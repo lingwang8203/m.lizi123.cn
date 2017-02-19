@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>活动详情</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_2321_function_sports_concret_frame1.js"></script>
+	</head>
+		<style>
+		 .book_photo{
+		 	width: 4rem;
+		 	height: 6rem;
+		 }
+		 .tex{
+		 	font-size: 0.6rem !important;
+		 }			 
+
+		.photo{
+			width:2rem;height:2rem;margin: 0.2rem;margin-right:0.1rem;
+		}	 			
+		.brief{
+			font-size: 0.3rem !important;	
+			color: #868686;
+		}
+		.good{
+			width: 1.2rem;height: 1rem;float: right;
+		}
+		.num{
+			padding-top: 0.1rem;
+		}			
+		.like{
+			width: 1.4rem;height: 1.2rem;
+		}
+		@media screen and (min-width:365px){ 
+			.brief{
+			font-size: 0.4rem !important;
+			}
+			.photo{
+				width: 2.4rem;
+				height: 2.4rem;
+			}			
+		.book_photo{
+		 	width:5rem;
+		 	height: 7rem;
+		 }		
+		 .tex{
+		 	font-size: 0.8rem !important;;
+		 }	
+		.good{
+			width: 1.4rem;height: 1.2rem;float: right;
+		}
+		.num{
+			padding-top: 0.3rem;
+		}	
+		.like{
+			width: 1.6rem;height: 1.4rem;
+		}					 		 		
+		 }		
+	</style>
+	<body>
+		<!--第一部分-->
+		<div class="aui-row aui-padded-t-5">
+			<div class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2 aui-text-center" style="margin: 0;padding: 0;margin-top: 0.1rem;">
+					<a href="#" target="_blank" id="sports_fabuzhe_image"><img src="" id="sports_fabuzhe_headImg" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;"/></a>
+				</div>
+				<div class="aui-col-xs-7 aui-row aui-padded-t-5">
+					<div class="aui-col-12 aui-font-size-14" id="sports_fabuzhe"></div>
+					<div class="aui-col-xs-12 aui-font-size-12"style="color: #9E9E9E;" id="sports_fabuzhe_jianjie"></div>										
+				</div>
+				<div class="aui-col-xs-3" style="margin-top: 0.3rem;color: #9E9E9E;">
+					<div class="aui-col-xs-12 aui-label lab aui-font-size-12 aui-label-outlined aui-pull-right aui-margin-r-5" id="sports_fabuzhe_guanzhu_index" style="width: auto;border-radius: 0.4em;">+关注</div>																		
+				</div>				
+			</div>
+			<div class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2 aui-margin-l-10">
+					<i class="aui-iconfont aui-icon-date aui-pull-right"style="color: #ffc040;"></i>
+				</div>					
+				<div class="aui-col-xs-9 aui-pull-left aui-font-size-12 aui-padded-l-10" id="sports_time"></div>
+			</div>
+			<div class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2 aui-margin-l-10">
+					<i class="aui-iconfont aui-icon-location aui-pull-right"style="color: #ffc040;"></i>
+				</div>					
+				<div class="aui-col-xs-9 aui-pull-left aui-font-size-12 aui-padded-l-10" id="sports_address"></div>
+			</div>	
+			<div class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2 aui-margin-l-10">
+					<i class="aui-iconfont aui-icon-comment aui-pull-right"style="color: #ffc040;"></i>
+				</div>					
+				<div class="aui-col-xs-9 aui-pull-left aui-font-size-12 aui-padded-l-10" id="sports_require"></div>
+			</div>				
+		</div>
+		<!--活动简介-->
+	<div class="aui-content"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="tit">活动简介</p>
+	</div>
+	<div class="aui-font-size-12 aui-padded-t-5"style="padding: 0 0.7rem;" id="sports_jianjie"></div>
+	<!--相关用户-->
+	<div class="aui-content aui-pull-left aui-padded-b-5 aui-padded-t-10"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">这些用户也参与了这个活动</p>
+	</div>		
+	<div class="aui-row"style="width:96%;margin: 0 auto;" id="sports_people_list">
+		<!--<a href="../../5_mine/51_mine_homepage/51_mine_homepage.html" target="_blank">
+			<div class="aui-col-xs-2"style="width: auto;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo1.jpg" class="aui-img-round photo"/>			
+			</div>
+		</a>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo2.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo3.jpg" class="aui-img-round photo"/>			
+		</div>	
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo4.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo5.jpg" class="aui-img-round photo"/>			
+		</div>	
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo3.jpg" class="aui-img-round photo"/>			
+		</div>		
+		<a href="2321_jian_more_people.html" target="_blank">
+			<div class="aui-col-xs-2"style="width: auto;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/more.png" style="width:0.6rem;height:0.8rem;margin: 0.3rem;margin-right: 0;margin-top: 0.8rem;" />			
+			</div>	
+		</a>-->
+	</div>	
+	<!--<div class="aui-content aui-pull-left aui-padded-b-10 aui-padded-t-10"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">TA参与了</p>
+   		 <p class="aui-pull-right aui-padded-r-10 aui-font-size-12"style="color: #FFBF2B;">更多></p>
+	</div>	
+	<div class="aui-row aui-pull-left">
+		<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row  aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>		
+	</div>	-->
+	<div class="aui-content aui-pull-left aui-padded-b-10 aui-padded-t-15"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">相关活动推荐</p>
+   		 <p class="aui-pull-right aui-padded-r-10 aui-font-size-12"style="color: #FFBF2B;" id="sports_tuijian_more">更多></p>
+	</div>	
+	<div class="aui-row aui-pull-left" id="sports_recommend_list" style="width: 100%;">
+		<!--<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<a href="232_function_sports_concret.html">
+				<div class="aui-col-xs-12">
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+				</div>
+			</a>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row  aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>		-->
+	</div>		
+	
+	</body>
+</html>

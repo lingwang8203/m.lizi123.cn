@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>花絮评论</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/concret_activities_huaxu.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<link href="css/activities_huaxu_critic.css" rel="stylesheet">
+		<script src="js/activities_huaxu_critic.js"></script>
+	</head>
+	<body>
+		<header>
+			<a class="title" id="return"></a>
+			<p>科技创新比赛</p>
+		</header>
+		<!--//////////////////一张图-->
+		<div class="huaxu">
+			<div class="user">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/touxiang.png">
+					<div class="user_formation">
+						<h3>春生半夏。</h3>
+						<p>花开开半夏，花落落永生</p>
+					</div>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/yifenxiang.png" class="fenxiang"/>
+					<span class="fabu_time">24小时前</span>
+			</div>
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/photo.jpg" class="one_picture"/>
+			<div class="shuoshuo">
+				<p class="user_miaoshu">世界上只有一种英雄主义，就是看清生活的真相后依然热爱生活。</p>
+			</div>
+			<div class="dilan">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/zan.png"  class="zan"/>
+				<p class="zan_number">198</p>
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/ping.png" class="pinglun"/>
+				<p class="pinglun_number">208</p>
+			</div>
+			<div class="yinying"></div>
+		</div>
+		<div class="pinglunlist">
+			<div class="critic">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/toupiao4.png" />
+				<div class="critic_right">
+					<div class="top">
+						<p>吃货小魔女</p>
+						<span name="zan_num">520</span>
+						<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/dianzan1.png" name="zan"/>
+						<span style="margin-right: 2vw;">24分钟前</span>
+					</div>
+					<div class="bottom">
+						<p>是啊，即使生活面目全非，但还是得一瘸一拐坚持着走下去。</p>
+						<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/mao.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="pinglunbox">
+			<a href="#" id="add_img">
+				<input type="file" id="upload_img" onchange="javascript:setImage()"/>
+			</a>
+			<input type="text" maxlength="100" placeholder="发表评论" id="critic"/>
+			<span id="fasong">发送</span>
+		</div>
+		<div class="blank">
+			
+		</div>
+	</body>
+	<script>
+		var url_index="huaxu";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="concret_activities.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

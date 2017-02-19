@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>编辑个人资料</title>
+		<link href="css/Edit_Club.css" rel="stylesheet"/>
+		<script src="js/Edit_Club.js"></script>
+		<script type="text/javascript" src="js/edit_userinf.js"></script>
+	</head>
+	<body>
+		<!--////////////////////顶部-->
+		<header>
+			<a href="PersonalHomepage_header.html"><p><编辑个人资料</p></a>
+			<a id="furnish" href="#"><span>完成</span></a>
+		</header>
+		<!--////////////////////////////////logo-->
+		<div class="Club_logo">
+			<form action="" method="post" enctype="multipart/form-data">
+				<a href="#" id="add_Club_logo">
+					<input type="file" id="upload_Club_logo" onchange="javascript:setImagePreview();"/>
+				</a>
+				<div id="show_Club_logo">
+			  	 	<img id="Club_logo" width="-1" height="-1" style="display: none" /> 
+			  	 	<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/1-3.png" id="camera"/>
+				</div>
+			</form>
+		</div>
+		<div class="middle">
+			<span>栗子昵称</span>
+			<input type="text" class="nickname" id="pageclub_name" maxlength="15"/>
+		</div>
+		<div class="middle">
+			<span>个人简介</span>
+			<textarea id="pageclub_jianjie" maxlength="100"></textarea>
+		</div>
+		<div class="middle">
+			<span>所在高校</span>
+			<input type="text" class="school" id="pageclub_name" maxlength="15"/>
+		</div>
+	</body>
+</html>

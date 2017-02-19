@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>课程</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/css_function_class.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+		<script type="text/javascript" src="js/function_class.js"></script>		
+	</head>
+	<body>
+		<!-----------------标签标题-------------------------------->
+		<div id="tap_class">
+			<p class="title">标签分类</p>
+		    <a id="logo_write"href="edit_label.html" target="_black"></a>
+		</div>
+		<div id="tap">
+			<div id="tap_first"class="css_same">
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+			</div>
+			<div id="tap_second"class="css_same">
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+			</div>
+			<div id="tap_third"class="css_same">
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+			</div>
+			<span style="width: 100%;background-color: #f0f0f0;height: 2.5rem;float: left;">
+				<button id="on_off"class="of" ></button>
+			</span>
+			<span style="width: 100%;background-color: #d3d3d3;height: 0.6rem;float: left;"></span>
+		</div>
+		<div class="in_html">
+		</div>
+	</body>
+    <script>
+    //-点击 标签变色功能-----------------------------------------
+    /*
+			var choose_but=new Array;
+			choose_but=document.getElementsByName("but");
+			for (var i=0;i<choose_but.length;i++) {
+				choose_but[i].addEventListener("touchstart",function(e){
+					e.preventDefault();
+					if(this.className=="not_choose")
+						this.className="choose";				
+					else			
+						this.className="not_choose";
+				},false);
+			}*/
+
+		//-收缩隐藏功能--------------------------------------------
+		var bb=new Array;
+		bb=document.getElementsByTagName("button");
+		onOff=document.getElementById("on_off");
+		
+		onOff.addEventListener("touchstart",open_close,false);
+
+		function open_close(){
+			
+			if(onOff.className=="of"){
+			onOff.className="o";
+			for (var i=0;i<bb.length;i++) {				
+				if(bb[i].className=="not_choose")
+					bb[i].style.display='none';
+				else if(bb[i].className=="choose")
+					bb[i].style.display='block';
+			}
+			}
+			
+			else if(onOff.className=="o"){
+			onOff.className="of";	
+			for (var i=0;i<bb.length;i++) 
+				bb[i].style.display='block';							
+			}
+		}
+		//---点击标签即跳转更新内容块---
+//		var content=document.getElementById("content");
+//		for (var i=0;i<choose_but.length;i++){
+//				choose_but[i].addEventListener("touchstart",function(e){
+//					e.preventDefault();
+//					content.setAttribute("src","function_class_afterChoose_contect.html");
+//				},false);			
+//		}		
+	</script>			
+</html>

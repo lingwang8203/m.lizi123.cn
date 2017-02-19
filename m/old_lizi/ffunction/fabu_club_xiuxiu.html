@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>发布秀秀</title>
+		<link href="css/fabu_huaxu.css" rel="stylesheet"/>
+		<script src="js/swipe.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="manage_club.html"><</a>
+			<h3 style="margin-left: 30vw;">社团秀秀</h3>
+			<a href="" id="publish" style="margin-left: 28vw;">完成</a>
+		</header>
+		<textarea class="content" maxlength="200" placeholder="活动详情内容"></textarea>
+		<div class="addWrap" id="addwrap">
+			   	<div class="swipe" id="mySwipe">
+			      	<div class="swipe-wrap" id="recover_page">
+			      		<div class="mulu">
+				      		<div id="show_picture1" class="show_picture">
+			  	 				<img id="picture1" width="-1" height="-1" style="display: none" />
+							</div>
+							<div id="show_picture2" class="show_picture">
+			  	 				<img id="picture2" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture3" class="show_picture">
+			  	 				<img id="picture3" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture4" class="show_picture">
+			  	 				<img id="picture4" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture5" class="show_picture">
+			  	 				<img id="picture5" width="-1" height="-1" style="display: none" /> 
+							</div>
+						</div>
+						<div class="mulu">
+				      		<div id="show_picture6" class="show_picture">
+			  	 				<img id="picture6" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture7" class="show_picture">
+			  	 				<img id="picture7" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture8" class="show_picture">
+			  	 				<img id="picture8" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture9" class="show_picture">
+			  	 				<img id="picture9" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture10" class="show_picture">
+			  	 				<img id="picture10" width="-1" height="-1" style="display: none" /> 
+							</div>
+						</div>
+						<div class="mulu">
+				      		<div id="show_picture11" class="show_picture">
+			  	 				<img id="picture11" width="-1" height="-1" style="display: none" />
+							</div>
+							<div id="show_picture12" class="show_picture">
+			  	 				<img id="picture12" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture13" class="show_picture">
+			  	 				<img id="picture13" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture14" class="show_picture">
+			  	 				<img id="picture14" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture15" class="show_picture">
+			  	 				<img id="picture15" width="-1" height="-1" style="display: none" /> 
+							</div>
+						</div>
+						<div class="mulu">
+				      		<div id="show_picture16" class="show_picture">
+			  	 				<img id="picture16" width="-1" height="-1" style="display: none" />
+							</div>
+							<div id="show_picture17" class="show_picture">
+			  	 				<img id="picture17" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture18" class="show_picture">
+			  	 				<img id="picture18" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture19" class="show_picture">
+			  	 				<img id="picture19" width="-1" height="-1" style="display: none" /> 
+							</div>
+							<div id="show_picture20" class="show_picture">
+			  	 				<img id="picture20" width="-1" height="-1" style="display: none" /> 
+							</div>
+						</div>
+						<ul id="position">
+					  	 	<li class="cur"></li>
+					  		<li class=""></li>
+					  		<li class=""></li>
+					  		<li class=""></li>
+						</ul>
+			     	</div>
+			    </div>
+		</div>
+		<div id="show_video" class="show_video">
+		    <video class="shipin" loop="loop" poster="img/concret/photo.jpg" controls="controls" name="video" id="shipin"> 
+				<source src="" type="video/mp4" id="source"></source> 
+				your browser does not support the video tag 
+			</video>
+		</div>
+		<form action="" method="post" enctype="multipart/form-data">
+		<div class="xiangqing_bottom">
+			<div class="xiangqing_bottom_left">
+				<a id="add_class_miaoshu_img" href="#">
+					<input type="file" name="file" id="upload_class_miaoshu_img"  onchange="javascript:setImagePreview();" multiple="multiple"/>
+				</a>
+				<a id="add_class_miaoshu_img_2" href="#">
+					<input type="file" name="file" id="upload_class_miaoshu_img" />
+				</a>
+				<a id="add_class_miaoshu_img_3" href="#">
+					<input type="file" name="file" id="upload_video"  onchange="javascript:setVideoPreview();"/>
+				</a>
+			</div>
+			<div class="xiangqing_bottom_right">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/xiangqing4.png" id="delete_tabs">
+			</div>		
+		</div>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var bullets = document.getElementById('position').getElementsByTagName('li');
+		var banner = Swipe(document.getElementById('mySwipe'), {
+			auto: 0,
+			continuous: true,
+			disableScroll:false,
+			callback: function(pos) {
+				var i = bullets.length;
+				while (i--) {
+				  bullets[i].className = ' ';
+				}
+				bullets[pos].className = 'cur';
+			}
+		});
+	</script>
+	<script src="js/fabu_club_xiuxiu.js"></script>
+</html>

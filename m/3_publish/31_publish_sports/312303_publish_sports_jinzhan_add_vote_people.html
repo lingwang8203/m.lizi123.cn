@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<title>选择投票选手</title>
+		<link href="../../css/aui.2.0.css" rel="stylesheet"/>
+		<script src="js/ajax_312303_publish_sports_jinzhan_add_vote_people.js"></script>
+	</head>
+	<body>
+		<!--顶部-->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18"><</a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16" id="sports_name">选择投票选手</div>
+		    <a class="aui-pull-right aui-btn" id="furnish">完成</a>
+		</header>
+		<div class="aui-searchbar" id="search" style="top: 2.25rem;">
+		    <div class="aui-searchbar-input aui-border-radius" tapmode onclick="doSearch()">
+		        <i class="aui-iconfont aui-icon-search"></i>
+		        <form action="javascript:search();">
+		            <input type="search" placeholder="请输入搜索内容" id="search-input">
+		        </form>
+		    </div>
+		    <div class="aui-searchbar-cancel" tapmod>取消</div>
+		</div>
+		<div class="aui-content aui-margin-b-15" style="margin-top:2.3rem;" id="invite_list">
+    	<ul class="aui-list aui-media-list">
+	        <li class="aui-list-header">参与活动的用户</li>
+	        <li class="aui-list-item aui-list-item-middle">
+	            <div class="aui-media-list-item-inner">
+	            	 <div class="aui-list-item-media" style="width: 8vw;padding-right: 0.2rem !important;">
+	                    <img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/choose1.png" name="choose_user" id="1">
+	                </div>
+	                <div class="aui-list-item-media" style="width: 3rem;padding-top:0 !important;padding-bottom: 0 !important;">
+	                    <img src="http://img.lizi123.cn/new_lizi/5_mine/56_mine_focus/Angle.png" class="aui-img-round aui-list-img-sm">
+	                </div>
+	                <div class="aui-list-item-inner ">
+	                    <div class="aui-list-item-text">
+	                        <div class="aui-list-item-title aui-font-size-14">安吉拉Angle</div>
+	                    </div>
+	                </div>
+	            </div>
+       		</li>
+       		<li class="aui-list-item aui-list-item-middle">
+	            <div class="aui-media-list-item-inner">
+	            	 <div class="aui-list-item-media" style="width: 8vw;padding-right: 0.2rem !important;">
+	                    <img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/choose1.png" name="choose_user" id="2">
+	                </div>
+	                <div class="aui-list-item-media" style="width: 3rem;padding-top:0 !important;padding-bottom: 0 !important;">
+	                    <img src="http://img.lizi123.cn/new_lizi/5_mine/56_mine_focus/Angle.png" class="aui-img-round aui-list-img-sm">
+	                </div>
+	                <div class="aui-list-item-inner ">
+	                    <div class="aui-list-item-text">
+	                        <div class="aui-list-item-title aui-font-size-14">安吉拉Angle</div>
+	                    </div>
+	                </div>
+	            </div>
+       		</li>
+       		<li class="aui-list-item aui-list-item-middle">
+	            <div class="aui-media-list-item-inner">
+	            	 <div class="aui-list-item-media" style="width: 8vw;padding-right: 0.2rem !important;">
+	                    <img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/choose1.png" name="choose_user" id="3">
+	                </div>
+	                <div class="aui-list-item-media" style="width: 3rem;padding-top:0 !important;padding-bottom: 0 !important;">
+	                    <img src="http://img.lizi123.cn/new_lizi/5_mine/56_mine_focus/Angle.png" class="aui-img-round aui-list-img-sm">
+	                </div>
+	                <div class="aui-list-item-inner ">
+	                    <div class="aui-list-item-text">
+	                        <div class="aui-list-item-title aui-font-size-14">安吉拉Angle</div>
+	                    </div>
+	                </div>
+	            </div>
+       		</li>
+       	</ul>
+       </div>
+	</body>
+</html>

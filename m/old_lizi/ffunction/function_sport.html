@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>活动区</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/css_function_sports.css">	
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/function_sport.js"></script>	
+	</head>
+	<body>
+		<!-----------------标签标题-------------------------------->
+		<div id="tap_class">
+			<p class="title">标签分类</p>
+		</div>
+		<div id="tap">
+			<div class="css_same shorts">
+				<button class="not_choose" name="but"><!--比赛类--></button>
+				<button class="not_choose" name="but"></button>
+			</div>
+			<div  class="css_same shorts">
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+			</div>
+			<div class="css_same long">
+				<button class="not_choose" name="but"></button>
+				<button class="not_choose" name="but"></button>
+			</div>				
+		</div>
+		<span style="width: 100%;background-color: #d3d3d3;height: 0.2rem;float: left;"></span>		
+		<!----内容------>
+		<!--<div class="in_html">-->
+			<!--注意：点击后出现“排序选择”-->			
+			<div class="sort_out">
+				<div class="sort">
+					<span>综合排行</span>
+					<a href="#"class="up"name="updown" ontouchstart="change(this)"></a>	
+				</div>
+				<div class="sort"style="border-left: 0.1em solid #B9BCC3;border-right: 0.1em solid #B9BCC3;">
+					<span>好评排行</span>
+					<a href="#"class="up"name="updown" ontouchstart="change(this)"></a>	
+				</div>
+				<div class="sort">
+					<span>热门排行</span>
+					<a href="#"class="up"name="updown" ontouchstart="change(this)"></a>					
+				</div>			
+			</div>			
+			<!--注意：点击前显示“热门推荐”，“猜你喜欢”等标题-->
+			<div class="in_html">
+			<!--热门内容-->
+			<!-- <div class="hotRe">
+				<p class="title"style="width: 80%;">热门内容</p>
+			</div> -->
+		
+			<!-- <a href="concret_activities.html" target="_black"><div class="sports">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/photo2.jpg" class="sport_photo"/>
+				<div class="laste">
+					<p>有进展更新</p>
+				</div>
+				<div class="text">
+					<p class="sports_title">“草莓音乐节，一起玩转音乐”</p>
+					<p class="club_number">已有<span>346</span>人参加</p>
+				</div>
+				<div class="summary">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/time.png" /><p>2016-10-05</p>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/place.png" /><p>华侨大学厦门校区田径场</p>
+					<div  class="num">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/like.png" /><p>246</p>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/comment.png" /><p>87</p>
+					</div>
+				</div>
+			</div></a>			 -->
+			<!-- <div class="in_html1">
+			</div>  -->
+			<!--猜你喜欢-->
+			<!-- <div class="in_html2"> -->
+			<!-- <div class="guess">
+				<p class="title"style="width: 80%;">猜你喜欢</p>
+			</div> -->
+
+			<!-- <a href="concret_activities.html" target="_black"><div class="sports">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/photo1.jpg" class="sport_photo"/>
+				<div class="text">
+					<p class="sports_title">“草莓音乐节，一起玩转音乐”</p>
+					<p class="club_number">已有<span>346</span>人参加</p>
+				</div>
+				<div class="summary">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/time.png" /><p>2016-10-05</p>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/place.png" /><p>华侨大学厦门校区田径场</p>
+					<div  class="num">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/like.png" /><p>246</p>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/comment.png" /><p>87</p>
+					</div>
+				</div>
+			</div></a>			 -->
+			<!-- </div> -->
+		</div>			
+	</body>
+	<!--<script>
+		   //-点击 标签变色功能-----------------------------------------
+		var choose_but=new Array;
+		choose_but=document.getElementsByName("but");
+		for (var i=0;i<choose_but.length;i++) {
+			choose_but[i].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				if(this.className=="not_choose")
+					this.className="choose";				
+				else			
+					this.className="not_choose";
+			},false);
+		}
+		
+		//-排序---
+//		//---点击标签即跳转更新内容块---
+//		var content=document.getElementById("content");
+//		for (var i=0;i<choose_but.length;i++){
+//				choose_but[i].addEventListener("touchstart",function(e){
+//					e.preventDefault();
+//					content.setAttribute("src","function_sport_afterchoose_sort_content.html");
+//				},false);			
+//		}		
+</script>-->
+</html>

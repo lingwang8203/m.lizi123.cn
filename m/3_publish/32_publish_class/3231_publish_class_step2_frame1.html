@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>课程发布第二步</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/LCalendar.css"/>
+		<link rel="stylesheet" type="text/css" href="css/new_publish_class.css"/>
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_3231_publish_class_step2_frame1.js"></script>
+	</head>
+	<style>
+	.t1{
+		background: #ffd630;
+	}
+		.t2{
+			background: #ffcb53;
+		}
+		.t3{
+			background: #fcaf57;
+		}
+		.t4{
+			background: #ffa569;
+		}
+		.good{
+			width: 1.2rem;height: 1rem;float: right;
+		}
+		.num{
+			padding-top: 0.1rem;
+		}			
+		.like{
+			width: 1.4rem;height: 1.2rem;
+		}
+		
+		.choose_module{
+			position: fixed;
+			top: 5vh;
+			left: 20vw;
+			width: 60vw;
+			height: auto;
+			background-color: #FFFFFF;
+			z-index: 201;
+			font-weight: normal;
+			font-size: 4vw;
+		}
+		.class_method{
+			display: inline-block;
+			width: 30vw;
+			height: auto;
+			overflow: auto;
+			font-size: 16px;
+			color: #212121;
+			padding: 3vw 0;
+		}
+		.class_method_name{
+			padding-left: 3vw;
+			color: #838383 !important; 
+		}
+		.class_method_radio{
+			float: left;
+			width: 3.5vw;
+			height: auto;
+			padding-top: 1.5vw;
+			margin-left: 4vw;
+		}
+		
+		#choose_method_cancel{
+			color: #ffbf2a !important;
+			margin-left: 7vw;
+		}
+		#choose_method_confirm{
+			color: #ffbf2a !important;
+			margin-left: 17vw;
+		}
+		
+		.class_day{
+			display: inline-block;
+			width: 30vw;
+			height: auto;
+			overflow: auto;
+			font-size: 16px;
+			color: #212121;
+			padding: 3vw 0;
+		}
+		.class_day_name{
+			padding-left: 3vw;
+			color: #838383 !important; 
+		}
+		.class_day_radio{
+			float: left;
+			width: 3.5vw;
+			height: auto;
+			padding-top: 1.5vw;
+			margin-left: 6vw;
+		}
+		
+		#choose_day_cancel{
+			color: #ffbf2a !important;
+			margin-left: 7vw;
+		}
+		#choose_day_confirm{
+			color: #ffbf2a !important;
+			margin-left: 17vw;
+		}
+			
+		@media screen and (min-width:365px){ 
+			.other{
+				padding-left: 2.1rem;
+				}
+		.good{
+			width: 1.4rem;height: 1.2rem;float: right;
+		}
+		.num{
+			padding-top: 0.3rem;
+		}	
+		.like{
+			width: 1.6rem;height: 1.4rem;
+		}					
+		}				
+	</style>
+	<body>
+	<ul>
+		<li>
+			<div class="aui-row aui-padded-t-5">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">讲师</p>
+				</div>				
+			<div class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2 aui-text-center" style="margin: 0;padding: 0;margin-top: 0.1rem;">
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" id="class_fabuzhe_headImg" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;"/>
+				</div>
+				<div class="aui-col-xs-7 aui-row aui-padded-t-5">
+					<div class="aui-col-12 aui-font-size-14" id="class_fabuzhe_name">小栗子</div>
+					<div class="aui-col-xs-12 aui-font-size-12"style="color: #9E9E9E;" id="class_fabuzhe_intro">一个爱拍照爱摄影的小家伙。</div>										
+				</div>			
+			</div>
+			<div class="tap_out other" id="class_fabuzhe_label">
+				<div class="aui-label aui-font-size-12 tap t1">爱拍照</div>
+				<div class="aui-label aui-font-size-12 tap t2">DIY热衷</div>		
+				<div class="aui-label aui-font-size-12 tap t3">想学英语</div>	
+				<div class="aui-label aui-font-size-12 tap t4">攀岩</div>	
+			</div>				
+			</div>
+		</li>
+		<li>
+			<div class="aui-row aui-padded-t-5">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">方式</p>
+				</div>	
+				<div class="aui-font-size-14 aui-padded-l-15 aui-padded-t-10" id="class_method">请选择上课方式(如一对一  .  线上  .  免费)</div>
+				<div class="aui-font-size-12 aui-padded-l-15 aui-padded-t-5"style="color: #616161;">共 
+					<input id="class_all_xueshi" maxlength="3" style="min-height: 0;color: #212121 !important;width: 8%;display: inline-block;text-align: center;" class="aui-font-size-14" type="text" placeholder="X" />学时，自
+					<input id="class_start_time" readonly="true" maxlength="15" style="min-height: 0;color: #212121 !important;width: 25%;display: inline-block;text-align: center;" class="aui-font-size-14" type="text" placeholder="选择时间" data-lcalendar="2000-01-01,2020-12-31" />开始</div>
+			</div>
+		</li>
+		<li>
+			<div class="aui-row aui-padded-t-15">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">课程表</p>
+				</div>	
+				<div class="aui-col-xs-12 aui-row  aui-padded-t-10">
+					<div class="aui-col-xs-2 aui-margin-l-10"style="width: auto;">
+						<i class="aui-iconfont aui-icon-date aui-pull-left"style="color: #ffc040;"></i>
+					</div>					
+					<div class="aui-col-xs-9 aui-pull-left aui-font-size-12 aui-padded-l-10" id="class_day">点击选择上课时间</div>
+				</div>
+				<div class="aui-col-xs-12 aui-row ">
+					<div class="aui-col-xs-2 aui-margin-l-10"style="width: auto;">
+						<i class="aui-iconfont aui-icon-location aui-pull-left" style="color: #ffc040;"></i>
+					</div>					
+					<input maxlength="20" style="min-height: 0;color: #212121 !important;width: 50%;display: inline-block;text-indent: 2.5vw;" class="aui-font-size-14" type="text" placeholder="请输入上课地点" id="class_address" />
+				</div>				
+			</div>
+		</li>
+		<li>
+			<div class="aui-row aui-padded-t-15">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">简介</p>
+				</div>
+				<textarea id="class_intro" style="height: 9rem;padding: 0 2vw;" maxlength="140" class="aui-font-size-14" placeholder="请说说您对本课程的相关介绍内容（不超过140字）。"></textarea>
+			</div>
+		</li>
+	</ul>	
+	<!--/////选择上课方式-->
+		<div class="choose_module" id="choose_class_method" style="display: none;">
+			<div class="class_method" name="method_face">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_method_radio"/>
+				<span class="class_method_name">一对一</span>
+			</div>
+			<div class="class_method" name="method_face" style="padding-left: 3vw;width: 27vw;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_method_radio"/>
+				<span class="class_method_name">一对多</span>
+			</div>
+			<div class="class_method" name="method_online">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_method_radio"/>
+				<span class="class_method_name">线上</span>
+			</div>
+			<div class="class_method" name="method_online" style="padding-left: 3vw;width: 27vw;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_method_radio"/>
+				<span class="class_method_name">线下</span>
+			</div>
+			<div class="class_method" name="method_charge">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_method_radio"/>
+				<span class="class_method_name">免费</span>
+			</div>
+			<div class="class_method" name="method_charge" style="padding-left: 3vw;width: 27vw;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_method_radio"/>
+				<span class="class_method_name">付费</span>
+			</div>
+			<div style="padding-bottom: 3vw;">
+				<span id="choose_method_confirm">确认</span>
+				<span id="choose_method_cancel">取消</span>
+			</div>
+		</div>
+		
+		
+	<!--/////选择上课时间-->
+		<div class="choose_module" id="choose_class_day" style="display: none;">
+			<div class="class_day">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_day_radio"/>
+				<span class="class_day_name">周一</span>
+			</div>
+			<div class="class_day" style="padding-left: 1vw;width: 27vw;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_day_radio"/>
+				<span class="class_day_name">周二</span>
+			</div>
+			<div class="class_day" >
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_day_radio"/>
+				<span class="class_day_name">周三</span>
+			</div>
+			<div class="class_day" style="padding-left: 1vw;width: 27vw;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_day_radio"/>
+				<span class="class_day_name">周四</span>
+			</div>
+			<div class="class_day">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_day_radio"/>
+				<span class="class_day_name">周五</span>
+			</div>
+			<div class="class_day" style="padding-left: 1vw;width: 27vw;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_day_radio"/>
+				<span class="class_day_name">周六</span>
+			</div>
+			<div class="class_day">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/circle_choose.png" class="class_day_radio"/>
+				<span class="class_day_name">周日</span>
+			</div>
+			<div style="padding-bottom: 3vw;">
+				<span id="choose_day_confirm">确认</span>
+				<span id="choose_day_cancel">取消</span>
+			</div>
+		</div>
+	</body>
+	<script src="js/old_LCalendar.js"></script>
+	<script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#class_start_time', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(), //最小日期
+        'maxDate': '2020-12-31' //最大日期
+    });
+    </script>
+</head>

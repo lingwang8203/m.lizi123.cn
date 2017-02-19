@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>设置</title>
+		<link href="css/set.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<span class="return"></span>
+			<a class="title" id="return">设置</a>
+		</header>
+		<div class="yinying"></div>
+		<a href="tuisong_set.html">
+			<div class="tabs">
+				<span>推送设�?/span>
+				<p class="enter">></p>
+			</div>
+		</a>
+		<a href="../login/choose_label.html">
+			<div class="tabs" style="border-bottom: none;">
+				<span>兴趣标签</span>
+				<p class="enter">></p>
+			</div>
+		</a>
+		<div class="yinying"></div>
+		<a href="#" id="huancun">
+			<div class="tabs" style="border: none;">
+				<span>清除缓存</span>
+				<p class="clear-data">52.6M</p>
+				<p class="enter">></p>
+			</div>
+		</a>
+		<div class="yinying"></div>
+		<a href="guanyu.html">
+		<div class="tabs" style="border: none;">
+			<span>关于</span>
+			<img src="http://img.lizi123.cn/LiZi/me/img/dian.png" id="new_guanzhu"/>
+			<p class="enter">></p>
+		</div>
+		</a>
+		<div class="yinying"></div>
+		<a id="quit">退出栗�?/a>
+	</body>
+	<script>
+		document.getElementById("huancun").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			alert("清除完毕�?);
+		},false);
+		//=======================退�?==========================
+		document.getElementById("quit").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			$.ajax({
+			    type:"post",
+			    url:"http://api.lizi123.cn/index.php/home/user/userLogout",
+			    data:{
+			    },
+			    success:function(data){
+			        var obj = eval(data);
+			        console.dir(obj);
+			        if(obj.status==200){
+//			        	window.location = "http://m.lizi123.cn/LiZi/login/";
+			        	window.open("http://m.lizi123.cn/LiZi/login");
+			        }else{
+			        }
+			    },
+			    error:function(data){
+			        alert("error!");
+			    },
+			});        
+		},false);
+		
+			
+	</script>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

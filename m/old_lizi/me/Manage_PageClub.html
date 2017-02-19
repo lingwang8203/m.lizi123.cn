@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="../me/js/manage_PageClub.js"></script>
+		<title>我管理的社团</title>
+		<link href="css/Manage_PageClub.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<a id="return"><p>我的社团</p></a>
+			<a href="Create_PageClub.html"><span>创建</span></a>
+		</header>
+		<div id="tabs">
+			<a href="Manage_PageClub.html"><p id="my_manage" class="tabs_check">我管理的</p></a>
+			<a href="Join_PageClub.html"><p id="my_join" class="tabs_uncheck">我加入的</p></a>
+		</div>
+        <!--测试用-->
+        <div class="yinying"></div>
+        <a href="../page_club/page_club.html">
+        <div class="manage_pageclub_list">
+			<img src="http://img.lizi123.cn/LiZi/me/img/club_logo.png" class="logo"/>
+			<div>
+				<h3 class="Club_name">栗子社</h3>
+				<p class="Club_miaoshu">华侨大学厦门校区栗子校园研发团队</p>
+				<div class="details">
+					<img src="http://img.lizi123.cn/LiZi/me/img/location.png" />
+					<p>华侨大学厦门校区</p>
+					<img src="http://img.lizi123.cn/LiZi/me/img/people.png" style="margin-left: 4vw;"/>
+					<p><span>120</span>人 已加入</p>
+				</div>
+				<a href="manage_club.html"><span class="manage_label">管理社团</span></a>
+				<span class="juti">></span>
+			</div>
+		</div>
+		</a>
+        <!--测试结束-->
+        <div class = "progress">
+		<div class="yinying"></div>
+		<div class="manage_pageclub_list">
+			<img src="http://img.lizi123.cn/LiZi/me/img/club_logo.png" class="logo"/>
+			<div>
+				<h3 class="Club_name">栗子社</h3>
+				<p class="Club_miaoshu">华侨大学厦门校区栗子校园研发团队</p>
+				<div class="details">
+					<img src="http://img.lizi123.cn/LiZi/me/img/location.png" />
+					<p>华侨大学厦门校区</p>
+					<img src="http://img.lizi123.cn/LiZi/me/img/people.png" style="margin-left: 4vw;"/>
+					<p><span>120</span>人 已加入</p>
+				</div>
+				<span class="manage_label">管理社团</span>
+				<span class="juti">></span>
+			</div>
+		</div>
+		<div class="manage_pageclub_list">
+			<img src="http://img.lizi123.cn/LiZi/me/img/club_logo.png" class="logo"/>
+			<div>
+				<h3 class="Club_name">栗子社</h3>
+				<p class="Club_miaoshu">华侨大学厦门校区栗子校园研发团队</p>
+				<div class="details">
+					<img src="http://img.lizi123.cn/LiZi/me/img/location.png" />
+					<p>华侨大学厦门校区</p>
+					<img src="http://img.lizi123.cn/LiZi/me/img/people.png" style="margin-left: 4vw;"/>
+					<p><span>120</span>人 已加入</p>
+				</div>
+				<span class="manage_label">管理社团</span>
+				<span class="juti">></span>
+			</div>
+		</div>
+		<div class="manage_pageclub_list">
+			<img src="http://img.lizi123.cn/LiZi/me/img/club_logo.png" class="logo"/>
+			<div>
+				<h3 class="Club_name">栗子社</h3>
+				<p class="Club_miaoshu">华侨大学厦门校区栗子校园研发团队</p>
+				<div class="details">
+					<img src="http://img.lizi123.cn/LiZi/me/img/location.png" />
+					<p>华侨大学厦门校区</p>
+					<img src="http://img.lizi123.cn/LiZi/me/img/people.png" style="margin-left: 4vw;"/>
+					<p><span>120</span>人 已加入</p>
+				</div>
+				<span class="manage_label">管理社团</span>
+				<span class="juti">></span>
+			</div>
+		</div>
+		</div>
+		</div>
+        <div class = "Manage_PageClub"></div>
+		<p id="wen">还没有社团?</p>
+		<a href="Create_PageClub.html" id="create">创建一个社团</a>
+	</body>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>推送设置</title>
+		<link href="css/set.css" rel="stylesheet"/>
+	</head>
+	<body style="background-color: white;">
+		<header>
+			<span class="return"></span>
+			<a class="title" href="set.html">推送设置</a>
+		</header>
+		<div class="xuanxiang">
+			<div class="text">
+				<h3>系统推荐</h3>
+				<p>你感兴趣的领域中值得关注的内容</p>
+			</div>
+			<img src="http://img.lizi123.cn/LiZi/test/set/img/kaiqi.png" class="switch"/>
+		</div>
+		<div class="xuanxiang">
+			<div class="text">
+				<h3>私信消息</h3>
+				<p>私信对话中，有了新的回复</p>
+			</div>
+			<img src="http://img.lizi123.cn/LiZi/test/set/img/kaiqi.png" class="switch"/>
+		</div>
+		<div class="xuanxiang">
+			<div class="text">
+				<h3>被回复的</h3>
+				<p>各项动态中，有了新的回复</p>
+			</div>
+			<img src="http://img.lizi123.cn/LiZi/test/set/img/kaiqi.png" class="switch"/>
+		</div>
+		<div class="xuanxiang">
+			<div class="text">
+				<h3>特别关注</h3>
+				<p>特别关注的用户有了新的动态</p>
+			</div>
+			<img src="http://img.lizi123.cn/LiZi/test/set/img/kaiqi.png" class="switch"/>
+		</div>
+	</body>
+	<script>
+		var sw=document.getElementsByClassName("switch");
+		for(var i=0;i<sw.length;i++){
+			sw[i].index=0;
+			sw[i].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				if(this.index==0){
+					this.src="http://img.lizi123.cn/LiZi/test/set/img/guanbi.png";
+					this.index=1;
+				}
+				else{
+					this.src="http://img.lizi123.cn/LiZi/test/set/img/kaiqi.png";
+					this.index=0;
+				}
+			},false);
+		}
+	</script>
+</html>

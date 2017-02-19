@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>管理社团成员</title>
+		<link href="css/manage_club_people.css" rel="stylesheet"/>
+		
+	</head>
+	<body>
+		<header>
+			<a class="title" href="../me/manage_club.html"><管理社团成员</a>
+			<img src="img/messqge.png"/ id="message_state">
+		</header>
+		<div class="dinglan">
+			<img src="img/piliang.png" id="piliang"/>
+			<img src="img/touxian.png" id="touxian"/>
+			<img src="img/quanxian.png" id="quanxian"/>
+			<img src="img/delete1.png" id="delete"/>
+			<img src="img/yidong1.png" id="yidong"/>
+		</div>
+		<div id="header_search">
+		<input type="text" placeholder=" 搜索 " id="search" maxlength="12"/>
+		<img src="../login/img/search.png" id="search_image"/>
+		</div>
+		<div id="pageclub_people">
+			<div class="list">
+				<div class="list_header">
+					<img src="img/sanjiao2.png" class="fenzu_icon"/>
+					<span class="fenzu_name">管理员</span>
+				</div>
+				<div class="people_list">
+					<div class="people">
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<img src="img/choose1.png" class="choose" style="display: none;"/>
+						<span class="people_touxian yellow">社长</span>
+						<span class="people_name">安吉拉angle</span>
+						<span class="huanjie">进行换届</span>
+					</div>
+					<div class="people">
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<img src="img/choose1.png" class="choose" style="display: none;"/>
+						<span class="people_touxian cyellow">宣传部部长</span>
+						<span class="people_name">安吉拉angle</span>
+						<span class="huanjie">进行换届</span>
+					</div>
+					<div class="people">
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<img src="img/choose1.png" class="choose" style="display: none;"/>
+						<span class="people_touxian cyellow">人事部部长</span>
+						<span class="people_name">安吉拉angle</span>
+						<span class="huanjie">进行换届</span>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="list_header">
+					<img src="img/sanjiao2.png" class="fenzu_icon"/>
+					<span class="fenzu_name">办公室</span>
+				</div>
+				<div class="people_list">
+					<div class="people">
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<img src="img/choose1.png" class="choose" style="display: none;"/>
+						<span class="people_touxian yellow">办公室主任</span>
+						<span class="people_name">安吉拉angle</span>
+						<span class="huanjie">进行换届</span>
+					</div>
+					<div class="people">
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<img src="img/choose1.png" class="choose" style="display: none;"/>
+						<span class="people_touxian tblue">成员</span>
+						<span class="people_name">安吉拉angle</span>
+						<span class="huanjie">进行换届</span>
+					</div>
+					<div class="people">
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<img src="img/choose1.png" class="choose" style="display: none;"/>
+						<span class="people_touxian tblue">成员</span>
+						<span class="people_name">安吉拉angle</span>
+						<span class="huanjie">进行换届</span>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="list_header">
+					<img src="img/sanjiao2.png" class="fenzu_icon"/>
+					<span class="fenzu_name">宣传部</span>
+				</div>
+				<div class="people_list">
+					
+				</div>
+			</div>
+			<div class="list">
+				<div class="list_header">
+					<img src="img/sanjiao2.png" class="fenzu_icon"/>
+					<span class="fenzu_name">人事部</span>
+				</div>
+				<div class="people_list">
+					
+				</div>
+			</div>
+			<div class="list">
+				<div class="list_header">
+					<img src="img/sanjiao2.png" class="fenzu_icon"/>
+					<span class="fenzu_name">外联部</span>
+				</div>
+				<div class="people_list">
+					
+				</div>
+			</div>
+		</div>
+		<!--///////////////////弹出层-->
+		<div id="back" style="display: none;"></div>
+		<div id="edit_touxian">
+			<p>编辑头衔</p>
+			<input type="text" placeholder="请输入头衔" id="newtouxian" maxlength="6"/>
+			<span id="touxian_cancel">取消</span>
+			<span id="touxian_confirm">好</span>
+		</div>
+		<!--///////////////////弹出层-->
+		<div id="edit_quanxian">
+			<p>编辑颜色与权限</p>
+			<div class="edit_quanxian_img">
+				<img src="img/yellow.png" id="yellow"/>
+				<img src="img/cyellow.png" id="cyellow"/>
+				<img src="img/blue.png" id="blue">
+				<img src="img/tblue.png" id="tblue"/>
+				<img src="img/red.png" id="red"/>
+			</div>
+			<div class="edit_quanxian_choose">
+				<img src="img/choose1.png" id="1" class="quanxian_choose"/>
+				<span id="quanxian0">管理社团成员</span>
+				<img src="img/choose1.png" id="2" class="quanxian_choose"/>
+				<span id="quanxian1">管理社团活动</span>
+			</div>
+			<div class="edit_quanxian_choose">
+				<img src="img/choose1.png" id="3" class="quanxian_choose"/>
+				<span id="quanxian2">编辑社团资料</span>
+				<img src="img/choose1.png" id="4" class="quanxian_choose"/>
+				<span id="quanxian3">发布社内通知</span>
+			</div>
+			<div class="edit_quanxian_choose">
+				<img src="img/choose1.png" id="5" class="quanxian_choose"/>
+				<span id="quanxian4">发布社团动态</span>
+				<img src="img/choose1.png" id="6" class="quanxian_choose"/>
+				<span id="quanxian5">管理社团记忆</span>
+			</div>
+			<span id="quanxian_cancel">取消</span>
+			<span id="quanxian_confirm">好</span>
+		</div>
+		<!--//////////////////////////////弹出层-->
+		<div id="delete_people">
+			<p>删除社团成员</p>
+			<h3>确定要将该用户从本社团中移除?</h3>
+			<span id="delete_cancel">取消</span>
+			<span id="delete_confirm">确认</span>
+		</div>
+		<!--//////////////////////////////弹出层-->
+		<div id="huanjie_div">
+			<p>进行换届</p>
+			<h3>确定要将<b>社长</b>换届给<a href="huanjieren.html">点击选择成员</a>?</h3>
+			<span id="huanjie_cancel">取消</span>
+			<span id="huanjie_confirm">确认</span>
+		</div>
+		<!--//////////////////////////////弹出层-->
+		<div id="yidongfenzu">
+			<p>把成员移动到</p>
+			<span id="add_fenzu">添加分组</span>
+			<div id="fenzu_list">
+				<div class="fenzu">
+					<img src="img/choose1.png" class="choose_fenzu"/>
+					<span class="fenzu_nm">管理员</span>
+					<img src="../ffunction/img/edit_label/cut.png" class="edit_fenzu">
+				</div>
+				<div class="fenzu">
+					<img src="img/choose1.png" class="choose_fenzu" />
+					<span class="fenzu_nm">办公室</span>
+					<img src="../ffunction/img/edit_label/cut.png" class="edit_fenzu">
+				</div>
+				<div class="fenzu">
+					<img src="img/choose1.png" class="choose_fenzu" />
+					<span class="fenzu_nm">宣传部</span>
+					<img src="../ffunction/img/edit_label/cut.png" class="edit_fenzu">
+				</div>
+				<div class="fenzu">
+					<img src="img/choose1.png" class="choose_fenzu" />
+					<span class="fenzu_nm">人事部</span>
+					<img src="../ffunction/img/edit_label/cut.png" class="edit_fenzu">
+				</div>
+				<div class="fenzu">
+					<img src="img/choose1.png" class="choose_fenzu" />
+					<span class="fenzu_nm">外联部</span>
+					<img src="../ffunction/img/edit_label/cut.png" class="edit_fenzu">
+				</div>
+			</div>
+			<span id="fenzu_cancel">取消</span>
+			<span id="fenzu_confirm">确认</span>
+		</div>
+		<!--///////////////////////////添加分组-->
+		<div class="add_fenzu">
+			<p>添加分组</p>
+			<input type="text" placeholder="请输入分组名称(字数不超过6)" id="newfenzu" maxlength="10"/>
+			<span id="add_fenzu_cancel">取消</span>
+			<span id="add_fenzu_confirm">好</span>
+		</div>
+	</body>
+	<script src="js/manage_club_people.js"></script>
+</html>

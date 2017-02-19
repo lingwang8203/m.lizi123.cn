@@ -1,0 +1,254 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	color:#868686 ;
+}
+/*===========================顶部======================================*/
+header{
+	width: 100vw;
+	height: 7vh;
+	background-color: #ffbf2b;
+	text-align: center;
+}
+header p{
+	display: inline-block;
+	font-size: 5vw;
+	float: left;
+	color: white;
+	margin-top: 1.5vh;
+	margin-left: 2vw;
+}
+header span{
+	font-size: 4vw;
+	float: right;
+	margin-right: 3vw;
+	margin-top: 1.6vh;
+	color: white;
+	padding: 0 2vw;
+	border: 0.3rem solid white;
+	border-radius: 15px;
+}
+
+/*////////////////////////////////////////////////////logo*/
+.Club_logo{
+	position: relative;
+	width: 100vw;
+	height: 20vh;
+	background-color: #ece9e3;
+	font-size: 4vw;
+}
+#add_Club_logo{
+	display: block;
+	position: absolute;
+	width: 26vw;
+	height: 15vh;
+	top: 2.5vh;
+	left: 36vw;
+	background-image: url(http://img.lizi123.cn/LiZi/me/img/yuan.png);
+	background-size: 26vw 15vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: auto;
+	z-index: 200;
+}
+#upload_Club_logo{
+	display: block;
+	width: 26vw !important;
+	height: 15vh !important;
+	filter:alpha(opacity=0);
+	opacity: 0;
+	z-index: 200;
+}
+#show_Club_logo{
+	position: relative;
+	width: 26vw !important;
+	height: 15vh !important;
+	margin-left: 36vw;
+	padding-top: 2.5vh;
+}
+#Club_logo{
+	border-radius: 50%;
+}
+#camera{
+	position: absolute;
+	width: 10vw;
+	height: auto;
+	right: 0;
+	bottom: 0;
+	z-index: 201;
+}
+
+
+/*//////////////////////////////////////////中间*/
+.middle{
+	width: 100vw;
+	padding: 3vw 2vw;
+	border-bottom: 2px solid #ece9e3;
+	overflow: auto;
+}
+.middle span{
+	float: left;
+	font-size: 4.5vw;
+	color: black;
+}
+#pageclub_name{
+	display: inline-block;
+	height: 6vw;
+	width: 70vw;
+	margin-left: 3vw;
+	outline: none;
+	margin-top: 0.5vw;
+	font-size: 4.5vw;
+}
+#pageclub_jianjie{
+	height: 19vw;
+	width: 75vw;
+	margin-left: 3vw;
+	font-size: 4.5vw;
+	resize: none;
+	margin-top: 0.5vw;
+}
+#pageclub_leixing{
+	float: left;
+	font-size: 4.5vw;
+	padding: 0.4vh 3vw;
+	background-color: #ffbf2b;
+	margin-left: 3vw;
+	border-radius: 30px;
+	color: white;
+	margin-top: 2.2vw;
+}
+.yinying{
+	width: 100vw;
+	height: 6vh;
+	background-color: #ece9e3;
+}
+.pageclub_photo{
+	width: 100vw;
+	/*padding: 0vw 1vw;*/
+}
+.club_photo{
+	position: relative;
+	width: 19vw;
+	height: 19vw;
+	margin-top: 3vw;
+	display: inline-block;
+	border: 3px solid #ffbf2b;
+}
+.add_pageclub_photo{
+	position: absolute;
+	width: 19vw;
+	height: 19vw;
+	background-image: url(http://img.lizi123.cn/LiZi/publish/img/add_class_details1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 19vw;
+}
+.upload_pageclub_photo{
+	position: absolute;
+	width: 19vw;
+	height: 19vw;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	z-index: 200;
+}
+.show_pageclub_photo{
+	position: relative;
+	display: inline-block;
+	width: 19vw;
+	height: 19vw;
+}
+.cancel_pageclub_photo{
+	position: absolute;
+	width: 6vw;
+	top: 1vw;
+	right: 1vw;
+	display: none;
+	z-index: 300;
+}
+.photo_box{
+	position: relative;
+	display: inline-block;
+	width: 24vw;
+}
+
+
+/*/////////////////////弹出层*/
+#back{
+	position: fixed;
+	top: 0vh;
+	width: 100vw;
+	height: 100vh;
+	background-color: #949494;
+	z-index: 999;
+	display: none;
+}
+#choose_fenlei{
+	position: fixed;
+	width: 80vw;
+	height: 40vh;
+	top: 30vh;
+	display: none;
+	left: 10vw;
+	z-index: 999;
+	background-color: white;
+}
+.tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	/*border-bottom: 0.2rem solid #dcdcdc;*/
+	/*background-color: burlywood;*/
+}
+.class{
+	font-size: 5vw;
+	font-weight: normal;
+	width: 50%;
+	float: left;
+	color: black;
+	padding:0.2rem 0 0.3rem 1rem;
+	margin:2rem 0 3rem 1.2rem;
+	/*background-color: blue;*/
+	border-left: 1rem solid #FFBF2B;
+	display: inline-block;
+	/*background-color: blue;*/
+}
+
+.tabs{
+	clear: both;
+	width: 100vw;
+	font-size: 4.5vw;
+}
+.unchecked{
+	color: #ff9000;
+	border: 2px solid #ff9000;
+	padding: 0.5vh 3vw;
+	border-radius: 15vw;
+	margin-left: 9vw;
+}
+.checked{
+	color: white;
+	border: 2px solid #ff9000;
+	padding: 0.5vh 3vw;
+	border-radius: 15vw;
+	margin-left: 9vw;
+	background-color: #ff9000;
+}
+#confirm{
+	font-size: 5vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 5vw;
+	text-align: center;
+	width: 100%;
+}

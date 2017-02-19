@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>秀秀详情</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_241_function_show_concret.js"></script>
+	</head>
+	<style>
+		.show_photo1 {
+			width: 100%;
+		}
+		
+		.showphoto3 {
+			width: 5.7rem;
+			height: 4rem;
+			margin-bottom: 0.2rem;
+		}
+		
+		.aui-col-xs-55 {
+			width: 48%;
+			position: relative;
+			float: left;
+		}
+		
+		@media screen and (min-width:365px) {
+			.showphoto3 {
+				width: 5.7rem;
+				height: 4rem;
+				margin-bottom: 0.2rem;
+			}
+		}
+		
+		.show_photo2 {
+			width: 7.6rem;
+			height: 6rem;
+			margin-bottom: 0.1rem;
+		}
+		
+		.showCriticPhoto3 {
+			width: 5rem;
+			height: 3rem;
+		}
+		
+		.showCriticPhoto2 {
+			width: 7.4rem;
+			height: 4.44rem;
+		}
+	</style>
+
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			<div class="aui-pull-left aui-col-xs-2 aui-font-size-18" id="return" >
+				<i class="aui-icon-left aui-iconfont"></i>
+			</div>
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16">秀秀正文</div>
+		</header>
+		<!----------------------秀秀推送格式(2图)-------------->
+
+		<div id="Show_content" style="display: block;">
+			<li class="aui-row aui-padded-b-5 aui-padded-t-5" style="width:100%;background: white;">
+				<div class="aui-col-xs-12 aui-row">
+					<div class="aui-col-xs-2 aui-text-center" style="margin-top: 0.1rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html" target="_blank"><img id="headImg" src="http://img.lizi123.cn/new_lizi/2_function/24_function_show/cover_image.png" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;" /></a>
+					</div>
+					<div class="aui-col-xs-6 aui-row aui-padded-t-5">
+						<div id="name" class="aui-col-12 aui-font-size-14"></div>
+						<div id="intro" class="aui-col-12 aui-font-size-12" style="color: #414141;"></div>
+					</div>
+					<div class="aui-col-xs-4 aui-font-size-12" style="margin-top: 0.3rem;color: #9E9E9E;">
+						<div id="time" class="aui-pull-right aui-padded-r-5"></div>
+					</div>
+				</div>
+				<div id="text" class="aui-font-size-14 aui-col-xs-12  aui-padded-l-10 aui-padded-r-5"></div>
+				<div id="photo_box" class="aui-row aui-col-xs-12 " style="padding:0.2rem 0 0.1rem 0.3rem;padding-bottom: 0;">
+					<div class="aui-col-xs-55 aui-text-center" style="margin-right: 0.4rem;">
+						<img src="http://img.lizi123.cn/new_lizi/2_function/24_function_show/cover_image.png" class="showphoto3" id="image_show" />
+					</div>
+					<div class="aui-col-xs-55 aui-text-center">
+						<img src="http://img.lizi123.cn/new_lizi/2_function/24_function_show/cover_image.png" class="showphoto3" id="show_img" onclick="closeDiv('small_img')" />
+					</div>
+				</div>
+				<!--div class="aui-row aui-col-xs-12">
+				<div class="aui-col-xs-2 aui-row aui-margin-l-15 aui-pull-left">
+					<i class="aui-iconfont aui-icon-like" name="xiuxiu_dianzan"></i>
+					<span id="zan_number"class="aui-font-size-12">125</span>
+				</div>
+				<a href="#" target="_blank">
+					<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left">
+						<i class="aui-iconfont aui-icon-comment"></i>
+						<span id="critic_number"class="aui-font-size-12">289</span>
+					</div>
+				</a>-->
+		</div>
+		</li>
+		<div class="hr"></div>
+		<div class="aui-content" style="width: 100%;padding-top: 0.2rem;">
+			<p class="tit" style="border-left: 0;	border-bottom: 2px solid #ffac0e;width: 2rem;">评论</p>
+		</div>
+		<ul id="critic_list">
+			<!--<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-2 aui-text-center" style="margin-top: 0.1rem;">
+						<a href="../../5_mine/51_mine_homepage/51_mine_homepage.html"target="_blank"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo6.jpg" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;"/></a>
+					</div>
+					<div class="aui-row aui-col-xs-10">
+						<div class="aui-col-xs-12 aui-row  aui-padded-t-5">
+							<div class="aui-col-xs-10 aui-font-size-14">呜啦啦。</div>	
+							<div class="aui-col-xs-2 aui-font-size-14" id="time">3小时前</div>
+						</div>
+						<div name="critic_text">
+							<div class="aui-col-xs-12 aui-font-size-14"style="display: inline-block !important;">有意思~</div>
+						</div>	
+						<div class="aui-row aui-col-xs-12">
+							<div class="aui-col-xs-2 aui-row aui-pull-left">
+								<img src="http://img.lizi123.cn/new_lizi/2_function/24_function_show/ic_small_good.png" class="small_good" name="critic_zan"/>
+								<span class="aui-font-size-12" style="font-family: '微软雅黑';">125</span>
+							</div>
+							<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left" tapmode onclick="openCriticDialog('input',0)">
+								<i class="aui-iconfont aui-icon-comment"></i>
+								<span class="aui-font-size-12">289</span>
+							</div>
+						</div>	
+						<div  class="aui-padded-t-5 answer_critic">
+							<div class="aui-col-xs-12 aui-font-size-14" tapmode onclick="openReplyCriticDialog('input',0,0)">
+								<span style="color: blue;">小菜鸟:</span>
+								<span style="color: blue;"></span>
+								<span style="word-break: break-all;">李云李云李云李云云李云李云李云李云李云李云李云李云李云李</span>
+							</div>
+							<div class="aui-col-xs-12 aui-font-size-14" tapmode onclick="openReplyCriticDialog('input',0,1)">
+								<span style="color: blue;">小菜鸟:</span>
+								<span style="color: blue;"></span>
+								<span style="word-break: break-all;">李云李云李云李云云李云李云李云李云李云李云李云李云李云李</span>
+							</div>
+							<div class="aui-col-xs-12 aui-font-size-14" tapmode onclick="openReplyCriticDialog('input',0,2)">
+								<span style="color: blue;">小菜鸟:@</span>
+								<span style="color: blue;">呜啦啦</span>
+								<span style="word-break: break-all;">李云李云李云李云云李云李云李云李云李云李云李云李云李云李</span>
+							</div>
+						</div>
+					</div>					
+				</div>	
+				<div class="aui-hr"></div>-->
+			<!--</li>-->
+			<!--<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-2 aui-text-center" style="margin-top: 0.1rem;">
+						<a href="../../5_mine/51_mine_homepage/51_mine_homepage.html"target="_blank"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo6.jpg" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;"/></a>
+					</div>
+					<div class="aui-row aui-col-xs-10">
+						<div class="aui-col-xs-12 aui-row  aui-padded-t-5">
+							<div class="aui-col-xs-10 aui-font-size-14">呜啦啦。</div>	
+							<div class="aui-col-xs-2 aui-font-size-14" id="time">3小时前</div>
+						</div>
+						<div name="critic_text">
+							<div class="aui-col-xs-12 aui-font-size-14"style="display: inline-block !important;">有意思~</div>
+						</div>	
+						<div class="aui-row aui-col-xs-12">
+							<div class="aui-col-xs-2 aui-row aui-pull-left">
+								<img src="http://img.lizi123.cn/new_lizi/2_function/24_function_show/ic_small_good.png" class="small_good" name="critic_zan"/>
+								<span class="aui-font-size-12" style="font-family: '微软雅黑';">125</span>
+							</div>
+							<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left" tapmode onclick="openCriticDialog('input',1)" >
+								<i class="aui-iconfont aui-icon-comment"></i>
+								<span class="aui-font-size-12">289</span>
+							</div>
+						</div>
+						<div  class="aui-padded-t-5 answer_critic">
+						</div>
+					</div>					
+				</div>	
+				<div class="aui-hr"></div>
+			</li>-->
+		</ul>
+		<div class="aui-row aui-pull-left aui-col-xs-12" style="border-top: 1px solid  #DDDDDD;position: fixed;bottom: 0rem;">
+			<div class="aui-col-xs-4 aui-row aui-padded-b-10 aui-padded-t-10" style="border-right:1px  solid  #DDDDDD;" id="publish_critic" tapmode onclick="openDialog('input')">
+				<div class=" aui-col-xs-6" style="padding-right: 0.2rem;">
+					<img src="http://img.lizi123.cn/new_lizi/2_function/24_function_show/ic_big_comment.png" class="good" />
+				</div>
+				<div class="aui-col-xs-6 aui-font-size-12 num" style="color: #ffc040;" id="critic_number">18</div>
+			</div>
+			<div class="aui-col-xs-4 aui-row aui-padded-b-10 aui-padded-t-10" style="border-right:1px  solid  #DDDDDD;">
+				<div class=" aui-col-xs-6" style="padding-right: 0.2rem;">
+					<img src="http://img.lizi123.cn/new_lizi/2_function/23_function_sports/ic_big_good.png" class="good" id="zan_index" />
+				</div>
+				<div class="aui-col-xs-6 aui-font-size-12 num" style="color: #ffc040;" id="zan_number">33</div>
+			</div>
+			<div class="aui-col-xs-4 aui-row aui-padded-b-10 aui-padded-t-10 aui-text-center">
+				<img src="http://img.lizi123.cn/new_lizi/2_function/23_function_sports/ic_like.png" class="like" id="shoucang_index" />
+			</div>
+		</div>
+		</div>
+		<div style="width: 100%;height: 3rem;"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/aui-dialog.js"></script>
+	<script type="text/javascript">
+		//返回---------------------------
+		var backurl = document.referrer;
+		var turn_back = document.getElementById("return");
+		//var str = "aaabbbcccdddeeefff";  
+
+		//alert(str);//结果bbbcccdddeeefff  
+		turn_back.addEventListener("touchstart", function(e) {
+			
+			if(backurl == "http://m.lizi123.cn/4_ground/4_ground_iframe4.html") {
+				window.open("http://m.lizi123.cn/?url_index=gro4");
+			} else {
+				str = backurl.match(/=(\S*)/)[0];
+				backurl = "http://m.lizi123.cn/3_publish/34_publish_club/342_publish_club_step2_Manage.html?club_id" + str + "&xiuxiu=0";
+				// alert(backurl);
+				window.open(backurl);
+			}
+		}, false);
+
+		var imgtag = document.getElementsByTagName("img");
+		for(var i = 0; i < imgtag.length; i++) {
+			imgtag[i].addEventListener("touchstart", function(e) {
+				e.preventDefault();
+				var src = imgtag[i].src;
+			}, false)
+		}
+		var time = new Date();
+		var dialog = new auiDialog({})
+
+		function openDialog(type) {
+			switch(type) {
+				case "input":
+					dialog.prompt({
+						title: "发表评论",
+						text: '你想说点什么',
+						buttons: ['取消', '确定']
+					}, function(ret) {
+						if(ret.buttonIndex == 2) {
+							if(ret.text != "") {
+								//	                        dialog.alert({
+								//	                            title:"提示",
+								//	                            msg: "您输入的内容是："+ret.text,
+								//	                            buttons:['确定']
+								//	                        });
+								var length = $(".answer_critic").length;
+								//	                    		alert(length);
+								var htm = "<li>";
+								htm += "<div class='aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5'>";
+								htm += "<div class='aui-col-xs-2 aui-text-center' style='margin-top: 0.1rem;'>";
+								// 	  						htm+="<a href='../../5_mine/51_mine_homepage/51_mine_homepage.html?user_id="+obj.critic[j].user_id+"'target='_blank'><img src='"+obj.critic[j].user_headImg+"' class='aui-img-round' style='width:2rem;height:2rem;margin-top: 0.1rem;'/></a></div>";
+								// 	  						htm+="<div class='aui-row aui-col-xs-10'><div class='aui-col-xs-12 aui-row aui-padded-t-5'>";
+								// 	  						htm+="<div class='aui-col-xs-10 aui-font-size-14'>"+obj.critic[j].name+"</div>	";
+								// 	  						htm+="<div class='aui-col-xs-2 aui-font-size-14' id='time'>"+obj.critic[j].time+"</div></div>";
+								// 	  						htm+="<div name='critic_text'>";
+								// 	  						htm+="<div class='aui-col-xs-12 aui-font-size-14'style='display: inline-block !important;'>"+obj.critic[j].content+"</div></div>";
+								// 	  						htm+="<div class='aui-row aui-col-xs-12'><div class='aui-col-xs-2 aui-row aui-pull-left'>";
+								// 	  						htm+="<img src='http://img.lizi123.cn/new_lizi/2_function/24_function_show/ic_small_good.png' class='small_good' name='critic_zan'/>";
+								// 	  						htm+="<span class='aui-font-size-12' style='padding-left:4px !important;'>"+obj.critic[j].zan_number+"</span></div>";
+								// 	  						htm+="<div class='aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left'>";
+								// 	  						htm+="<i class='aui-iconfont aui-icon-comment'></i>";
+								// 	  						htm+="<span class='aui-font-size-12' style='padding-left:4px !important;'>"+obj.critic[j].critic_number+"</span></div></div></div></div><div class='aui-hr'></div></li>";
+								htm += "<a href='../../5_mine/51_mine_homepage/51_mine_homepage.html'target='_blank'><img src='" + online_user_image + "' class='aui-img-round' style='width:2rem;height:2rem;margin-top: 0.1rem;'/></a></div>";
+								htm += "<div class='aui-row aui-col-xs-10'><div class='aui-col-xs-12 aui-row aui-padded-t-5'>";
+								htm += "<div class='aui-col-xs-10 aui-font-size-14'>" + online_user_name + "</div>	";
+								htm += "<div class='aui-col-xs-2 aui-font-size-14' id='time'>" + time.getHours() + ":" + time.getMinutes() + "</div></div>";
+								htm += "<div name='critic_text'>";
+								htm += "<div class='aui-col-xs-12 aui-font-size-14'style='display: inline-block !important;'>" + ret.text + "</div></div>";
+								htm += "<div class='aui-row aui-col-xs-12'><div class='aui-col-xs-2 aui-row aui-pull-left'>";
+								htm += "<img src='http://img.lizi123.cn/new_lizi/2_function/24_function_show/ic_small_good.png' class='small_good' name='critic_zan'/>";
+								htm += '<span class="aui-font-size-12" style="padding-left:4px" !important;">0</span></div>';
+								htm += "<div class='aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left' tapmode onclick='openCriticDialog(\"input\"," + length + ")'>";
+								htm += "<i class='aui-iconfont aui-icon-comment'></i>";
+								htm += "<span class='aui-font-size-12' style='padding-left:4px !important;'>0</span></div></div><div  class='aui-padded-t-5 answer_critic'></div></div></div><div class='aui-hr'></div></li>";
+								$("#critic_list").append(htm);
+								showComment(ret.text);
+							} else {
+								alert("输入不能为空哦");
+							}
+						}
+					})
+					break;
+				default:
+					break;
+
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var time = new Date();
+		var critic_dialog = new auiDialog({})
+
+		function openCriticDialog(type, index, comment_id) {
+			switch(type) {
+				case "input":
+					dialog.prompt({
+						title: "发表评论",
+						text: '你想说点什么',
+						buttons: ['取消', '确定']
+					}, function(ret) {
+						if(ret.buttonIndex == 2) {
+							if(ret.text != "") {
+								var length = $(".answer_critic").eq(index).children().length;
+								//	                    		alert(length);
+								var html = '<div class="aui-col-xs-12 aui-font-size-14" tapmode onclick="openReplyCriticDialog(\'input\',' + index + ',' + length + ')">';
+								html += '<span style="color: blue;">' + online_user_name + ':</span>';
+								html += "<span style='color: blue;'></span>";
+								html += '<span style="word-break: break-all;">' + ret.text + '</span></div>';
+								$(".answer_critic").eq(index).append(html);
+								showComment(ret.text, comment_id);
+							} else {
+								alert("输入不能为空哦");
+							}
+						}
+					})
+					break;
+				default:
+					break;
+
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var reply_critic_dialog = new auiDialog({})
+
+		function openReplyCriticDialog(type, index1, index2, comment_id) {
+			switch(type) {
+				case "input":
+					dialog.prompt({
+						title: "回复评论",
+						text: '你想说点什么',
+						buttons: ['取消', '确定']
+					}, function(ret) {
+						if(ret.buttonIndex == 2) {
+							if(ret.text != "") {
+								var length = $(".answer_critic").eq(index1).children().length;
+								//		                    	alert(length);
+								var html = '<div class="aui-col-xs-12 aui-font-size-14" tapmode onclick="openReplyCriticDialog(\'input\',' + index1 + ',' + length + ')">';
+								var to = $(".answer_critic").eq(index1);
+								to = to.children()[index2];
+								if(to.children[1].innerHTML != "") {
+									to = to.children[1].innerHTML;
+								} else {
+									to = to.children[0].innerHTML;
+									to = to.substring(0, to.length - 1);
+								}
+								html += '<span style="color: blue;">' + online_user_name + ':@</span>';
+								html += '<span style="color: blue;padding-left:3px;">' + to + '</span>';
+								html += '<span style="word-break: break-all;padding-left:3px;">' + ret.text + '</span></div>';
+								$(".answer_critic").eq(index1).append(html);
+								showComment(ret.text, comment_id);
+							} else {
+								alert("输入不能为空哦");
+							}
+						}
+					})
+					break;
+				default:
+					break;
+
+			}
+		}
+	</script>
+
+</html>

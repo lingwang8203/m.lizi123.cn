@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>反馈</title>
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />	
+	    <style type="text/css">
+			.aui-btn-block {
+			    display: block;
+			    width: 70%;
+			    padding: 0.6rem 0;
+			    margin-bottom: 0;
+			    margin-left: 15%;
+			    font-size: 0.9rem;
+			}
+	    </style>
+	</head>
+	<body style="background:#eaeaea;">
+		<div style="width: 100vw;height: 1rem;;"></div>
+		<li class="aui-list-item aui-margin-t-10">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-input">
+                    <textarea placeholder="输入你的意见详情....." style="text-indent: 32px;height: 58vh;resize: none;background-color: white;" maxlength="140"/></textarea>
+                </div>
+            </div>
+        </li>
+       	<div style="background-color: #eaeaea;padding-top: 2.6rem;padding-bottom: 2.6rem;">
+	        <div class="aui-content-padded">
+	        	<p><div class="aui-btn aui-btn-warning aui-btn-block"  tapmode onclick="showDefault('success')">提交</div></p>
+	        </div>
+        </div>
+	</body>
+	<script type="text/javascript" src="../../js/aui-toast.js" ></script>
+	<script type="text/javascript">
+//	    apiready = function(){
+//	        api.parseTapmode();
+//	    }
+	    var toast = new auiToast();
+	    function showDefault(type){
+	        switch (type) {
+	            case "success":
+	                toast.success({
+	                    title:"提交成功",
+	                    duration:2000
+	                });
+	                break;
+	            default:
+	                // statements_def
+	                break;
+	        }
+	        window.open("http://m.lizi123.cn/?url_index=me");
+	    }
+	
+	</script>
+</html>

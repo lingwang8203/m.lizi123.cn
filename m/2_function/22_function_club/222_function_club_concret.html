@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">	
+	<title>社团主页</title>
+	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/iconfont_like.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script src="../../js/jquery-2.2.3.min.js"></script>
+	<script src="js/ajax_222_function_club_concret.js"></script>
+</head>
+
+<style>
+	#club_headImg{
+	width:3rem;height:3rem;	margin-top: 1rem;
+	}
+	
+	@media screen and (min-width:365px){ 
+	#club_headImg{
+	width:4rem;height:4rem;	margin-top: 0;
+	}
+		 }	
+</style>
+<body>
+	<header class="aui-bar aui-bar-nav">
+    		<a class="aui-pull-left aui-btn">
+        		<span class="aui-iconfont aui-icon-left"></span>
+    		</a>
+    		<div id="club_title" class="aui-title">文学社</div>
+	</header>
+	
+	
+	<div class="aui-content">
+		<ul class="aui-list">
+			<li class="aui-row aui-padded-b-5 aui-padded-t-0"style="width:100%;height: auto;position: relative;">
+				<div class="aui-col-xs-12"style="padding: 0;margin: 0;height: auto;">
+					<img src="http://m.lizi123.cn/2_function/22_function_club/image/she_fenmian.jpg" id="club_fengmian" style="height: 16rem;width: 100%;"/>
+				</div>
+				<div class="sportcontect" style="width: 100%;height: auto;position: absolute;bottom: 0.5rem;">
+					<div style="width: 100%;height: auto;">
+						<div class="aui-col-xs-20 out"style="width: 100%;">
+							<div class="aui-col-xs-12 in_opacity"style="width: 100%;"></div>
+							<div class="aui-col-xs-12 miaoBian aui-margin-b-15 weiZhi"style="width: 100%;">
+							    <div class="aui-col-xs-9 aui-row aui-pull-right ">
+									<div class="aui-font-size-16 aui-col-xs-8 "style="color: white;" id="club_name">文学社<div class="aui-font-size-12 aui-col-xs-8 aui-pull-right aui-padded-t-5"style="color: white;text-align: left;" id="club_school">(华侨大学)</div></div>
+								</div>
+								<div class="aui-col-xs-12 aui-row aui-padded-t-10 aui-padded-l-15 aui-padded-r-15">
+									<p class="aui-font-size-12 aui-col-xs-14" style="color: white;line-height: 130%;" id="club_miaoshu">"俨然依旧，一副温柔娴淑岁月安好的样子谢你们，带着包容，依次出现在我那不上不下的年纪里 "  </p>
+								</div>
+							</div>
+							<div class="aui-row aui-col-xs-3 aui-pull-right aui-padded-b-5 aui-padded-r-5">
+								<div class="iconfont_like icon-xin aui-pull-right aui-font-size-20 aui-col-xs-12 " style="color: white;" id="club_shoucang_index"><div class="aui-label lab_join aui-margin-l-15 aui-font-size-12" id="club_shoucang_number">178</div></div>
+								<div class="aui-row aui-label lab_join  aui-pull-right aui-font-size-14 aui-col-xs-10 aui-margin-t-5 aui-margin-r-15"style="color: white;text-align: center;border-radius: 0.4rem;" id="club_join_index">+加入</div>
+							</div>
+							<div class="aui-col-xs-4 aui-margin-l-10 imgWeiZhi">
+					           <img src="image\TouXiang_22Club.jpg" id="club_headImg" class="aui-img-round"/>
+				           </div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active"id="impress">社团印象</div>
+			    <div class="aui-tab-item"id="show"><div></div>社团秀秀</div>
+			    <div class="aui-tab-item"id="memory">社团记忆</div>
+			</div>
+	</div>
+	<iframe id="ifram" style="width: 100%;height: 50em;" src=""frameborder=no  border=0  marginwidth=0  marginheight=0  ></iframe>
+	<img src="../21_function_class/img/ic_edit.png" style="position: fixed;bottom: 2.5rem;right: 2rem;width: 3rem;height: auto;z-index: 999;display: none;" id="publish_club_xiuxiu">
+	<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/ic_write.png" style="position: fixed;bottom: 2.5rem;right: 2rem;width: 3rem;height: auto;z-index: 999;display: none;" id="publish_club_jiyi">
+</body>
+<script type="text/javascript" src="js/aui-tab.js" ></script>
+
+	<script type="text/javascript">
+        apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+<script>
+window.onload=function(){
+		var url=location.href;  
+  		var tmp1=url.split("?")[1];  
+        var tmp3=tmp1.split("=")[2];  
+        var parm1=tmp3;  
+        club_id=tmp1.split("&")[0];  
+        club_id=club_id.split("=")[1];  
+        if(parm1=="2"){
+        	document.getElementById("ifram").src="2222_function_club_concret_frame2.html?club_id="+club_id;
+        	document.getElementById("ifram").style.height="60em";
+            document.getElementById("publish_club_xiuxiu").style.display="block";
+            document.getElementById("impress").className="aui-tab-item";
+            document.getElementById("memory").className="aui-tab-item";
+            document.getElementById("show").className="aui-tab-item aui-active";
+        }else if(parm1=="3"){
+        	document.getElementById("ifram").src="2223_function_club_concret_frame3.html?club_id="+club_id;
+        	document.getElementById("ifram").style.height="60em";
+            document.getElementById("publish_club_jiyi").style.display="block";
+            document.getElementById("impress").className="aui-tab-item";
+            document.getElementById("show").className="aui-tab-item";
+            document.getElementById("memory").className="aui-tab-item aui-active";
+        }
+}
+</script>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />	
+	    <link rel="stylesheet" type="text/css" href="css/mine.css" />	
+	    <script src="../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_mine.js"></script>
+	    <style type="text/css">
+	    	.aui-border-b:after{
+				transform: none !important;
+				height: 0;
+			}
+			.aui-list-item-arrow:before{
+				border: 2px solid white;
+				border-top: none;
+   				border-right: none;
+			}
+	    </style>
+	</head>
+	<body>
+		<div class="aui-card-list aui-bg-base  aui-padded-t-10 aui-padded-b-10" style="margin: 0;">
+			<a href="http://m.lizi123.cn/6_chat/new_chat_homepage.php"target="_blank" class="aui-pull-right aui-btn aui-margin-r-5" style="padding: 0;background-color: #FFBF2A !important;">
+		        <img src="http://img.lizi123.cn/LiZi/index/img/news_weidu.png" class="btn-news" id="message_state"/>
+		    </a>
+	        <div class="aui-card-list-header aui-card-list-user aui-border-b" style="overflow: auto;">
+                  <a href="50_mine_homepage_self/50_mine_homepage_self.html" target="_blank">
+	            <div class="aui-card-list-user-avatar" id="user_headImgDiv">
+                   
+	                <img src="" class="aui-img-round" id="user_headImg"/>
+                      
+	            </div>
+                </a>
+	            <div class="aui-card-list-user-name aui-text-white aui-padded-t-5">
+	                <div class="aui-font-size-20">Hi,<span id="user_name"></span>~</div>
+	            </div>
+	            <a href="50_mine_homepage_self/50_mine_homepage_self.html" target="_blank">
+	            <div class="aui-card-list-user-info aui-text-white aui-padded-t-5 aui-list-item-arrow">这是你连续签到的第 <span id="user_login_time" style="font-size: large;"></span> 天</div>
+	            </a>
+	            <div class="aui-card-list-user-info aui-text-white aui-padded-t-5">连续登陆签到将会获得积分哦</div>
+	        </div>
+    	</div>
+    	<section class="aui-grid" style="color: #a5a5a5 !important;">
+		    <div class="aui-row">
+		    	<a href="52_mine_class/521_mine_classManege.html" target="_blank" style="color: #a5a5a5 !important;">
+		        <div class="aui-col-xs-3" style="padding: 0.5rem;">
+		           	<img src="http://img.lizi123.cn/LiZi/me/img/my-class.jpg" class="mine-tabs"/>
+		            <div class="aui-grid-label" style="margin-top: 0;">我的课程</div>
+		        </div>
+		        </a>
+		        <a href="53_mine_club/531_mine_club_manage.html" target="_blank" style="color: #a5a5a5 !important;">
+			        <div class="aui-col-xs-3" style="padding: 0.5rem;">
+			           	<img src="http://img.lizi123.cn/LiZi/me/img/my-club.png" class="mine-tabs" style="width: 19vw !important;height: auto;"/>
+			            <div class="aui-grid-label" style="margin-top: 0;">我的社团</div>
+			        </div>
+		        </a>
+		        <a href="54_mine_sports/54_mine_sportsManege.html" target="_blank" style="color: #a5a5a5 !important;">
+		        <div class="aui-col-xs-3" style="padding: 0.5rem;">
+		           	<img src="http://img.lizi123.cn/LiZi/me/img/my-activ.png" class="mine-tabs" style="width: 14.3vw !important;height: auto;"/>
+		            <div class="aui-grid-label" style="margin-top: 0;">我的活动</div>
+		        </div>
+		        </a>
+		        <a href="55_mine_show/55_mine_showManege.html" target="_blank" style="color: #a5a5a5 !important;">
+		        <div class="aui-col-xs-3" style="padding: 0.5rem;">
+		           	<img src="http://img.lizi123.cn/LiZi/me/img/my-show.png" class="mine-tabs" style="width: 15.2vw !important;height: auto;"/>
+		            <div class="aui-grid-label" style="margin-top: 0;">我的秀秀</div>
+		        </div>
+		        </a>
+		    </div>
+		</section>
+		<div class="aui-content aui-margin-b-15">
+		    <ul class="aui-list aui-media-list">
+		        <li class="aui-list-header"> </li>
+		        <a href="56_mine_focus/56_mine_focus.html"target="_blank">
+		        <li class="aui-list-item aui-list-item-middle">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media" style="width: 1.8rem;">
+		                    <img src="http://img.lizi123.cn/LiZi/me/img/my-guanzhu.png"  style="width: 90%;height: auto;">
+		                </div>
+		                <div class="aui-list-item-inner aui-font-size-16" style="width: 23%;padding-right: 0;">我的关注</div>
+		                <!--<div class="aui-list-item-media" style="width: 1.2rem;">//有更新时出现点
+		                    <img src="http://img.lizi123.cn/LiZi/me/img/dian.png" id="guanzhu_state" >
+		                </div>-->
+		            </div>
+		        </li></a>
+		        <a href="57_mine_fans/57_mine_fans.html"target="_blank">		        
+		        <li class="aui-list-item aui-list-item-middle">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media" style="width: 1.8rem;">
+		                    <img src="http://img.lizi123.cn/LiZi/me/img/my-fensi.png" style="width: 110%;height: auto;">
+		                </div>
+		                <div class="aui-list-item-inner aui-font-size-16" style="width: 23%;padding-right: 0;">我的粉丝</div>
+		                <!--<div class="aui-list-item-media" style="width: 2.6rem;">//有更新时出现
+		                    <img src="http://img.lizi123.cn/LiZi/me/img/new.png" id="fensi_state">
+		                </div>-->
+		            </div>
+		        </li></a>
+		        <li class="aui-list-header"> </li>
+	        	<a href="58_mine_collect/58_mine_collect.html"target="_blank">
+		        <li class="aui-list-item aui-list-item-middle">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media" style="width: 1.8rem;">
+		                    <img src="http://img.lizi123.cn/LiZi/me/img/my-collection.png"  style="width: 110%;height: auto;">
+		                </div>
+		                <div class="aui-list-item-inner aui-font-size-16">我的收藏</div>
+		            </div>  
+		        </li> </a>
+		        <li class="aui-list-header"> </li>
+		        <a href="../7_login/74_login_chooseLabel/74_login_chooseLabel.html" target="_blank">
+			        <li class="aui-list-item aui-list-item-middle">
+			            <div class="aui-media-list-item-inner">
+			                <div class="aui-list-item-media" style="width: 1.8rem;">
+			                    <img src="http://img.lizi123.cn/LiZi/me/img/help.png" >
+			                </div>
+			                <div class="aui-list-item-inner aui-font-size-16">我的标签</div>
+			            </div>
+			        </li>
+		        </a>
+		        <li class="aui-list-header"> </li>
+		        <a href="59_mine_helpBack/59_mine_helpBack.html " target="_blank">
+			        <li class="aui-list-item aui-list-item-middle">
+			            <div class="aui-media-list-item-inner">
+			                <div class="aui-list-item-media" style="width: 1.8rem;">
+			                    <img src="http://img.lizi123.cn/LiZi/me/img/set.png" >
+			                </div>
+			                <div class="aui-list-item-inner aui-font-size-16">帮助与反馈</div>
+			            </div>
+			        </li>
+		        </a>
+		        <li class="aui-list-header"> </li>
+		    </ul>
+		</div>
+	</body>
+</html>

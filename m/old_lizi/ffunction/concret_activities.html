@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>活动详情</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/concret_activities.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+	</head>
+	<body>
+		<!-- =====内容==== -->
+		<div id="tou">
+		<a href="ffunction.html"><img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/back.png" id="back"/></a>
+		<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/fenxiang.png" id="fenxiang"/>
+		<img id ="class_image" src="" class="full_photo"/>
+		<div id="activities_name"></div>
+		<p id="name"><!--科技创新大赛--></p>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a id="brief" class="nav_on">详情</a></li>
+				<li><a id="comment" class="nav_off">花絮</a></li>
+				<li><a id="record" class="nav_off">进展</a></li>
+			</ul>
+		</div>
+		<!-- <div class="yinying"></div> -->
+		<!--内敛内容-->
+		<iframe id="middle" src="concret_activities_brief.html"></iframe>
+		<!-- =====置地浮动部分====== -->
+		<div class="bottom" id="bottom">
+				<p class="join_before" id="join">参加活动</p>
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/tubiao.png" id="zan"/>
+				<p id="zan_num"><!--170-->170</p>
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/xin.png" id="guanzhu"/>
+		</div>
+		<a id="fabu"><img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/pencil.png"></a>
+	</body>
+	<script src="js/concret_activities.js"></script>
+	<script type="text/javascript" src="js/iframe.js"></script>
+	<script type="text/javascript">
+				var	middle=document.getElementById("middle");	
+				var brief=document.getElementById("brief");
+				var _comment=document.getElementById("comment");
+				var record=document.getElementById("record");
+				var bottom=document.getElementById("bottom");
+				var isActPublisher = 0;//是否是发布�?
+				//获取url参数
+    			var id = getQueryString("activity_id");
+    			//alert(id);
+				$.ajax({
+					type:"post",
+					url:"http://api.lizi123.cn/index.php/home/activity/isActPublisher",
+					data:{
+						"activity_id":id,
+				    },
+				    success:function(data){
+				    	var obj=eval(data);
+				    	console.dir(obj);
+				    	if (obj.status==200) {
+				    		isActPublisher = 1;
+				    	}
+				    },
+				    error:function(data)
+				    {
+				    	alert("获取数据失败�?);
+				    }
+				    
+				});
+				//发布花絮
+				document.getElementById("fabu").href="fabu_huaxu.html?activity_id="+id; 
+				//切换至详�?
+				brief.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="nav_on";
+					middle.src="concret_activities_brief.html?activity_id="+id;
+					bottom.style.display="block";
+					document.getElementById("fabu").style.display="none";
+					_comment.className="nav_off";
+					record.className="nav_off";
+				},false);	
+				//切换至花�?
+				_comment.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="nav_on";
+					middle.src="concret_activities_huaxu.html?activity_id="+id;
+					middle.style.height="100vh";
+					bottom.style.display="none";
+					document.getElementById("fabu").style.display="inline-block";
+					brief.className="nav_off";
+					record.className="nav_off";
+				},false);	
+				//切换至进�?
+				record.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="nav_on";
+					if (isActPublisher) {
+						middle.src="concret_activities_xiangqing_publisher.html?activity_id="+id;
+					}else{
+						middle.src="concret_activities_xiangqing_tourist.html?activity_id="+id;
+					}
+					
+					middle.style.height="100vh";
+					bottom.style.display="none";
+					document.getElementById("fabu").style.display="none";
+					brief.className="nav_off";
+					_comment.className="nav_off";
+				},false);	
+//获取url参数
+function getQueryString(name){ 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) {
+		return unescape(r[2]); 
+	}else{
+		return null; 
+	}
+}; 
+	</script>
+	<script>
+		var url=location.href;  
+  		var tmp1=url.split("?")[1];  
+        var tmp3=tmp1.split("=")[1];  
+        var parm1=tmp3;  
+        if(parm1=="huaxu"){
+        		_comment.className="nav_on";
+				middle.src="concret_activities_huaxu.html?activity_id="+id;
+				middle.style.height="100vh";
+				bottom.style.display="none";
+				document.getElementById("fabu").style.display="inline-block";
+				brief.className="nav_off";
+				record.className="nav_off";
+        }
+        else if(parm1=="jinzhan"){
+        	record.className="nav_on";
+					if (isActPublisher) {
+						middle.src="concret_activities_xiangqing_publisher.html?activity_id="+id;
+					}else{
+						middle.src="concret_activities_xiangqing_tourist.html?activity_id="+id;
+					}
+					
+					middle.style.height="100vh";
+					bottom.style.display="none";
+					document.getElementById("fabu").style.display="none";
+					brief.className="nav_off";
+					_comment.className="nav_off";
+        }
+	</script>
+</html>

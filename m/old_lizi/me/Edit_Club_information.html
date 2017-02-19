@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>我管理的社团</title>
+		<link href="css/Edit_Club.css" rel="stylesheet"/>
+		<script src="js/Edit_Club.js"></script>
+		<script src="js/Edit_ClubInfo.js"></script>
+	</head>
+	<body>
+		<!--////////////////////顶部-->
+		<header>
+			<a href="manage_club.html"><p><编辑社团资料</p></a>
+			<a href="#"><span id="furnish">完成</span></a>
+		</header>
+		<!--////////////////////////////////logo-->
+		<div class="Club_logo">
+			<form action="" method="post" enctype="multipart/form-data">
+				<a href="#" id="add_Club_logo">
+					<input type="file" id="upload_Club_logo" onchange="javascript:setImagePreview();"/>
+				</a>
+				<div id="show_Club_logo">
+			  	 	<img id="Club_logo" width="-1" height="-1" style="display: none" /> 
+			  	 	<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/1-3.png" id="camera"/>
+				</div>
+			</form>
+		</div>
+		<div class="middle">
+			<span>社团名称</span>
+			<input type="text" class="club_name" id="pageclub_name" maxlength="15"/>
+		</div>
+		<div class="middle">
+			<span>社团简介</span>
+			<textarea id="pageclub_jianjie" maxlength="100"></textarea>
+		</div>
+		<div class="middle">
+			<span>社团所属</span>
+			<input type="text" class="club_school" id="pageclub_name" maxlength="15"/>
+		</div>
+		<div class="middle" style="padding-top: 0;">
+			<span style="padding-top: 3vw;">社团类型</span>
+			<span id="pageclub_leixing">文化艺术</span>
+		</div>
+		<div class="yinying"></div>
+		<div class="pageclub_photo">
+			<div class="photo_box" style="margin-left: 2vw;">
+				<div class="club_photo">
+					<form action="" method="post" enctype="multipart/form-data">
+						<a href="#" class="add_pageclub_photo" id="add_pageclub_photo1">
+							<input type="file" id="upload_pageclub_photo1" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview1();"/>
+						</a>
+						<div id="show_pageclub_photo1" class="show_pageclub_photo">
+						 	<img id="photo1" width="-1" height="-1" style="display: none" /> 
+						</div>
+					</form>
+				</div>
+				<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+			</div>
+			<div class="photo_box">
+				<div class="club_photo">
+					<form action="" method="post" enctype="multipart/form-data">
+						<a href="#" class="add_pageclub_photo" id="add_pageclub_photo2">
+							<input type="file" id="upload_pageclub_photo2" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview2();"/>
+						</a>
+						<div id="show_pageclub_photo2" class="show_pageclub_photo">
+						 	<img id="photo2" width="-1" height="-1" style="display: none" /> 
+						</div>
+					</form>
+				</div>
+				<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+			</div>
+			<div class="photo_box">
+				<div class="club_photo">
+					<form action="" method="post" enctype="multipart/form-data">
+						<a href="#" class="add_pageclub_photo" id="add_pageclub_photo3">
+							<input type="file" id="upload_pageclub_photo3" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview3();"/>
+						</a>
+						<div id="show_pageclub_photo3" class="show_pageclub_photo">
+						 	<img id="photo3" width="-1" height="-1" style="display: none" /> 
+						</div>
+					</form>
+				</div>
+				<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+			</div>
+			<div class="photo_box">
+				<div class="club_photo">
+					<form action="" method="post" enctype="multipart/form-data">
+						<a href="#" class="add_pageclub_photo" id="add_pageclub_photo4">
+							<input type="file" id="upload_pageclub_photo4" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview4();"/>
+						</a>
+						<div id="show_pageclub_photo4" class="show_pageclub_photo">
+						 	<img id="photo4" width="-1" height="-1" style="display: none" /> 
+						</div>
+					</form>
+				</div>
+				<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+			</div>
+		</div>
+		<div class="pageclub_photo">
+			<div class="photo_box" style="margin-left: 2vw;">
+				<div class="club_photo">
+					<form action="" method="post" enctype="multipart/form-data">
+						<a href="#" class="add_pageclub_photo" id="add_pageclub_photo5">
+							<input type="file" id="upload_pageclub_photo5" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview5();"/>
+						</a>
+						<div id="show_pageclub_photo5" class="show_pageclub_photo">
+						 	<img id="photo5" width="-1" height="-1" style="display: none" /> 
+						</div>
+					</form>
+				</div>
+				<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+			</div>
+			<div class="photo_box">
+				<div class="club_photo">
+					<form action="" method="post" enctype="multipart/form-data">
+						<a href="#" class="add_pageclub_photo" id="add_pageclub_photo6">
+							<input type="file" id="upload_pageclub_photo6" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview6();"/>
+						</a>
+						<div id="show_pageclub_photo6" class="show_pageclub_photo">
+						 	<img id="photo6" width="-1" height="-1" style="display: none" /> 
+						</div>
+					</form>
+				</div>
+				<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+			</div>
+			<div class="photo_box">
+				<div class="club_photo">
+					<form action="" method="post" enctype="multipart/form-data">
+						<a href="#" class="add_pageclub_photo" id="add_pageclub_photo7">
+							<input type="file" id="upload_pageclub_photo7" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview7();"/>
+						</a>
+						<div id="show_pageclub_photo7" class="show_pageclub_photo">
+						 	<img id="photo7" width="-1" height="-1" style="display: none" /> 
+						</div>
+					</form>
+				</div>
+				<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+			</div>
+			<div class="photo_box">
+				<div class="club_photo">
+						<form action="" method="post" enctype="multipart/form-data">
+							<a href="#" class="add_pageclub_photo" id="add_pageclub_photo8">
+								<input type="file" id="upload_pageclub_photo8" class="upload_pageclub_photo" onchange="javascript:setPhotoPreview8();"/>
+							</a>
+							<div id="show_pageclub_photo8" class="show_pageclub_photo">
+							 	<img id="photo8" width="-1" height="-1" style="display: none" /> 
+							</div>
+						</form>
+					</div>
+					<img src="http://img.lizi123.cn/LiZi/publish/img/cut.png" class="cancel_pageclub_photo"/>
+				</div>
+			</div>
+		</div>
+		<!--////////////////弹出层-->
+		<div id="back"></div>
+		<div id="choose_fenlei">
+			<div class="tap_class">
+				<p class="class">选择社团分类</p>
+			</div>
+			<div style="height: 1vh;clear: both;"></div>
+			<div class="tabs">
+				<span class="unchecked" name="leibie">学生组织</span>
+				<span class="unchecked" name="leibie">实践服务</span>
+			</div>
+			<div style="height: 5vh;"></div>
+			<div class="tabs">
+				<span class="unchecked" name="leibie">娱乐爱好</span>
+				<span class="unchecked" name="leibie">学术科技</span>
+			</div>
+			<div style="height: 5vh;"></div>
+			<div class="tabs">
+				<span class="unchecked" name="leibie">文化艺术</span>
+				<span class="unchecked" name="leibie">体育竞技</span>
+			</div>
+			<p id="confirm">好</p>
+		</div>
+	</body>
+</html>

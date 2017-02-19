@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" />
+		<meta content="user-scalable=0;" name="viewport" />	
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1.0" />
+		<title>login</title>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript">
+			function borderFocus(x){
+				x.style.borderColor="#FFA500";
+			}
+
+			function borderBlur(x){
+				x.style.borderColor="#bbb";
+			}
+
+			function load(){
+				document.body.style.height=window.screen.height;
+			}
+
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style type="text/css">
+			@font-face {
+				font-family:myFont; src: url("font/方正细圆简体.ttf")
+			}  
+
+
+
+			.foot {
+				height: 35vw;
+			}
+
+			.slogan {
+				position: relative;
+				height: 10vw;
+				width: 10vw;
+
+				border-radius: 1.5vw/1.5vw;
+				background-color: #ffbf2b;
+
+				color: white;
+				font-weight: 300;
+				font-size: 7.5vw;
+				font-family: "myFont";
+				text-align: center;
+
+				margin-left: 45vw;
+				top: 15vw;
+			}
+
+			.slogan div {
+				padding-top: 1vw;
+			}
+
+
+
+			.head {
+				height: 29%;
+				width: 100vw;
+			}
+
+			.inputs {
+				height: 5vw;
+
+			}
+
+			.inputs input {
+				font-size: 4.3vw;
+				font-family: "Microsoft YaHei";
+
+				width: 75%;
+				margin-left: 12.5%;
+				
+				margin-top: 8vw;
+
+				border-width: 0 0 2px 0;
+				outline: none;
+				border-color: #bbbbbb;
+			}
+
+			.rst {
+				cursor: pointer;
+				height: 3.7vw;
+				margin-top: 28vw;
+				margin-right: 12.5%;
+
+				float: right;
+				color: #ffac0d;
+				font-size: 3.5vw;
+				font-family: "Microsoft YaHei";
+			}
+
+			.buttons {
+				height: 24vw;
+				margin-top: 18vw;
+			}
+
+			.buttons button {
+				font-size: 4.3vw;
+				font-family: "Microsoft YaHei";
+
+				border-radius: 2.67vw;
+
+				height: 9vw;
+				width: 75%;
+
+				margin-top: 3.55vw;
+				margin-left: 12.5%;
+				border: none;
+
+				cursor: pointer;
+				outline: none;
+
+				color: white;
+				background: #ffac0d;
+			}
+
+			.crt {
+				cursor: pointer;
+				height: 3.55vw;
+				margin-top: 26.7vw;
+				padding-top: -9vw;
+				text-align: center;
+
+				color: #ffac0d;
+				font-size: 3.55vw;
+				font-family: "Microsoft YaHei";
+			}
+
+			.shares {
+				width: 75%;
+				padding-left: 10%;
+
+			}
+
+			.shares img {
+				float: left;
+				width: 20%;
+				margin-left: 12%;
+				margin-top: 15vw;
+			}
+
+		</style>
+
+	</head>
+
+	<body onload="load()">
+
+		<div class="foot">
+			<div class="slogan">
+				<div>憬</div>
+			</div>
+		</div>
+		
+				  
+		<div class="inputs">
+			<div class="account">
+				<input type="text" id="account" placeholder="账号" required onfocus="borderFocus(this)" onblur="borderBlur(this)">
+			</div>
+
+			<div class="password">
+				<input type="password" id="password" placeholder="密码" required  onfocus="borderFocus(this)" onblur="borderBlur(this)">
+			</div>
+		</div>
+
+		<div class="rst">
+			<span href="">忘记密码</span>
+		</div>
+		
+		<div class="buttons">
+			<div id="login">
+				<button class="login" type="submit">登陆</button>
+			</div>
+
+			<div id="seenow">
+				<button class="seenow" type="submit">先看看</button>
+			</div>
+		</div>
+
+		<div class="crt">
+			<span onclick="">创建账号</span>
+		</div>
+		
+
+		<div class="shares">
+			<div id="qq">
+				<img class="qq" src="http://img.lizi123.cn/LiZi/login/img/qq.png">
+			</div>
+
+			<div id="wechat">
+				<img class="wechat" src="http://img.lizi123.cn/LiZi/login/img/wechat.png">
+			</div>
+
+			<div id="weibo">
+				<img class="weibo" src="http://img.lizi123.cn/LiZi/login/img/weibo.png">
+			</div>
+		</div>
+	</body>
+</html>

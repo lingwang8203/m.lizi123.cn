@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101338320","appkey":"986345f12ccf656e6fdebf0b1884e657","callback":"http://qj_wa.qdmedia.cc/LiZi/footer/footer.html","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

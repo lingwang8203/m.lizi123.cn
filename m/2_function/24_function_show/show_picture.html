@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>查看图片</title>
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="../../js/getBrowserInfo.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background: black;
+			}
+			
+			#show_picture a {
+				width: 100vw;
+				height: 100vh;
+			}
+			
+			.picture_pos {
+				width: 100vw;
+				height: 100vh;
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div style="width:100vw;height:100vh;" id="show_picture">
+			<div class="picture_pos">
+				<a href="javascript:history.go(-1);">
+					<img src="http://img.lizi123.cn/new_lizi/2_function/24_function_show/cover_image.png" id="image">
+				</a>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload = function(e) {
+				imgurl = getQueryString('imgurl');
+				var img=document.getElementById("image");
+				img.src = imgurl;		
+				var browser_w = document.documentElement.clientWidth; // 可见区域宽度 
+				var browser_h = document.documentElement.clientHeight;// 可见区域高度 
+//				var image_temp=new Image();
+				if(img.width>browser_w){
+					img.style.width=browser_w+'px';
+					img.style.height='aotu';
+//					var html="1---";
+//					html="picture width="+img.width;
+//				    html+="\n"+"picture height="+img.height;
+//					alert(html);
+				}
+				else{
+					img.width=browser_w;
+					img.height='aotu';
+//					var html="2---";
+//					html="picture width="+img.width;
+//				    html+="\n"+"picture height="+img.height;
+//					alert(html);
+				}
+			}
+			//=================================获取url参数=====================
+		function getQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if(r != null) {
+				return unescape(r[2]);
+			} else {
+				return null;
+			}
+		}
+	</script>
+
+</html>

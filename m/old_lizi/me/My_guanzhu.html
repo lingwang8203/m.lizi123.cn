@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>我的关注</title>
+		<link href="../page_club/css/yaoqing.css" rel="stylesheet"/>
+		<script src="js/My_guanzhu.js"></script>
+	</head>
+	<body>
+		<header>
+			<a class="title" id="return"><我的关注</a>
+		</header>
+		<div id="header_search">
+		<input type="text" placeholder=" 搜索 " id="search" maxlength="12"/>
+		<img src="http://img.lizi123.cn/LiZi/login/img/search.png" id="search_image"/>
+		</div>
+		<div id="pageclub_people">
+			<div class="list">
+				<div class="list_header">
+					<span class="fenzu_name">特别关注</span>
+				</div>
+				<div id="special" class="people_list">
+					<!--div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="special">取消特别关注</span>
+					</div>
+					<div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="special">取消特别关注</span>
+					</div>
+					<div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="special">取消特别关注</span>
+					</div>
+					<div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="special">取消特别关注</span>
+					</div-->
+				</div>
+			</div>
+			<div class="list">
+				<div class="list_header">
+					<span class="fenzu_name">已关注</span>
+				</div>
+				<div id="normal" class="people_list">
+					<!--div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="nospecial">设为特别关注</span>
+					</div>
+					<div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="nospecial">设为特别关注</span>
+					</div>
+					<div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="nospecial">设为特别关注</span>
+					</div>
+					<div class="people">
+						<img src="http://img.lizi123.cn/LiZi/me/img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+						<span class="special" name="nospecial">设为特别关注</span>
+					</div-->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>
+

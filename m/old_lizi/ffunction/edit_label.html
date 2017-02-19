@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑标签页面</title>
+		<!--<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />-->
+		<link href="css/edit_label.css" rel="stylesheet" />
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script src="js/swipe.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="../footer/footer.html" id="back"><</a>
+			<span id="edit">编辑标签</span>
+			<a href="#" id="furnish">完成</a>
+		</header>
+		<iframe id="center" src="edit_label_header.html"></iframe>
+		<div class="label_classification">
+			<div id="tap_class">
+				<p class="title">自定义标签</p>
+			</div>
+		    <div style="clear: both;"></div>
+		    <div class="label_classification_1">
+		    	<a href="#" class="content1_label" style="padding: 1%;margin-right: 2%;"><span>添加标签</span></a>
+		        <a href="#" class="content1_label" style="padding: 1%;" name="content1_label"><span style="padding: 1% 4%;">摄影</span></a>
+		    </div>
+		</div>
+		<div class="label_classification">
+			<div id="tap_class">
+				<p class="title">热门标签</p>
+			</div>
+		    <div style="clear: both;"></div>
+		    <div class="label_classification_1" style="border-bottom: hidden;">
+		    	<a href="#" class="content1_label" style="padding: 1%;" name="content1_label"><span>英语口语</span></a>
+		    	<a href="#"><img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/increase.png"></a>
+		    </div>
+		    <div class="hot_label">
+		    	<div class="hot_label_1" style="padding-left: 5%;">
+		    		<img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/book1.png" />
+		    		<p>旅用英语口语教程(一)</p>
+		    	</div>
+		    	<div class="hot_label_1">
+		    		<img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/book2.png" />
+		    		<p>旅用英语口语教程(一)</p>
+		    	</div>
+		    	<div class="hot_label_1">
+		    		<img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/book1.png" />
+		    		<p>旅用英语口语教程(二)</p>
+		    	</div>
+		    	<div class="hot_label_1">
+		    		<img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/book2.png" />
+		    		<p>一对一英语口语训练</p>
+		    	</div>
+		    </div>
+		</div>
+	</body>
+	<script src="js/edit_label.js"></script>
+	<script>
+		var url_index="ffunction";
+		document.getElementById("back").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

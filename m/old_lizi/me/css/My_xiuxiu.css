@@ -1,0 +1,164 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #ffbf2b;
+text-align: center;
+width: 100vw;
+text-align: left;
+padding: 3vw 2vw;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+}
+.yinying{
+	width: 100vw;
+	height: 3vw;
+	background-color: #e0e0e0;
+}
+.huaxu{
+	width: 100vw;
+	height: auto;
+	position: relative;
+}
+.user{
+	width: 100vw;
+	height: auto;
+	position: relative;
+	overflow: auto;
+}
+.user img{
+	float: left;
+	margin-top: 1.5vw;
+	margin-left: 4vw;
+	width: 12vw;
+	height: auto;
+}
+.user_formation{
+	float: left;
+	display: inline-block;
+	margin-top: 1.5vw;
+	margin-left: 3vw;
+	width: 56vw;
+}
+.user_formation h3{
+	font-size: 4vw;
+	color: black;
+	font-weight: bold;
+}
+.user_formation p{
+	margin-top: 1vw;
+	font-size: 3vw;
+	color: #949494;
+	word-break: break-all;
+}
+.fenxiang{
+	position: absolute;
+	top: 0.5vw;
+	right: 7vw;
+	width: 5vw !important;
+	color: #949494;
+}
+.fabu_time{
+	position: absolute;
+	color: #949494;
+	font-size: 3.5vw;
+	top: 8vw;
+	right: 4vw;
+}
+.shuoshuo{
+	clear: both;
+	font-size: 3.5vw;
+	margin-left: 1.5vw;
+	margin-right: 1.5vw;
+	margin-top: 1vh;
+	overflow: auto;
+}
+.user_miaoshu{
+	color: black;
+	 max-height: 999999px; 
+}
+.dilan{
+	width: 95vw;
+	height: auto;
+	margin-top: 1vw;
+	margin-left: 5vw;
+	margin-bottom: 1.5vw;
+	overflow: auto;
+}
+.dilan img{
+	float: left;
+}
+.zan{
+	width: 5vw;
+	height: auto;
+}
+.pinglun{
+	width: 5vw;
+	height: auto;
+	margin-left: 5vw;
+}
+.zan_number{
+	margin-left: 2vw;
+	margin-top: 0vw;
+}
+.pinglun_number{
+	margin-top: 0vw;
+	margin-left: 2vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+.dilan p{
+	float: left;
+	display: inline-block;
+	font-size: 3.5vw;
+	color: black;
+}
+/*///////////////////一张图片*/
+.one_picture{
+	width: 100vw;
+	height: 30vh;
+	margin-top: 0.5vh;
+}
+/*/////////////////////////////////////视频*/
+.shipin{
+	width: 100vw;
+	height: 30vh;
+	margin-top: 0.5vh;
+}
+/*button{
+	font-size: 5vw;
+	width: 15vw;
+	height: 15vw;
+}*/
+.play{
+	position: absolute;
+	top: 10vh;
+	left: 43vw;
+	width: 14vw;
+}

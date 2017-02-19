@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>发布活动</title>
+		<script type="text/javascript" src="../../js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" href="css/publish_activities.css"/>
+		<link rel="stylesheet" href="../../css/aui.2.0.css"/>
+		<script src="js/ajax_publish_activities_step1.js"></script>
+		<style type="text/css">
+			.aui-list textarea{
+				height: 10rem;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<!--顶部，发布活动-->
+			<header class="aui-bar aui-bar-nav aui-bar-light aui-bg-base" style="color: white !important;">
+			    <a class="aui-pull-left aui-btn" href="http://m.lizi123.cn/index.html">
+			        <span class="aui-iconfont aui-icon-left-black"></span>
+			    </a>
+			    <div class="aui-title aui-font-size-20">发布活动</div>
+			    <a class="aui-pull-right aui-btn" style="color: #212121 !important;" id="furnish">完成</a>
+			</header>
+			
+			<form action="" method="post" id="poster">
+				<a href="#" id="upload_poster_img"></a>
+				<div id="show_poster_img" class="show_poster_img">
+			  	 	<img id="preview" width="-1" height="-1" style="display: none" /> 
+				</div>
+			</form>						
+			<div class="aui-content aui-margin-b-15">
+		        <ul class="aui-list aui-list-in">		            
+		            <li class="aui-list-item">
+		                <div class="aui-list-item-inner">
+		                    	添加标题
+		                </div>
+		            </li>		            
+		        </ul>
+    		</div>
+			
+			<div class="aui-content aui-margin-b-15">
+        		<ul class="aui-list aui-list-in">
+            		
+            		<li class="aui-list-item aui-list-item-middle">
+            			<div class="aui-list-item-label-icon">
+	                		<i class="aui-iconfont ">
+	                			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/ClOCK.png" class="aui-img-round aui-col-xs-6"style="height: 1rem;width: 1rem;"/>
+	                		</i>
+           				</div>
+                		<div class="aui-list-item-inner aui-list-item-arrow">               			
+                    		时间
+                    	</div>
+           	 		</li>
+           	 		
+           			<li class="aui-list-item">
+           				<div class="aui-list-item-label-icon">
+	                		<i class="aui-iconfont ">
+	                			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/LeiXing.png" class=" aui-col-xs-6"style="height: 1rem;width: 1rem;"/>
+	                		</i>
+           				</div>
+                		<div class="aui-list-item-inner aui-list-item-arrow">
+                    		类型
+                		</div>
+            		</li>
+            		
+            		<li class="aui-list-item">
+            			<div class="aui-list-item-label-icon">
+	                		<i class="aui-iconfont ">
+	                			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/LaiXIngBiaoQing.png" class=" aui-col-xs-6"style="height: 1rem;width: 1rem;"/>
+	                		</i>
+           				</div>
+                		<div class="aui-list-item-inner aui-list-item-arrow">
+                    		标签
+                		</div>
+            		</li>
+            		
+            		<li class="aui-list-item">
+            			<div class="aui-list-item-label-icon">
+	                		<i class="aui-iconfont ">
+	                			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/BaoMing.png" class=" aui-col-xs-6"style="height: 1rem;width: 1rem;"/>
+	                		</i>
+           				</div>
+                		<div class="aui-list-item-inner aui-list-item-arrow">
+                    		报名信息
+                		</div>
+            		</li>
+            		
+            		<li class="aui-list-item">
+            			<div class="aui-list-item-label-icon">
+	                		<i class="aui-iconfont ">
+	                			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/DiDian.png" class="aui-img-round aui-col-xs-6"style="height: 1rem;width: 1rem;"/>
+	                		</i>
+           				</div>
+                		<div class="aui-list-item-inner"style="width: 6rem;">
+                    		报名地点
+                		</div>
+                		<div class="aui-list-item-input"style="height: 2.2rem;" >
+							<textarea placeholder="输入活动地点" id="content" maxlength="14"style="height: 2.2rem;" class="aui-font-size-14 aui-col-xs-18 aui-margin-t-10"></textarea>
+						</div>
+            		</li>
+            		
+            		<li class="aui-list-item">
+            			<div class="aui-list-item-label-icon">
+	                		<i class="aui-iconfont ">
+	                			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/31_publish_sports/HuoDongXiangQing.png" class="aui-img-round aui-col-xs-6"style="height: 1rem;width: 1rem;"/>
+	                		</i>
+           				</div>
+                		<div class="aui-list-item-inner">
+                    		活动详情
+                		</div>            
+            		</li>
+            		
+            		<li class="aui-list-item">
+				        <div class="aui-list-item-inner">
+				            <div class="aui-list-item-input aui-margin-l-15">
+				                <textarea placeholder="详细描述下这次活动的安排啥啥吧~" id="content" maxlength="500" minlength="15"class="aui-font-size-12 aui-margin-l-15"></textarea>
+				            </div>
+				        </div>
+				    </li>
+        		</ul>       		
+    	</div>						
+	</body>
+</html>

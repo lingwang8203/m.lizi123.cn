@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择标签</title>
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/choose_label.css">
+		
+	</head>
+
+	<body>
+		<h3 id="header">选择标签</h3>
+		<div class="label">
+			<img src="http://img.lizi123.cn/LiZi/login/img/techang.png" class="lei" />
+			<div id="shanchang_module">
+				<a href="#" id="shanchang">
+					<img src="http://img.lizi123.cn/LiZi/login/img/lvjia.png" class="jia" />
+					<span class="label_span">添加我擅长的</span>
+				</a>
+				<div class="choosed_label">
+				</div>
+			</div>
+		</div>
+		<div class="label">
+			<img src="http://img.lizi123.cn/LiZi/login/img/xingqu.png" class="lei" />
+			<div id="xingqu_module">
+				<a href="#" id="xingqu">
+					<img src="http://img.lizi123.cn/LiZi/login/img/huangjia.png" class="jia" />
+					<span class="label_span">添加我感兴趣的</span>
+				</a>
+				<div class="choosed_label">
+				</div>
+			</div>
+		</div>
+		<div class="label">
+			<img src="http://img.lizi123.cn/LiZi/login/img/xiang.png" class="lei" />
+			<div id="xiangxue_module">
+				<a href="#" id="xiangxue">
+					<img src="http://img.lizi123.cn/LiZi/login/img/hongjia.png" class="jia" />
+					<span class="label_span">添加我想学的</span>
+				</a>
+				<div class="choosed_label">
+				</div>
+			</div>
+		</div>
+		<div id="next" onclick="next_down()">下一步</div>
+		<!--	/////////////////背景层-->
+		<div id="zoom_preview"></div>
+		<div id="change_module" style="display: none;">
+			<div class="tap_class">
+				<p id="exchange">我想学的</p>
+			</div>
+			<div style="clear: both;"></div>
+			<a href="#" class="change_module_label label_back"><span>添加标签</span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+			<a href="#" id="refresh_label" style="margin-bottom: 0.5vh;">换一批标签</a>
+			<a href="#" id="cancel_change_module" style="margin-bottom: 0.5vh;">取消</a>
+			<a href="#" id="confirm_change_module" style="margin-bottom: 0.5vh;">好</a>
+		</div>
+	</body>
+	<script src="js/ajax_choose_label.js"></script>
+	<script>
+		//document.getElementById("next").addEventListener("touchstart",
+		function next_down() {
+			alert("it works");
+			//console.dir(masterTag);
+			//console.dir(hobbyTag);
+			//console.dir(learnTag);
+			$.param(masterTag);
+			$.param(hobbyTag);
+			$.param(learnTag);
+			$.ajax({
+				type: "post",
+				url: "http://api.lizi123.cn/index.php/home/user/userTag",
+				xhrFields: {
+					withCredentials: true
+				},
+				data: {
+					"client_type": 0,
+					"masterTag": masterTag,
+					"hobbyTag": hobbyTag,
+					"learnTag": learnTag,
+				},
+				success: function(data) {
+					var obj = eval(data);
+					console.dir(obj);
+					if(obj.status == 200) {
+						alert("it ok");
+						window.open("http://m.lizi123.cn/5_mine/50_mine_homepage_self/50_mine_homepage_self.html");
+					}
+				},
+				error: function(data) {
+					    alert("失败!");
+				},
+			});
+		}
+	</script>
+
+</html>

@@ -1,0 +1,37 @@
+.in_opacity{
+	height: 4rem;
+	position: absolute;
+	bottom: 0;
+	background: #FFBF2A;
+	opacity: 0.5;
+}
+.miaoBian{
+	color: white;
+    border-top: 4px solid white;
+    z-index: 100;
+}
+.out{
+	height: 10rem;
+	position: absolute;
+	bottom: 0;
+}
+.weiZhi{
+	height: 6rem;
+	margin-right:12rem;
+	position: relative;
+	top: 4rem;
+	z-index: 0;
+}
+.imgWeiZhi{
+	height: 4rem;
+	position: relative;
+	bottom: 1rem;
+	z-index: 120;
+}
+active {
+	color: #ffbf2a;
+}
+.ffuntion .aui-active{
+	color: #FFBF2A;
+	border-bottom: 2px solid #FFBF2A;
+}

@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>接口测试DEMO</title>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//获取url参数中的user_id
+			    //var user_id = getQueryString("user_id");
+			    //alert("js");
+			    var images = new Array("http://img.lizi123.cn/LiZi/index/img/xiu_photo.png","http://img.lizi123.cn/LiZi/index/img/class_photo.png");
+			    $.param(images,true);
+			    //alert(images);
+			    //==============================接口调用=============================
+				$.ajax({
+			        type:"post",
+			        //url:"http://api.lizi123.cn/index.php/home/ground/groundNew",
+			        url:"http://api.lizi123.cn/index.php/home/club/clubApplyList",
+			        data:{
+			        	"client_type":0,
+			        	//"type_id":6,
+			        	//"user_id":1,
+			        	"user_name":15711589783,
+			        	"user_password":123456,
+					"club_id":1,
+			        	//"intro":"今天好开心啊，又敲代码了！！�?,
+			        	//"images":images,
+			        	//"class_id":1,
+			        	//"comment_id":2,
+			        	//"content":"回复评论测试002",
+			        },
+			        xhrFields: {
+			            withCredentials: true
+			        },
+			        success:function(data){
+			            var obj = eval(data);
+			            console.dir(obj);
+			        },
+			        error:function(data){
+			            alert("error!");
+			        },
+			            
+			    });
+
+
+			});
+			//=================================获取url参数=====================
+			function getQueryString(name){ 
+			    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+			    var r = window.location.search.substr(1).match(reg); 
+			    if (r != null) {
+			        return unescape(r[2]); 
+			    }else{
+			        return null; 
+			    }
+			}; 
+		</script>
+	</head>
+	<body>
+		<center><h1>接口测试DEMO</h1></center>
+	</body>
+</html>

@@ -1,0 +1,327 @@
+/*html {
+	font-size: 0.625rem;
+}*/
+
+
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-weight:400;
+	
+}
+	
+/*------------------------------header---------------------------------------*/
+#header {
+	background-color: #ffbf2b;
+	text-align: center;
+}
+#header .icon {
+	position:absolute;
+	top: 17rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+#header .chat{
+	left:6.3rem;
+	background: url(http://img.lizi123.cn/LiZi/me/img/chat.png) no-repeat;
+}
+
+#header .follow{
+	right:6.3rem;
+	background:url(http://img.lizi123.cn/LiZi/me/img/follow.png) no-repeat;
+}
+#header .return{
+	position:absolute;
+	left:2.5rem;
+	top:2rem;
+	background:url(http://img.lizi123.cn/LiZi/me/img/return.png) no-repeat;
+	width:2rem;
+	height:2rem;
+}
+#head{
+	position: absolute;
+	width: 17.5rem;
+	height:17.5rem;
+	left:0;
+	right:0;
+	top:6.6rem;
+	bottom:0;
+	margin:0 auto;
+}
+
+#header .PersonalName{
+	text-align: center;
+	padding-top:25.6rem;
+	font-size:2.5rem;
+	color:white;
+	margin-bottom: 1.25rem;
+}
+#header .Introduce{
+	text-align: center;
+	font-size: 1.6rem;
+	color: white;
+	display: inline-block;
+	padding-right: 2.5rem;
+	line-height: 4.6rem;
+}
+/*--------------------------navigation-------------------------------------*/
+#navigation{
+	width:100%;
+	height:4.2em;
+	background: #FFBF2B;
+	margin-top: -0.0625rem;
+	padding-top:6rem;
+	box-shadow: 0 0.2rem 0.2rem #c9c8c8;
+}
+#navigation li{ 
+	width: 33%;
+	float: left;
+	text-align:center;
+	font-size: 2.1rem;
+}
+#navigation a{
+	padding: 0.15em;
+	display: block;
+	width: 28%;
+}
+.nav_on{
+	margin: 0 auto;
+	color:#ffffff;
+	border-bottom: 0.15em solid #ffffff;
+}
+.nav_off{
+	margin: 0 auto;
+	color:#ffffff;}
+
+/*--ta的------*/
+#ta .pic{
+	display: inline-block;
+	width:8.1rem;
+	padding-top:9rem;
+	text-align: center;
+	font-size:1.65rem;
+	color:#a5a5a5;
+}
+.classes{
+	background: url(http://img.lizi123.cn/LiZi/me/img/class.png) no-repeat;
+}
+.club{
+	background: url(http://img.lizi123.cn/LiZi/me/img/club.png) no-repeat;
+}
+.show{
+	background: url(http://img.lizi123.cn/LiZi/me/img/show.png) no-repeat;
+}
+.activity{
+	background: url(http://img.lizi123.cn/LiZi/me/img/activity.png) no-repeat;
+}
+.collect{
+	background: url(http://img.lizi123.cn/LiZi/me/img/collect.png) no-repeat;
+}
+.friends{
+	background: url(http://img.lizi123.cn/LiZi/me/img/friends.png) no-repeat;
+}
+
+table {
+	width:100%;
+}
+.first{
+	padding-top: 7.2rem;
+	padding-bottom:7rem;
+}
+.second{
+/*	padding-bottom:22rem;*/
+	padding-bottom:17.4rem;
+}
+
+/*--dynamic--*/]
+#dynamic .logo {
+	display: inline-block;
+	padding-left:1.8rem;
+	padding-top:2rem;
+	height:5.8rem;
+	width:5.8rem;
+}
+#dynamic .info{
+	display:inline-block;
+	vertical-align: top;
+	padding-top:3rem;
+}
+#dynamic .name{
+/*	display: inline-block;*/
+	font-size: 1.7rem;
+	padding-left:1.63rem;
+	padding-bottom:1.2rem;
+}
+#dynamic .sign{
+	display: inline-block;
+	font-size: 1.2rem;
+	padding-left:1.63rem;
+	color: #949494;;
+}
+#dynamic .time{
+	display:inline-block;
+	font-size: 1.2rem;
+	color: #949494;;
+     padding-left:25rem;
+}
+#dynamic .share{
+	position:absolute;
+	background: url(http://img.lizi123.cn/LiZi/me/img/share.png) no-repeat;
+	right:1.7rem;
+	top:49.6rem;
+	width:2.8rem;
+	height:3.1rem;
+}
+#dynamic .pic{
+	width:100%;
+	padding-top:0.7rem;
+	border-bottom:0.8rem solid #ffbf2b;
+}
+#dynamic .play{
+/*	background:("img/play.png") no-repeat;*/
+	width:6.4rem;
+	height:6.4rem;
+	position:absolute;
+	/*top:19.4rem;*/
+	top:65.6rem;
+	left:0;
+	right:0;
+	bottom:0;
+/*	left:24.2rem;*/
+	margin:0 auto;
+}
+#dynamic .note{
+	font-size:1.7rem;
+	padding-top: 1.2rem;
+	padding-left:1.6rem;
+	/*padding-right: 1rem;*/
+	padding-bottom: 0.8rem;
+}
+#dynamic .like{
+	background:url(http://img.lizi123.cn/LiZi/me/img/zan.png) no-repeat;
+	width:3.3rem;
+	height:3rem;
+	position:absolute;
+	left:2.7rem;
+/*	top:47.8rem;	*/
+	padding-left: 5rem;
+	font-size: 1.6rem;
+}
+#dynamic .comment{
+	background: url(http://img.lizi123.cn/LiZi/me/img/comment.png) no-repeat;
+	width:3.3rem;
+	height:3rem;
+	position:absolute;
+	left:14.25rem;
+	padding-left: 5rem;
+/*	top:47.8rem;	*/
+/*    vertical-align:center;*/
+    font-size: 1.6rem;
+}
+
+
+/*------------homepage ---------------*/
+.stitle{
+	display: inline-block;
+	font-size:2rem;
+	border-left:0.5rem solid #ffbf2b;
+	padding-left:1.6rem;
+	margin:1rem 0 1.1rem 1.6rem;
+}
+.impress .stitile-impress{
+	margin-top:1.6rem;
+}
+.more{
+	font-size:2rem;
+	color:#ff9000;
+	text-decoration:underline;
+	padding-left:43.5rem;
+}
+.impress .star{
+	float: left;
+	background:url(http://img.lizi123.cn/LiZi/me/img/interested.png) no-repeat center;
+	width:12.5rem;
+	height:12.5rem;
+	/*position:absolute;
+	left:6.4rem;
+	top:50.5rem;*/
+}
+
+.impress ul {
+	display: inline-block;
+	min-height: 12.5rem;
+	width: 48rem;
+}
+
+.impress .label{
+	margin-right: 2.1rem;
+	margin-bottom: 2.1rem;
+	padding: 0.87rem 2.1rem;
+	width: 10rem;
+	max-width: 10rem;
+	font-size:2rem;
+	color:white;
+	background: #ffbf2b;
+	border-radius: 2.5rem;
+	display:inline-block;
+	text-align: center;
+}
+
+.impress .label:first-child {
+	margin-top: 1.5rem;
+}
+
+.impress .label:nth-child(3n+0){
+	margin-right: 0;
+}
+
+.impress .stitle {
+	display: block;
+}
+
+.join ul{
+	width:100%;
+	padding-top:2.8rem;
+}
+.join li{
+	float:left;
+	text-align: center;
+	font-size: 1.8rem;
+	color: #3d3d3d;;
+	padding-bottom: 2.8rem;
+}
+.join .book{
+	margin-bottom: 1rem;
+	width:15rem;
+	height:21rem;
+	
+}
+.join .bk1{
+	margin-left:5rem;
+	padding-right:3.6rem;
+}
+.join .bk3{
+	padding-left:3.6rem;
+}
+.relative .icon{
+	width:6.7rem;
+	height:6.7rem;
+	padding:1.3rem 1.4rem 0 1.4rem;
+	border-radius: 50%;
+}
+
+.relative .relative-icon{
+	padding-left:5rem;
+}
+
+.relative .note-ic2{
+	font-size:1.6rem;
+	color:#3d3d3d;
+	padding-top:2rem;
+	padding-left:6.5rem;
+	padding-bottom: 2.6rem;
+}
+#foot{
+	width: 100vw;
+	height: 100vw;
+}

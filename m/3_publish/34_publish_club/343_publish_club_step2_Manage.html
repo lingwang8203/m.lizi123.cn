@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">	
+	<title>编辑社团</title>
+	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/iconfont_like.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	
+</head>
+<body>
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+       <a class="aui-pull-left aui-btn">
+           <span class="aui-iconfont aui-icon-left"style="color: #FFFFFF;"></span>
+       </a>
+       <div class="aui-title"style="color: #FFFFFF;">管理文学社社团</div>
+       <a class="aui-pull-right aui-btn ">
+           <span class="aui-pull-right"style="color: #FFFFFF;">编辑</span>
+       </a>
+    </header>
+    
+    
+    <div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active" id="impress">社团印象</div>
+			    <div class="aui-tab-item" id="show">社团秀秀</div>
+			    <div class="aui-tab-item" id="memory">社团记忆</div>
+	</div>
+	<iframe id="ifram" style="width: 100%;height: 50em;" src="3431_publish_club_step2_Manage_frame1.html" frameborder=no  border=0  marginwidth=0  marginheight=0  >3431_publish_club_step2_Manage_frame1.html</iframe>
+	<!---iframe id="ifram" style="width: 100%;height: 50em;" src=""frameborder=no  border=0  marginwidth=0  marginheight=0  ></iframe---->
+</body>
+<script type="text/javascript" src="js/aui-tab.js" ></script>
+
+	<script type="text/javascript">
+    club_id = 1;
+        apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+
+</html>

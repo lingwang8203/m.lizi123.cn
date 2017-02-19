@@ -1,0 +1,465 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #fcb058;
+text-align: center;
+width: 96vw;
+text-align: left;
+padding: 1vw 2vw;
+overflow: auto;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 200;
+}
+header a{
+	float: left;
+	font-size: 8vw;
+	color: white;
+}
+header p{
+	float: left;
+	font-size: 4vw;
+	color: white;
+	margin-top: 3vw;
+	text-align: center;
+	display: inline-block;
+	width: 70vw;
+	margin-left: 6vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+header span{
+	display: inline-block;
+	clear: both;
+	text-align: center;
+	margin-top: 3vw;
+}
+#create{
+	float: right;
+	width: 5.5vw;
+	margin-top: 2.5vw;
+	margin-right: 0vw;
+}
+
+.chat_interface{
+	width: 94vw;
+	position: relative;
+	padding: 0 3vw;
+	z-index: 199;
+}
+.tz{
+	width: 94vw;
+	height: auto;
+	color: #CCCCCC;
+	text-align: center;
+	margin-top: 10vh;
+}
+.tz_time{
+	font-size: 2.8vw;
+}
+.tz_message{
+	font-size: 3.2vw;
+	margin-top: 3vw;
+}
+.mytalk{
+	width: 94vw;
+	position: relative;
+	height: auto;
+	padding: 3vw 0;
+	clear: both;
+	overflow: auto;
+	font-weight: normal;
+}
+.mytalk img{
+	float: right;
+	width: 12vw;
+	height: 12vw;
+}
+.lft{
+	float: right;
+	margin-right: 2vw;
+	position: relative;
+}
+.lft img{
+	width: 30vw;
+	height: auto;
+	margin-top: 1vw;
+	padding: 1vw;
+	border: 2px solid #ffb057;
+	border-radius: 20px;
+}
+.fasong_yuyin_message{
+	width: 8vw !important;
+	height: auto !important;
+	margin-top: 1vw !important;
+	padding: 0 !important;
+	border: none !important;
+	border-radius: 0 !important;
+}
+#video{
+	margin-top: 1vw;
+	padding: 0 !important;
+	border: none !important;
+	border-radius: 0 !important;
+}
+.shipin{
+	width: 35vw;
+	height: 22vw;
+}
+.play{
+	position: absolute;
+	top: 6vw;
+	left: 15vw;
+	width: 8vw !important;
+	padding: 0 !important;
+	border:  none !important;
+	border-radius: 0 !important;
+}
+.lftr{
+	text-align: right;
+}
+.lft h3{
+	display: inline-block;
+	text-align: right;
+	font-size: 3.2vw;
+	font-weight: normal;
+}
+.lftr span{
+	display: inline-block;
+	font-size: 2.6vw;
+	margin-right: 2vw;
+	text-align: right;
+}
+.me_message{
+	float: right;
+	display: inline-block;
+	clear: both;
+	font-size: 4vw;
+	padding: 0.5vw 2vw;
+	margin-top: 1vw;
+	background-color: #ffb057;
+	color: white;
+	border-radius: 15px;
+	max-width: 60vw;
+	word-break: break-all;
+}
+/*.lft p{
+	clear: both;
+	font-size: 4vw;
+	padding: 0.5vw 2vw;
+	margin-top: 1vw;
+	background-color: #ffb057;
+	color: white;
+	border-radius: 15px;
+	max-width: 60vw;
+	word-break: break-all;
+}*/
+.biaoqing_chat{
+	clear: both;
+	font-size: 4vw;
+	padding: 0.5vw 2vw;
+	margin-top: 1vw;
+	background-color: #ffb057;
+	color: white;
+	border-radius: 15px;
+	max-width: 60vw;
+}
+.biaoqing_chat img{
+	width: 5vw;
+	height: 5vw;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.yuyin_yangs{
+	width: 4vw !important;
+	height: auto !important;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.biaoqing_chat span{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	word-break: break-all;
+	float: left;
+}
+.yourtalk{
+	width: 94vw;
+	position: relative;
+	height: auto;
+	padding: 3vw 0;
+	clear: both;
+	overflow: auto;
+}
+.yourtalk img{
+	float: left;
+	width: 12vw;
+	height: 12vw;
+}
+.rgt{
+	float: left;
+	margin-left: 2vw;
+}
+.rgt img{
+	width: 30vw;
+	height: auto;
+	margin-top: 1vw;
+	padding: 1vw;
+	border: 2px solid #ffb057;
+	border-radius: 20px;
+}
+.rgtl{
+	text-align: left;
+}
+.rgt h3{
+	display: inline-block;
+	text-align: left;
+	font-size: 3.2vw;
+	font-weight: normal;
+}
+.rgtl span{
+	display: inline-block;
+	font-size: 2.6vw;
+	margin-left: 2vw;
+	text-align: left;
+}
+.rgt p{
+	font-size: 4vw;
+	padding: 0.5vw 2vw;
+	margin-top: 1vw;
+	background-color: #ffb057;
+	color: white;
+	border-radius: 15px;
+	max-width: 60vw;
+	word-break: break-all;
+}
+.your_message{
+	display: inline-block;
+	float: left;
+	font-size: 4vw;
+	padding: 0.5vw 2vw;
+	margin-top: 1vw;
+	background-color: #ffb057;
+	color: white;
+	border-radius: 15px;
+	max-width: 60vw;
+	word-break: break-all;
+}
+.chat_dilan{
+	position: fixed;
+	width: 100vw;
+	height: auto;
+	background-color: #ffb057;
+	padding: 3vw 0;
+	padding-bottom: 0;
+	bottom: 0;
+	z-index: 200;
+}
+#input{
+	width: 96vw;
+	padding: 0 2vw;
+}
+#input input{
+	width: 80vw;
+	font-size: 4vw;
+	height: 7vw;
+	border-radius: 15px;
+}
+#input span{
+	font-size: 4vw;
+	color: white;
+	margin-left: 2vw;
+}
+#tabs{
+	width: 96vw;
+	margin-top: 2vw;
+	overflow: auto;
+	margin-bottom: 2vw;
+	padding-bottom: 1.5vw;
+}
+#biaoqing{
+	float: left;
+	width: 6.5vw;
+	height: 6.5vw;
+	margin-left: 10vw;
+}
+#luyin{
+	float: left;
+	width: 5vw;
+	margin-left: 15vw;
+}
+#camera{
+	float: left;
+	width: 8vw;
+	margin-left: 15vw;
+}
+#pic{
+	float: left;
+	display: inline-block;
+	width: 6.5vw;
+	height: 6.5vw;
+	background-image: url(../img/picture.png);
+	background-size: 6.5vw;
+	background-repeat: no-repeat;
+	margin-left: 15vw;
+}
+#upload_pic{
+	width: 6.5vw;
+	height: 6.5vw;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+#vid{
+	float: left;
+	display: inline-block;
+	width: 8vw;
+	height: 8vw;
+	background-image: url(../img/camera.png);
+	background-size: 8vw;
+	background-repeat: no-repeat;
+	margin-left: 15vw;
+}
+#upload_video{
+	width: 8vw;
+	height: 8vw;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+#tianchong{
+	width: 100vw;
+	height: 15vh;
+}
+#biaoqinglan{
+	clear: both;
+	width: 100vw;
+	height: 35vh;
+	background-color: white;
+	overflow: auto;
+	display: none;
+}
+.hang{
+	clear: both;
+	overflow: auto;
+	width: 100vw;
+	height: auto;
+	margin: 2vw 0;
+}
+.biaoqing{
+	width: 11vw;
+	height: 11vw;
+	margin-left: 2vw;
+}
+.biaoqing_chat{
+	float: right;
+}
+.your_biaoqing_chat{
+	float: left;
+}
+.your_biaoqing_chat{
+	clear: both;
+	font-size: 4vw;
+	padding: 0.5vw 2vw;
+	margin-top: 1vw;
+	background-color: #ffb057;
+	color: white;
+	border-radius: 15px;
+	max-width: 60vw;
+}
+.your_biaoqing_chat img{
+	width: 5vw;
+	height: 5vw;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.your_biaoqing_chat span{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	word-break: break-all;
+	float: left;
+}
+#yuyinlan{
+	clear: both;
+	width: 100vw;
+	height: 35vh;
+	background-color: white;
+	overflow: auto;
+	display: none;
+}
+#tip{
+	display: block;
+	font-size: 3.5vw;
+	color: #fcaf56;
+	margin-top: 1vw;
+	text-align: center;
+}
+#time{
+	font-size: 3.5vw;
+	color: #fcaf56;
+	margin-top: 1vw;
+	text-align: center;
+	display: none;
+}
+#luyin_fasong{
+	margin-top: 1.5vw !important;
+	width: 10vw !important;
+	margin-left: 39vw;
+	display: none;
+}
+#luyin_delete{
+	margin-top: 1.5vw !important;
+	width: 10vw !important;
+	margin-left: 5vw !important;
+	display: none;
+}
+.btn{
+	width: 29vw;
+	height: 30vw;
+	margin-left: 35.5vw;
+	margin-top: 10vw;
+	background-image: url(../img/luyin_chat.png);
+	background-repeat: no-repeat;
+	background-color: white;
+	background-size: 29vw;
+	outline: none;
+}
+.btn00{
+	width: 20vw;
+	height: 13vw;
+	margin-left: 35.5vw;
+	margin-top: 10vw;
+	background-color:darkorange;
+	font-size: 30px;
+}

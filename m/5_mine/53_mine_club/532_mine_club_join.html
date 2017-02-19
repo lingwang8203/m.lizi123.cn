@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>我的社团</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_532_mine_club_join.js"></script>
+
+		<script>
+			window.onload=function(e){
+				document.getElementById("mine_manage_club").addEventListener("touchstart",function(e){
+					e.preventDefault();
+					window.location.href="531_mine_club_manage.html";
+				},false);
+				
+			}
+		</script>
+		<style>
+			body{
+				background: white;
+			}
+		</style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav">
+	    <a class="aui-pull-left aui-btn" href="http://m.lizi123.cn/?url_index=me">
+	        <span class="aui-iconfont aui-icon-left"></span>我的社团
+	    </a>
+	    <!-- <div class="aui-title">Title</div> -->
+	</header>
+	<div class="aui-tab" id="tab">
+	    <div class="aui-tab-item  aui-font-size-16" id="mine_manage_club">我管理的</div>
+	    <div class="aui-tab-item aui-font-size-16 aui-active" style="color: #ffbf2b;border-bottom: 2px solid #ffbf2b;"><div></div>我加入的</div>
+	</div>
+		<section class="aui-content1">
+		<section class="aui-content-padded" style="margin:0.3rem;">
+			<div class="aui-content">
+				<ul id="club_list">
+					<!--<a href="../../2_function/22_function_club/222_function_club_concret.html">
+						<li class="aui-row"style="border: 0.05rem solid #D9D9D9;border-radius:0.5rem;margin: 0.5rem 0.3rem;padding: 0.3rem 0.2rem;">
+							<div class="aui-col-xs-2 aui-text-center">
+								<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg"class="aui-img-round club_photo_suit" />
+							</div>
+							<div class="aui-col-xs-8 aui-padded-l-5">
+								<div class="aui-col-xs-12 aui-font-size-16">栗子�?/div>
+								<div class="aui-col-xs-12 aui-font-size-12"style="color:#666666;">华侨大学厦门校区栗子研发实验�?/div>
+								<div class="aui-col-xs-12">
+									<i class="aui-icon-my aui-iconfont aui-pull-left"></i>
+									<div class="aui-font-size-12 aui-pull-left aui-padded-l-5"style="padding-top: 0.1rem;color:#666666;"><span style="color:#ffcb53;"> 120�?</span>已加�?/div>
+								</div>
+							</div>
+						    <div class="aui-col-xs-2 aui-pull-right">
+						      	<div class="aui-pull-right aui-label lab aui-font-size-12 aui-label-outlined tap_on"style="margin-top: 0.1rem;" name="quitClub">申请退�?/div>
+						      	<div class="aui-bar-ligh-col-xs-12">
+						      		<i class="aui-iconfont aui-icon-right aui-pull-right aui-padded-r-10"></i>
+						      	</div>
+						    </div> 			
+						</li>
+					</a>
+					<a href="../../2_function/22_function_club/222_function_club_concret.html">
+						<li class="aui-row"style="border: 0.05rem solid #D9D9D9;border-radius:0.5rem;margin: 0.5rem 0.3rem;padding: 0.3rem 0.2rem;">
+							<div class="aui-col-xs-2 aui-text-center">
+								<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg"class="aui-img-round club_photo_suit" />
+							</div>
+							<div class="aui-col-xs-8 aui-padded-l-5">
+								<div class="aui-col-xs-12 aui-font-size-16">栗子�?/div>
+								<div class="aui-col-xs-12 aui-font-size-12"style="color:#666666;">华侨大学厦门校区栗子研发实验�?/div>
+								<div class="aui-col-xs-12">
+									<i class="aui-icon-my aui-iconfont aui-pull-left"></i>
+									<div class="aui-font-size-12 aui-pull-left aui-padded-l-5"style="padding-top: 0.1rem;color:#666666;"><span style="color:#ffcb53;"> 120�?</span>已加�?/div>
+								</div>
+							</div>
+						    <div class="aui-col-xs-2 aui-pull-right">
+						      	<div class="aui-pull-right aui-label lab aui-font-size-12 aui-label-outlined tap_on"style="margin-top: 0.1rem;">申请退�?/div>
+						      	<div class="aui-bar-ligh-col-xs-12">
+						      		<i class="aui-iconfont aui-icon-right aui-pull-right aui-padded-r-10"></i>
+						      	</div>
+						    </div> 			
+						</li>
+					</a>
+					<a href="../../2_function/22_function_club/222_function_club_concret.html">
+						<li class="aui-row"style="border: 0.05rem solid #D9D9D9;border-radius:0.5rem;margin: 0.5rem 0.3rem;padding: 0.3rem 0.2rem;">
+							<div class="aui-col-xs-2 aui-text-center">
+								<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg"class="aui-img-round club_photo_suit" />
+							</div>
+							<div class="aui-col-xs-8 aui-padded-l-5">
+								<div class="aui-col-xs-12 aui-font-size-16">栗子�?/div>
+								<div class="aui-col-xs-12 aui-font-size-12"style="color:#666666;">华侨大学厦门校区栗子研发实验�?/div>
+								<div class="aui-col-xs-12">
+									<i class="aui-icon-my aui-iconfont aui-pull-left"></i>
+									<div class="aui-font-size-12 aui-pull-left aui-padded-l-5"style="padding-top: 0.1rem;color:#666666;"><span style="color:#ffcb53;"> 120�?</span>已加�?/div>
+								</div>
+							</div>
+						    <div class="aui-col-xs-2 aui-pull-right">
+						      	<div class="aui-pull-right aui-label lab aui-font-size-12 aui-label-outlined tap_on"style="margin-top: 0.1rem;">申请退�?/div>
+						      	<div class="aui-bar-ligh-col-xs-12">
+						      		<i class="aui-iconfont aui-icon-right aui-pull-right aui-padded-r-10"></i>
+						      	</div>
+						    </div> 			
+						</li>
+					</a>					-->
+				</ul>
+			</div>
+		</section>
+		<div class="aui-font-size-14 aui-text-center aui-padded-t-15 aui-padded-b-15" style="color:#808080">还没有社团？</div>
+		<a target="_blank" href="http://m.lizi123.cn/?url_index=fcbc"><div class="aui-font-size-16 aui-text-center aui-padded-b-15" style="color:#ff8a00;text-decoration:underline;">一起去加入社团</div></a>
+	</section>
+
+</body>
+</html>

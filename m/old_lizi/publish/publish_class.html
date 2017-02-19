@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布课程</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<link href="css/publish_class.css" rel="stylesheet" />
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>	
+		<style type="text/css">
+			@media only screen and (max-width:360px ) {
+				 .change_module_label_long{
+					font-weight: normal;
+					float: left;
+					width: 16vw;
+					text-align: center;
+					margin-top: 4vw;
+					border: 2px solid #ff9000;
+					padding: 1vw 1.5vw;
+					border-radius: 13px;
+				}
+				.change_module_label{
+					font-weight: normal;
+					float: left;
+					width: 15vw;
+					text-align: center;
+					margin-top: 4vw;
+					margin-left: 2vw;
+					border: 2px solid #ff9000;
+					padding: 1vw 2vw;
+					border-radius: 13px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!--顶部，发布课程-->
+		<header>
+			<a href="#" id="more"><</a>
+			<h1>发布课程</h1>
+			<a href="#" id="furnish">完成</a>
+		</header>
+		<!--发布课程头部，标题，价格，授课方式-->
+		<div class="class_header">
+			<!--封面-->
+			
+			<a href="#" id="pub_cover_img">
+				<input type="file" name="file" id="pub_img"   onchange="javascript:setCoverImage();"/>
+				<h1>上传封面</h1>
+				<div id="show_img">
+		    		<img id="cover_img" width="-1" height="-1" style="display: none" />  
+		    		<!--<img id="cancel_cover_img" src="http://img.lizi123.cn/LiZi/publish/img/img_funtion/edit_label/cut.png"/>-->
+		    	</div>
+		    	<img id="cancel_cover_img" class="cancel_cover_img" src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/cut.png"/>
+			</a>
+			
+			<div class="pub_class_header">
+				<!--课程标题-->
+				<input type="text" id="pub_class_header" placeholder="请输入标题"/>
+				<span id="pub_add_label">添加标签</span>
+				<!--授课方式-->
+				<form action="" method="get" id="give_class">
+					<span style="float: left;font-size: 4vw;">授课方式</span>
+					<div class="give_choose_top">
+					<input type="radio" name="give_way1" value="online"/>
+					<label name="give_class_address" class="unchecked" for="online">线上</label>
+					<input type="radio" name="give_way2" value="one_to_one"/>
+					<label name="give_class_way" class="unchecked" for="one_to_one" style="margin-left: 2vw;">一对一</label>
+					</div>
+					<div style="height: 1.5vh;clear: both;"></div>
+					<div class="give_choose_foot">
+					<input type="radio" name="give_way1" value="belowline"/>
+					<label name="give_class_address" class="unchecked" for="belowline">线下</label>
+					<input type="radio" name="give_way2"  value="one_to_many"/>
+					<label name="give_class_way" class="unchecked" for="one_to_many" style="margin-left: 2vw;">一对多</label>
+					</div>
+					<div style="height: 1vh;clear: both;"></div>
+				</form>
+				<!--付费方式-->
+				<form action="" method="get" id="pay_way">
+					<span style="float: left;font-size: 4vw;">付费方式</span>
+					<div class="pay_choose_1">
+					<input type="radio" name="pay_way" value="free"/>
+					<label name="pay" class="unchecked" for="free">免费</label>
+					<input type="radio" name="pay_way" value="exchange"/>
+					<label name="pay" class="unchecked" for="exchange" style="margin-left: 2vw;">交换</label>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/edit_label.png" id="open_change_module" style="width: 4vw;"/>
+					</div>
+					<div style="height: 1.5vh;clear: both;"></div>
+					<div class="pay_choose_2">
+					<input type="radio" name="pay_way" value="charge"/>
+					<label name="pay" class="unchecked" for="charge" id="charge">付费</label>
+					<input type="number" id="charge_money" readonly="true"/>元
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--课程详情板块-->
+		<div class="class_details">
+		    <div class="tap_class">
+				<p class="class">课程详情</p>
+				<p class="word_count">还可以输入<span id="remain_word_count">140</span>个字</p>
+			</div>
+		    <form id = "form_img" action="#" method="get">
+		    	<textarea id="intro" placeholder="添加描述(字数不超过140)"></textarea>
+<!--		    	<input type="button" id="add_class_detais_file"/>-->
+
+<!--//上传多张图片-->
+				<a id="add_class_detais_file" href="#">
+					<input type="file" name="file" id="upload_class_detais_file1"  onchange="javascript:setImagePreview();" multiple="multiple"/>
+				</a>
+		    	<div id="show_class_detais_img1" class="show_class_detais_img">
+		    		<img id="preview1" width="-1" height="-1" style="display: none" /> 
+		    	</div>
+		    	<div id="show_class_detais_img2" class="show_class_detais_img">
+		    		<img id="preview2" width="-1" height="-1" style="display: none" /> 
+		    	</div>
+		    	<div id="show_class_detais_img3" class="show_class_detais_img">
+		    		<img id="preview3" width="-1" height="-1" style="display: none" />  
+		    	</div>
+		    	<img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/cut.png" id="cancel_img" style="display: none;"/>
+		    </form>
+		   <!-- //放大预览层-->
+		    <div id="zoom_preview"><img id="zoom_img"/></div>
+<!--//上传多张图片结束-->
+		    <div style="clear: both;height: 1vh;"></div>
+		</div>
+		<div id="schedule">
+		    <div class="tap_class">
+				<p class="class">课程表</p>
+			</div>
+			<div style="clear: both;"></div>
+		    <div id="class_time">
+			    <span class="schedule_header">上课时间</span>
+			    <div id="schedule_choose_time">
+				    <a href="#" class="class_time_off" name="choose_time">一</a>
+				    <a href="#" class="class_time_off" name="choose_time">二</a>
+				    <a href="#" class="class_time_off" name="choose_time">三</a>
+				    <a href="#" class="class_time_off" name="choose_time">四</a>
+				    <a href="#" class="class_time_off" name="choose_time">五</a>
+				    <a href="#" class="class_time_off" name="choose_time">六</a>
+				    <a href="#" class="class_time_off" name="choose_time">日</a>
+			    </div>
+		    </div>
+		    <div style="width: 100vw; margin: 2vh 3vw; ">
+		    	<span >每周课时</span>
+		    	<input id="class_hours" type="text" />课时
+		    	&nbsp;持续<input  id="class_weeks" type="text"/>周
+		    </div>
+		    <div style="margin: 2vh 3vw;width: 100vw;">
+		    <span>上课地点</span>
+		    <input id="class_address" type="text" placeholder="添加上课地点描述" />
+		    </div>
+		</div>
+		<div id="frame_back" style="display: none;"></div>
+		<div id="change_module" style="display: none;">
+			<div class="tap_class">
+				<p id="exchange">你想交换的(不超过三个)</p>
+			</div>
+		    <div style="clear: both;"></div>
+		    <a href="#" class="change_module_label_long label_back"><span>添加标签</span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" id="refresh_label">换一批标签</a>
+		    <a href="#" id="cancel_change_module">取消</a>
+		    <a href="#" id="confirm_change_module">好</a>
+		</div>
+	</body>
+	<!--<script type="text/javascript">
+		 var input1 = document.getElementById("upload_class_detais_file");// 获得控件对象
+		 input1.onchange = inputPath; //当控件对象 input1 有变化时执行函数 inputPath
+		 function inputPath() {
+		  var input2 = document.getElementById("show_class_detais_file"); // 获取 input 对象 input2
+		  input2.value=input1.value;  // 将控件 input1 的值赋给 input2 
+		 }
+	</script>-->
+	<script src="js/publish_class.js"></script>
+</html>

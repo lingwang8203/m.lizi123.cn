@@ -1,0 +1,41 @@
+hh<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人主页</title>
+		<meta content="user-scalable=0;" name="viewport" />		
+		<link rel="stylesheet" type="text/css" href="css/css_PersonalHomepage.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/PersonalHomepages.js"></script>
+	</head>
+	<body>
+		<!-- ------------------------header--------------------------------------------- -->
+		<div id="header">
+			<span class="icon chat"></span>
+			<span class="icon follow"></span>
+			<img src="http://img.lizi123.cn/LiZi/me/img/head.png"	id="head"  class="head">
+			<p class="PersonalName">小栗�?/p>
+			<p class="Introduce">华侨大学厦门校区栗子社社�?/p>
+			<a href="edit_personal_information.html"><img src="http://img.lizi123.cn/LiZi/me/img/edit.png"/></a>
+			<span class="return" id="return"></span>
+		</div>
+		<!-- -----------------------------navigation---------------------------------- -->
+		<div id="navigation">
+			<ul>
+				<li><a id="homepage" class="nav_on">主页</a></li>
+				<li><a id="dynamic" class="nav_off">动�?/a></li>
+				<li><a id="ta" class="nav_off">Ta�?/a></li>
+			</ul>
+		</div>
+		<iframe src="" id="foot"></iframe>
+	</body>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

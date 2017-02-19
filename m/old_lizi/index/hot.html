@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>热门</title>
+		<link href="css/hot.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<a class="title" href="../footer/footer.html"><热门</a>
+		</header>
+		<div id="hotList">
+		<!--//////////////////////////最热门-->
+		<div id="hotest">
+			<img src="http://img.lizi123.cn/LiZi/index/img/cat.png" />
+			<div id="font">
+				<span id="bianhao">01</span>
+				<div id="header">
+					<h3>春季流浪猫摄影大赛</h3>
+					<p>替他们表达心意</p>
+					<p>主办方:华侨大学爱心社</p>
+				</div>
+				<span id="baoming">报名参加</span>
+				<a href="">查看活动详情></a>
+			</div>
+		</div>
+		
+		<!--/////////////////////////////热门-->
+		<div class="hot">
+			<div class="pic">
+				<img src="http://img.lizi123.cn/LiZi/index/img/hot1.png" />
+				<span>02</span>
+			</div>
+			<div class="miaoshu">
+				<h3>汉服制作入门课程</h3>
+				<p>讲师·壹安</p>
+			</div>
+			<a href="">查看课程详情></a>
+		</div>
+		
+		<div class="hot">
+			<div class="pic">
+				<img src="http://img.lizi123.cn/LiZi/index/img/hot2.png" />
+				<span>03</span>
+			</div>
+			<div class="miaoshu">
+				<h3>汉服制作入门课程</h3>
+				<p>讲师·壹安</p>
+			</div>
+			<a href="">查看课程详情></a>
+		</div>
+		
+		<div class="hot">
+			<div class="pic">
+				<img src="http://img.lizi123.cn/LiZi/index/img/hot2.png" />
+				<span>04</span>
+			</div>
+			<div class="miaoshu">
+				<h3>汉服制作入门课程</h3>
+				<p>讲师·壹安</p>
+			</div>
+			<a href="">查看课程详情></a>
+		</div>
+
+		</div>
+	</body>
+	<script>
+		hotNUm = 5;
+		hot();
+		window.onload=function(){
+			var header=document.getElementsByTagName("header")[0];
+			var hot=document.getElementsByClassName("hot")[0];
+			setInterval(function(){
+				var top = hot.getBoundingClientRect().top //元素顶端到可见区域顶端的距离
+	//			var se = document.documentElement.clientHeight //浏览器可见区域高度。
+				if(top <150 ) {
+	 				header.style.backgroundColor="#ffbf2b";
+				}
+				else{
+					header.style.backgroundColor="";
+				}
+			},100)
+		}
+		//=======================获取hot内容=========================
+		function hot(){
+			$.ajax({
+				type:"post",
+				url:"http://qj_api.qdmedia.cc/index.php/home/skill/hot",
+				data:{
+			    },
+			    success:function(data){
+			    	var obj=eval(data);
+			    	console.dir(obj);
+			    	if(obj.status==200){
+			    		skillShow(obj);
+			    	};
+			    },
+			    error:function(data){
+			    	alert("获取数据失败！");
+			    }
+			    
+			});
+		}
+		//===========================活动内容展示==============================
+		function actShow(obj){
+			for (var i = 0; i < obj.length; i++) {
+				var html = "<div id='hotest'>";
+				html += "<img src='"+obj[i].image_1+"' />";
+				html += "<div id='font'>";
+				html += "<span id='bianhao'>0"+hotNUm+"</span>";
+				html += "<div id='header'>";
+				html += "<h3>"+obj[i].name+"</h3>";
+				html += "<p>"+obj[i].intro+"</p>";
+				html += "<p>主办方:华侨大学爱心社</p>";
+				html += "</div>";
+				html += "<span id='baoming'>报名参加</span>";
+				html += "<a href='http://qj_wa.qdmedia.cc/LiZi/ffunction/concret_activities.html?activity_id="+obj[i].id+"'>查看活动详情></a>";
+				html += "</div>";
+				html += "</div>";
+				$("#hotList").append(html);
+				hotNUm++;
+			}
+		}
+		//==========================课程内容展示=====================================
+		function skillShow(obj){
+			for (var i = 0; i < obj.length; i++) {
+				var html = "<div class='hot'>";
+				html += "<div class='pic'>";
+				html += "<img src='"+obj[i].image_1+"' />";
+				html += "<span>0"+hotNUm+"</span>";
+				html += "</div>";
+				html += "<div class='miaoshu'>";
+				html += "<h3>"+obj[i].name+"</h3>";
+				html += "<p>讲师·"+obj[i].user_name+"</p>";
+				html += "</div>";
+				html += "<a href='http://qj_wa.qdmedia.cc/LiZi/ffunction/concret_activities.html?activity_id="+obj[i].id+"'>查看课程详情></a>";
+				html += "</div>";
+				$("#hotList").append(html);
+				hotNUm++;
+			}
+		}
+	</script>
+</html>

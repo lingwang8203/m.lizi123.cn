@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>管理社团</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont_like.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script>
+			club_id = getQueryString('club_id');
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) {
+					return unescape(r[2]);
+				} else {
+					return null;
+				}
+			};
+		</script>
+	</head>
+
+	<body>
+
+		<header class="aui-bar aui-bar-nav">
+			<a class="aui-pull-left aui-col-xs-2 aui-font-size-18">
+				<</a>
+					<div class="aui-col-xs-8 aui-text-center aui-font-size-16" id="sports_name">管理社团</div>
+					<a class="aui-pull-right aui-col-xs-2 aui-font-size-16" id="sports_edit">编辑</a>
+		</header>
+
+		<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			<div class="aui-tab-item aui-active" id="impress">社团印象</div>
+			<div class="aui-tab-item" id="show">社团秀秀</div>
+			<div class="aui-tab-item" id="memory">社团记忆</div>
+		</div>
+		<iframe id="ifram" style="width: 100%;height: 100em;" src='3421_publish_club_step2_Manage_frame1.html' frameborder=no border=0 marginwidth=0 marginheight=0 scrolling=no></iframe>
+		<!-------------------顶部------------------->
+		<!---iframe id="ifram" style="width: 100%;height: 50em;" src=""frameborder=no  border=0  marginwidth=0  marginheight=0  ></iframe---->
+	</body>
+	<!--<script type="text/javascript" src="js/aui-tab.js"></script>-->
+
+	<script type="text/javascript">
+	//返回
+		backurl = getQueryString('xiuxiu');
+		//		var str = backurl.match(/&(\S*)/)[1];
+		if(backurl == "0") { ///function class concret
+			//alert(backurl);
+			document.getElementById("ifram").src = "3422_publish_club_step2_Manage_frame2.html?club_id=" + club_id + "";
+		    document.getElementById("impress").className="aui-tab-item";
+		    document.getElementById("show").className="aui-tab-item aui-active";
+		
+		} else {
+			document.getElementById("ifram").src = "3421_publish_club_step2_Manage_frame1.html?club_id=" + club_id + "";
+		}
+
+        var impress=document.getElementById("impress");
+        var show=document.getElementById("show");
+        var memory=document.getElementById("memory");
+        var ifram=document.getElementById("ifram");
+        impress.addEventListener("touchstart",function(){
+        	impress.className="aui-tab-item aui-active";
+        	show.className="aui-tab-item";
+        	memory.className="aui-tab-item";
+        	ifram.src="3421_publish_club_step2_Manage_frame1.html?club_id="+club_id+"";
+        },false)
+        show.addEventListener("touchstart",function(){
+        	
+        	show.className="aui-tab-item aui-active";
+        	impress.className="aui-tab-item";
+        	memory.className="aui-tab-item";
+        	ifram.src="3422_publish_club_step2_Manage_frame2.html?club_id="+club_id+"";
+        },false)
+        memory.addEventListener("touchstart",function(){
+        	memory.className="aui-tab-item aui-active";
+        	impress.className="aui-tab-item";
+        	show.className="aui-tab-item";
+        	ifram.src="3423_publish_club_step2_Manage_frame3.html?club_id="+club_id+"";
+        },false)
+        
+		apiready = function() {
+			api.parseTapmode();
+		}
+//		var tab = new auiTab({
+//			element: document.getElementById("tab"),
+//			// callback:function(o,dom){
+//			//     console.log(o);
+//			// }
+//		}, function(ret) {
+//			console.log(ret)
+//		});
+
+		//xiuxiu跳转
+	</script>
+
+</html>

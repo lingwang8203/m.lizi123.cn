@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>私聊页面</title>
+		<link href="css/group_chat.css" rel="stylesheet"/>
+		<script src="js/group_chat.js"></script>
+	</head>
+	<body>
+		<header>
+			<a class="title" href="../ground/index.html"><</a>
+			<p><span>一只大菜鸟</span></p>
+			<img src="img/config.png" id="create"/>
+		</header>
+		<div class="chat_interface" id="chat">
+			<div id="tianchong"></div>
+			<!--////////////////////////我发言 右方-->
+			<div class="mytalk">
+				<img src="img/touxiang.png" />
+				<div class="lft">
+					<h3>小栗子</h3>
+					<p>组个队，双排吧55555555555555555555555555555</p>
+				</div>
+			</div>
+			<!--//////////////////我发图片-->
+			<div class="mytalk">
+				<img src="img/touxiang.png" />
+				<div class="lft">
+					<h3>小栗子</h3>
+					<img src="../ffunction/img/book/book.png" />
+				</div>
+			</div>
+			<!--///////////////////////对方发言 左方-->
+			<div class="yourtalk">
+				<img src="img/touxiang1.png" />
+				<div class="rgt">
+					<h3>一只大菜鸟</h3>
+					<p>拒绝，我的上帝，你不知道你已经坑了我多少把了吗？谁派你来帮我戒掉游戏的！</p>
+				</div>
+			</div>
+			<!--/////////////////////对方发图片-->
+			<div class="yourtalk">
+				<img src="img/touxiang1.png" />
+				<div class="rgt">
+					<h3>一只大菜鸟</h3>
+					<img src="../ffunction/img/book/book2.png" />
+				</div>
+			</div>
+		</div>
+		<div id="tianchong"></div>
+		<div class="chat_dilan">
+			<div id="input">
+				<input type="text" maxlength="100" id="message"/>
+				<span id="fasong">发送</span>
+			</div>
+			<div id="tabs">
+				<img src="img/biaoqing.png" id="biaoqing"/>
+				<img src="img/luyin.png" id="luyin"/>
+				<img src="img/camera.png" id="camera"/>
+				<a href="#" id="pic">
+					<input type="file" id="upload_pic" onchange="javascript:upload_img();"/>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

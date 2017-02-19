@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="user-scalable=0;" name="viewport" />	
+		<title>详情</title>
+		<link rel="stylesheet" type="text/css" href="css/toupiao.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+	</head>
+	<body class="toupiao_body">
+		<div class="toupiao_middle2">
+		<!--	<input type="text" id="input2" placeholder="活动详情内容......">-->
+			<textarea type="text" id="input2" placeholder="活动详情内容"></textarea>
+		</div>
+		<div id="show_class_miaoshu_img1" class="show_class_miaoshu_img">
+		    <img id="preview1" width="-1" height="-1" style="display: none" /> 
+		    <video class="shipin" loop="loop" poster="img/concret/photo.jpg" controls="controls" name="video" id="shipin"> 
+				<source src="" type="video/mp4" id="source"></source> 
+				your browser does not support the video tag 
+			</video>
+		</div>
+		<div id="show_class_miaoshu_img2" class="show_class_miaoshu_img">
+		    <img id="preview2" width="-1" height="-1" style="display: none" /> 
+		</div>
+
+		<div id="show_class_miaoshu_img3" class="show_class_miaoshu_img">
+		    <img id="preview3" width="-1" height="-1" style="display: none" />  
+		</div>
+		<form action="" method="post" enctype="multipart/form-data">
+		<div class="xiangqing_bottom">
+			<div class="xiangqing_bottom_left">
+				<a id="add_class_miaoshu_img" href="#">
+					<input type="file" name="file" id="upload_class_miaoshu_img"  onchange="javascript:setImagePreview();" multiple="multiple"/>
+				</a>
+				<span class="show_class_miaoshu_photo"></span>
+				<a id="add_class_miaoshu_img_3" href="#">
+					<input type="file" name="file" id="upload_video"  onchange="javascript:setVideoPreview();" multiple="multiple"/>
+				</a>
+			</div>
+			<div class="xiangqing_bottom_right">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/xiangqing4.png" id="delete_tabs">
+			</div>		
+		</div>
+		</form>
+	</body>
+	<script>
+			var index=0;
+		//多图片上传预览
+ 			function setImagePreview() { 
+ 			if(index==2){
+ 				document.getElementById("source").src="";
+ 				document.getElementById("shipin").style.display="none";
+ 			}
+            var preview, img_txt, localImag, file_head = document.getElementById("upload_class_miaoshu_img");  
+            var filelists=file_head.files;
+            img_index=filelists.length;
+            if(img_index<1||img_index>3)
+            return alert("做多允许上传3张图片,请重新选择！");
+            var picture=new Array;
+            for(var i=0;i<img_index;i++){
+            	picture[i] = file_head.value;
+            if (!picture[i].match(/.jpg|.gif|.png|.bmp/i)) return alert("您上传的图片格式不正确，请重新选择！");  
+            if (preview = document.getElementById("preview"+(i+1)), file_head.files && file_head.files[i]) 
+                preview.style.display = "block",
+                preview.style.width = "100%",  
+                preview.style.height = "100%", 
+                index=1,
+                preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[i]) : window.URL.createObjectURL(file_head.files[i]);  
+            else {  
+                file_head.select(),  
+                file_head.blur(),  
+                img_txt = document.selection[i].createRange().text,  
+                localImag = document.getElementById("show_class_miaoshu_img"+(i+1)),  
+                localImag.style.width = "100%",  
+                localImag.style.height = "100%";  
+                try {  
+                    localImag.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)",  
+                    localImag.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = img_txt  
+                } catch(f) {  
+                    return alert("您上传的图片格式不正确，请重新选择！"); 
+                }  
+                preview.style.display = "none",  
+                document.selection.empty() ; 
+            } 
+        }
+    }
+ 			
+ 			
+ 	//视频上传预览
+		 function setVideoPreview(){
+		 	if(index==1){
+		 		document.getElementById("preview1").src="";
+		 		document.getElementById("preview1").style.display="none";
+		 		document.getElementById("preview2").src="";
+		 		document.getElementById("preview2").style.display="none";
+		 		document.getElementById("preview3").src="";
+		 		document.getElementById("preview3").style.display="none";
+		 	}
+			document.getElementById("shipin").style.display="inline-block";
+			var preview, img_txt, localImag, file_head = document.getElementById("upload_video"),
+		            picture = file_head.value; 
+//		            if (!picture.match(/.jpg|.gif|.png|.bmp/i)) return alert("您上传的图片格式不正确，请重新选择！"),  
+//		            !1;  
+		            if (preview = document.getElementById("source"), file_head.files && file_head.files[0]) preview.style.display = "block",  
+		                preview.style.width = "100%",  
+		                preview.style.height = "100%",
+		                index=2,
+		                preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);  
+		            else {  
+		                file_head.select(),  
+		                file_head.blur(),  
+		                img_txt = document.selection.createRange().text,  
+		                localImag = document.getElementById("show_class_miaoshu_img1"),  
+		                localImag.style.width = "100%",  
+		                localImag.style.height = "100%";  
+		                try {  
+		                    localImag.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)",  
+		                    localImag.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = img_txt  
+		                } catch(f) {  
+		                    return alert("您上传的图片格式不正确，请重新选择！"),  
+		                    !1  
+		                }  
+		                preview.style.display = "none",  
+		                document.selection.empty()  
+		            }   
+		            !0  
+		}
+		 
+	/////////删除
+	document.getElementById("delete_tabs").addEventListener("touchstart",function(e){
+		e.preventDefault();
+	},false);
+	</script>
+</html>
+

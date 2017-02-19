@@ -1,0 +1,115 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	color:#868686 ;
+}
+
+/*////////////////////////////////////////////////////logo*/
+.Club_logo{
+	position: relative;
+	width: 100vw;
+	height: 20vh;
+	background-color: #ece9e3;
+	font-size: 4vw;
+}
+#add_Club_logo{
+	display: block;
+	position: absolute;
+	width: 26vw;
+	height: 15vh;
+	top: 2.5vh;
+	left: 36vw;
+	/*background-image: url(http://img.lizi123.cn/LiZi/me/img/yuan.png);
+	background-size: 26vw 15vh;
+	background-repeat: no-repeat;
+	background-position: center;*/
+	overflow: auto;
+	z-index: 400;
+}
+#upload_Club_logo{
+	display: block;
+	width: 26vw !important;
+	height: 15vh !important;
+	filter:alpha(opacity=0);
+	opacity: 0;
+	z-index: 200;
+}
+#show_Club_logo{
+	position: relative;
+	width: 26vw !important;
+	height: 17.5vh !important;
+	margin-left: 36vw;
+	padding-top: 2.5vh;
+}
+#Club_logo{
+	border-radius: 50%;
+}
+#camera{
+	position: absolute;
+	width: 10vw;
+	height: auto;
+	right: 0;
+	bottom: 0;
+	z-index: 201;
+}
+
+
+/*//////////////////////////////////////////中间*/
+
+.yinying{
+	width: 100vw;
+	height: 6vh;
+	background-color: #ece9e3;
+}
+.pageclub_photo{
+	width: 100vw;
+	/*padding: 0vw 1vw;*/
+}
+.club_photo{
+	position: relative;
+	width: 19vw;
+	height: 19vw;
+	margin-top: 3vw;
+	display: inline-block;
+}
+.add_pageclub_photo{
+	position: absolute;
+	width: 19vw;
+	height: 19vw;
+	background-image: url(http://img.lizi123.cn/LiZi/publish/img/add_class_details1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 19vw;
+}
+.show_pageclub_photo{
+	/*position: relative;
+	display: inline-block;
+	width: 19vw;
+	height: 19vw;*/
+	position: relative;
+	float: left;
+	display: inline-block;
+	border: none;
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	width: 22vw;
+	height: 22vw;
+
+}
+.photo_box{
+	position: relative;
+	display: inline-block;
+	width: 19vw;
+	margin: 0 2.5vw;
+}
+

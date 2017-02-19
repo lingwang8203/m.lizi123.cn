@@ -1,0 +1,145 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #ffbf2b;
+text-align: center;
+width: 100vw;
+text-align: left;
+padding: 3vw 2vw;
+overflow: auto;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+	float: left;
+}
+#search_box{
+	font-size: 4.4vw;
+	text-align: left;
+	text-indent: 8vw;
+	background-color: #ffbf2b;
+	margin-left: 5vw;
+	width: 75vw;
+	padding: 0.7vw;
+	border-radius: 10px;
+}
+input{
+	color: white;
+	border: 2px solid white;
+}
+#search_div{
+	float: left;
+	display: inline-block;
+	font-size: 4vw;
+	background-color: #ffbf2b;
+	position: relative;
+}
+#search_image{
+	position: absolute;
+	left: 6.5vw;
+	width: 6vw;
+	top: 0;
+}
+::-webkit-input-placeholder { color: white; } 
+::-moz-placeholder {/* Firefox 18- */ color: white; } 
+::-moz-placeholder{/* Firefox 19+ */ color: white; } 
+::-ms-input-placeholder { color: white; }
+
+.search_hostory{
+	width: 94vw;
+	height: auto;
+	padding: 2vw 3vw;
+	border-bottom: 3px solid #a8a8a8;
+	clear: both;
+	overflow: auto;
+}
+.search_hostory p{
+	float: left;
+	display: inline-block;
+	font-size: 4.5vw;
+	color: #585858;
+}
+.search_hostory span{
+	float: right;
+	font-size: 4vw;
+	color: #a8a8a8;
+}
+#clear_history{
+	width: 100vw;
+	font-size: 4vw;
+	text-align: center;
+	margin-top: 4vh;
+}
+#search_sort{
+	font-size: 4vw;
+	display: block;
+	margin-top: 3vh;
+	margin-left: 3vw;
+}
+.sort{
+	width: 97vw;
+	margin-left: 3vw;
+	height: auto;
+	clear: both;
+	overflow: auto;
+	margin-bottom: 4vh;
+	margin-top: 2vh;
+}
+.sort img{
+	width: 4vw;
+	float: left;
+	height: auto;
+}
+.sort p{
+	float: left;
+	display: inline-block;
+	font-size: 4vw;
+	margin-top: 0.5vw;
+	margin-left: 2vw;
+}
+#tanchuang{
+	width: 15vw;
+	height: auto;
+	background-color: white;
+	position: fixed;
+	top: 1.5vh;
+	padding-top: 1.5vw;
+	text-align: center;
+	left: 2.3vw;
+	border: 2px solid #a8a8a8;
+	border-radius: 10px;
+	display: none;
+}
+#tanchuang p{
+	font-size: 4vw;
+	margin: 0 2vw;
+	margin-bottom: 3vw;
+}
+.checked{
+	color: #ffbf2b;
+}

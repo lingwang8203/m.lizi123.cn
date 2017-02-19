@@ -1,0 +1,106 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #ffbf2b;
+text-align: center;
+width: 100vw;
+text-align: left;
+padding: 3vw 2vw;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+}
+.activities{
+	width: 100vw;
+	position: relative;
+}
+.yinying{
+	width: 100vw;
+	height: 3vw;
+	background-color: #e0e0e0;
+}
+.class{
+	position: relative;
+	width: 100vw;
+	height: auto;
+}
+.poster{
+	width: 100vw;
+	height: 30vh;
+}
+.edit{
+	position: absolute;
+	top: 3vh;
+	left: 3vw;
+	width: 8vw;
+}
+.delete{
+	position: absolute;
+	top: 3vh;
+	left: 13vw;
+	width: 8vw;
+}
+.zhiding{
+	position: absolute;
+	top: 3vh;
+	left: 23vw;
+}
+.header{
+	position: relative;
+	width: 100vw;
+}
+.header h3{
+	display: inline-block;
+	font-size: 5vw;
+	font-weight: normal;
+	margin-left: 3vw;
+}
+.header a{
+	font-size: 4vw;
+	color: #ffbf2b;
+	border-bottom: 2px solid #ffbf2b;
+	margin-left: 35vw;
+}
+.activties_date{
+	position: relative;
+	width: 94vw;
+	height: auto;
+	margin: 2vh 3vw;
+	overflow: auto;
+}
+.activties_date img{
+	float: left;
+	width: 6vw;
+}
+.activties_date span{
+	float: left;
+	font-size: 3.5vw;
+	margin-top: 0.5vw;
+	margin-left: 7vw;
+}

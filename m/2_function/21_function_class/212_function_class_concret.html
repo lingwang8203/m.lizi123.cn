@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>课程详情</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_212_function_class_concret.js"></script>
+	</head>
+	<style>
+		.cover{
+			width: 100%;
+			height: 10rem;
+			float: left;
+		}
+		@media screen and (min-width:365px){ 
+		.cover{
+			width: 100%;
+			height:12rem;
+		}
+		 }			
+		.ffuntion .aui-active{
+			color: #000000;
+			border-bottom: 2px solid white;
+		}				 
+	</style>
+		<script type="text/javascript" language="javascript">
+
+    function iFrameHeight() {
+
+        var ifm= document.getElementById("ifram");
+
+        var subWeb = document.frames ? document.frames["ifram"].document :ifm.contentDocument;
+
+            if(ifm != null && subWeb != null) {
+
+            ifm.height = subWeb.body.scrollHeight;
+
+            }
+
+    }
+
+</script> 
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18" id="return">
+			 	<i class="aui-icon-left aui-iconfont"></i>
+			 </a>
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16" id="class_header"></div>			       
+		</header>
+		<img src="" class="cover" id="class_poster"/>
+			<!-------------------tab切换------------------->
+		<header class="aui-bar aui-bar-nav">			
+			<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active"style="background: none;color: white;"id="frame1">详情</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame2"><div></div>感悟</div>
+			</div>			       
+		</header>	
+		<iframe id="ifram" name="ifram" style="width: 100%;height:45em;"src="" frameborder=no  border="0"  marginwidth="0"  marginheight="0"   onload="iFrameHeight()"></iframe>		
+		<img src="img/ic_edit.png" style="position: fixed;bottom: 2.5rem;right: 2rem;width: 3rem;height: auto;z-index: 999;display: none;" id="publish_class_ganwu">
+	</body>
+	<script type="text/javascript" src="js/aui-tab.js" ></script>
+	<script type="text/javascript">
+        apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+    document.getElementById("publish_class_ganwu").addEventListener("touchstart",function(e){
+    	e.preventDefault();
+    	window.open("213_publish_class_ganwu.php?class_id="+class_id+"");
+    },false)
+</script>	
+<script>
+		var url_index="fcc";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="http://m.lizi123.cn"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+</script>
+<script>
+window.onload=function(){
+		var url=location.href;  
+  		var tmp1=url.split("?")[1];  
+        var tmp3=tmp1.split("=")[2];  
+        var parm1=tmp3;  
+        class_id=tmp1.split("&")[0];  
+        class_id=class_id.split("=")[1];  
+        if(parm1=="2"){
+        	document.getElementById("ifram").src="2122_function_class_concret_frame2.html?class_id="+class_id;
+            document.getElementById("publish_class_ganwu").style.display="block";
+            document.getElementById("frame1").className="aui-tab-item";
+            document.getElementById("frame2").className="aui-tab-item aui-active";
+        }
+		
+}
+</script>
+</html>

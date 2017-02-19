@@ -1,0 +1,135 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #ffbf2b;
+text-align: center;
+width: 96vw;
+text-align: left;
+padding: 3vw 2vw;
+overflow: auto;
+}
+header a{
+	float: left;
+	font-size: 5vw;
+	color: white;
+}
+header span{
+	float: right;
+	font-size: 4vw;
+	color: white;
+	margin-top: 1vw;
+}
+#tabs{
+	width: 100vw;
+	padding: 5vw;
+	font-size: 3.5vw;
+	color: #fcaf56;
+}
+#tabs img{
+	width: 15vw;
+	height: auto;
+}
+#tabs1{
+	display: inline-block;
+	margin-left: 26vw;
+}
+#tabs2{
+	display: inline-block;
+	margin-left: 5vw;
+}
+#tips{
+	width: 100vw;
+	height: auto;
+	position: relative;
+	background-color: #fcaf56;
+	color: white;
+	text-align: center;
+	padding: 2vw 0;
+}
+#tips h5{
+	font-size: 3.5vw;
+	font-weight: normal;
+}
+#tips p{
+	font-size: 3vw;
+	margin-top: 2vw;
+}
+.group_details{
+	width: 94vw;
+	padding: 4vw 3vw;
+	color: #fcaf56;
+	border-bottom: 2px solid #d4d4d4;
+	clear: both;
+	overflow: auto;
+}
+.group_details span{
+	float: left;
+	font-size: 4vw;
+}
+.group_details input{
+	float: left;
+	font-size: 4vw;
+	margin-left: 3vw;
+	width: 70vw;
+	height: 6vw;
+}
+#group_chat{
+	width: 100vw;
+	height: 50vh;
+}
+.group_details textarea{
+	float: left;
+	font-size: 4vw;
+	width: 70vw;
+	height: 27vh;
+	margin-left: 3vw;
+	resize: none;
+}
+.group_details a{
+	display: inline-block;
+	float: right;
+	font-size: 7vw;
+	color: #fcaf56;
+	margin-right: 2vw;
+	margin-top: 0vw;
+}
+#label{
+	clear: both;
+	margin-left: 13vw;
+	font-size: 3.5vw !important;
+	overflow: auto;
+}
+#label span{
+	background-color: #fcaf56;
+	color: white;
+	border-radius: 15px;
+	font-size: 3.5vw !important;
+	padding: 0.5vw 1vw;
+	margin-top: 2vw;
+	margin-left: 2.5vw;
+}

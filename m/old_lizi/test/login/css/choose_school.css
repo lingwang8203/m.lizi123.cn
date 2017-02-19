@@ -1,0 +1,110 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	color:#868686 ;
+	position: relative;
+}
+
+/*//////////////////////////标题*/
+#header{
+	font-size: 6vw;
+	color: black;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 6vh;
+}
+
+#header_search{
+	margin-top: 5vh;
+	position: relative;
+}
+#search{
+	font-size: 4vw;
+	width: 70vw;
+	text-align: center;
+	margin-left: 15vw;
+	padding: 0.5vh 0;
+	border: 2px solid #b4b4b4;
+	border-radius: 30px;
+	/*background-image: url(http://img.lizi123.cn/LiZi/test/login/img/search.png);
+	background-repeat: no-repeat;
+	background-size: 4vw;
+	background-position-x: 2vw;
+	background-position-y: 0.5vh;*/
+	outline:none;
+}
+
+#search_image{
+	width: 4vw;
+	position: absolute;
+	top: 0.7vh;
+	left: 18vw;
+}
+p{
+	font-size: 5vw;
+	margin-top: 5vh;
+	text-align: center;
+	color: black;
+}
+#city{
+	margin-top: 2vh;
+	color: #fc9e0b;
+}
+#school{
+	margin-top: 2vh;
+	color: #fc9e0b;
+}
+.buttons {
+	height: 20vw;
+}
+
+.buttons button {
+	position: relative;
+	font-size: 6vw;
+	font-family: "Microsoft YaHei";
+	height: 10vw;
+	width: 75%;
+	border-radius: 2.67vw;
+	top: 5vw;
+	margin-left: 12.5%;
+	border:none;
+	cursor: pointer;
+	outline: none;
+	color: white;
+	background: #ffac0d;
+}
+
+#near_school{
+	height: 28vh;
+	overflow: auto;
+}
+#near_school p{
+	margin-top: 2vh;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5; 
+	opacity: 0.5;
+	color: #fc9e0b;
+}
+.checked{
+	font-size: 6vw;
+	filter:alpha(opacity=100) !important;
+	-moz-opacity:1 !important; 
+	opacity: 1 !important;
+	color: #fc9e0b;
+}
+.hidd{
+	display: none;
+}
+.xian{
+	display: block;
+}

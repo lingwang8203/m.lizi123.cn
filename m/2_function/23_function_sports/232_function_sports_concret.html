@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>活动详情</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_232_function_sports_concret.js"></script>
+		<script src="js/ajax_2321_function_sports_concret_frame1.js"></script>
+	</head>
+	<style>
+		.cover{
+			width: 100%;
+			height: 10rem;
+			float: left;
+		}
+		@media screen and (min-width:365px){ 
+		.cover{
+			width: 100%;
+			height:12rem;
+		}
+		 }			
+		.ffuntion .aui-active{
+			color: #000000;
+			border-bottom: 2px solid white;
+		}	
+		.ic_share{			
+			width: 1rem;
+			height: 1rem;
+			float: right;
+		}
+		@media screen and (min-width:365px){
+		.ic_share{
+			width: 1.2rem;
+			height: 1.2rem;
+			float: right;
+		}
+		}			 
+	</style>
+	<body>
+		
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18" id="return">
+			 	<i class="aui-icon-left aui-iconfont"></i>
+			 </a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16" id="sports_name">科技创新大赛</div>
+		    <!--<a class="aui-pull-right aui-col-xs-2  aui-padded-t-10"style="width: auto;float: right;">
+		    	<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_share_white.png" class="ic_share"/>
+		    </a>			       -->
+		</header>	
+		<img src="" class="cover" id="sports_poster"/>
+			<!-------------------tab切换------------------->
+		<header class="aui-bar aui-bar-nav">			
+			<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active"style="background: none;color: white;"id="frame1">详情</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame2"><div></div>花絮</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame3">进展</div>
+			</div>			       
+		</header>	
+		<iframe id="ifram"style="width: 100%;height:34em;"src="" frameborder=no  border=0  marginwidth=0  marginheight=0  ></iframe>	
+		<img src="../21_function_class/img/ic_edit.png" style="position: fixed;bottom: 3.0rem;right: 2rem;width: 3rem;height: auto;z-index: 999;display: none;" id="publish_sport_huaxu">
+<footer class="aui-bar aui-bar-tab">
+	  <div class="aui-row aui-pull-left aui-col-xs-12"style="border-top: 1px solid  #DDDDDD;">
+		<div class="aui-col-xs-6 aui-text-center aui-padded-b-10 aui-padded-t-10"style="background:  #ffc040;color: white;" id="sports_signUp">报名参加</div>
+		<div class="aui-col-xs-3 aui-row aui-padded-b-10 aui-padded-t-10"style="border-right:1px  solid  #DDDDDD;">
+			<div class=" aui-col-xs-6"style="padding-right: 0.2rem;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_big_good.png" id="sports_zan" class="good"/>
+			</div>
+			<div class="aui-col-xs-6 aui-font-size-12 num"style="color: #ffc040;" id="sports_zan_number">33</div>
+		</div>
+		<div class="aui-col-xs-3 aui-row aui-padded-b-10 aui-padded-t-10 aui-text-center">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_like.png" id="sports_shoucang" class="like"/>
+		</div>
+	 </div>
+</foot>
+	</body>
+	<script type="text/javascript" src="js/aui-tab.js" ></script>
+	<script type="text/javascript">
+        apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+    document.getElementById("publish_sport_huaxu").addEventListener("touchstart",function(e){
+    	e.preventDefault();
+//  	alert(activity_id);
+    	window.open("http://m.lizi123.cn/2_function/23_function_sports/233_publish_sport_huaxu.php?activity_id="+activity_id+"");
+    },false)
+</script>	
+<script>
+		var url_index="fsc";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="http://m.lizi123.cn"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+</script>
+<script>
+window.onload=function(){
+		var url=location.href;  
+  		var tmp1=url.split("?")[1];  
+        var tmp3=tmp1.split("=")[2];  
+        var parm1=tmp3;  
+        sports_id=tmp1.split("&")[0];  
+        sport_id=sports_id.split("=")[1];  
+        if(parm1=="2"){
+        	document.getElementById("ifram").src="2322_function_sports_concret_frame2.html?activity_id="+sport_id;
+            document.getElementById("publish_sport_huaxu").style.display="block";
+            document.getElementById("frame1").className="aui-tab-item";
+            document.getElementById("frame3").className="aui-tab-item";
+            document.getElementById("frame2").className="aui-tab-item aui-active";
+        }
+}
+</script>
+</html>

@@ -1,0 +1,123 @@
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-weight:400;
+	}
+/*----header------*/
+.header{
+background-color: #ffbf2b;
+text-align: center;
+}
+.return{
+position:absolute;
+left:3.5rem;
+top:2.75rem;
+width:3.3rem;
+height:3.5rem;
+}
+.title{
+display:inline-block;
+font-size:3.5rem;
+color:white;
+line-height: 0;
+text-align: center;
+padding-left: 20rem;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+#furnish{
+	font-size: 3.5rem;
+	color: white;
+	margin-left: 20vw;
+}
+.btn{
+display:inline-block;
+font-size:2.8rem;
+color:white;
+line-height: 0;
+float:right;
+padding-top: 1.5rem;
+padding-right: 3.1rem;;
+}
+/*/////////////////上传logo*/
+#logo{
+	width: 40vw;
+	height: 30vh;
+	margin-left: 30vw;
+	position: relative;
+	margin-top: 0 !important;
+}
+#add_logo{
+	display: block;
+	position: absolute;
+	width: 40vw !important;
+	height: 30vh !important;
+	background-image:url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: 39vw;
+	background-position: center;
+	overflow: auto;
+	z-index: 200;
+}
+#upload_logo{
+	width: 40vw !important;
+	height: 30vh !important;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	z-index: 200;
+}
+#show_logo{
+	position: relative;
+	width: 39vw !important;
+	height: 23vh !important;
+	padding-top: 6vw;
+}
+#preview{
+	border-radius: 50%;
+}
+
+/*///////////////////////////////////输入*/
+.activities{
+	width: 40vw;
+	margin: 5vw 25vw;
+	padding: 5vw 12vw;
+	background-image: url(../img/icon_title.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 54vw;
+}
+.activities input{
+	font-size: 5vw;
+	width: 40vw;
+	border: none;
+	text-align: center;
+}
+.activities_day{
+	width: 40vw;
+	margin: 5vw 25vw;
+	padding: 5vw 12vw;
+	background-image: url(../img/icon_time.png);
+	background-repeat: no-repeat;
+	background-size: 54vw;
+	background-position: left;
+	font-size: 5vw;
+	color: #bcbcbc;
+}
+.activities_day input{
+	font-size: 5vw;
+	width: 40vw;
+	border: none;
+	text-align: center;
+}
+#activities_details{
+	width: 90vw;
+	margin-left: 5vw;
+	height: 23vh;
+	border: none;
+	resize: none;
+	font-size: 4vw;
+}
+#delete{
+	position: absolute;
+	right: 5vw;
+	bottom: 5vw;
+}

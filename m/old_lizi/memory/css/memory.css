@@ -1,0 +1,115 @@
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-weight:400;
+	}
+/*----header------*/
+.header{
+background-color: #ffbf2b;
+text-align: center;
+}
+.return{
+position:absolute;
+left:3.5rem;
+top:2.75rem;
+width:3.3rem;
+height:3.5rem;
+}
+.title{
+display:inline-block;
+font-size:3.5rem;
+color:white;
+line-height: 0;
+text-align: center;
+padding-left: 8rem;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+.btn{
+display:inline-block;
+font-size:2.8rem;
+color:white;
+line-height: 0;
+float:right;
+padding-top: 1.5rem;
+padding-right: 3.1rem;;
+}
+/*----content------*/
+.logo{
+	position:absolute;
+	/*top:16.3rem;*/
+	top:15.3rem;
+	left:0;
+	right:0;
+	margin:0 auto;
+}
+.icon{
+/*font-size:2.8rem;
+color: #a3a3a3;*/
+position:absolute;
+left:14.0rem;
+/*margin:0;
+line-height:7.0rem;
+padding-left: 11.0rem;
+padding-right: 5.0rem;*/
+width:32.0rem;
+height:7.0rem;
+}
+.ititle{
+background: url("http://img.lizi123.cn/LiZi/memory/css/img/icon_title.png") no-repeat left;
+/*top:48.0rem;*/
+top:46.0rem;
+}
+#text-ititle{
+position:absolute;
+left:23.0rem;
+margin:0;
+top:47.0rem;
+height:4rem;
+font-size:2.8rem;
+color: #a3a3a3;
+border:0;
+}
+.itime{
+background: url("http://img.lizi123.cn/LiZi/memory/css/img/icon_time.png") no-repeat left;
+/*top:60.3rem;*/
+top:56.3rem;
+}
+.text-itime{
+/*display: inline-block;*/
+position:absolute;
+top:58.3rem;
+height:2.8rem;
+font-size:2.8rem;
+color: #a3a3a3;
+border:0;
+text-align: right;
+}
+.year{
+left:22.0rem;
+}
+.month{
+left:31.0rem;
+}
+.day{
+left:36.5rem;
+}
+.details{
+font-size:2.5rem;
+color:#a3a3a3;
+margin-left: 3.0rem;
+/*padding-top: 64.0rem;;*/
+/*padding-top:58.0rem;*/
+position: absolute;
+top:67.0rem;
+width:90%;
+border:0;
+}
+
+.icon_delete{
+background:url("http://img.lizi123.cn/LiZi/memory/css/img/icon_delete.png") no-repeat;
+width:6rem;
+height:6rem;
+position:absolute;
+bottom:2.63rem;
+right:3.1rem;
+}

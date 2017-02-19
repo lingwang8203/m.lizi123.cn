@@ -1,0 +1,187 @@
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-weight:400;
+}
+
+/*---header-----*/
+
+.header{
+	background-color: #ffb057;
+/*	box-shadow:  0 0.2rem 0.5rem #5e5d5d;*/
+}
+
+.title{
+	background: url(http://img.lizi123.cn/LiZi/chat_new/img/icon_return.png) no-repeat;
+	display: inline-block;
+	font-size:2.8rem;
+	color:#ffffff;
+	line-height: 2.8rem;
+	padding-left: 5.0rem;
+	margin-left: 4.18rem;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.edit{
+	display: inline-block;
+	font-size: 2.37rem;
+	color:#ffffff;
+	float: right;
+	padding-right: 2.8rem;
+	padding-top: 2.3rem;
+}
+
+.logo{
+	width:300px;
+	height:300px;
+	position: absolute;
+	left:0;
+	top:13.7rem;
+	right:0;
+	bottom:0;
+	margin:0 auto;
+}
+
+.name-icon{
+	text-align: center;
+	font-size: 2.8rem;
+	color: #4d4d4d;
+	padding-top: 29.7rem;
+	padding-bottom: 3.7rem;
+}
+
+.msg{
+	font-size:2.3rem;
+	/*padding:3.37rem 0rem 3.37rem 5.6rem;*/
+	padding:3.0rem 0rem 3.0rem 4.6rem;
+
+}
+
+.host-group{
+	color: #ffb057;
+}
+
+.textbox{
+	font-size: 2.0rem;
+	border:none;
+	vertical-align: top;
+	padding-top: 0.5rem;
+	position: absolute;
+/*	left:14.3rem;*/
+	left:13.0rem;
+	line-height: 2.5rem;
+}
+
+/*=====information_group====*/
+.logo-information{
+	width:270px;
+	height:270px;
+	position: absolute;
+	left:0;
+	top:12.0rem;
+	right:0;
+	bottom:0;
+	margin:0 auto;
+	/*left:22.5rem;*/
+}
+
+.name-icon-information{
+	text-align: center;
+	font-size: 2.8rem;
+	color: #4d4d4d;
+	font-weight: bold;
+	padding-top: 24.0rem;
+}
+
+.introduction-information{
+	font-size: 2rem;
+	color:#999999;
+	text-align: center;
+	margin:1.6rem 5.0rem 0 5.0rem;
+	line-height: 3rem;
+}
+
+.perfectInformation{
+	display: inline-block;
+	font-size: 2rem;
+	color:#ffffff;
+	background-color: #ffb057;
+	padding: 0.5rem 1.5rem;
+	border-radius: 1.5rem;
+	position: absolute;
+	right:4.5rem;
+	top:12.5rem;
+}
+
+.icon-modify{
+	background: url(http://img.lizi123.cn/LiZi/chat_new/img/icon_modify.png) no-repeat;
+	width: 25px;
+	height: 42px;
+	position: absolute;
+	top:19.5rem;
+	right:2.75rem;
+}
+
+.location-information{
+	background: url(http://img.lizi123.cn/LiZi/chat_new/img/icon_location.png) no-repeat;
+	font-size: 2rem;
+	color:#ffb057;
+	padding-left:3.75rem;
+	margin:  2.5rem 0rem 2.5rem 20.5rem;
+/*	text-align: center;*/
+	display: inline-block;
+}
+
+.bar-member{
+	font-size: 2.3rem;
+	color: #ffffff;
+	background-color: #fcaf56;
+	line-height: 4.0rem;
+	padding-left: 2.2rem;
+}
+
+.icon-member{
+	display: inline-block;
+	width: 125px;
+	height: 125px;
+	padding:2.5rem 0 2.5rem 2.2rem; 
+}
+
+.number-group{
+	display: inline-block;
+	font-size: 2.3rem;
+	color: #fcaf56;
+	background: url(http://img.lizi123.cn/LiZi/chat_new/img/icon_modify.png) no-repeat right;
+	vertical-align: top;
+	padding-right: 3.0rem;
+	margin-top: 5.0rem;
+	margin-left: 1.5rem;
+}
+
+.block-member{
+	border-bottom: 2px solid  #999999;
+}
+
+.matter-group{
+	font-size: 2.3rem;
+	color: #fcaf56;
+	border-bottom: 1px solid  #999999;
+	padding-left: 2.2rem;
+	line-height: 7rem;
+}
+
+.dissolution-group{
+	font-size: 2.8rem;
+	color: #ffffff;
+	background-color: #fcc27e;
+	text-align:center;
+	line-height: 8rem;
+	margin-top: 12rem;
+}
+
+.icon-modify-member{
+	display: inline-block;
+	float: right;
+	padding-top: 2.3rem;
+	padding-right: 2.5rem;
+}

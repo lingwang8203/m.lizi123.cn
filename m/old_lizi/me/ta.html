@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人主页</title>
+		<meta content="user-scalable=0;" name="viewport" />		
+		<link rel="stylesheet" type="text/css" href="css/css_PersonalHomepage.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">	
+	</head>
+	<body>
+		<div id="ta">
+		<table>
+		<tr align="center">
+			<!--<td><img src="http://img.lizi123.cn/LiZi/me/css/img/class.png"></td>
+			<td><img src="http://img.lizi123.cn/LiZi/me/css/img/club.png"></td>
+			<td><img src="http://img.lizi123.cn/LiZi/me/css/img/show.png"></td>-->
+			<td class="first" ><a class="link" target="_blank"><span class="pic classes">课程</span></a></td>
+			<td class="first" ><a class="link" target="_blank"><span class="pic club">社团</span></a></td>
+			<td class="first" ><a class="link" target="_blank"><span class="pic show">秀秀</span></a></td>
+		</tr>	
+		<tr align="center">
+			<!--<td><img src="http://img.lizi123.cn/LiZi/me/css/img/activity.png"></td>
+			<td><img src="http://img.lizi123.cn/LiZi/me/css/img/collect.png"></td>
+			<td><img src="http://img.lizi123.cn/LiZi/me/css/img/friends.png"></td>-->
+			<td class="second" ><a class="link" target="_blank"><span class="pic activity">活动</span></a></td>
+			<td class="second" ><span class="pic collect">采集</span></td>
+			<td class="second" ><a class="link" target="_blank"><span class="pic friends">好友</span></a></td>
+		</tr>	
+		</table>
+		</div>
+	</body>
+	<script>
+		//获取url参数中的user_id
+    	var user_id = getQueryString("user_id");
+    	console.dir(user_id);
+    	var link = document.getElementsByClassName("link");
+    	link[0].href = "My_manage_class.html?user_id="+user_id;
+    	link[1].href = "Manage_PageClub.html?user_id="+user_id;
+    	link[2].href = "My_xiuxiu.html?user_id"+user_id;
+    	link[3].href = "My_manage_activties.html?user_id="+user_id;
+    	//link[4].href = "";
+    	link[4].href = "My_guanzhu.html?user_id="+user_id;
+
+
+		//获取url参数
+		function getQueryString(name){ 
+		    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+		    var r = window.location.search.substr(1).match(reg); 
+		    if (r != null) {
+		        return unescape(r[2]); 
+		    }else{
+		        return null; 
+		    }
+		}; 
+	</script>
+</html>

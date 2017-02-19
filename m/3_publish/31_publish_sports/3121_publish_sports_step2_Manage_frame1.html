@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>活动详情管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/LCalendar.css"/>
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_3121_publish_sports_step2_Manage_frame1.js"></script>
+	</head>
+		<style>
+		 .book_photo{
+		 	width: 4rem;
+		 	height: 6rem;
+		 }
+		 .tex{
+		 	font-size: 0.6rem !important;
+		 }			 
+
+		.photo{
+			width:2rem;height:2rem;margin: 0.2rem;margin-right:0.1rem;
+		}	 			
+		.brief{
+			font-size: 0.3rem !important;	
+			color: #868686;
+		}
+		.good{
+			width: 1.2rem;height: 1rem;float: right;
+		}
+		.num{
+			padding-top: 0.1rem;
+		}			
+		.like{
+			width: 1.4rem;height: 1.2rem;
+		}
+		@media screen and (min-width:365px){ 
+			.brief{
+			font-size: 0.4rem !important;
+			}
+			.photo{
+				width: 2.4rem;
+				height: 2.4rem;
+			}			
+		.book_photo{
+		 	width:5rem;
+		 	height: 7rem;
+		 }		
+		 .tex{
+		 	font-size: 0.8rem !important;;
+		 }	
+		.good{
+			width: 1.4rem;height: 1.2rem;float: right;
+		}
+		.num{
+			padding-top: 0.3rem;
+		}	
+		.like{
+			width: 1.6rem;height: 1.4rem;
+		}					 		 		
+		 }		
+	</style>
+	<body>
+		<!--第一部分-->
+		<div class="aui-row aui-padded-t-5">
+				<div class="aui-col-xs-12 aui-text-center">
+					<img src="" id="sports_fabuzhe_headImg" class="aui-img-round" style="width: 3rem;height: 3rem;border: 0.1rem solid white;" />
+				</div>
+				<div class="aui-col-xs-12 aui-text-center aui-font-size-18" id="sports_fabuzhe_name"></div>
+			    <div class="aui-col-xs-12 aui-text-center brief"style="padding: 0 2.4rem;" id="sports_fabuzhe_jianjie"></div>	
+				<div class="aui-col-xs-12 aui-row">
+					<div class="aui-col-xs-4 aui-margin-t-5">
+						<i class="aui-iconfont aui-icon-date aui-pull-right"></i>
+					</div>					
+					<div class="aui-col-xs-8 aui-pull-left aui-font-size-12 aui-padded-l-10 aui-margin-t-5">
+						<input id="time" readonly="true" maxlength="15" style="min-height: 0;color: #212121 !important;" class="aui-font-size-12" type="text" placeholder="输入活动时间" data-lcalendar="2000-01-01,2020-12-31" />
+					</div>
+				</div>
+				<div class="aui-col-xs-12 aui-row">
+					<div class="aui-col-xs-4">
+						<i class="aui-iconfont aui-icon-location aui-pull-right"></i>
+					</div>					
+					<div class="aui-col-xs-8 aui-pull-left aui-font-size-12 aui-padded-l-10">
+						<input id="sports_address" readonly="true" maxlength="15" style="min-height: 0;color: #212121 !important;" class="aui-font-size-12" type="text" placeholder="输入活动地点" />
+					</div>
+				</div>	
+				<div class="aui-col-xs-12 aui-row">
+					<div class="aui-col-xs-4">
+						<i class="aui-iconfont aui-icon-comment aui-pull-right"></i>
+					</div>					
+					<div class="aui-col-xs-8 aui-pull-left aui-font-size-12 aui-padded-l-10">
+						<input id="sports_require" readonly="true" maxlength="15" style="min-height: 0;color: #212121 !important;" class="aui-font-size-12" type="text" placeholder="输入活动报名要求" />
+					</div>
+				</div>				
+		</div>
+		<!--活动简介-->
+	<div class="aui-content"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="tit">活动简介</p>
+	</div>
+	<div class="aui-font-size-12 aui-padded-t-5"style="padding: 0 0.7rem;">
+		<textarea id="sports_jianjie" readonly="true" style="height: 4.5rem;" maxlength="140" class="aui-font-size-12" placeholder="输入活动简介"></textarea>
+	</div>
+	<!--相关用户-->
+	<div class="aui-content aui-pull-left aui-padded-b-5 aui-padded-t-10"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">这些用户也参与了这个活动</p>
+	</div>		
+	<div class="aui-row"style="width:96%;margin: 0 auto;" id="sports_join_people_list"> 
+		<!--<a href="../../5_mine/51_mine_homepage/51_mine_homepage.html">
+			<div class="aui-col-xs-2"style="width: auto;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo1.jpg" class="aui-img-round photo"/>			
+			</div>
+		</a>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo2.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo3.jpg" class="aui-img-round photo"/>			
+		</div>	
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo4.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo5.jpg" class="aui-img-round photo"/>			
+		</div>	
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo3.jpg" class="aui-img-round photo"/>			
+		</div>		
+		<a href="">
+			<div class="aui-col-xs-2"style="width: auto;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/more.png" style="width:0.6rem;height:0.8rem;margin: 0.3rem;margin-right: 0;margin-top: 0.8rem;" />			
+			</div>	
+		</a>-->
+	</div>	
+	<div class="aui-content aui-pull-left aui-padded-b-10 aui-padded-t-10"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">相关活动推荐</p>
+   		 <p class="aui-pull-right aui-padded-r-10 aui-font-size-12"style="color: #FFBF2B;display: none;" id="sports_tuijian_more">更多></p>
+	</div>	
+	<div class="aui-row aui-pull-left aui-padded-b-15" id="sports_tuijian_list">
+		<!--<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+				<a href="../../2_function/23_function_sports/2321_function_sports_concret_frame1.html" target="_blank">
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+				</a>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row  aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>		-->
+	</div>	
+	<div class="aui-row aui-pull-left aui-col-xs-12"style="border-top: 1px solid  #DDDDDD;">
+		<div class="aui-col-xs-4 aui-text-center aui-padded-b-10 aui-padded-t-10 aui-font-size-14"style="background:  #ffc040;color: white;" id="sports_choose_join_information">选择报名信息</div>
+		<div class="aui-col-xs-4 aui-text-center aui-padded-b-10 aui-padded-t-10 aui-font-size-14"style="background:  #ffc040;color: white;border-left:1px  solid white;" id="sports_check_join_people">查看报名人员</div>
+		<div class="aui-col-xs-4 aui-row aui-padded-b-10 aui-padded-t-10"style="border-right:1px  solid  #DDDDDD;">
+			<div class=" aui-col-xs-6"style="padding-right: 0.2rem;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_big_good.png" class="good" id="sports_zan_index"/>
+			</div>
+			<div class="aui-col-xs-6 aui-font-size-12 num"style="color: #ffc040;" id="sports_zan_number">33</div>
+		</div>
+	</div>
+	</body>
+	<script src="js/LCalendar.js"></script>
+	<script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#time', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(), //最小日期
+        'maxDate': '2020-12-31' //最大日期
+    });
+    </script>
+</html>

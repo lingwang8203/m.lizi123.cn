@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>index_middle</title>
+		<link rel="stylesheet" type="text/css" href="css/css_index.css">
+		<meta content="user-scalable=0;" name="viewport" />		
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/ind4ex_wrap.js"></script>
+		<script src="js/slider.js"></script>		
+	</head>
+	<body>
+				<!------------------顶部----------------------------->
+		<div id="header">
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/place.png"class="tubiao"style="float:left;height: 4.9em;padding-top: 0.7em;"/>
+			<p style="padding-top: 0.3em;">华侨大学</p>
+			<span style="width: 15%;float: left;">&ensp;</span>
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/logo.png" id="logo"/>
+			<img class="_tubiao" src="http://img.lizi123.cn/LiZi/ffunction/img/news.png"style="width: 5.5em;"/>
+			<img class="_tubiao" src="http://img.lizi123.cn/LiZi/ffunction/img/search.png"/>
+		</div>		
+			<!--------------------轮播-------------------------->
+	<div id="banner_tabs" class="flexslider">
+		<ul class="slides">
+			<li>
+				<img width="100%" height="100%" alt="" src="http://img.lizi123.cn/LiZi/ffunction/img/banner.jpg" >
+			</li>
+			<li>
+				<img width="100%" height="100%" alt=""src="http://img.lizi123.cn/LiZi/ffunction/img/banner1.jpg">
+			</li>
+			<li>
+				<img width="100%" height="100%" alt="" src="http://img.lizi123.cn/LiZi/ffunction/img/banner2.jpg" >
+			</li>
+			<li>
+				<img width="100%" height="100%" alt="" src="http://img.lizi123.cn/LiZi/ffunction/img/banner1.jpg" >
+			</li>
+		</ul>
+		<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+			<li><a>1</a></li>
+			<li><a>2</a></li>
+			<li><a>3</a></li>
+			<li><a>4</a></li>
+		</ol>
+	</div>
+		<!------------------------------------热门内容------------------------>
+    	<div class="title">
+			<span style="text-align:left ;display: block;float: left;padding: 1rem;">热门内容</span>
+			<a style="text-align: right;display: block;float: right;padding: 1rem;" class="more">更多>></a>
+		</div>
+		<ul>
+			<li class="hot">
+				<div class="hot_contect"id="hot_contect1">
+					<span class="u">摄影技巧</span>
+					<span>2262人参与</span>
+				</div>			
+			</li>
+			<li class="hot">
+				<div class="hot_contect" id="hot_contect2">
+					<span class="u">摄影技巧</span>
+					<span>2262人参与</span>
+				</div>
+			</li>
+			<li class="hot" style="width: 34%;">
+				<div class="hot_contect" id="hot_contect3">
+					<span class="u">摄影技巧</span>
+					<span>2262人参与</span>
+				</div>		
+			</li>	
+		</ul>
+		<!----------------------今日精选---------------------------->
+		<div class="title">
+			<p  class="today">今日精选</p>
+		</div>		
+		<div class="today_content">
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/touxiang.jpg" class="touxiang"/>
+			<span class="user_name">壹安</span>
+			<span class="user_title">南京邮电大学街舞节开幕</span>
+			<span class="tap">社团活动</span>
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/tuisong.jpg" class="tuisong"/>
+		</div>
+		<div class="today_content">
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/touxiang.jpg" class="touxiang"/>
+			<span class="user_name">壹安</span>
+			<span class="user_title">南京邮电大学街舞节开幕</span>
+			<span class="tap">社团活动</span>
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/tuisong.jpg" class="tuisong"/>
+		</div>
+		<div class="today_content">
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/touxiang.jpg" class="touxiang"/>
+			<span class="user_name">壹安</span>
+			<span class="user_title">南京邮电大学街舞节开幕</span>
+			<span class="tap">社团活动</span>
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/tuisong.jpg" class="tuisong"/>
+		</div>	
+		<div>
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/tuisong.jpg" class="tuisong last" />
+		</div>
+	</body>
+	<!--海报轮播-->
+		<script type="text/javascript">
+		$(function() {
+			var bannerSlider = new Slider($('#banner_tabs'), {
+				time: 2500,
+				delay: 400,
+				event: 'hover',
+				auto: true,
+				mode: 'fade',
+				controller: $('#bannerCtrl'),
+				activeControllerCls: 'active'
+			});
+		})
+		</script>
+</html>

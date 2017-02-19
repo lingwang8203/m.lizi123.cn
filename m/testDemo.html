@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PC端登录测试页面</title>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//èŽ·å–urlå‚æ•°ä¸­çš„user_id
+			    //var user_id = getQueryString("user_id");
+			    //alert("js");
+			    var images = new Array("http://img.lizi123.cn/LiZi/index/img/xiu_photo.png","http://img.lizi123.cn/LiZi/index/img/class_photo.png");
+			    $.param(images,true);
+			    //alert(images);
+			    //==============================æŽ¥å£è°ƒç”¨=============================
+				$.ajax({
+			        type:"post",
+			        url:"http://api.lizi123.cn/index.php/home/user/userLogin",
+			        data:{
+			        	"client_type":0,
+			        	//"lat":24.6025564467,
+			        	//"lng":118.0852088732,
+			        	//"type_id":6,
+			        	//"user_id":1,
+			        	"user_name":15711589783,
+			        	"user_password":123456,
+			        	//"intro":"ä»Šå¤©å¥½å¼€å¿ƒå•Šï¼Œåˆæ•²ä»£ç äº†ï¼ï¼ï¼?,
+			        	//"images":images,
+			        	//"class_id":2,
+			        	//"intro":"12345678",
+			        	//"comment_id":2,
+			        	//"content":"å›žå¤è¯„è®ºæµ‹è¯•002",
+			        },
+			        xhrFields: {
+			            withCredentials: true
+			        },
+			        success:function(data){
+			            var obj = eval(data);
+			            console.dir(obj);
+			            if (obj.status==200) {
+			            	alert("登录成功");
+			            };
+			        },
+			        error:function(data){
+			            alert("error!");
+			        },
+			            
+			    });
+
+
+			});
+			//=================================èŽ·å–urlå‚æ•°=====================
+			function getQueryString(name){ 
+			    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+			    var r = window.location.search.substr(1).match(reg); 
+			    if (r != null) {
+			        return unescape(r[2]); 
+			    }else{
+			        return null; 
+			    }
+			}; 
+		</script>
+	</head>
+	<body>
+		<center><h1>PC端登录测试页面</h1></center>
+	</body>
+</html>

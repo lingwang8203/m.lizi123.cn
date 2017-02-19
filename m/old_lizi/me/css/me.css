@@ -1,0 +1,167 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	color:#868686 ;
+}
+/*===========================顶部======================================*/
+#header{
+	/*width: 100%;
+	height: 26%;*/
+	overflow: auto;
+	background-color: #ffbf2b;
+/*	position: relative;*/
+/*	padding: 4vh 0vh 0vh 0vh;*/
+	padding-top:5.0vh;
+}
+#touxiang{
+	/*padding-left: 5vw;*/
+	float: left;
+	width: 30vw;
+	height: auto;
+	border-radius:50%;
+	overflow:hidden;
+}
+#introduce{
+	float: left;
+	display: inline-block;
+	margin-left: 1vw;
+	width: 50vw;
+	height: auto;
+	margin-top: 1vh;
+	color: #ffffff;
+}
+#introduce h3{
+	font-size: 5vw;
+	margin-bottom: 0.5vh;
+}
+#introduce p{
+	font-size: 3.3vw;
+	margin-bottom: 0.5vh;
+}
+#date{
+	font-weight: normal;
+	font-size: 6vw;
+}
+#header a{
+	position: absolute;
+	font-size: 7vw;
+	color: #FFFFFF;
+/*	top: 8vh;*/
+	top:10vh;
+	/*right: 3vw;*/
+	right:2.7vw;
+}
+#message_state{
+	position: absolute;
+	/*top: 2vh;*/
+	top:2.5vh;
+	right: 3vw;
+}
+/*===========================中间选项卡======================================*/
+#function_tabs{
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: auto;
+}
+.function_tabs{
+	float: left;
+	width: 25vw;
+	display: inline-block;
+/*	padding: 2vh 0vw;*/
+	padding-top:2.5rem;
+	padding-bottom:2.2rem;
+}
+.function_tabs img{
+	width: 11.2vw;
+	height: auto;
+	padding:0vw 8.5vw;
+	padding: 0vw 7.0vw ;
+	padding-bottom: 1vh;
+}
+.function_tabs p{
+	/*font-size: 4.5vw;*/
+	font-size:4.0vw;
+	color: #a5a5a5;
+	padding-left: 4vw;
+/*	padding-left:1.8rem;*/
+}
+/*//重写图片大小*/
+#my_pageclub{
+	width: 14vw !important;
+	padding-left: 5.5vw;
+	padding-bottom: 2.5vw;
+}
+#my_activities{
+	width: 10vw !important;
+	padding-left: 7.5vw;
+	padding-bottom: 2.2vw;
+}
+#my_xiuxiu{
+	width: 10vw !important;
+	padding-left: 7.5vw;
+	padding-bottom: 3.8vw;
+}
+.yinying{
+	width: 100%;
+	height: 2vh;
+	background-color: #e0e0e0;
+	clear: both;
+}
+/*===========================竖向选项卡======================================*/
+.my{
+	width: 100%;
+	position: relative;
+/*	padding: 2vh 0 1vh 0;*/
+	border-bottom: solid 2px #e0e0e0;
+	overflow: auto;
+}
+.my_icon{
+	width: 7vw;
+	float: left;
+/*	margin-left: 5vw;*/
+	margin-left:6.5vw;
+	margin-top: 1.3rem;
+}
+.icon-help{
+	margin-left:7.5vw;
+}
+.icon-invite{
+	margin-top: 1.7rem;;
+}
+.icon-fans{
+	margin-top: 0.8rem;;
+}
+.my p{
+	display: inline-block;
+	float: left;
+	font-size: 4.8vw;
+/*	margin-left: 4vw;*/
+	margin-left:6.5vw;
+	line-height: 7rem;;
+}
+.my .p-help{
+	margin-left:7.5vw;
+}
+.new_guanzhu{
+	float: left;
+/*	margin-top: 2vw;*/
+	margin-top: 4.5vw;
+	margin-left: 2vw;
+}
+#new_fensi{
+	float: left;
+	margin-left: 2vw;
+/*	margin-top: 2vw;*/
+	margin-top: 3.5vw;
+}

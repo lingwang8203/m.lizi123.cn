@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+	<title>我的课程</title>
+	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	<script src="../../js/jquery-2.2.3.min.js"></script>
+    <script src="js/ajax_522_mine_classJoin.js"></script>
+	<style type="text/css">
+	.date{
+		border-radius: 50%;
+		padding:0 0.1rem;
+		margin-right:0.1rem;
+		font-size: 0.45rem;
+	}
+	.tap-on{
+		border:1px solid #ffac0d;
+		color:white;
+		background-color: #ffac0d;
+	}
+	.tap-off{
+		border:1px solid;
+	}
+	</style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav">
+	    <a class="aui-pull-left aui-btn" href="http://m.lizi123.cn/?url_index=me">
+	        <span class="aui-iconfont aui-icon-left"></span>我的课程
+	    </a>
+	    <a class="aui-pull-right aui-font-size-14" style="line-height: 1rem;border:1px solid white;border-radius:0.2rem;padding:0 0.3rem;margin:0.55rem;">发布</a>
+	    <!-- <div class="aui-title">Title</div> -->
+	</header>
+	<div class="aui-tab" id="tab">
+	    <div class="aui-tab-item aui-font-size-16" id="mine_fabu_class"style="color:#b0aca6">联系过的</div>
+	    <div class="aui-tab-item aui-active aui-font-size-16"  style="color: #ffbf2b;border-bottom: 2px solid #ffbf2b;">我发布的</div>
+	</div>
+	<section class="aui-content1" style="background-color:white;">
+		<section class="aui-content-padded" style="margin:0.3rem;">
+	<div style="height:0.1rem;background-color:#F5F5F5;"></div>
+		<ul id="join_class_list" class="aui-list">
+		<!----------------------课程推送格式-------------->
+			<!--<li class="aui-row aui-padded-t-5 aui-padded-b-5"style="width:100%;background: white;">
+				<div class="aui-col-xs-2 aui-text-center"style="margin: 0;padding: 0;margin-top: 0.1rem;">
+	        		<a href="../5_mine/51_mine_homepage/51_mine_homepage.html" style="width: 2rem !important;height:auto;"target="_blank"><img src="http://img.lizi123.cn/LiZi/index/img/user1.png" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;" /></a>
+	        	</div>
+	        	<div class="aui-col-xs-6 aui-row aui-padded-t-5">
+	        		<div class="aui-col-12 aui-font-size-14">韶华嫣然。</div>  
+	 	      		<div class="aui-col-12 aui-font-size-12"style="color: #757575;">2016/10/13</div> 	        			
+	        	</div>  
+	    		<div class="aui-col-xs-4"style="margin-top: 0.3rem;">
+	      			<a href="13_home_label/13_home_label.html"target="_blank"><div class="aui-label aui-pull-right aui-font-size-12 tap">摄影拍</div></a>
+	        	</div>       
+	        	<a href="../2_function/21_function_class/212_function_class_concret.html" style="color: #212121 !important;"target="_blank">
+		        	<div class="aui-row aui-col-xs-12">
+				        <div class="aui-col-xs-5 aui-pull-left"style="height: 8.4rem;	padding: 0.5rem !important;padding-top: 0 !important;">
+				        		<img src="http://img.lizi123.cn/LiZi/index/img/class_photo.png"style="height:8.4rem;width: 100%;" />
+				        </div>
+			        	<div class="aui-col-xs-7 aui-row aui-pull-left">
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-12 aui-font-size-18 ">"标题名字"</div>
+			        		</div>		        		
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">上课方式</div>
+			        			<div class="aui-col-xs-8 aui-font-size-12">线上·一对一</div>
+			        		</div>	
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">课程简介</div>
+			        			<div class="aui-col-xs-8 aui-font-size-12">由华侨大学摄影协会会长线下教学的摄影课，提供上课时可用的单反摄影操作......</div>
+			        		</div>	
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">上课地点</div>
+			        			<div class="aui-col-xs-8 aui-font-size-12">厦门校区 A336</div>
+			        		</div>		 
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">上课时间</div>
+			        			<div class="aui-col-xs-8  aui-row aui-font-size-12">
+			        				<div class="aui-col-12" >周一，二，三</div>
+			        				<div class="aui-col-12">共 <span style="color: #ffac0d;">43</span>学时</div>	          				
+			        			</div>
+			        		</div>	        		
+			        	</div>
+		        	</div>
+	        	</a>
+	        	<div class="aui-row aui-col-xs-12">
+		        	<div class="aui-col-xs-2 aui-row aui-margin-l-15 aui-pull-left">
+		        		<i class="aui-iconfont aui-icon-like" name="class_dianzan"></i>
+		        		<span class="aui-font-size-12">125</span>       		
+		        	</div>
+		        	<a href="#">
+			        	<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left">
+			        		<i class="aui-iconfont aui-icon-comment"></i>
+			        		<span class="aui-font-size-12">289</span>       		
+			        	</div> 
+		        	</a>
+		        	<div class="aui-col-xs-1 aui-pull-right">
+		        		<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/delete1.png" style="width: 1rem;height: auto;"/>
+		        	</div>
+		    		<div class="aui-col-xs-4 aui-pull-right">
+		      			<div class="aui-pull-right aui-label lab aui-font-size-12 aui-label-outlined tap_on"style="margin-top: 0;">进入管理</div>
+		      	    </div>  	        	        	
+		        </div>	        	
+			</li>
+		<div class="hr"></div>		-->
+		<!----------------------课程推送格式-------------->
+			<!--<li class="aui-row aui-padded-t-5 aui-padded-b-5"style="width:100%;background: white;">
+				<div class="aui-col-xs-2 aui-text-center"style="margin: 0;padding: 0;margin-top: 0.1rem;">
+	        		<a href="../5_mine/51_mine_homepage/51_mine_homepage.html" style="width: 2rem !important;height:auto;"target="_blank"><img src="http://img.lizi123.cn/LiZi/index/img/user1.png" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;" /></a>
+	        	</div>
+	        	<div class="aui-col-xs-6 aui-row aui-padded-t-5">
+	        		<div class="aui-col-12 aui-font-size-14">韶华嫣然。</div>  
+	 	      		<div class="aui-col-12 aui-font-size-12"style="color: #757575;">2016/10/13</div> 	        			
+	        	</div>  
+	    		<div class="aui-col-xs-4"style="margin-top: 0.3rem;">
+	      			<a href="13_home_label/13_home_label.html"target="_blank"><div class="aui-label aui-pull-right aui-font-size-12 tap">摄影摄</div></a>
+	        	</div>       
+	        	<a href="../2_function/21_function_class/212_function_class_concret.html" style="color: #212121 !important;"target="_blank">
+		        	<div class="aui-row aui-col-xs-12">
+				        <div class="aui-col-xs-5 aui-pull-left"style="height: 8.4rem;	padding: 0.5rem !important;padding-top: 0 !important;">
+				        		<img src="http://img.lizi123.cn/LiZi/index/img/class_photo.png"style="height:8.4rem;width: 100%;" />
+				        </div>
+			        	<div class="aui-col-xs-7 aui-row aui-pull-left">
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-12 aui-font-size-18 ">"标题名字"</div>
+			        		</div>		        		
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">上课方式</div>
+			        			<div class="aui-col-xs-8 aui-font-size-12">线上·一对一</div>
+			        		</div>	
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">课程简介</div>
+			        			<div class="aui-col-xs-8 aui-font-size-12">由华侨大学摄影协会会长线下教学的摄影课，提供上课时可用的单反摄影操作......</div>
+			        		</div>	
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">上课地点</div>
+			        			<div class="aui-col-xs-8 aui-font-size-12">厦门校区 A336</div>
+			        		</div>		 
+			        		<div class="aui-row aui-col-12 ">
+			        			<div class="aui-col-xs-4  aui-font-size-12">上课时间</div>
+			        			<div class="aui-col-xs-8  aui-row aui-font-size-12">
+			        				<div class="aui-col-12" >周一，二，三</div>
+			        				<div class="aui-col-12">共 <span style="color: #ffac0d;">43</span>学时</div>	          				
+			        			</div>
+			        		</div>	        		
+			        	</div>
+		        	</div>
+	        	</a>
+	        	<div class="aui-row aui-col-xs-12">
+		        	<div class="aui-col-xs-2 aui-row aui-margin-l-15 aui-pull-left">
+		        		<i class="aui-iconfont aui-icon-like" name="class_dianzan"></i>
+		        		<span class="aui-font-size-12">125</span>       		
+		        	</div>
+		        	<a href="#">
+			        	<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left">
+			        		<i class="aui-iconfont aui-icon-comment"></i>
+			        		<span class="aui-font-size-12">289</span>       		
+			        	</div> 
+		        	</a>
+		        	<div class="aui-col-xs-1 aui-pull-right">
+		        		<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/delete1.png" style="width: 1rem;height: auto;"/>
+		        	</div>
+		    		<div class="aui-col-xs-4 aui-pull-right">
+		      			<div class="aui-pull-right aui-label lab aui-font-size-12 aui-label-outlined tap_on"style="margin-top: 0;">进入管理</div>
+		      	    </div>  	        	        	
+		        </div>	        	
+			</li>-->
+		<!--<div class="hr"></div>-->			
+		</ul>		
+
+		</section>		
+		</section>
+		<script>
+			document.getElementById("mine_fabu_class").addEventListener("touchstart",function(e){
+				e.preventDefault();
+				window.location.href="521_mine_classManege.html";
+			},false);
+		</script>
+</body>
+</html>

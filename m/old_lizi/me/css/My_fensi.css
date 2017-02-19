@@ -1,0 +1,100 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+	
+	text-align: center;
+	/*width: 100vw;*/
+	text-align: left;
+	padding: 3vw 7vw;
+	background: url("http://img.lizi123.cn/LiZi/me/img/return.png") no-repeat;
+	background-position: 2% 50%;
+	background-color: #ffbf2b;
+/*	width: 4vw;
+	height: 4.5vw;*/
+}
+header a{
+	font-size: 5vw;
+	color: white;
+}
+.yinying{
+	width: 96vw;
+	background-color: #EDEDED;
+	font-size: 4vw;
+	color: #919191;
+	padding: 0.5vh 2vw;
+}.list{
+	width: 100vw;
+	position: relative;
+	height: auto;
+}
+.people{
+	width:96vw;
+	height: auto;
+	padding: 0.5vw 2vw;
+	clear: both;
+	border-bottom: 1px solid #A8A8A8;
+	overflow: auto;
+	position: relative;
+}
+.people_touxiang{
+	float: left;
+	width: 11vw;
+	height: 11vw;
+	border-radius: 50%;
+	margin-top: 2.5vw;
+	margin-bottom: 2.5vw;
+}
+.people_name{
+	float: left;
+	font-size: 4.2vw;
+	margin-left: 3vw;
+	margin-top: 1vw;
+	color:#696969;
+	padding-top: 1.5vw;
+}
+.from{
+	font-size: 3.7vw;
+	color: #8D8D8D;
+}
+.guanzhu{
+	position: absolute;
+	font-size: 4vw;
+	right: 3vw;
+	top: 5.8vw;
+	padding: 0.8vw 3vw;
+	background-color: #ffbf2b;
+	border-radius: 10px;
+	color: white;
+	line-height: 4vw;
+}
+.yiguanzhu{
+	position: absolute;
+	font-size: 4vw;
+	right: 3.5vw;
+	top: 5.8vw;
+}

@@ -1,0 +1,160 @@
+html{
+	font-size: 62.5%;
+	font: "微软雅黑";
+	color: black;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	font-weight: normal;
+}
+html,body{
+	position: relative;
+}
+a:link{
+	color:black ;
+	text-decoration: none;
+}
+input:focus{
+	outline: none;
+}
+/*//////////////////////////顶部//////////////////////////////////*/
+header{
+	font: "微软雅黑";
+	font-weight: normal;
+	width: 100vw;
+	height: 10vh;
+	background-color: #ffbf2b;
+}
+#more{
+	display: inline-block;
+	width: 5vw;
+	font-size: 6vw;
+	font-weight: bold;
+	margin-left: 2vw;
+	color: black;
+}
+header h1{
+	display: inline-block;
+	margin-left: 30vw;
+	font-size: 7vw;
+}
+#furnish{
+	display: inline-block;
+	margin-left: 25vw;
+	font-size: 5.5vw;
+	font-weight: bold;
+	color: black;
+}
+
+/*//拍照 图片 */
+#show_img{
+	width: 100%;
+	height: 52vh;
+	position: relative;
+	background-color: #000000;
+	z-index: 1;
+}
+#show_div{
+	width: 100vw;
+	overflow: auto;
+	/*padding-top: 2vh;*/
+	/*margin: 0 10vw;*/
+	height: 52vh;
+	position: relative;
+}
+#icon_paizhao{
+	position: absolute;
+	height: 8vh;
+	padding: 1vh 0;
+	width: 15vw;
+	background-image: url(http://img.lizi123.cn/LiZi/publish/img/camera.png);
+	background-repeat: no-repeat;
+	background-size: 15vw;
+	background-position: center;
+	bottom: 0;
+	left: 43vw;
+	overflow: auto;
+	z-index: 999;
+}
+#choose_img{
+	position: absolute;
+	height: 8vh;
+	padding: 1vh 0;
+	width: 11vw;
+	background-image: url(http://img.lizi123.cn/LiZi/publish/img/xiangce.png);
+	background-repeat: no-repeat;
+	background-size: 11vw;
+	background-position: center;
+	bottom: 0;
+	right: 5vw;
+	overflow: auto;
+	z-index: 999;
+}
+#upload_xiu{
+	position: absolute;
+	height: 8vh;
+	width: 15vw;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.cancel_xiu_img{
+	display: none;
+	position: absolute;
+	top: 2vh;
+	right: 3vw;
+	width: 10vw;
+}
+
+/*//////////////说点什么吧//////*/
+.tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	/*border-bottom: 0.2rem solid #dcdcdc;*/
+	/*background-color: burlywood;*/
+}
+.class{
+	font-size: 4vw;
+	font-weight: bold;
+	width: 50%;
+	float: left;
+	padding:0.2rem 0 0.3rem 1rem;
+	margin:2rem 0 3rem 1.2rem;
+	/*background-color: blue;*/
+	border-left: 1rem solid #FFBF2B;
+	display: inline-block;
+	/*background-color: blue;*/
+}
+#content{
+	width: 100%;
+	height: 25vh;
+	border: none;
+	font-size: 4vw;
+	resize: none;
+}
+#footer{
+	width: 100%;
+	height: auto;
+	padding: 2vw 0;
+	position: relative;
+	background-color: #e6e6e6;
+	clear: both;
+	overflow: auto;
+}
+#aite{
+	float: left;
+	margin-top: 0;
+	width: 6vw;
+	margin-left: 8vw;
+}
+#jing{
+	float: left;
+    margin-left: 5vw;
+    width: 5vw;
+}
+#weizhi{
+	float: right;
+	width: 4vw;
+	margin-right: 5vw;
+}

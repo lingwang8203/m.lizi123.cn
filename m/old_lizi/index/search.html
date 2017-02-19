@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/search.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+	</head>
+	<body>
+		<header>
+			<a id="all">全部∨</a>
+			<div id="search_div">
+				<form action="" method="post">
+					<input type="text" placeholder="搜索" id="search_box"/>
+				</form>
+				<img src="http://img.lizi123.cn/LiZi/index/img/search.png" id="search_image"/>
+			</div>
+		</header>
+		<a href="#">
+			<div class="search_hostory">
+				<p>华侨大学文学社</p>
+				<span>社团</span>
+			</div>
+		</a>
+		<a href="#">
+			<div class="search_hostory">
+				<p>小栗子</p>
+				<span>用户</span>
+			</div>
+		</a>
+		<a href="#">
+			<div class="search_hostory">
+				<p>创新科技大赛</p>
+				<span>活动</span>
+			</div>
+		</a>
+		<p id="clear_history">清空搜索历史</p>
+		<span id="search_sort">热搜排行</span>
+		<div class="sort">
+			<img src="http://img.lizi123.cn/LiZi/index/img/arrow1.png" />
+			<p>春季摄影大赛</p>
+		</div>
+		<div class="sort">
+			<img src="http://img.lizi123.cn/LiZi/index/img/arrow2.png" />
+			<p style="margin-top: 0;">春季摄影大赛</p>
+		</div>
+		<div class="sort">
+			<img src="http://img.lizi123.cn/LiZi/index/img/arrow3.png" style="margin-top: 2.5vw;"/>
+			<p>春季摄影大赛</p>
+		</div>
+		<!--///////////////////////////////弹窗-->
+		<div id="tanchuang">
+			<p class="checked">全部</p>
+			<p>用户</p>
+			<p>社团</p>
+			<p>课程</p>
+			<p>活动</p>
+			<p>秀秀</p>
+		</div>
+	</body>
+	<script>
+		var all=document.getElementById("all");
+		var tanchuang=document.getElementById("tanchuang");
+		var check=document.getElementById("tanchuang").children;
+		all.addEventListener("touchstart",function(e){
+			e.preventDefault();
+			tanchuang.style.display="block";
+		},false);
+		for(var i=0;i<check.length;i++){
+			check[i].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				check[0].className="";
+				this.className="checked";
+				all.innerHTML=this.innerHTML+"∨";
+				tanchuang.style.display="none";
+			},false);
+		}
+	</script>
+</html>

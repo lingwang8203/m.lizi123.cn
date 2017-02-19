@@ -1,0 +1,59 @@
+/*--------------顶部-------------------------*/
+.aui-bar .btn-place{
+	width:1.2rem;
+	height: 1.4rem;
+	padding: 0;
+	margin: 0;
+}
+.aui-bar .btn-news{
+	width:1.4rem;
+	height: 1.2rem;
+	padding: 0;
+	margin: 0;	
+}
+#placeName{
+	color: white;
+	padding: 0;
+	padding-left:0.1rem;
+	margin: 0;
+	text-decoration: underline;
+}
+#logo{
+	width: 2rem;
+	height: 2rem;
+}
+/*----------------热门---------------------------*/
+.title{
+	height: 1.4rem;
+	padding: 0.2rem;
+	background: #f4f4f4;
+}
+
+.hot_title,.hot_num{
+	color: white;
+}
+/*-=----------推送----------*/
+.out{
+	height: 4rem;
+	position: absolute;
+	bottom: 0;
+}
+.in_opacity{
+	height: 4rem;
+	position: absolute;
+	bottom: 0;
+	background: black;
+	opacity: 0.5;
+}
+.join_title{
+	color: white;
+	border: 0.1rem solid white;
+	padding: 0.2rem;
+	margin: 0.2rem;
+}
+/*----------功能区样式-------------*/
+/*--------功能区顶部---------*/
+.ffuntion .aui-active{
+	color: #000000;
+	border-bottom: 2px solid white;
+}

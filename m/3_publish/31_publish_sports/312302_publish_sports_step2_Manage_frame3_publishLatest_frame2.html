@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">			
+		<title>进展投票的发布</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/LCalendar.css"/>
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" href="../33_publish_show/css/new_publish_show.css" />
+		<script src="js/ajax_312301_publish_sports_step2_Manage_frame3_publishLatest_frame1.js"></script>
+	</head>
+	<style>
+	body{
+		background: white;
+	}
+		.numm{
+			width: auto;
+			padding: 0 0.2rem;
+			background: #ffbf2b;
+			border-radius:10%;
+			color: white;
+			text-align: center;
+		}
+	</style>
+	<body>		
+		<!--截止日期-->
+		<div class="aui-col-xs-12 aui-font-size-14 aui-padded-t-10  aui-padded-b-10 aui-padded-l-10">
+			<div class="aui-col-xs-4 aui-font-size-16">截止日期</div>
+			<div class="aui-col-xs-8">
+				<input id="time" readonly="readonly" style="min-height: 0;color: #212121 !important;" class="aui-font-size-16" type="text" placeholder="输入投票截止时间" data-lcalendar="2000-01-01,2020-12-31" />
+			</div>
+		</div>
+		<!--选择选手-->
+		<ul>
+			<li class="aui-row aui-padded-l-15 aui-padded-r-10 aui-col-xs-12 aui-padded-t-10"style="color:#212121;">
+				<div class="aui-col-xs-2 numm aui-font-size-14">No.1</div>
+				<div class="aui-col-xs-8 aui-padded-l-10">
+					<input type="text"style="color:#212121;"placeholder="输入选手姓名." class="aui-font-size-18" />
+				</div>
+		        <div class="aui-list-item-input">
+		            <textarea placeholder="请输入选手简介." id="content" maxlength="140"style="height: 5rem;"></textarea>
+		        </div>
+		<div id="add_show_miaoshu_img" style="display: block !important;"></div>
+			</li>
+			<li class="aui-row aui-padded-l-15 aui-padded-r-10 aui-col-xs-12 aui-padded-t-10"style="color:#212121;">
+				<div class="aui-col-xs-2 numm aui-font-size-14">No.2</div>
+				<div class="aui-col-xs-8 aui-padded-l-10">
+					<input type="text"style="color:#212121;"placeholder="输入选手姓名." class="aui-font-size-18" />
+				</div>
+		        <div class="aui-list-item-input">
+		            <textarea placeholder="请输入选手简介." id="content" maxlength="140"style="height: 5rem;"></textarea>
+		        </div>
+		<div id="add_show_miaoshu_img" style="display: block !important;"></div>
+			</li>
+			<li class="aui-row aui-padded-l-15 aui-padded-r-10 aui-col-xs-12 aui-padded-t-10"style="color:#212121;">
+				<div class="aui-col-xs-2 numm aui-font-size-14">No.3</div>
+				<div class="aui-col-xs-8 aui-padded-l-10">
+					<input type="text"style="color:#212121;"placeholder="输入选手姓名." class="aui-font-size-18" />
+				</div>
+		        <div class="aui-list-item-input">
+		            <textarea placeholder="请输入选手简介." id="content" maxlength="140"style="height: 5rem;"></textarea>
+		        </div>
+		<div id="add_show_miaoshu_img" style="display: block !important;"></div>
+			</li>
+			<li class="aui-row aui-padded-l-15 aui-padded-r-10 aui-col-xs-12 aui-padded-t-10"style="color:#212121;">
+				<div class="aui-col-xs-2 numm aui-font-size-14">No.4</div>
+				<div class="aui-col-xs-8 aui-padded-l-10">
+					<input type="text"style="color:#212121;"placeholder="输入选手姓名." class="aui-font-size-18" />
+				</div>
+		        <div class="aui-list-item-input">
+		            <textarea placeholder="请输入选手简介." id="content" maxlength="140"style="height: 5rem;"></textarea>
+		        </div>
+		<div id="add_show_miaoshu_img" style="display: block !important;"></div>
+			</li>	
+			<li class="aui-row aui-padded-l-15 aui-padded-r-10 aui-col-xs-12 aui-padded-t-10"style="color:#212121;">
+				<div class="aui-col-xs-2 numm aui-font-size-14">No.5</div>
+				<div class="aui-col-xs-8 aui-padded-l-10">
+					<input type="text"style="color:#212121;"placeholder="输入选手姓名." class="aui-font-size-18" />
+				</div>
+		        <div class="aui-list-item-input">
+		            <textarea placeholder="请输入选手简介." id="content" maxlength="140"style="height: 5rem;"></textarea>
+		        </div>
+		<div id="add_show_miaoshu_img" style="display: block !important;"></div>
+			</li>		
+			<li style="padding-bottom: 2rem;">
+				<div class="aui-col-xs-12 aui-padded-t-15 aui-text-center aui-padded-l-15 aui-padded-r-15">
+					<button  style="color: white;background: #ffbf2b;border: none;width: 100%;font-size: 0.9rem !important;">增加投票选手</button>
+				</div>	
+			</li>
+		</ul>
+	</body>
+	<script src="js/old_LCalendar.js"></script>
+	<script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#time', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(), //最小日期
+        'maxDate': '2020-12-31' //最大日期
+    });
+    </script>
+</html>

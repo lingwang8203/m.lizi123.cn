@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的收藏</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/My_class.css">
+		<link rel="stylesheet" type="text/css" href="css/My_collection.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+	</head>
+	<body>
+		<header>
+			<a class="title" id="return">返回</a>
+			<span id="all">全部∨</span>
+		</header>
+		<iframe src="My_collection_all.html" id="collection"></iframe>
+		<!--//////////////////弹出层-->
+		<div id="tanchu">
+			<p class="checked">全部</p>
+			<p class="unchecked" style="padding: 1vh;">收藏的课程</p>
+			<p class="unchecked">收藏的社团</p>
+			<p class="unchecked">收藏的活动</p>
+		</div>
+	</body>
+	<script>
+		var all=document.getElementById("all");
+		var tanchu=document.getElementById("tanchu");
+		var tabs=document.getElementById("tanchu").children;
+		var collection=document.getElementById("collection");
+		all.index=0;
+		all.addEventListener("touchstart",function(e){
+			e.preventDefault();
+			if(all.index==0){
+				tanchu.style.display="block";
+				all.index=1;
+			}
+			else{
+				tanchu.style.display="none";
+				all.index=0;
+			}
+		},false);
+		function recover(){
+			for(var i=0;i<tabs.length;i++){
+				tabs[i].className="unchecked";
+			}
+		}
+		tabs[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			recover();
+			this.className="checked";
+			collection.src="My_collection_all.html";
+		},false);
+		tabs[1].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			recover();
+			this.className="checked";
+			collection.src="My_collection_class.html";
+		},false);
+		tabs[2].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			recover();
+			this.className="checked";
+			collection.src="My_collection_activties.html";
+		},false);
+		tabs[3].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			recover();
+			this.className="checked";
+			collection.src="My_collection_pageclub.html";
+		},false);
+	</script>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

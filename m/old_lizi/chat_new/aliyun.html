@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+    <meta content="user-scalable=0;" name="viewport" /> 
+  </head>
+  <body>
+  <img src="http://img.lizi123.cn/LiZi/chat_new/img/touxiang.png">
+  <input type="file" id="file" />
+  <script type="text/javascript">
+    var client = new OSS.Wrapper({
+      region: '<oss region>',
+      accessKeyId: '<Your accessKeyId>',
+      accessKeySecret: '<Your accessKeySecret>',
+      bucket: '<Your bucket name>'
+    });
+    document.getElementById('file').addEventListener('change', function (e) {
+      var file = e.target.files[0];
+      var storeAs = 'upload-file';
+      console.log(file.name + ' => ' + storeAs);
+      client.multipartUpload(storeAs, file).then(function (result) {
+        console.log(result);
+      }).catch(function (err) {
+        console.log(err);
+      });
+    });
+  </script>
+</body>
+</html>
+
+

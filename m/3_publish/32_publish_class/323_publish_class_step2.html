@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>课程管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_323_publish_class_step2.js"></script>
+	</head>
+	<style>
+		.cover{
+			width: 100%;
+			height: 10rem;
+			float: left;
+		}
+		@media screen and (min-width:365px){ 
+		.cover{
+			width: 100%;
+			height:12rem;
+		}
+		 }			
+		.ffuntion .aui-active{
+			color: #000000;
+			border-bottom: 2px solid white;
+		}	
+		.ic_share{
+			
+			width: 1rem;
+			height: 1rem;
+			float: right;
+		}
+		@media screen and (min-width:365px){
+		.ic_share{
+			width: 1.2rem;
+			height: 1.2rem;
+			float: right;
+		}
+		}			 
+	</style>
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18" href="321_publish_class_step1.php"><</a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16" id="class_name">摄影课之人像虚实结合</div>	
+			<a class="aui-pull-right aui-col-xs-2 aui-font-size-12" id="class_edit">完成</a>	
+		</header>
+		<img src="" id="class_poster" class="cover"/>
+			<!-------------------tab切换------------------->
+		<header class="aui-bar aui-bar-nav">			
+			<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active"style="background: none;color: white;"id="frame1">详情</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame2">感悟</div>
+			</div>			       
+		</header>	
+		<iframe id="ifram"style="width: 100%;height:35em;"src="3231_publish_class_step2_frame1.html" frameborder=no  border=0  marginwidth=0  marginheight=0  scrolling=no></iframe>		
+	</body>
+</html>

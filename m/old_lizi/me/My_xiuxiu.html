@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的秀秀</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/My_xiuxiu.css">
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/my_show.js"></script>	
+	</head>
+	<body>
+		<header>
+			<a class="title" id="return"><我的秀秀</a>
+		</header>
+		<div id="showList">
+		<!--div class="yinying"></div>
+		<//////////////////////////////////一张图>
+		<div class="huaxu">
+			<div class="user">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/touxiang.png">
+					<div class="user_formation">
+						<h3>春生半夏。</h3>
+						<p>花开开半夏，花落落永生</p>
+					</div>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/yifenxiang.png" class="fenxiang"/>
+					<span class="fabu_time">24小时前</span>
+			</div>
+			<img src="http://img.lizi123.cn/LiZi/ffunction/img/club/photo2.jpg" class="one_picture"/>
+			<div class="shuoshuo">
+				<p class="user_miaoshu">世界上只有一种英雄主义，就是看清生活的真相后依然热爱生活。</p>
+			</div>
+			<div class="dilan">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/zan.png"  class="zan"/>
+				<p class="zan_number">198</p>
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/ping.png" class="pinglun"/>
+				<p class="pinglun_number">208</p>
+			</div>
+			<div class="yinying"></div>
+		</div>
+		</////////////////////////////////视频>
+		<div class="huaxu">
+			<div class="user">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/touxiang.png">
+					<div class="user_formation">
+						<h3>春生半夏。</h3>
+						<p>花开开半夏，花落落永生</p>
+					</div>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/yifenxiang.png" class="fenxiang"/>
+					<span class="fabu_time">24小时前</span>
+			</div>
+			<div style="position: relative;">
+			<video class="shipin" loop="loop" poster="../ffunction/img/concret/photo.jpg" controls="controls" name="video"> 
+			<source src="http://img.lizi123.cn/LiZi/ffunction/img/test.mp4" type="video/mp4"></source> 
+			your browser does not support the video tag 
+			</video> 
+			<img src="http://img.lizi123.cn/LiZi/me/img/play.png" class="play" name="play"/>
+			</div>
+			<div class="shuoshuo">
+				<p class="user_miaoshu">世界上只有一种英雄主义，就是看清生活的真相后依然热爱生活。</p>
+			</div>
+			<div class="dilan">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/zan.png"  class="zan"/>
+				<p class="zan_number">198</p>
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/ping.png" class="pinglun"/>
+				<p class="pinglun_number">208</p>
+			</div>
+			<div class="yinying"></div>
+		</div-->
+
+		</div>
+	</body>
+	<script type="text/javascript"> 
+		var play=document.getElementsByName("play");
+		var myVideo=document.getElementsByName("video");
+		function playPause(i) 
+		{ 
+		if (myVideo[i].paused){ 
+			myVideo[i].play(); 
+			play[i].style.opacity="0";
+			}
+		else {
+			myVideo[i].pause(); 
+			play[i].style.opacity="1";
+			}
+		} 
+		for(var i=0;i<play.length;i++){
+			play[i].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				playPause(i-1);
+			},false);
+		}
+	</script> 
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

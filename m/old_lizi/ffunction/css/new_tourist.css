@@ -1,0 +1,162 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	color:#868686 ;
+	position: relative;
+}
+
+
+.jinzhan{
+	width: 100vw;
+	height: auto;
+	position: relative;
+	color: black;
+}
+.right{
+	display: inline-block;
+	margin-left: 10vw;
+	margin-right: 2vw;
+	width: 77vw;
+	position: relative;
+	padding-left: 11vw;
+	padding-bottom: 5vw;
+	border-left: 5px solid #ffbf2a;
+}
+.right_header{
+	font-size: 4.5vw;
+	margin-top: 1vh;
+}
+.right_miaoshu{
+	margin-top: 1.5vh;
+	font-size: 3vw;
+}
+.time{
+	position: absolute;
+	right: 5vw;
+	top: 0;
+	color:#aaaaaa;
+	font-size: 2.5vw;
+}
+.tubiao{
+	position: absolute;
+	top: 0;
+	width: 156px;
+	height: 156px;
+	left: 2vw;
+}
+.right_image{
+	width: 21vw;
+	height: 21vw;
+	margin-top: 1.5vh;
+	margin-right: 3vw;
+}
+/*///投票*/
+.toupiao1{
+	width:74vw;
+	height:11vh;
+	display:inline-block;
+	margin-top: 1.5vh;
+}
+.toupiao1_left{
+	float:left;
+	width:15vw;
+	height:8vh;
+	
+}
+.toupiao1_right{
+	margin-left:3vw;
+	float:right;
+	width:56vw;
+	height:8vh;
+}
+.toupiao1_right_h{
+	margin-bottom: 0.8vh;;
+	font-size:3vw;
+	font-weight:800;
+	width:40vw;
+	height:2vh;
+}
+.toupiao1_right_p{
+	margin-bottom: 0.5vh;
+	font-size:2.7vw;
+	width:55vw;
+	height:5vh;
+}
+.toupiao1_right_right{
+	text-align: center;
+	margin-right:1.3vw;
+	float:right;
+	width:13vw;
+	height:2vh;
+	border:0.5vw solid #FFBF2B;
+	border-radius: 20rem;
+	font-size:2.8vw;
+	font-weight:400;
+	color:#FFBF2B;
+}
+.yitoupiao{
+	text-align: center;
+	margin-right:1.3vw;
+	float:right;
+	width:13vw;
+	height:2vh;
+	border:0.5vw solid #FFBF2B;
+	border-radius: 20rem;
+	font-size:2.8vw;
+	font-weight:400;
+	color:white;
+	background-color: #FFBF2B;
+}
+
+/*//////////////////视频*/
+.guanfang_bottom{
+	text-align: center;
+	width:74vw;
+	height:30vh;
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/guanfangshipin.png);
+	background-repeat: no-repeat;
+	position: relative;
+}
+.shipin{
+	width:70vw;
+	height:30vh;
+}
+.play{
+	position: absolute;
+	top: 11vh;
+	left: 31vw;
+	width: 14vw;
+}
+
+/*////////////////////////////底栏*/
+.bottom{
+	width: 100vw;
+	height: 5vh;
+	margin-top: 3vh;
+	background-color: #ffbf2a;
+	text-align: center;
+	font-size: 5vw;
+	color: white;
+}

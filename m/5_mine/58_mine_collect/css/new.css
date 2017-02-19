@@ -1,0 +1,20 @@
+.aui-bar-nav {
+	top: 0;
+	line-height: 2.25rem;
+	background-color: #FFC107;/*#03a9f4;*/
+	color: #ffffff;
+}
+.aui-label-info {
+  color: #ffffff;
+  background-color: #FFC107;/*#03a9f4;*/
+}
+
+.aui-label-outlined.aui-label-info {
+  	color: black;/*#03a9f4;*/
+  	border-color:white;
+  	background:white;
+}
+.shipin{
+	background:url(http://img.lizi123.cn/new_lizi/5_mine/55_mine_show/xiu_photo.png) ;
+	width:100%;
+}

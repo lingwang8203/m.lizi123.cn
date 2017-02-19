@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布活动</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" href="css/publish_activities.css"/>
+		<link rel="stylesheet" href="../page_club/css/LCalendar.css">
+	</head>
+	<body>
+		<!--顶部，发布活动-->
+		<header>
+			<a href="publish_activities_first.html" id="more"><</a>
+			<h1>发布活动</h1>
+			<a href="#" id="furnish">下一步</a>
+		</header>
+		<div>
+			<div class="tap_class">
+				<p class="class">活动时间</p>
+			</div>
+			<div id="time">
+				<input id="demo1" type="text" readonly="" placeholder="输入活动时间" data-lcalendar="2000-01-01,2020-12-31" />
+			</div>
+		</div>
+		<div class="address">
+			<div class="tap_class">
+				<p class="class">活动地点</p>
+			</div>
+			<input type="text" id="activities_address" placeholder="输入活动地点" maxlength="15"/>
+		</div>
+		<div class="address">
+			<div class="tap_class">
+				<p class="class">活动要求</p>
+			</div>
+			<textarea id="yaoqiu" maxlength="50" placeholder="输入是否需要付费/门票等"></textarea>
+		</div>
+		<div id="success">
+			<input type="radio"  value="online"/>
+			<label name="ok" class="unchecked" for="jieshou" id="ok">接受平台报名</label>
+		</div>
+	</body>
+	<script src="js/publish_activities_second.js"></script>
+	<script src="../page_club/js/LCalendar.js"></script>
+	<script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#demo1', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(), //最小日期
+        'maxDate': '2020-12-31' //最大日期
+    });
+    </script>
+</html>

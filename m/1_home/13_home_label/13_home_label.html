@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>摄影区</title>
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />	
+	    <link rel="stylesheet" type="text/css" href="../css/index.css" />	
+	    <script src="../../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_13_home_label.js"></script>
+	</head>
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18" href="../../index.html">
+			 	<i class="aui-icon-left aui-iconfont"></i>
+			 </a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16" id="area_name">摄影区</div>			       
+		</header>			
+	<div class="aui-content"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">本区达人</p>
+	</div>	
+	<div class="aui-row"style="width:96%;margin: 0 auto;" id="superman_list"> 
+		<div class="aui-col-xs-2"style="width: auto;">
+			<a href="../../5_mine/51_mine_homepage/51_mine_homepage.html" target="_blank"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo1.jpg" class="aui-img-round photo"/></a>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo2.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo3.jpg" class="aui-img-round photo"/>			
+		</div>	
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo4.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo5.jpg" class="aui-img-round photo"/>			
+		</div>		
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo6.jpg" class="aui-img-round photo"/>			
+		</div>		
+		
+		<div class="aui-col-xs-2"style="width: auto;">
+			<a href="13_home_label_more_people.html" target="_blank"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/more.png" style="width:0.6rem;height:0.8rem;margin: 0.3rem;margin-right: 0;margin-top: 0.8rem;" /></a>			
+		</div>			
+	</div>
+		<!-------下面推送部分-------------------------->
+		<div class="aui-content aui-margin-t-10"style="background: #fcc07c;">
+			<select name="select-native-2" id="select-native-2" data-mini="true"class="mid" style="padding-left: 8rem;" onchange="changeIframeSrc()">
+	    	    <option value="1">&nbsp;&nbsp;全部</option>
+	    	    <option value="2">相关课程</option>
+	    	    <option value="3">相关活动</option>
+	   	 	    <option value="4">相关社团</option>
+				<option value="5">相关秀秀</option>		
+ 	 	    </select>
+		</div>
+		<iframe src="13_home_label_iframe1.html" style="width: 100vw;height: 50rem;border: none;" id="ifram"></iframe>
+	</body>
+</html>

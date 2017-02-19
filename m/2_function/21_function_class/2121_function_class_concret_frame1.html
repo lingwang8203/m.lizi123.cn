@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>课程详情</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_2121_function_class_concret_frame1.js"></script>
+	</head>
+	<style>
+	.t1{
+		background: #ffd630;
+	}
+		.t2{
+			background: #ffcb53;
+		}
+		.t3{
+			background: #fcaf57;
+		}
+		.t4{
+			background: #ffa569;
+		}
+		.good{
+			width: 1.2rem;height: 1rem;float: right;
+		}
+		.num{
+			padding-top: 0.1rem;
+		}			
+		.like{
+			width: 1.4rem;height: 1.2rem;
+		}
+			
+		@media screen and (min-width:365px){ 
+			.other{
+				padding-left: 2.1rem;
+				}
+		.good{
+			width: 1.4rem;height: 1.2rem;float: right;
+		}
+		.num{
+			padding-top: 0.3rem;
+		}	
+		.like{
+			width: 1.6rem;height: 1.4rem;
+		}					
+		}				
+	</style>
+	<body>
+	<ul>
+		<li>
+			<div class="aui-row aui-padded-t-5">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">讲师</p>
+				</div>				
+			<div class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2 aui-text-center" style="margin: 0;padding: 0;margin-top: 0.1rem;">
+					<a href="#" target="_blank" id="teacher_image"><img src="" class="aui-img-round" style="width:2rem;height:2rem;margin-top: 0.1rem;" id="teacher_pic"/></a>
+				</div>
+				<div class="aui-col-xs-7 aui-row aui-padded-t-5">
+					<div class="aui-col-12 aui-font-size-14" id="teacher_name"></div>
+					<div class="aui-col-xs-12 aui-font-size-12"style="color: #9E9E9E;" id="teacher_miaoshu"></div>										
+				</div>
+				<div class="aui-col-xs-3" style="margin-top: 0.5rem;color: #9E9E9E;">
+					<div class="aui-col-xs-12 aui-label lab aui-font-size-12 aui-bg-base aui-text-white aui-label-outlined aui-pull-right aui-margin-r-5"style="width: auto;border-radius: 0.4em;" id="guanzhu_index">+关注</div>																		
+				</div>				
+			</div>
+			<div class="tap_out other">
+				<div class="aui-label aui-font-size-12 tap t1" name="teacher_label">爱拍照</div>
+				<div class="aui-label aui-font-size-12 tap t2" name="teacher_label">DIY热衷</div>		
+				<div class="aui-label aui-font-size-12 tap t3" name="teacher_label">想学英语</div>	
+				<div class="aui-label aui-font-size-12 tap t4" name="teacher_label">攀岩</div>	
+			</div>				
+			</div>
+		</li>
+		<li>
+			<div class="aui-row aui-padded-t-5">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">方式</p>
+				</div>	
+				<div class="aui-font-size-14 aui-padded-l-15 aui-padded-t-10" id="class_way"></div>
+				<div class="aui-font-size-12 aui-padded-l-15 aui-padded-t-5"style="color: #616161;">共<span style="color:#ffcb53;" id="class_xueshi">  </span>学时，自<span style="color: #ffcb53;" id="class_time">  </span>开始</div>
+			</div>
+		</li>
+		<li>
+			<div class="aui-row aui-padded-t-15">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">课程表</p>
+				</div>	
+				<div class="aui-col-xs-12 aui-row  aui-padded-t-10">
+					<div class="aui-col-xs-2 aui-margin-l-10"style="width: auto;">
+						<i class="aui-iconfont aui-icon-date aui-pull-left"style="color: #ffc040;"></i>
+					</div>					
+					<div class="aui-col-xs-9 aui-pull-left aui-font-size-12 aui-padded-l-10" id="class_schedule_time"></div>
+				</div>
+				<div class="aui-col-xs-12 aui-row ">
+					<div class="aui-col-xs-2 aui-margin-l-10"style="width: auto;">
+						<i class="aui-iconfont aui-icon-location aui-pull-left"style="color: #ffc040;"></i>
+					</div>					
+					<div class="aui-col-xs-9 aui-pull-left aui-font-size-12 aui-padded-l-10" id="class_schedule_address"></div>
+				</div>				
+			</div>
+		</li>
+		<li>
+			<div class="aui-row aui-padded-t-15">
+				<div class="aui-col-xs-12"style="padding-top: 0.2rem;">
+			   		 <p class="tit">简介</p>
+				</div>
+				<div class="aui-font-size-14 aui-padded-l-15 aui-padded-t-5 aui-padded-r-5" id="class_jianjie"></div>
+			</div>
+		</li>
+		<li>
+			<div class="aui-row aui-padded-t-15">
+				<div class="aui-content aui-pull-left aui-padded-b-10 aui-padded-t-10"style="width: 100%;padding-top: 0.2rem;">
+			   		 <p class="aui-pull-left tit">相关课程推荐</p>
+			   		 <a id="more_href" href="#" target="_blank"><p class="aui-pull-right aui-padded-r-10 aui-font-size-12"style="color: #FFBF2B;" id="more_class_recommend">更多></p></a>
+				</div>
+				<div class="aui-col-xs-12  aui-padded-t-5 " id="class_jian">
+						<!--<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+							<div class="aui-col-xs-12">
+								<a href="212_function_class_concret.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/></a>
+							</div>
+							<div class="aui-col-xs-12 tex">PS入门教学</div>
+						</div>
+						<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+							<div class="aui-col-xs-12">
+								<a href="#"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/></a>
+							</div>
+							<div class="aui-col-xs-12 tex">拍出好照片</div>
+						</div>
+						<div class="aui-col-xs-4 aui-row  aui-padded-l-15 aui-padded-r-10">
+							<div class="aui-col-xs-12">
+								<a href="#"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/></a>
+							</div>
+							<div class="aui-col-xs-12 tex">修图技巧GET</div>
+						</div>							-->
+				</div>
+			</div>			
+		</li>		
+		<li class="aui-padded-t-15">
+			<div class="aui-row aui-pull-left aui-col-xs-12"style="border-top: 1px solid  #DDDDDD;">
+				<a id="chat_teacher" href="#" target="_blank"><div class="aui-col-xs-6 aui-text-center aui-padded-b-10 aui-padded-t-10"style="background:  #ffc040;color: white;">联系导师</div></a>
+				<div class="aui-col-xs-3 aui-row aui-padded-b-10 aui-padded-t-10"style="border-right:1px  solid  #DDDDDD;">
+					<div class=" aui-col-xs-6"style="padding-right: 0.2rem;">
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_big_good.png" class="good" id="class_zan"/>
+					</div>
+					<div class="aui-col-xs-6 aui-font-size-12 num"style="color: #ffc040;" id="class_zan_num">33</div>
+				</div>
+				<div class="aui-col-xs-3 aui-row aui-padded-b-10 aui-padded-t-10 aui-text-center">
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_like.png" class="like" id="class_like"/>
+				</div>
+			</div>			
+		</li>
+	</ul>	
+	</body>
+</head>

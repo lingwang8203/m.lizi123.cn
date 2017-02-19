@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>课程详情</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/concret_class.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/concret_class.js"></script>				
+	</head>
+	<body>
+<!------------------顶部----------------------------->
+		<div id="header">
+			<a id="return" href="../footer/footer.html"><img class="_tubiao" src="img/concret/back.png"style="float: left;"/></a>
+			<p class="concret_title">课程详情</p>
+			<img class="_tubiao" src="http://img.lizi123.cn/LiZi/index/img/news.png"style="width: 5.5em;"/>
+			<img class="_tubiao" src="http://img.lizi123.cn/LiZi/ffunction/img/concret/share.png"/>
+		</div>
+<!--内容---------------------->
+		<img id ="class_image" src="" class="full_photo"/>
+		<div class="nav">
+			<ul>
+				<li><a id="brief" class="nav_on">简介</a></li>
+				<li><a id="comment" class="nav_off">评价</a></li>
+				<li><a id="record" class="nav_off">相关课程</a></li>
+			</ul>
+		</div>
+<!--内敛内容-->
+		<iframe id="middle_contect" src="concret_class_brief.html"></iframe>
+<!---------置地浮动部分-->
+		<div class="bottom">
+				<p class="join_before" id="join"> 报名参加</p>
+				<a href="../chat_new/siliao.html">
+				<div class="call same">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/call.png" class="l"/>
+					<p>私信</p>
+				</div>
+				</a>
+				<div class="collection same" id="collection">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/concret/collection.png" class="l" id="collection_image"/>
+					<p>收藏</p>
+				</div>
+		</div>
+	</body>
+	<script>
+		var url_index="ffunction";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

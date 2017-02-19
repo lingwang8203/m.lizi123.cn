@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布课程</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" href="css/new_publish_class.css"/>
+	</head>
+	<body>
+		<!--顶部，发布课程-->
+		<header>
+			<a href="#" id="more"><</a>
+			<h1>发布课程</h1>
+			<a href="#" id="furnish">下一步</a>
+		</header>
+		<!--添加标题/描述-->
+		<form action="" method="post" id="fb_class">
+		<input type="text" id="class_header" placeholder="添加标题"/>
+		<textarea id="class_miaoshu" placeholder="添加课程描述"></textarea>
+		<!--//上传多张图片-->
+		<a id="add_class_miaoshu_img" href="#">
+			<input type="file" name="file" id="upload_class_miaoshu_img"  onchange="javascript:setImagePreview();" multiple="multiple"/>
+		</a>
+		<div id="show_class_miaoshu_img1" class="show_class_miaoshu_img">
+		    <img id="preview1" width="-1" height="-1" style="display: none" /> 
+		</div>
+		<div id="show_class_miaoshu_img2" class="show_class_miaoshu_img">
+		    <img id="preview2" width="-1" height="-1" style="display: none" /> 
+		</div>
+		<div id="show_class_miaoshu_img3" class="show_class_miaoshu_img">
+		    <img id="preview3" width="-1" height="-1" style="display: none" />  
+		</div>
+		<img src="http://img.lizi123.cn/LiZi/ffunction/img/edit_label/cut.png" id="cancel_img" style="display: none;"/>
+		</form>
+		<!-- //放大预览层-->
+		<div id="zoom_preview"><img id="zoom_img"/></div>
+		<span id="add_label">添加标签</span>
+		<div id="frame_back" style="display: none;"></div>
+		<div id="change_module" style="display: none;">
+			<div class="tap_class">
+				<p id="exchange">选择标签(不超过三个)</p>
+			</div>
+		    <div style="clear: both;"></div>
+		    <a href="#" class="change_module_label_long label_back"><span>添加标签</span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" class="change_module_label label_back" name="change_label"><span></span></a>
+		    <a href="#" id="refresh_label">换一批标签</a>
+		    <a href="#" id="cancel_change_module">取消</a>
+		    <a href="#" id="confirm_change_module">好</a>
+		</div>
+		<!--//已选择标签-->
+		<p id="label">已选择标签:<span id="label0">标签一</span><span id="label1">标签二</span><span id="label2">标签三</span></p>
+	</body>
+	<script src="js/new_publish_class.js"></script>
+</html>

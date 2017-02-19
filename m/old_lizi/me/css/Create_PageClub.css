@@ -1,0 +1,177 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	color:#868686 ;
+}
+
+/*//////////////////////////顶部//////////////////////////////////*/
+header{
+	font: "微软雅黑";
+	font-weight: normal;
+	width: 100vw;
+	height: 10vh;
+	/*padding-top: 3vh;*/
+	background-color: #ffbf2b;
+}
+#more{
+	margin-top: 3vh;
+	display: inline-block;
+	width: 5vw;
+	font-size: 5vw;
+	font-weight: bold;
+	margin-left: 2vw;
+	color: white;
+}
+header h1{
+	font-weight:normal ;
+	display: inline-block;
+	margin-left: 24vw;
+	font-size: 6vw;
+	color: white;
+}
+#furnish{
+	display: inline-block;
+	margin-left: 15vw;
+	font-size: 5vw;
+	font-weight:normal ;
+	color: white;
+}
+
+/*/////////////////上传logo*/
+#logo{
+	width: 40vw;
+	height: 30vh;
+	margin-left: 30vw;
+	position: relative;
+	margin-top: 0 !important;
+}
+#add_logo{
+	display: block;
+	position: absolute;
+	width: 40vw !important;
+	height: 30vh !important;
+	background-image: url(http://img.lizi123.cn/LiZi/me/img/chuanlogo.png);
+	background-repeat: no-repeat;
+	background-size: 39vw;
+	background-position: center;
+	overflow: auto;
+	z-index: 200;
+}
+#upload_logo{
+	width: 40vw !important;
+	height: 30vh !important;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	z-index: 200;
+}
+#show_logo{
+	position: relative;
+	width: 39vw !important;
+	height: 23vh !important;
+	padding-top: 6vw;
+}
+#preview{
+	border-radius: 50%;
+}
+#edit_clubname{
+	width: 70vw;
+	height: auto;
+	font-size: 5vw;
+	text-align: center;
+	margin-left: 15vw;
+	margin-top: 5vh;
+	border-bottom: 2px solid #ffbf2b;
+}
+#tips{
+	font-size: 4vw;
+	margin-top: 15vh;
+	text-align: center;
+}
+#tips a{
+	color: #ffbf2b;
+	border-bottom: 2px solid #ffbf2b;
+}
+
+#label{
+	font-size: 4vw;
+	margin-top: 15vw;
+	text-align: center;
+	color: #ffbf2b;
+}
+/*/////////////////////弹出层*/
+#back{
+	position: fixed;
+	top: 10vh;
+	width: 100vw;
+	height: 90vh;
+	background-color: #949494;
+	z-index: 999;
+}
+#choose_fenlei{
+	position: fixed;
+	width: 80vw;
+	height: 40vh;
+	top: 30vh;
+	left: 10vw;
+	z-index: 999;
+	background-color: white;
+}
+.tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	/*border-bottom: 0.2rem solid #dcdcdc;*/
+	/*background-color: burlywood;*/
+}
+.class{
+	font-size: 5vw;
+	font-weight: normal;
+	width: 50%;
+	float: left;
+	color: black;
+	padding:0.2rem 0 0.3rem 1rem;
+	margin:2rem 0 3rem 1.2rem;
+	/*background-color: blue;*/
+	border-left: 1rem solid #FFBF2B;
+	display: inline-block;
+	/*background-color: blue;*/
+}
+
+.tabs{
+	clear: both;
+	width: 100vw;
+	font-size: 4.5vw;
+}
+.unchecked{
+	color: #ff9000;
+	border: 2px solid #ff9000;
+	padding: 0.5vh 3vw;
+	border-radius: 15vw;
+	margin-left: 9vw;
+}
+.checked{
+	color: white;
+	border: 2px solid #ff9000;
+	padding: 0.5vh 3vw;
+	border-radius: 15vw;
+	margin-left: 9vw;
+	background-color: #ff9000;
+}
+#confirm{
+	font-size: 5vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 5vw;
+	text-align: center;
+	width: 100%;
+}

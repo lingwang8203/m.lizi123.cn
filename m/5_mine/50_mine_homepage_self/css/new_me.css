@@ -1,0 +1,66 @@
+
+.aui-margin-b-15 {
+	margin-bottom: 0rem !important;
+}
+.touxiang-background{
+	background-color: #FFC107;
+}
+.aui-list .aui-list-item-text {
+    font-size: 0.7rem;
+    color: white;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    		box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    		align-items: center;
+    text-align:center;
+}
+.aui-list .aui-list-item-title {
+    font-size: 0.8rem;
+    position: relative;
+    max-width: 100%;
+    color: white;
+    font-weight: 600;
+    text-align:center;
+}
+.aui-list .aui-list-item-title-xiaotouxiang {
+    font-size: 0.7rem;
+    position: relative;
+    max-width: 100%;
+    color: #1A1A1A;
+    font-weight: 600;
+    text-align:leftft;
+}
+.aui-list .aui-list-item-text-xiaotouxiang {
+    font-size: 0.6rem;
+    color: #1A1A1A;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    		box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    		align-items: center;
+    text-align:center;
+}
+.xiaotouxiang-background{
+	background: white;
+}
+.shipin{
+	background:url(../img/shipin.png) ;
+	width:100%;
+}
+.aui-card-list-user-avatar img {
+	width: 130%;/*100%*/
+	display: block;
+}

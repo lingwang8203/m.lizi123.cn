@@ -1,0 +1,443 @@
+html{
+	font-size: 62.5%;
+	font: "微软雅黑";
+	color: black;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	font-weight: normal;
+}
+html,body{
+	position: relative;
+}
+a:link{
+	color:black ;
+	text-decoration: none;
+}
+input:focus{
+	outline: none;
+}
+textarea{
+	resize: none;
+}
+/*//////////////////////////顶部//////////////////////////////////*/
+header{
+	font: "微软雅黑";
+	font-weight: normal;
+	width: 100vw;
+	height: 7.708333vh;
+	background-color: #ffbf2b;
+	overflow: auto;
+}
+#more{
+	display: inline-block;
+	width: 5.102vw;
+	height:  5.102vw;
+	margin-left: 2vw;
+	margin-top: 3.5vw;
+	float: left;
+}
+#more img{
+	width: 5.102vw;
+	height: 5.102vw;
+}
+header h1{
+	display: inline-block;
+	margin-left: 30vw;
+	font-size: 5.102vw;
+	float: left;
+}
+#furnish{
+	float: right;
+	display: inline-block;
+	margin-right: 2vw;
+	font-size: 3.469vw;
+	font-weight: bold;
+	color: black;
+	margin-top: 4vw;
+}
+/*///////////////////////////////////课程标题描述*/
+#fb_class{
+	width: 100vw;
+	height: auto;
+	overflow: auto;
+}
+#class_header{
+	display: inline-block;
+	height: 5.5vh;
+	width: 100vw;
+	border-left: none;
+	border-top: none;
+	border-right:none ;
+	font-size: 5vw;
+	text-align: center;
+}
+#class_miaoshu{
+	width: 100vw;
+	height: 45vh;
+	border: none;
+	font-size: 4vw;
+}
+#add_class_miaoshu_img{
+	display: inline-block;
+	float: left;
+	overflow: auto;
+	margin-left: 5vw;
+	width: 22vw;
+	height: 22vw;
+	background-image:url(http://img.lizi123.cn/LiZi/ffunction/img/edit_label/add_class_details.png);
+	background-repeat: no-repeat;
+	background-size: 22vw;
+	background-position: center;
+	border: 1px solid #f5f5f5;
+	margin-top: 2vh;
+	margin-bottom: 3vh;
+}
+#upload_class_miaoshu_img{
+	display: inline-block;
+	width: 15vw;
+	height: 15vw;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+#cancel_img{
+	padding: 0 !important;
+	width: 7vw !important;
+	height: auto !important;
+	margin-top: 3vw;
+	margin-left: 5vw;
+}
+.show_class_miaoshu_img{
+	position: relative;
+	float: left;
+	display: inline-block;
+	border: none;
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	width: 22vw;
+	height: 22vw;
+	line-height: 7vw;
+	margin-top: 2vh;
+}
+/*放大预览层*/
+#zoom_preview{
+	display: none;
+	position: fixed;
+	top: 15vh;
+	left: 10vw;
+	width: 80vw;
+	height: 75vh;
+	background-color: #404040;
+}
+#zoom_img{
+	padding: 0 !important;
+	width: 100%;
+	height: 100%;
+}
+/*//添加标签*/
+#add_label{
+	display: block;
+	font-size: 4vw;
+	clear: both;
+	color: #ffbf2b;
+	width: 16vw;
+	text-align: center;
+	margin-top: 6vh;
+	margin-left: 4vw;
+	border: solid 1px #ffbf2b;
+	padding: 0.5vw 2vw;
+	border-radius: 3rem;
+	text-shadow: none;
+}
+
+#frame_back{
+	position: fixed;
+	top: 7.708333vh;
+	left: 0;
+	width: 100%;
+	height: 90vh;
+	background-color: #404040;
+	opacity:0.7;
+	z-index: 100;
+}
+.tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	/*border-bottom: 0.2rem solid #dcdcdc;*/
+	/*background-color: burlywood;*/
+}
+#exchange{
+	width: 100%;
+	float: left;
+	font-size: 4vw;
+	padding:0.2rem 0 0 0.3rem;
+	margin:2rem 0 0.5rem 1.2rem;
+	/*background-color: blue;*/
+	border-left: 0.3rem solid #FFBF2B;
+	/*background-color: blue;*/
+}
+#change_module{
+	position: fixed;
+	top: 30vh;
+	left: 15vw;
+	padding-left: 2vw;
+	height: 34vh;
+	width: 70vw;
+	background-color: #FFFFFF;
+	z-index: 200;
+	font: "微软雅黑";
+	font-weight: normal;
+	font-size: 3vw;
+}
+.change_module_label_long{
+	font-weight: normal;
+	float: left;
+	width: 15vw;
+	text-align: center;
+	margin-top: 4vw;
+	margin-left: 2vw;
+	border: 2px solid #ff9000;
+	padding: 1vw 2vw;
+	border-radius: 13px;
+}
+.change_module_label{
+	font-weight: normal;
+	float: left;
+	width: 15vw;
+	text-align: center;
+	margin-top: 4vw;
+	margin-left: 2vw;
+	border: 2px solid #ff9000;
+	padding: 1vw 2vw;
+	border-radius: 13px;
+}
+.label_back{
+	color: #FF9000;
+}
+.label_back_hover{
+	color: white;
+	background-color: #FF9000;
+}
+#refresh_label{
+	float:left;
+	margin-top: 5vw;
+	margin-left: 5vw;
+	font-size: 4vw;
+	color: #FF9000;
+}
+#cancel_change_module{
+	float:left;
+	margin-top: 5vw;
+	margin-left: 20vw;
+	font-size: 4vw;
+	color: #FF9000;
+}
+#confirm_change_module{
+	float:left;
+	margin-top: 5vw;
+	margin-left: 6vw;
+	font-size: 4vw;
+	color: #FF9000;
+}
+/*//已选择标签*/
+#label{
+	display: none;
+	font-size: 4vw;
+	font-weight: bold;
+	margin-left: 5vw;
+	margin-top: 5vw;
+}
+#label0,#label1,#label2{
+	margin-left: 2vw;
+	display: none;
+	padding: 0.6vw 2vw;
+	background-color: #ffad0c;
+	color: white;
+	border-radius: 10px;
+}
+
+
+
+
+/*////////////////////////////////////////////////////////////第二页*/
+.tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	/*border-bottom: 0.2rem solid #dcdcdc;*/
+	/*background-color: burlywood;*/
+}
+.class{
+	font-size: 5vw;
+	font-weight: bold;
+	width: 50%;
+	float: left;
+	padding:0.2rem 0 0.3rem 1rem;
+	margin:2rem 0 3rem 1.2rem;
+	/*background-color: blue;*/
+	border-left: 1rem solid #FFBF2B;
+	display: inline-block;
+	/*background-color: blue;*/
+}
+#schedule{
+	width: 100vw;
+	font: "微软雅黑";
+	font-weight: bold;
+	font-size: 4.5vw !important;
+	font-weight: normal;
+	border-bottom: 2px solid #bfbfbf;
+}
+#class_hours{
+	width: 15vw;
+	margin-left:2vw;
+	font-size: 4vw;
+	text-align: center;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+#class_weeks{
+	width: 15vw;
+	font-size: 4vw;
+	text-align: center;
+	margin-left: 2vw;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+#class_address{
+	margin-left: 2vw;
+	font-size: 4vw;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+/*#schedule_choose_time{
+	float: left;
+	position: relative;
+	height: auto;
+	overflow: auto;
+	/*padding-top: 0.7vw;*/
+}*/
+#class_time{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	margin-top: 0.5vh;
+}
+.schedule_header{
+	margin: 0 3vw;
+	float: left;
+	font-weight: bold;
+}
+.class_time_off{
+	/*width: 6vw;
+	height: 6vw;*/
+	margin-left: 2vw;
+	padding:0.5vw  0.5vw;
+	overflow: auto;
+	text-align: center;
+	font-size: 4.5vw;
+	color: #908788;
+	/*background-image:url(http://img.lizi123.cn/LiZi/publish/img/schedule_off.png);
+	background-repeat: no-repeat;
+	background-size: 5.2vw;*/
+	border: 2px solid #e0e0e0;
+	border-radius: 100%;
+}
+.class_time_on{
+	margin-left: 2vw;
+	padding:0.5vw  0.5vw;
+	overflow: auto;
+	text-align: center;
+	font-size: 4.5vw;
+	color: #FFFFFF;
+	/*background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/edit_label/schedule_on.png);
+	background-repeat: no-repeat;
+	background-size: 6vw;*/
+	border: 2px solid #ffac0d;
+	border-radius: 100%;
+	color: white;
+	background-color: #FFAC0D;
+}
+
+
+/*//付费*/
+#give_class{
+	width: 100vw;
+	height: auto;
+	border-bottom: 2px solid #f5f5f5;
+	padding-top: 2vh;
+	font-size: 4vw;
+	font-weight: bold;
+	overflow: auto;
+	margin-left: 3rem;
+	padding-bottom: 3vw;
+	border-bottom: 2px solid #d1d1d1;
+}
+.give_choose_top{
+	float: left;
+	padding-left: 5vw;
+}
+.give_choose_foot{
+	float: left;
+	padding-left: 21vw;
+}
+.pay_choose_1{
+	float: left;
+	padding-left: 5vw;
+}
+.pay_choose_2{
+	float: left;
+	padding-left: 21vw;
+}
+input[type="radio"]{
+	display: none;
+}
+.unchecked{
+	padding-left: 5vw;
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/edit_label/choose1.png);
+	background-repeat: no-repeat;
+	background-size: 4vw;
+}
+.checked{
+	padding-left: 5vw;
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/edit_label/choose2.png);
+	background-repeat: no-repeat;
+	background-size: 4vw;
+}
+#pay_way{
+	width: 100vw;
+	height: auto;
+	padding-top: 2vh;
+	font-size: 4vw;
+	font-weight: bold;
+	margin-left: 3rem;
+	position: relative;
+	overflow: auto;
+	padding-bottom: 3vw;
+	border-bottom: 2px solid #d1d1d1;
+}
+#charge_money{
+	width: 10vw;
+	font-size: 4vw;
+	text-align: center;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
+
+#over{
+	width: 14vw;
+	font-size: 6vw;
+	text-align: center;
+	border: 2px solid #ffbf2b;
+	background-color: #ffbf2b;
+	color: white;
+	margin-left: 42vw;
+	margin-top: 5vh;
+	padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+	border-radius: 3rem;
+}

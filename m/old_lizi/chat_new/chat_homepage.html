@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>聊天主页</title>
+		<link href="css/chat_homepage.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<a class="title" id="return"><</a>
+			<span>聊天</span>
+			<img src="http://img.lizi123.cn/LiZi/chat_new/img/create.png" id="create"/>
+		</header>
+		<div id="find">
+			<span>发现群聊</span>
+			<a href="#">></a>
+			<img src="http://img.lizi123.cn/LiZi/chat_new/img/touxiang.png" />
+			<img src="http://img.lizi123.cn/LiZi/chat_new/img/touxiang1.png" />
+			<img src="http://img.lizi123.cn/LiZi/chat_new/img/touxiang.png" />
+		</div>
+		<!--/////////////////////个人聊天-->
+		<a href="siliao.html" target="_blank">
+			<div class="chat">
+				<img src="http://img.lizi123.cn/LiZi/chat_new/img/touxiang.png" class="touxiang"/>
+				<div class="font">
+					<h3>一只大菜鸟</h3>
+					<p>恩</p>
+				</div>
+				<span>24分钟前</span>
+				<span class="weidu">未读消息</span>
+			</div>
+		</a>
+		<!--////////////////////////群聊-->
+		<a href="group_chat.html" target="_blank">
+			<div class="chat">
+				<img src="http://img.lizi123.cn/LiZi/chat_new/img/touxiang1.png" class="touxiang"/>
+				<div class="font">
+					<div class="header">
+						<h3>不玩游戏的LOLer</h3>
+						<img src="http://img.lizi123.cn/LiZi/chat_new/img/group.png"/>
+					</div>
+					<p>我就静静的看你们装逼</p>
+				</div>
+				<span>24分钟前</span>
+				<span class="weidu">未读消息</span>
+			</div>
+		</a>
+		<!--///////////////////////////右上角弹窗-->
+		<div id="back">
+			<a href="">
+				<div class="tabs">
+					<img src="http://img.lizi123.cn/LiZi/chat_new/img/siliao.png" />
+					<span>发起私聊</span>
+				</div>
+			</a>
+			<a href="create_groupchat.html">
+				<div class="tabs" style="padding-bottom: 1vw;">
+					<img src="http://img.lizi123.cn/LiZi/chat_new/img/group.png" />
+					<span>创建群聊</span>
+				</div>
+			</a>
+		</div>
+	</body>
+	<script>
+		var create=document.getElementById("create");
+		create.index=0;
+		create.addEventListener("touchstart",function(e){
+			e.preventDefault();
+			if(this.index==0){
+				document.getElementById("back").style.display="block";
+				this.index=1;
+			}
+			else{
+				document.getElementById("back").style.display="none";
+				this.index=0;
+			}
+		},false)
+	</script>
+	<script>
+		var url_index="ground";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

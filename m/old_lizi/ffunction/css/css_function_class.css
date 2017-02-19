@@ -1,0 +1,213 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+body{
+	padding-bottom: 50em;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+	display: block;
+	border: none;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;	
+}
+/*=================标签分类========================*/
+.title{
+	font-size: 2rem;
+	width: 50%;
+	float: left;
+	padding:0.2rem 0 0.3rem 0.3rem;
+	margin:1rem 0 0.5rem 1.2rem;
+	/*background-color: blue;*/
+	border-left: 0.5rem solid #FFBF2B;
+	/*background-color: blue;*/
+}
+#logo_write{
+	float: right;
+	/*height: 7rem;*/
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/same/write.png);
+	width: 5rem;
+	height: 5rem;
+	margin-right: 2rem;
+	/*background-color: firebrick;*/
+}
+#tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	border-bottom: 0.2rem solid #dcdcdc;
+	/*background-color: burlywood;*/
+}
+.css_same{
+	width: 33%;
+	float: left;
+	padding-bottom: 1rem;
+	/*background-color: blueviolet;*/
+}
+#tap_first button{
+	width: 7rem;
+}
+#tap_first{
+	border-right:0.1rem solid #dcdcdc ;
+}
+#tap_third{
+	border-left: 0.1rem solid #dcdcdc;
+}
+#tap_second{
+	border-right:0.1rem solid #dcdcdc ;
+	border-left: 0.1rem solid #dcdcdc;
+}
+.of,.o{
+	height:3rem;
+	width:6rem;	
+	background: none;
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/same/close.png);
+	padding: 0.2rem;
+	display: block;
+	margin: 0 auto;
+}
+.o{
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/same/open.png);
+}
+.not_choose{
+	display: block;
+	width: 10rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 1.7rem;
+	padding: 0.5rem;
+	border-radius:1.5rem;
+	border:0.15rem solid #ff9000;
+	color: #ff9000;
+	background: none;
+}
+.choose{
+	display: block;
+	width: 10rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 1.7rem;
+	padding: 0.5rem;
+	border-radius:1.5rem;
+	border:0.15rem solid #ff9000;
+	color:white;
+	background:#ff9000;		
+}
+/*===================================热门推荐===========================*/
+.keCheng{
+	width: 100%;
+	float: left;
+	/*padding: 0.5rem 0 1rem 1rem;*/
+	/*background-color: cadetblue;*/
+	height: 21.5em;
+	border-bottom:0.3rem solid #ededed ;
+	
+}
+.keCheng .fenmian{
+	width: 15em;
+	height: 19rem;
+	/*margin: 1em 0em 1em 0em;*/
+	float: left;
+	padding: 1.2rem 1em 1rem 1.5rem;
+	float: left;
+	/*background: teal;*/
+}
+
+.concret{
+	font-size: 1.7rem;
+	width: 70%;
+	padding-top:1em;
+	float: left;
+	/*background-color: burlywood;*/
+}
+.concret p{
+	padding-bottom: 0.4rem;
+	/*background: yellow;*/
+}
+.class_name{
+	font-size: 2rem;
+	/*display: block;*/
+	/*width: 70%;*/
+	/*background-color: blue;*/
+}
+.show{
+	width: 80%;
+	float: left;
+	/*padding-top:1rem ;*/
+	/*background-color: blanchedalmond;*/
+}
+.show span{
+	float: left;
+}
+.show span img{
+	float: left;
+	padding: 0;
+	width: 3.6rem;
+	height: 3.4rem;
+	text-align: center;
+	/*background-color:blue;*/
+}
+.show span p{
+	float: left;
+	font-size: 1.5rem;
+	color: #9b9fa6;
+	/*background-color: brown;*/
+	padding: 0;
+	padding-top: 0.8rem;
+}
+.show ._numer{
+	padding-right: 1rem;
+}
+.show ._Star{
+	padding-left: 1em;
+}
+.show ._Star .star{
+	width: 2.5rem;
+	height: 2.5rem;
+	padding-top: 0.5rem;
+}
+.tap{
+	color: #FFFFFF;
+	font-size: 1.5rem;
+	background-color: #ff9000;
+	padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+	border-radius: 1.5rem;
+	float: right;
+	/*margin:1.5em 1em 0 0;*/
+	margin-right: 0.5em;
+}
+/*._tapAdd{
+	width: 18%;
+	height:18rem;
+	float:right;
+	/*background-color: cadetblue;*/
+}*/
+.by{
+	font-size: 2rem;
+	color: #b9bcc3;	
+	/*float: right;*/
+	padding:1rem;
+	background-color: blue;
+	margin-top:12rem;
+}

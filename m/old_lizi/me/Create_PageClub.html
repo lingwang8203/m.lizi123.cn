@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>创建社团</title>
+		<link href="css/Create_PageClub.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!--顶部-->
+		<header>
+			<a href="Manage_PageClub.html" id="more"><</a>
+			<h1>社团基本信息</h1>
+			<a href="manage_club.html" id="furnish">下一步</a>
+		</header>
+		<form action="" method="post" id="logo">
+			<a href="#" id="add_logo">
+				<input type="file" name="file" id="upload_logo"  onchange="javascript:setImagePreview();"/>
+			</a>
+			<div id="show_logo" class="show_logo">
+		  	 	<img id="preview" width="-1" height="-1" style="display: none" /> 
+			</div>
+		</form>
+		<input type="text"  placeholder="填写社团名称" id="edit_clubname"/>
+		<!--//已选择标签-->
+		<p id="label">已选择类别:<span id="label0">标签一</span></p>
+		<p id="tips">点击[下一步]代表你已阅读并同意<a href="#">用户使用协议</a></p>
+		<!--////////////////弹出层-->
+		<div id="back"></div>
+		<div id="choose_fenlei">
+			<div class="tap_class">
+				<p class="class">选择社团分类</p>
+			</div>
+			<div style="height: 1vh;clear: both;"></div>
+			<div class="tabs">
+				<span class="unchecked" name="leibie">学生组织</span>
+				<span class="unchecked" name="leibie">实践服务</span>
+			</div>
+			<div style="height: 5vh;"></div>
+			<div class="tabs">
+				<span class="unchecked" name="leibie">娱乐爱好</span>
+				<span class="unchecked" name="leibie">学术科技</span>
+			</div>
+			<div style="height: 5vh;"></div>
+			<div class="tabs">
+				<span class="unchecked" name="leibie">文化艺术</span>
+				<span class="unchecked" name="leibie">体育竞技</span>
+			</div>
+			<p id="confirm">好</p>
+		</div>
+	</body>
+	<script src="js/Create_PageClub.js"></script>
+</html>

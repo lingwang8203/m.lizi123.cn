@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="user-scalable=0;" name="viewport" />		
+		<title>栗子校园</title>
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/css_footer.css">
+	</head>
+	<body>
+		<!-------------中上 导入html--------------------->
+		<iframe src="../index/index.html" id="middle"></iframe>
+		<!------底部------------------------>
+			<footer>
+			<a><img name="fabu"  src="http://img.lizi123.cn/LiZi/footer/img/add.png" id="add" /></a>
+			<ul>
+				<a><li class="nav_logo">
+					<img src="http://img.lizi123.cn/LiZi/footer/img/logo1.png" id="index" class="logo_on"/>
+					<span class="t">首页</span>
+				</li></a>
+				<a><li class="nav_logo">
+					<img src="http://img.lizi123.cn/LiZi/footer/img/logo2.png" id="ffunction" class="logo_off"/>
+					<span class="t">功能</span>
+				</li></a>
+				<li class="nav_logo">
+					<img src="http://img.lizi123.cn/LiZi/footer/img/logo3.jpg" id="not"/>
+				</li>
+				<a><li class="nav_logo">
+					<img src="http://img.lizi123.cn/LiZi/footer/img/logo4.png" id="exchange"class="logo_off"/>
+					<span class="t">广场</span>
+				</li></a>
+				<a><li class="nav_logo">
+					<img src="http://img.lizi123.cn/LiZi/footer/img/logo5.png" id="me"class="logo_off"/>
+					<span class="t">我的</span>
+				</li></a>			
+			</ul>
+		</footer>
+		<!--发布弹出层-->
+		<div id="pop_class" style="display: none;">
+			<a href="../wangEditor-mobile/test/publish_class_first.php">
+				<img src="http://img.lizi123.cn/LiZi/publish/img/class.png">
+				<p>课程</p>
+			</a>
+		</div>
+		<div id="pop_star" style="display: none;">
+			<a href="../publish/show.php">
+				<img src="http://img.lizi123.cn/LiZi/publish/img/show.png">
+				<p>秀秀</p>
+			</a>
+		</div>
+		<div id="pop_activity" style="display: none;">
+			<a href="../wangEditor-mobile/test/publish_activities_first.php">
+				<img src="http://img.lizi123.cn/LiZi/publish/img/sports.png">
+				<p>活动</p>
+			</a>
+		</div>
+		<div id="pop_cancel" style="display: none;">
+			<a href="#">
+				<img src="http://img.lizi123.cn/LiZi/publish/img/fabu.png">
+			</a>
+		</div>
+		<div id="pop_back" style="display: none;">555555</div>
+		<h1 id="pop_publish" style="display: none;">发布</h1>		
+	</body>
+	<script type="text/javascript">
+	//导航条切换
+				var	mid=document.getElementById("middle");	
+				var inde=document.getElementById("index");
+				var ffunction=document.getElementById("ffunction");
+				var exchange=document.getElementById("exchange");
+				var me=document.getElementById("me");
+				//首页区切换
+				inde.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="logo_on";
+					mid.src="../index/index.html";
+					ffunction.className="logo_off";
+					exchange.className="logo_off";
+					me.className="logo_off";
+				},false);
+				//功能区切换
+				ffunction.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="logo_on";
+					mid.src="../ffunction/ffunction.html";
+					inde.className="logo_off";
+					exchange.className="logo_off";
+					me.className="logo_off";
+				},false);
+				//交换区切换
+				exchange.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="logo_on";
+					mid.src="../ground/index.html";
+					inde.className="logo_off";
+					ffunction.className="logo_off";
+					me.className="logo_off";
+				},false);
+				//我的区切换
+				me.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="logo_on";
+					mid.src="../me/me.html";
+					inde.className="logo_off";
+					ffunction.className="logo_off";
+					exchange.className="logo_off";
+				},false);				
+</script>			
+	<!--发布弹出层-->
+<script>
+			var index=0;//弹出层关闭
+			var back=document.getElementById("pop_back");
+			var pclass=document.getElementById("pop_class");
+//			var book=document.getElementById("pop_books");
+			var activity=document.getElementById("pop_activity");
+			var cancel=document.getElementById("pop_cancel");
+			var star=document.getElementById("pop_star");
+			var pop_publish=document.getElementById("pop_publish");
+			var publish=document.getElementById("add");
+			
+        	publish.addEventListener("touchstart",function(e){
+			e.preventDefault();
+				if(index==0){
+					back.style.display="block";
+					pclass.style.display="block";
+//					book.style.display="block";
+					activity.style.display="block";
+					star.style.display="block";
+					cancel.style.display="block";
+					pop_publish.style.display="block";
+					index++;
+					判断当前用户是否登陆
+					$.ajax({
+			            type:"get",
+			            url:"http://api.lizi123.cn/index.php/home/index/isLogin",
+			            data:{
+			            },
+			            success:function(data){
+			                var obj = eval(data);
+			                console.dir(obj);
+			                if (obj.status==200) {
+
+			                }else{
+				        		alert('请登陆！');
+				        		window.location.href="../login";
+				        	}
+						},
+			            error:function(data){
+			                alert("error!");
+			            },
+			        });
+				}
+			},false);
+
+			cancel.addEventListener("touchstart",function(e){
+				e.preventDefault();
+				back.style.display="none";
+				pclass.style.display="none";
+//				book.style.display="none";
+				activity.style.display="none";
+				star.style.display="none";
+				cancel.style.display="none";
+				pop_publish.style.display="none";
+				index--;
+			},false);
+
+        
+    
+		
+</script>	
+<script>
+		var url_index
+		var url=location.href;  
+  		var tmp1=url.split("?")[1];  
+        var tmp3=tmp1.split("=")[1];  
+        var parm1=tmp3;  
+        if(parm1=="a"){						
+				ffunction.className="logo_on";
+				mid.src="../ffunction/ffunction.html";
+				inde.className="logo_off";
+				exchange.className="logo_off";
+				me.className="logo_off";
+				url_index="a";
+        }
+        else if(parm1=="c"){						
+				ffunction.className="logo_on";
+				mid.src="../ffunction/ffunction.html";
+				inde.className="logo_off";
+				exchange.className="logo_off";
+				me.className="logo_off";
+				url_index="c";
+        }
+        else if(parm1=="p"){						
+				ffunction.className="logo_on";
+				mid.src="../ffunction/ffunction.html";
+				inde.className="logo_off";
+				exchange.className="logo_off";
+				me.className="logo_off";
+				url_index="p";
+        }
+        else if(parm1=="ground"){
+        		exchange.className="logo_on";
+				mid.src="../ground/index.html";
+				inde.className="logo_off";
+				ffunction.className="logo_off";
+				me.className="logo_off";
+        }
+        else if(parm1=="ffunction"){
+        	ffunction.className="logo_on";
+				mid.src="../ffunction/ffunction.html";
+				inde.className="logo_off";
+				exchange.className="logo_off";
+				me.className="logo_off";
+        }
+        else if(parm1=="me"){
+        	me.className="logo_on";
+					mid.src="../me/me.html";
+					inde.className="logo_off";
+					ffunction.className="logo_off";
+					exchange.className="logo_off";
+        }
+</script>
+</html>

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>广场</title>
+		<link rel="stylesheet" type="text/css" href="css/ground.css">	
+		<meta content="user-scalable=0;" name="viewport" />	
+		<!--script src="jquery.mobile-1.4.5.min"></script-->
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        
+	</head>
+	<body>
+<!------------------顶部----------------------------->
+		<div id="header">
+			<a href="../index/search.html"><img class="_tubiao" src="http://img.lizi123.cn/LiZi/ground/img/search.png"/></a>
+			<p class="concret_title">广场</p>
+		</div>
+		<div class="button_out">
+			<a href="samehobby.html" target="_blank">
+				<div class="same">
+					<img class="btu" src="http://img.lizi123.cn/LiZi/ground/img/hobby.png" />
+					<p>同好</p>
+				</div>
+			</a>
+			<div class="same">
+				<img class="btu" src="http://img.lizi123.cn/LiZi/ground/img/circle.png" />
+				<p>圈子</p>
+			</div>
+				<div class="same">
+					<img id="chat" class="btu" src="http://img.lizi123.cn/LiZi/ground/img/chat.png" />
+					<p>聊天</p>
+				</div>
+		</div>
+<!-- 内敛界面------------------------------------------->
+		<form>
+		<div class="out">
+    	<select name="select-native-2" id="select-native-2" data-mini="true"class="mid">
+    	    <option value="1">最新</option>
+    	    <option value="2">达人秀</option>
+    	    <option value="3">活动花絮</option>
+   	 	    <option value="4">社团秀秀</option>
+			<option value="5">特别关心</option>
+ 	 	  </select>
+		</div>
+		</form>	
+		
+<!--内敛内容-->
+		<iframe id="middle_contect" src="new_file.html"></iframe>
+		</div>
+	</body>
+	<script>
+        document.getElementById("chat").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			$.ajax({
+	            type:"get",
+	            url:"http://api.lizi123.cn/index.php/home/index/isLogin",
+	            data:{
+	            },
+	            success:function(data){
+	                var obj = eval(data);
+	                console.dir(obj);
+	                if (obj.status==200) {
+//	                	window.location.href = "../chat/Applications/Chat/Web/chat_homepage.php";
+	                	window.open("../chat/Applications/Chat/Web/chat_homepage.php");
+	                }else{
+		        		alert("请登录!");
+//		        		window.location.href="http://m.lizi123.cn/LiZi/login/index.html";
+		        		window.open("http://m.lizi123.cn/login/index.html");
+		        	}
+				},
+	            error:function(data){
+	                alert("error!");
+	            },
+	        });
+		},false)
+			
+		</script>
+</html>

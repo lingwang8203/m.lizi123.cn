@@ -1,0 +1,146 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+body{
+	padding-bottom: 50em;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+	display: block;
+	border: none;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;	
+}
+/*=================标签分类========================*/
+.title{
+	font-size: 2rem;
+	width: 50%;
+	float: left;
+	padding:0.2rem 0 0.3rem 0.3rem;
+	margin:1rem 0 0.5rem 1.2rem;
+	/*background-color: blue;*/
+	border-left: 0.5rem solid #FFBF2B;
+	/*background-color: blue;*/
+}
+#tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	border-bottom: 0.2rem solid #dcdcdc;
+	/*background-color: burlywood;*/
+}
+.css_same{
+	width:23%;
+	float: left;
+	padding-bottom: 1rem;
+	/*background-color: blueviolet;*/
+}
+/*.shorts button{
+	width: 7rem;
+}*/
+
+.not_choose{
+	display: block;
+	/*width: 10rem;*/
+	margin: 0 auto;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 1.7rem;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	border-radius:1.5rem;
+	border:0.15rem solid #ff9000;
+	color: #ff9000;
+	background: none;
+}
+.choose{
+	display: block;
+	/*width: 10rem;*/
+	margin: 0 auto;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 1.7rem;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	border-radius:1.5rem;
+	border:0.15rem solid #ff9000;
+	color:white;
+	background:#ff9000;		
+}
+/*===================================热门推荐===========================*/
+.club{
+	width: 100%;
+	float: left;
+	/*background-color: cadetblue;*/
+	height:auto;
+	padding: 1.5rem 0 1.5rem 0;
+	border-bottom:0.2rem solid #ededed ;	
+}
+.club_top{
+	width: 100%;
+	float: left;
+}
+.club .user_photo{
+	width: 10rem;
+	height: 10rem;
+	float: left;
+	margin-left:2rem;
+	border-radius: 2rem;
+}
+.club .text{
+	font-size: 1.5rem;
+	width: 57%;
+	padding-left: 2rem;
+	float: left;	
+}
+.club .text p{
+	float: left;
+}
+.club .text .club_name{
+	font-size: 2.5rem;
+	/*background: aqua;*/
+}
+.club .text .club_number{
+	padding: 0.5rem 0 0 1.5rem;
+	text-align: center;
+}
+.club .text .club_number span{
+	font-size: 2rem;
+}
+.join_button{
+	margin: 2rem;
+	width: 120px;
+	height: 120px;
+	float:right;
+	border:0;
+	background-color: #FFFFFF;
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/club/join.png);
+}
+.photo{
+	width: 100%;
+	float: left;
+	/*background: yellow;*/
+}
+.photo img{
+	width: 12rem;
+	height: 7rem;
+	padding-left: 2rem;
+	float: left;
+}

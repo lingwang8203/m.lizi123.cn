@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>设置活动负责人</title>
+		<link href="css/yaoqing.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<a class="title" href="../me/manage_club.html"><设置活动负责人</a>
+			<span id="furnish">确认</span>
+		</header>
+		<div id="header_search">
+		<input type="text" placeholder=" 搜索 " id="search" maxlength="12"/>
+		<img src="../login/img/search.png" id="search_image"/>
+		</div>
+		<div id="pageclub_people">
+			<div class="list">
+				<div class="list_header">
+					<span class="fenzu_name">管理员</span>
+				</div>
+				<div class="people_list">
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="list_header">
+					<span class="fenzu_name">办公室</span>
+				</div>
+				<div class="people_list">
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+					<div class="people">
+						<img src="img/choose1.png" class="choose"/>
+						<img src="img/touxiang.png" class="people_touxiang"/>
+						<span class="people_name">安吉拉angle</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload=function(){
+			var choose=document.getElementsByClassName("choose");
+			var people=document.getElementsByClassName("people");
+			for(var i=0;i<people.length;i++){
+				people[i].index=0;
+				people[i].addEventListener("touchstart",function(e){
+					e.preventDefault();
+					if(this.index==0){
+						this.children[0].src="img/choose2.png";
+						this.index=1;
+					}
+					else{
+						this.children[0].src="img/choose1.png";
+						this.index=0;
+					}
+				},false);
+			}
+		}
+	</script>
+</html>

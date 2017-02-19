@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> -->
+    <meta content="user-scalable=0;" name="viewport" /> 
+    <title>常见问题</title>
+    <link rel="stylesheet" type="text/css" href="css/css_feedback.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+</head>
+
+<body>
+    <!-- =================header======== -->
+    <div class="header">
+        <span class="return" id="return"></span>
+        <a id="return1"><p class="title">帮助与反馈</p></a>
+    </div>
+    <!-- =====content===== -->
+    <div class="content">
+        <a href="feedback.html"><span class="opinion1 unche">意见反馈</span></a>
+        <a href="problem.html"><span class="opinion2 che">常见问题</span></a>
+        <div class="question">
+            <p class="ques">1、在哪里可以管理社团？</p>
+            <p class="ans">登陆后，点击【我的】页面中【我的社团】，即可找到【管理社团】按钮啦。</p>
+            <p class="ques">2、圈子在哪里？</p>
+            <p class="ans">点击【广场】按钮，即可看到圈子入口。</p>
+            <p class="ques">3、如何设置特别关注？</p>
+            <p class="ans">登陆后，点击【我的】页面中【我的关注】，长按想设置为特别关注的用户即可设置。同理，长按特别关注用户可以取消特别关注。</p> 
+            <p class="ques">4、如何修改兴趣标签？</p>
+            <p class="ans">登陆后，点击【我的】页面中【设置】，即可找到兴趣标签入口。</p>
+            <span class="page">1</span>
+        </div>
+        <div class="bar"></div>
+    </div>
+</body>
+<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+		document.getElementById("return1").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>
+

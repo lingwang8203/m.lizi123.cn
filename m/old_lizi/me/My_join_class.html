@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的课程</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/My_class.css">
+		<link rel="stylesheet" type="text/css" href="../ffunction/css/css_function_class.css"/>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+	</head>
+	<body>
+		<header>
+			<a class="title" id="return" style="font-size: 5vw;padding: 0;"><我的课程</a>
+		</header>
+		<div id="tabs">
+			<a href="My_manage_class.html"><p id="my_manage" class="tabs_uncheck">我发布的</p></a>
+			<a href="My_join_class.html"><p id="my_join" class="tabs_check">我学习的</p></a>
+		</div>
+		<div class="yinying"></div>
+		<div class="in_html">
+			<a href="../ffunction/concret_class.html">
+		        <div class="keCheng">
+		        <img src="http://img.lizi123.cn/LiZi/ffunction/img/book/book.png" class="fenmian"/>
+		        <div class="concret">
+			        <a><span class="tap">摄影</span></a>
+			        <p class="class_name">【三分钟教会你摄影后期】</p>              
+			        <p class="class_characteristics">课程分享·特长爱好·文化艺术</p>
+			        <p class="class_way">线下 · 一对多</p>
+			        <p class="class_time">开课时间：2016-10-25</p>
+			        <p class="jiFen"> 30积分</p>
+			        <div class="show">
+				        <span class="_numer"><img src="http://img.lizi123.cn/LiZi/ffunction/img/same/comment.png" /><p>583</p></span>
+				        <span class="_numer"><img src="http://img.lizi123.cn/LiZi/ffunction/img/same/good.png" /><p>102</p></span>
+				        <span class="_Star">
+				            <img src="http://img.lizi123.cn/LiZi/ffunction/img/same/star.png" class="star"/>
+				        <p>4.3</p>
+				        </span>
+			        </div>
+			        <p class="by" style="color: #b9bcc3;float: right;width: 100%;font-size: 0.9em;"><span style="float: right;">by Peter</span></p>
+		        </div>
+		        </div>
+		    </a>
+		</div>
+	</body>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

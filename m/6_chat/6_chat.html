@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>一级聊天列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+	</head>
+	<style>
+		.ic_share{
+			
+			width: 1rem;
+			height: 1rem;
+			float: right;
+		}
+		.touxiang{
+			width:2.6rem;height:2.6rem;margin-top: 0.1rem;
+		}
+		.new_chat{
+			color:white;background: red;width: auto;border-radius: 50%;margin-right: 1rem;margin-top: 0.1rem;
+		}
+		.new_chat_1{
+			padding:0rem 0.25rem;
+		}
+		.new_chat_2{
+			padding:0.1rem 0.2rem;
+		}
+		.new_chat_99{
+		 padding:0.1rem;	
+		}
+		.new_chat_dot{
+			padding:0 0.3rem;border-radius: 50%;
+		}
+		@media screen and (min-width:365px){
+		.ic_share{
+			width: 1.2rem;
+			height: 1.2rem;
+			float: right;
+		}
+		.new_chat{
+			margin-right: 1.5rem;
+			margin-top: 0.2rem;
+		}
+		.touxiang{
+			width:2.8rem;height:2.8rem;margin-top: 0.1rem;
+		}
+	
+		}			
+	</style>
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18"><</a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16">消息</div>
+		    <a class="aui-pull-right aui-col-xs-2  aui-padded-t-10"style="width: auto;">
+		    	<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/6_chat/ic_create.png" class="ic_share"/>
+		    </a>			       
+		</header>
+		<ul>
+			
+			<!---------个人聊（一天内的消息）----->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">小栗子</div>
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">好的啊。</div>										
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right" style="margin-top: 0.3rem;color: #9E9E9E;">14:23</div>				
+				</div>
+				<div class="aui-hr"></div>
+			</li>
+			<!---------个人聊（一周内的消息）----->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">小栗子</div>
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">好的啊。</div>										
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right aui-row" style="margin-top: 0.3rem;color: #9E9E9E;">
+						<div class="aui-col-xs-12 aui-pull-right">星期二</div>
+						<div class="aui-col-xs-12  aui-pull-right new_chat new_chat_1">!</div>
+					</div>				
+				</div>
+				<div class="aui-hr"></div>
+			</li>
+			<!---------个人聊（超过一周的消息）----->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">小栗子</div>
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">好的啊。</div>										
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right aui-row" style="margin-top: 0.3rem;color: #9E9E9E;">
+						<div class="aui-col-xs-12 aui-pull-right">16/9/23</div>
+						<div class="aui-col-xs-12  aui-pull-right new_chat new_chat_1">5</div>
+					</div>					
+				</div>
+				<div class="aui-hr"></div>
+			</li>			
+			<!--社团信息-->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/6_chat/touxiang_club.png" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">WEB俱乐部</div>
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">@宣传部：下午五点开会。</div>										
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right aui-row" style="margin-top: 0.3rem;color: #9E9E9E;">
+						<div class="aui-col-xs-12 aui-pull-right">14:23</div>
+						<div class="aui-col-xs-12  aui-pull-right new_chat new_chat_2">33</div>
+					</div>					
+				</div>
+				<div class="aui-hr"></div>				
+			</li>
+			<!--系统消息------->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/6_chat/touxiang_system.png" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">系统消息</div>				
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">您的活动有新的报名。</div>										
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right aui-row" style="margin-top: 0.3rem;color: #9E9E9E;">
+						<div class="aui-col-xs-12 aui-pull-right">16/9/23</div>
+						<div class="aui-col-xs-12  aui-pull-right new_chat new_chat_dot">&nbsp;</div>
+					</div>	
+				</div>	
+				<div class="aui-hr"></div>				
+			</li>
+			<!-----活动消息------>
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/6_chat/touxiang_sport.png" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">科技创新大赛</div>
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">科技创新大赛邀请您参与投票。</div>										
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right aui-row" style="margin-top: 0.3rem;color: #9E9E9E;">
+						<div class="aui-col-xs-12 aui-pull-right">14:23</div>
+						<div class="aui-col-xs-12  aui-pull-right new_chat new_chat_99">99+</div>
+					</div>				
+				</div>	
+				<div class="aui-hr"></div>				
+			</li>			
+		</ul>
+	</body>
+	<script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>
+    <script>
+    // 连接服务端
+    var socket = io('http://workerman.net:2120');
+    // uid可以是自己网站的用户id，以便针对uid推送以及统计在线人数
+    uid = 31;
+    // socket连接后以uid登录
+    socket.on('connect', function(){
+    	socket.emit('login', uid);
+    });
+    // 后端推送来消息时
+    socket.on('new_msg', function(msg){
+        console.log("收到消息："+msg);
+        alert(msg);
+    });
+    // 后端推送来在线数据时
+    //socket.on('update_online_count', function(online_stat){
+    //    console.log(online_stat);
+    //});
+    
+</script>
+</html>

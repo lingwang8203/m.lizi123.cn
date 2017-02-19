@@ -1,0 +1,88 @@
+
+body:before {
+    content: ' ';
+    position: fixed;
+    z-index: -200;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("http://img.lizi123.cn/LiZi/mobile/images/bg.jpg") center 0 no-repeat;
+    background-size: cover;
+}
+.btn{
+    width: 70%;
+    background: #FD7522;
+    font-size: 1rem;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    padding:0.5rem 2rem;
+    margin:0 auto;
+    text-decoration: none;
+    position:relative;
+    overflow:hidden
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-top:20%
+}
+.box{
+    width: 80%;
+    text-align: center;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translate(0,20px);
+}
+.box-end{
+    opacity: 1;
+    transform: translate(0,0px);
+}
+.input{
+    border:1px solid #FD7522;
+    border-radius: 5px;
+    height: 25px;
+    width: 30%;
+    outline: none;
+    padding-left: 10px;
+    letter-spacing: 5px;
+}
+.yzm{
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-left: 5px;
+
+}
+.white-border-box{
+    margin:0 auto;
+    width: 90%;
+    border:1px solid #ffffff;
+    border-radius:10px;
+    overflow: hidden;
+}
+.left{
+    background: url("http://img.lizi123.cn/LiZi/mobile/images/left.png") no-repeat;
+    width: 12%;
+    height: 12%;
+    position: absolute;
+    right: 10%;
+    background-size: contain;
+    bottom:10px;
+    display: none;
+
+}
+.right{
+    background: url("http://img.lizi123.cn/LiZi/mobile/images/right.png") no-repeat;
+    width: 11%;
+    height: 11%;
+    right: 0;
+    position: absolute;
+    background-size: contain;
+    bottom:10px;
+    display: none;
+
+}

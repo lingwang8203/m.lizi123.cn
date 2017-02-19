@@ -1,0 +1,144 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+/*background-color: #ffbf2b;*/
+text-align: center;
+width: 100vw;
+text-align: left;
+padding: 3vw 2vw;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 201;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+}
+/*////////////////////////////////////最热门*/
+#hotest{
+	width: 100vw;
+	height: 50vh;
+	position: relative;
+	z-index: 200;
+}
+#hotest img{
+	width: 100vw;
+	height: 50vh;
+}
+#font{
+	position: absolute;
+	bottom: 5vw;
+	left: 0;
+	color: white;
+}
+#bianhao{
+	float: left;
+	font-size: 15vw;
+	padding: 1.0vw 0vw;
+	margin-left: 3vw;
+	border-bottom:1vw solid white;
+	border-top: 1vw solid white;
+}
+#header{
+	float: left;
+	margin-left: 3vw;
+}
+#header h3{
+	font-size: 5vw;
+	font-weight: normal;
+	margin-top: 1.5vw;
+}
+#header p{
+	font-size: 4vw;
+	margin-top: 1vw;
+}
+#baoming{
+	float: right;
+	font-size: 4vw;
+	padding: 1vw 2vw;
+	border: 0.5vw solid white;
+	margin-top: 2vw;
+	margin-right: 2vw;
+	border-radius: 15px;
+}
+#font a{
+	float: right;
+	font-size: 4vw;
+	color: white;
+	margin-right: 2vw;
+	margin-top: 5.5vw;
+}
+/*//////////////////热门*/
+.hot{
+	width: 96vw;
+	height: auto;
+	margin: 2vw 2vw;
+	margin-bottom: 0;
+	overflow: auto;
+	border: 2px solid #a8a8a8;
+	padding-bottom: 2vw;
+}
+.pic{
+	position: relative;
+	width: 96vw;
+	height: auto;
+}
+.pic img{
+	width: 96vw;
+	height: 25vh;
+}
+.pic span{
+	position: absolute;
+	bottom: 4vw;
+	left: 3vw;
+	font-size: 8vw;
+	color: white;
+	border-bottom: 1vw solid white;
+	border-top: 1vw solid white;
+}
+.miaoshu{
+	float: left;
+	margin-top: 2vw;
+	margin-left: 5vw;
+}
+.miaoshu h3{
+	font-weight: normal;
+	font-size: 4.5vw;
+}
+.miaoshu p{
+	font-size: 3.5vw;
+	margin-top: 0.5vw;
+}
+.hot a{
+	color: black;
+	float: right;
+	margin-right: 1vw;
+	margin-top: 5vw;
+	font-size: 3.5vw;
+}

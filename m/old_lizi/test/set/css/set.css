@@ -1,0 +1,156 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+	background-color: #e0e0e0;
+}
+header{
+	background: url(http://img.lizi123.cn/LiZi/test/set/img/icon_return.png) no-repeat;
+	background-color: #ffbf2b;
+	text-align: center;
+	/*width: 100vw;*/
+	text-align: left;
+	/*padding: 3vw 2vw;*/
+	padding:3vw 7vw;
+	background-position: 4% 50%;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+	padding-left: 4vw;
+}
+.yinying{
+	width: 100vw;
+	height: 3vw;
+	background-color: #e0e0e0;
+}
+.tabs{
+	width: 92vw;
+	font-size: 4.8vw;
+	padding: 1vh 4vw;
+	overflow: auto;
+	clear: both;
+	background-color: white;
+	border-bottom: 2px solid #e0e0e0;
+}
+.tabs span{
+	float: left;
+}
+.enter{
+	float: right;
+	display: inline-block;
+	width: 3vw;
+	font-size: 4.8vw;
+}
+.clear-data{
+	display: inline-block;
+	font-size: 3.3vw;
+	color:#6B6B6B;
+	line-height: 3.5vw;
+	padding-left: 59vw;
+	margin-top: -1vw;
+}
+.enter{
+	color:#979797;
+}
+#new_guanzhu{
+	float: left;
+	margin-left: 1vw;
+	margin-top: 2.4vw;
+}
+#quit{
+	display: block;
+	width: 95vw;
+	font-size: 4.8vw;
+	padding: 1.5vh 2.5vw;
+	overflow: auto;
+	clear: both;
+	text-align: center;
+	color: #f68002;
+	background-color: white;
+}
+#logo{
+	/*margin-top: 20vw;*/
+	width: 40vw;
+	height: auto;
+/*	margin-left: 20vw;
+	margin-bottom: 20vw;*/
+	position: absolute;
+	left:0;
+	right: 0;
+	top:30vw;
+	bottom: 20vw;
+	margin: 0 auto;
+}
+#version{
+	width: 100vw;
+	font-size: 4vw;
+	text-align: center;
+	padding-top: 70vw;
+}
+.update{
+	display: inline-block;
+	background-color: #ffbf2b;
+	color: #fff;
+	margin-top: 8vw;
+/*	margin-right: auto;
+	margin-left: auto;*/
+	padding: 0.8vw 7vw;
+	border-radius: 3vw;
+	margin-left: 34vw;
+}
+p{
+	/*width: 100vw;*/
+	font-size: 4vw;
+	text-align: center;
+}
+.xuanxiang{
+	width: 92vw;
+	height: auto;
+	padding: 1.5vh 4vw;
+    border-bottom: 2px solid #e0e0e0;
+    overflow: auto;
+}
+.text{
+	float: left;
+	display: inline-block;
+}
+.text h3{
+	font-size: 4.8vw;
+	font-weight: normal;
+	line-height: 4.8vw;
+	padding-bottom: 1.5vw;
+}
+.text p{
+	font-size: 4vw;
+	text-align: left;
+	width: 80vw;
+	line-height: 4vw;
+	color: #6D6D6D;
+}
+.switch{
+	float: left;
+	margin-top: 2vw;
+}

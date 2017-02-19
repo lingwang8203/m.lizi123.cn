@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>个人主页</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	    <link rel="stylesheet" type="text/css" href="../../1_home/css/index.css" />	
+	    <script src="../../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_50_mine_homepage_self.html.js"></script>
+	</head>
+	<style>
+		.brief{
+			font-size: 0.6rem !important;	
+		}
+		@media screen and (min-width:365px){ 
+			.brief{
+			font-size: 0.7rem !important;
+			}
+		 }		
+	</style>
+	<body>
+		
+	<!--顶部----------------------------->
+		<div class="aui-row aui-padded-t-15"style="background: #FFBF2B;">
+			<div class="aui-col-xs-3 aui-row">
+				 <div class="aui-pull-left aui-col-xs-12 aui-font-size-18">
+				 	<i class="aui-icon-left aui-iconfont aui-padded-l-5" style="color: white;" id="return"></i>
+				 </div>		
+			</div>
+			<div class="aui-col-xs-6 aui-row"style="color: white;">
+				<div class="aui-col-xs-12 aui-text-center">
+					<img src="" id="mine_headImg" class="aui-img-round" style="width: 5rem;height: 5rem;border: 0.1rem solid white;" />
+				</div>
+				<div class="aui-col-xs-12 aui-text-center aui-font-size-18" id="mine_name"></div>
+				<div class="aui-col-xs-12 aui-text-center aui-row">
+					<div class="aui-col-xs-10 brief" id="mine_intro"></div>
+					<div class="aui-col-xs-2" id="edit_myself">
+						<i class="aui-iconfont aui-icon-pencil"style="color: white;float: left;"></i>
+					</div>
+				</div>				
+			</div>		
+		</div>
+		<!-------------------tab切换------------------->
+		<header class="aui-bar aui-bar-nav">			
+			<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active"style="background: none;color: white;"id="frame1">主页</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame2"><div></div>动态</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame3">Wo的</div>
+			</div>			       
+		</header>	
+		<iframe id="ifram"style="width: 100%;height:60em;"src="501_mine_homepage_self_frame1.html" frameborder=no  border=0  marginwidth=0  marginheight=0  scrolling=no></iframe>		
+	</body>
+	<script type="text/javascript" src="js/aui-tab.js" ></script>
+	<script type="text/javascript" src="../js/api.js" ></script>
+	<script type="text/javascript">
+        apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="http://m.lizi123.cn"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+</script>
+</html>
+	

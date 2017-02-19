@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0," name="viewport" /> 
+		<title>帮助与反�?/title>
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/css_feedback.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+	</head>
+	<body>
+		<!-- ===header====== -->
+		<div class="header">
+			<span class="return" id="return"></span>
+			<a id="return1"><p class="title">帮助与反�?/p></a>
+		</div>
+		<!-- =====content==== -->
+		<div class="content">
+			<a href="feedback.html"><p class="opinion1 che">意见反馈</p></a>
+			<a href="problem.html"><p class="opinion2 unche">常见问题</p></a>
+			<textarea class="details" placeholder="输入您的意见详情......" rows="14" maxlength="140"></textarea>
+			<p id="submit" class="sumit">提交</p>
+		</div>
+	</body>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+		document.getElementById("return1").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+		//===============================意见反馈===================================
+		document.getElementById("submit").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var content = document.getElementsByClassName("details")[0].value;
+			console.dir(content);
+			$.ajax({
+                type:"POST",
+                url:"http://api.lizi123.cn/index.php/home/user/feedback",
+                data:{
+                	"content":content,
+                },
+                success:function(data){
+                	var obj = eval(data);
+                	console.dir(obj);
+                	alert("提交成�?�！");
+                },
+                error:function(data){
+                    alert("error!");
+                },
+        	});
+		},false);
+		
+	</script>
+</html>

@@ -1,0 +1,144 @@
+/*html{
+	font-size: 16px;	
+}
+*/
+/*html:root{
+	font-size: 625%;
+}*/
+
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-weight:400;
+	background-color: #e0e0e0;
+}
+
+/*---header-----*/
+
+.header{
+	background-color: #ffbf2b;
+	box-shadow:  0 0.2rem 0.5rem #B3B2B2;
+}
+
+.title{
+	background: url(http://img.lizi123.cn/LiZi/test/set/img/icon_return.png) no-repeat;
+	display: inline-block;
+	font-size:5vw;
+	color:#ffffff;
+/*	line-height: 2.8rem;
+	padding-left: 3.75rem;
+	margin-left: 1.6rem;
+	margin-top: 3.0rem;
+	margin-bottom: 3.0rem;*/
+	padding:3vw 7vw;
+	background-position: 5% 50%;
+}
+
+/*--content------*/
+
+.content{
+	background-color: #e0e0e0;
+}
+
+.opinion1{
+	float: left;
+	display:inline-block;
+	font-size:4vw ;
+	/*padding:1.5rem 3.5rem;*/
+	padding:0.6rem 3rem;
+	border: 0.2rem solid #ffbf2b;
+	/*margin-top:6.0rem;*/
+	/*margin-top:5.0rem;*/
+	margin-top: 4.2rem;
+	/*margin-bottom:7.5rem;*/
+	/*margin-bottom:6rem;*/
+	margin-bottom: 4.8rem;
+	margin-left: 24vw;
+	margin-right: 0;
+	
+}
+.opinion2{
+	float: left;
+	display:inline-block;
+	font-size:4vw ;
+	/*padding:1.5rem 3.5rem;*/
+	padding:0.6rem 3rem;
+	border: 0.2rem solid #ffbf2b;
+	/*margin-top:6.0rem;*/
+	/*margin-top:5.0rem;*/
+	margin-top: 4.2rem;
+	/*margin-bottom:7.5rem;*/
+	/*margin-bottom:5.5rem;*/
+	margin-bottom: 4.8rem;
+	margin-left: 0;
+}
+
+.che{
+	background-color: #ffbf2b;
+	color:#ffffff;
+}
+
+.unche{
+	background-color: #ffffff;
+	color:#ffbf2b;
+}
+
+.details{
+	width:95.1%;
+	border:0;
+	font-size:2.5rem;
+	color:#b5b5b5;
+	padding:1rem 1.5rem;
+}
+
+.sumit{
+	display: inline-block;
+	font-size: 4.5vw;
+	color:#ffffff;
+	padding:0.87rem 13.4rem;
+	background-color: #ffbf2b;
+	margin-left: 14.7rem;
+/*	margin-top: 5.7rem;*/
+	margin-top: 8.3rem;
+/*	margin-bottom: 7.7rem;*/
+	margin-bottom: 6.5rem;
+	
+}
+
+/*---problem----*/
+.question{
+	clear: both;
+	background-color: #ffffff;
+	margin:0 1.5vw;
+	width: 97vw;
+	box-shadow:  0 0 1.2rem #8f8b8b;
+	font-size: 2.2rem !important;
+}
+.ques{
+	padding-left:1.3rem;
+	line-height: 4.0rem;
+	padding-bottom: 1.0rem;
+	padding-top: 1vw;
+	max-height: 999999px;
+}
+
+.ans{
+	padding-left:4.8rem;
+	padding-right: 2.2rem;
+	line-height: 4.0rem;
+	padding-bottom: 5vw;
+	max-height: 999999px;
+}
+
+.page{
+	background: url(http://img.lizi123.cn/LiZi/test/set/img/icon_page.png) no-repeat;
+	width:8rem;
+	height:1.2rem;
+	line-height: 4.0rem;;
+	font-size:2.5rem;
+	padding:0 28.0rem;
+	background-position: 50%;
+}
+
+.bar{
+	padding:3.5rem 0;
+}

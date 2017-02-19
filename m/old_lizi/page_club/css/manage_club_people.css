@@ -1,0 +1,502 @@
+{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-color: #ffbf2b;
+	text-align: center;
+	width: 96vw;
+	text-align: left;
+	padding: 3vw 2vw;
+	overflow: auto;
+}
+header a{
+	float: left;
+	font-size: 5vw;
+	color: white;
+}
+#message_state{
+	float: left;
+	margin-top: 0.5vh;
+	margin-left: 55vw;
+}
+.dinglan{
+	width: 100vw;
+	position: relative;
+	margin-top: 2vw;
+}
+#piliang{
+	margin-left: 2vw;
+	width: 8vw;
+}
+#touxian{
+	margin-left: 40vw;
+	width: 9vw;
+}
+#delete{
+	margin-left: 2vw;
+	width: 9vw;
+}
+#quanxian{
+	margin-left: 2vw;
+	width: 9vw;
+}
+#yidong{
+	margin-left: 2vw;
+	width: 9vw;
+}
+#header{
+	font-size: 6vw;
+	color: black;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 6vh;
+}
+
+#header_search{
+	margin-top: 1.5vh;
+	position: relative;
+}
+#search{
+	font-size: 4.5vw;
+	width: 95vw;
+	text-align: center;
+	margin-left: 2vw;
+	padding: 0.5vh 0;
+	border: 2px solid #b4b4b4;
+	border-radius: 15px;
+	margin-bottom: 1vh;
+	/*background-image: url(../img/search.png);
+	background-repeat: no-repeat;
+	background-size: 4vw;
+	background-position-x: 2vw;
+	background-position-y: 0.5vh;*/
+	outline:none;
+}
+#search_image{
+	width: 4.5vw;
+	position: absolute;
+	top: 0.7vh;
+	left: 8vw;
+}
+.list{
+	width: 100vw;
+	position: relative;
+	height: auto;
+}
+.list_header{
+	width: 96vw;
+	height: auto;
+	background-color: #ededed;
+	padding: 0.5vw 2vw;
+}
+.fenzu_icon{
+	float: left;
+	width: 3vw;
+	margin-top: 1.5vw;
+}
+.fenzu_name{
+	font-size: 4vw;
+	margin-left: 3vw;
+}
+.people{
+	width:96vw;
+	height: auto;
+	padding: 1vw 2vw;
+	clear: both;
+	border-bottom: 2px solid #ededed;
+	overflow: auto;
+}
+.people_touxiang{
+	float: left;
+	width: 10vw;
+	height: 10vw;
+	border-radius: 50%;
+}
+.choose{
+	float: left;
+	width: 9vw;
+	height: 9vw;
+	margin-left: 1vw;
+	margin-bottom: 1vw;
+}
+.people_touxian{
+	float: left;
+	margin-left: 4vw;
+	margin-top: 2vw;
+	font-size: 4vw;
+	padding: 0.5vw 2vw;
+	border-radius: 15px;
+	color: white;
+}
+.yellow{
+	background-color: #ffbf2a;
+}
+.cyellow{
+	background-color: #ffd800;
+}
+.blue{
+	background-color: #2dfff8;
+}
+.tblue{
+	background-color: #49b8ff;
+}
+.red{
+	background-color: #ff7d7d;
+}
+.people_name{
+	float: left;
+	font-size: 4.5vw;
+	margin-left: 3vw;
+	margin-top: 2vw;
+}
+.huanjie{
+	float: right;
+	color: #ffbf2a;
+	font-size: 3.5vw;
+	border-bottom: 2px solid #FFBF2A;
+	margin-top: 2.5vw;
+}
+/*/////////////////////////////////弹出层*/
+#back{
+	position: fixed;
+	z-index: 200;
+	width: 100vw;
+	height: 92.8vh;
+	top: 7.2vh;
+	background-color: #949494;
+	opacity: 0.6;
+}
+#edit_touxian{
+	position: fixed;
+	z-index: 201;
+	width: 80vw;
+	height: 23vh;
+	left: 10vw;
+	top: 24vh;
+	background-color: #ffffff;
+	display: none;
+}
+#edit_touxian p{
+	font-size: 4.5vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #ffbf2b;
+}
+#newtouxian{
+	margin-top: 5vh;
+	margin-left: 5vw;
+	font-size: 4.5vw;
+	width: 70vw;
+	text-align: left;
+	border: none;
+	border-bottom: 2px solid #FFBF2A;
+	display: block;
+}
+#touxian_cancel{
+	display: inline-block;
+	font-size: 4vw;
+	color: #ff9000;
+	margin-top: 4vh;
+	margin-left: 55vw;
+}
+#touxian_confirm{
+	display: inline-block;
+	font-size: 4vw;
+	color: #ff9000;
+	margin-top: 4vh;
+	margin-left: 7vw;
+}
+
+/*//////////////////////////////////编辑权限*/
+#edit_quanxian{
+	position: fixed;
+	z-index: 201;
+	width: 80vw;
+	height: 36vh;
+	left: 10vw;
+	top: 24vh;
+	background-color: #ffffff;
+	display: none;
+}
+#edit_quanxian p{
+	font-size: 4.5vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #ffbf2b;
+}
+.edit_quanxian_img{
+	width: 80vw;
+	margin-top: 1vh;
+	border-bottom: 2px solid #c2c2c2;
+	padding-bottom: 1vw;
+}
+.edit_quanxian_img img{
+	width: 12vw;
+	margin-left: 2.5vw;
+}
+.edit_quanxian_choose{
+	width: 80vw;
+	margin-top: 2vw;
+	display: block;
+	clear: both;
+	overflow: auto;
+}
+.quanxian_choose{
+	float: left;
+	margin-left: 4vw;
+	width: 6vw;
+	height: 6vw;
+}
+.edit_quanxian_choose span{
+	float: left;
+	font-size: 4vw;
+	margin-left: 1vw;
+	margin-top: 0.2vw;
+}
+#quanxian_cancel{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 3vh;
+	margin-left: 50vw;
+}
+#quanxian_confirm{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 3vh;
+	margin-left: 8vw;
+}
+/*//////////////////////////////////踢人*/
+#delete_people{
+	position: fixed;
+	width: 80vw;
+	left: 10vw;
+	top: 24vh;
+	background-color: #ffffff;
+	z-index: 201;
+	height: 20vh;
+	display: none;
+}
+#delete_people p{
+	font-size: 4.5vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #ffbf2b;
+}
+#delete_people h3{
+	font-weight: normal;
+	font-size: 4.5vw;
+	margin-left: 7vw;
+}
+#delete_cancel{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 1.5vh;
+	margin-left: 50vw;
+}
+#delete_confirm{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 1.5vh;
+	margin-left: 8vw;
+}
+
+/*////////////////////////////////////////////换届*/
+#huanjie_div{
+	position: fixed;
+	width: 80vw;
+	left: 10vw;
+	top: 24vh;
+	background-color: #ffffff;
+	z-index: 201;
+	height: 20vh;
+	display: none;
+}
+#huanjie_div p{
+	font-size: 4.5vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #ffbf2b;
+}
+#huanjie_div h3{
+	font-weight: normal;
+	font-size: 4.5vw;
+	margin-left: 5vw;
+}
+#huanjie_div b{
+	font-weight: normal;
+	color: #feba34;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+#huanjie_div a{
+	color: #feba34;
+	margin-left: 1vw;
+}
+#huanjie_cancel{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 1.5vh;
+	margin-left: 50vw;
+}
+#huanjie_confirm{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 1.5vh;
+	margin-left: 8vw;
+}
+/*////////////////////////////////////移动分组*/
+#yidongfenzu{
+	position: fixed;
+	width: 80vw;
+	left: 10vw;
+	top: 24vh;
+	background-color: #ffffff;
+	z-index: 201;
+	height: auto;
+	display: none;
+}
+#yidongfenzu p{
+	font-size: 4.5vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #ffbf2b;
+    display: inline-block;
+}
+#add_fenzu{
+	font-size: 4vw;
+	margin-left: 30vw;
+	color: #ff9000;
+}
+.fenzu{
+	width: 39vw;
+	clear: both;
+	margin-top: 2vh;
+	overflow: auto;
+	height: auto;
+	display: inline-block;
+}
+.choose_fenzu{
+	float: left;
+	width: 6vw;
+	height: 6vw;
+	margin-left: 3vw;
+}
+.fenzu_nm{
+	float: left;
+	font-size: 4vw;
+	margin-left: 1vw;
+}
+.edit_fenzu{
+	float: left;
+	margin-left: 2vw;
+	width: 4vw;
+	margin-top: 0.5vw;
+}
+#fenzu_cancel{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 2vh;
+	margin-left: 50vw;
+	margin-bottom: 2vh;
+}
+#fenzu_confirm{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 2vh;
+	margin-left: 8vw;
+}
+/*//////////////////////////////添加分组*/
+.add_fenzu{
+	position: fixed;
+	z-index: 201;
+	width: 80vw;
+	height: 23vh;
+	left: 10vw;
+	top: 30vh;
+	background-color: #ffffff;
+	display: none;
+}
+.add_fenzu p{
+	font-size: 4.5vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #ffbf2b;
+}
+#add_fenzu_cancel{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 3vh;
+	margin-left: 50vw;
+}
+#add_fenzu_confirm{
+	font-size: 4vw;
+	display: inline-block;
+	color: #ff9000;
+	margin-top: 3vh;
+	margin-left: 8vw;
+}
+#newfenzu{
+	margin-top: 5vh;
+	margin-left: 5vw;
+	font-size: 4.5vw;
+	width: 70vw;
+	text-align: left;
+	border: none;
+	border-bottom: 2px solid #FFBF2A;
+	display: block;
+}
+.people_list{
+	display: none;
+}

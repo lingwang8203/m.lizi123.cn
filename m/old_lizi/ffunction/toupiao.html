@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- <meta content="user-scalable=0;" name="viewport" />	 -->
+		<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;” />
+		<title>投票</title>
+		<link rel="stylesheet" type="text/css" href="css/toupiao.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+	</head>
+	<body class="toupiao_body">
+		<form action="" method="post" enctype="multipart/form-data">
+		<div class="toupiao_middle2" id="toupiao_middle">
+			<textarea type="text" id="input2" placeholder="请输入详情......"></textarea>
+			<div class="jiezhi">
+				<span>截止日期</span><input id = "year" type="text" maxlength="4"/><span>年</span><input id="month" type="text" maxlength="2"/><span>月</span><input id="day" type="text" maxlength="2"/><span>日</span>
+			</div>
+			<div class="xiangqing">
+				<div class="xiangqing_box">1</div>
+				<div class="xiangqing_img">
+					<a id="add_toupiao_img1" href="#" class="add_toupiao_img">
+						<input type="file" name="file" id="upload_toupiao_img1" class="upload_toupiao_img" onchange="javascript:setImagePreview(1);"/>
+					</a>
+					<div id="show_toupiao_img1" class="show_toupiao_img">
+		   			 	<img id="toupiao1" width="-1" height="-1" style="display: none" class="toupiao"/> 
+					</div>
+				</div>
+				<div class="xiangqing_right">
+					<textarea type="text" class="input3" id="voteContent1" placeholder="请输入详情......" maxlength="50"></textarea>
+				</div>
+			</div>
+		</div>
+		</form>
+		<p class="bottom_jia" id="add_new_toupiao">添加</p>
+	</body>
+	<script src="js/toupiao.js"></script>
+</html>

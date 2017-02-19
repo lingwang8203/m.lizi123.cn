@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<title>位置群聊</title>
+		<link href="css/create_groupchat.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="group_details">
+			<span>群名称</span>
+			<input type="text" placeholder="（必填）10个字以内" maxlength="10" id="name"/>
+		</div>
+		<div class="group_details">
+			<span>群简介</span>
+			<textarea placeholder="（必填）50个字以内" maxlength="50"></textarea>
+		</div>
+		<div class="group_details">
+			<span>群标签</span>
+			<input type="text" placeholder="（选填）可填写多个，按空空格键形成" style="width: 78vw;" maxlength="15" id="lab" onchange="change()"/>
+			<div id="label">
+				<!--<span>音乐</span>-->
+			</div>
+		</div>
+	</body>
+	<script>
+		function change(){
+			var str=document.getElementById("lab").value
+	//		var str="test1  test2 test3";
+			var ret=str.split(/\s+/);
+//			alert(ret.length);
+			for(var i=0;i<ret.length;i++){
+				var html="<span>"+ret[i]+"</span>";
+				$("#label").append(html);
+				document.getElementById("lab").value="";
+			}
+		}
+	</script>
+</html>

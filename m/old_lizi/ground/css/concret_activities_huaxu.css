@@ -1,0 +1,213 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	color:#868686 ;
+	position: relative;
+}
+
+/*///////////////////////////////详情*/
+.huaxu{
+	width: 100vw;
+	height: auto;
+	position: relative;
+}
+.user{
+	width: 100vw;
+	height: auto;
+	position: relative;
+	overflow: auto;
+}
+.user img{
+	float: left;
+	margin-top: 1.5vw;
+	margin-left: 4vw;
+	width: 12vw;
+	height: auto;
+}
+.user_formation{
+	float: left;
+	display: inline-block;
+	margin-top: 1.5vw;
+	margin-left: 3vw;
+	width: 56vw;
+}
+.user_formation h3{
+	font-size: 4vw;
+	color: black;
+	font-weight: bold;
+}
+.user_formation p{
+	margin-top: 1vw;
+	font-size: 3vw;
+	color: #949494;
+	word-break: break-all;
+}
+.fenxiang{
+	position: absolute;
+	top: 0.5vw;
+	right: 7vw;
+	width: 5vw !important;
+	color: #949494;
+}
+.fabu_time{
+	position: absolute;
+	color: #949494;
+	font-size: 3.5vw;
+	top: 8vw;
+	right: 4vw;
+}
+.shuoshuo{
+	clear: both;
+	font-size: 3.5vw;
+	margin-left: 1.5vw;
+	margin-right: 1.5vw;
+	margin-top: 1vh;
+	overflow: auto;
+}
+.user_miaoshu{
+	color: black;
+	 max-height: 999999px; 
+}
+.dilan{
+	width: 95vw;
+	height: auto;
+	margin-top: 1vw;
+	margin-left: 5vw;
+	overflow: auto;
+}
+.dilan img{
+	float: left;
+}
+.zan{
+	width: 5vw;
+	height: auto;
+}
+.pinglun{
+	width: 5vw;
+	height: auto;
+	margin-left: 5vw;
+}
+.zan_number{
+	margin-left: 2vw;
+	margin-top: 0vw;
+}
+.pinglun_number{
+	margin-top: 0vw;
+	margin-left: 2vw;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+.dilan p{
+	float: left;
+	display: inline-block;
+	font-size: 3.5vw;
+	color: black;
+}
+.yinying{
+	clear: both;
+	width: 100vw;
+	height: 1.5vh;
+	background-color: #e0e0e0;
+	margin-top: 1vw;
+}
+/*///////////////////一张图片*/
+.one_picture{
+	width: 100vw;
+	height: 30vh;
+	margin-top: 0.5vh;
+}
+/*////////////////////两张图*/
+.duotu_yinying{
+	width: 15vw;
+	height: 15vw;
+	background-color: #1d1d1d;
+	position: absolute;
+	right: 0vw;
+	bottom: 0.5vw;
+	opacity: 0.5;
+}
+.number{
+	font-size: 5vw;
+	color: white;
+	position: absolute;
+	bottom: 5vw;
+	right: 4vw;
+}
+/*/////////////////////三张图*/
+.three_one_picture{
+	float: left;
+	width: 70vw;
+	height: 30vh;
+	margin-left: 1.5vw;
+}
+.two_picture{
+	display: inline-block;
+	float: left;
+	margin-left: 2vw;
+	width: 25vw;
+	height: auto;
+}
+.three_two_picture{
+	width: 25vw;
+	height: 14vh;
+}
+.duotu{
+	width: 25vw;
+	height: 14vh;
+	background-color: #1d1d1d;
+	position: absolute;
+	right: 0vw;
+	bottom: 0.5vw;
+	opacity: 0.5;
+}
+.duotu_number{
+	position: absolute;
+	font-size: 6vw;
+	color: white;
+	bottom: 5vh;
+	right: 7vw;
+}
+.image{
+	position: relative;
+	overflow: auto;
+}
+
+/*/////////////////////////////////////视频*/
+.shipin{
+	width: 100vw;
+	height: 30vh;
+	margin-top: 0.5vh;
+}
+/*button{
+	font-size: 5vw;
+	width: 15vw;
+	height: 15vw;
+}*/
+.play{
+	position: absolute;
+	top: 10vh;
+	left: 43vw;
+	width: 14vw;
+}

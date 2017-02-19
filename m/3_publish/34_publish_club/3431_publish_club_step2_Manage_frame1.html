@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">	
+	<title>社团主页</title>
+	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	<!--link rel="stylesheet" type="text/css" href="../../css/iconfont_like.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!--script src="../../js/jquery-2.2.3.min.js"></script>-->
+	<!--script src="js/ajax_222_function_club_concret.js"></script>-->
+</head>
+
+<style>
+	#club_headImg{
+	width:3rem;height:3rem;	margin-top: 1rem;
+	}
+	
+	@media screen and (min-width:365px){ 
+	#club_headImg{
+	width:4rem;height:4rem;	margin-top: 0;
+	}
+		 }	
+		 
+ 	.club_photo_record{
+			width: 4.5rem;
+			height: 4.5rem;
+			border-radius: 50%;
+			border: 0.15rem solid #FFFFFF ;
+		}
+	.miaoBianClub{
+	color: white;
+    border-top: 4px solid white;
+    z-index: 100;
+    }
+    .TouWei{
+    	height: 6rem;
+		position: relative;
+		bottom: 1rem;
+		z-index: 120;
+    }.weiZhiClub{
+	height: 6rem;
+	margin-right:12rem;
+	position: relative;
+	top: 4rem;
+	z-index: 0;
+}
+</style>
+<body>
+	<div class="aui-content">
+		<ul class="aui-list">
+			<li class="aui-row aui-padded-b-5 aui-padded-t-0"style="width:100%;height: auto;position: relative;">
+				<div class="aui-col-xs-12"style="padding: 0;margin: 0;height: auto;">
+					<img src="http://m.lizi123.cn/2_function/22_function_club/image/she_fenmian.jpg" id="club_fengmian" style="height: 16rem;width: 100%;"/>
+				</div>
+				<div class="sportcontect" style="width: 100%;height: auto;position: absolute;bottom: 0.5rem;">
+					<div style="width: 100%;height: auto;">
+						<div class="aui-col-xs-20 out"style="width: 100%;">
+							<div class="aui-col-xs-12 in_opacity"style="width: 100%;height: 6rem;"></div>
+							<div class="aui-col-xs-12 miaoBianClub weiZhiClub aui-text-center"style="width: 100%;height: 6rem;">
+							    <div class="aui-col-xs-12 aui-row "style="top: 2rem;margin: 0;">
+									<div class="aui-font-size-16 aui-col-xs-12 aui-pull-right "style="color: white;height:2rem;text-align: right;" id="club_name">文学社<div class="aui-font-size-12 aui-col-xs-6 aui-pull-right aui-padded-t-5"style="color: white;text-align: left;" id="club_school">(华侨大学)</div></div>
+								</div>
+								<div class="aui-col-xs-12 aui-row aui-padded-t-10 aui-padded-l-15 aui-padded-r-15" style="top: 1rem;">
+									<p class="aui-font-size-12 aui-col-xs-14" style="color: white;line-height: 130%;top: 2rem;" id="club_miaoshu">"俨然依旧，一副温柔娴淑岁月安好的样子谢你们，带着包容，依次出现在我那不上不下的年纪里 "  </p>
+								</div>
+							</div>
+							<div class="aui-row aui-col-xs-3 aui-pull-right aui-padded-b-5 aui-padded-r-5"style="bottom: 4rem;">
+								<div class="aui-row aui-label lab_join  aui-pull-right aui-font-size-14 aui-col-xs-10 aui-margin-t-5 aui-margin-r-15"style="color: white;text-align: center;border-radius: 0.4rem;" id="club_join_index">178</div>
+							</div>
+							<div class="aui-col-xs-12 TouWei"style="bottom: 4rem;left: 7.5rem;">
+					             <img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/TouXiang_22Club.jpg" id="club_headImg" class="aui-img-round club_photo_record "/>
+				           </div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="aui-row" style="width: 100%;height: 5rem;background: white;">
+			<div class="aui-col-xs-3" style="left: 1rem;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/GongGao.png" class="aui-padded-t-10 "  style="height: 4rem;left: 4rem;"/>
+			</div>
+			<div class="aui-col-xs-3" style="left: 1rem;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/HuoDong.png" class="aui-padded-t-10 "  style="height: 4rem;left: 4rem;"/>
+			</div>
+			<div class="aui-col-xs-3" style="left: 1rem;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/JiYi.png" class="aui-padded-t-10 "  style="height: 4rem;left: 4rem;"/>
+			</div>
+			<div class="aui-col-xs-3" style="left:1rem;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ShengQing.png" class="aui-padded-t-10 "  style="height: 4rem;left: 4rem;"/>
+			</div>
+		</div>
+	</div>
+		
+	<div class="aui-content " style="width: 100%;background: white;">
+		<div>
+			<ul class="aui-list-header aui-row aui-padded-b-5 tit" style="width: 72%;display: inline-block;"><div style="color: #000000;">社团成员</div></ul>
+			<ul class="aui-list-header aui-row aui-padded-b-5 aui-font-size-12" style="color: #212121;width: 20%;display: inline-block;text-align: right;" id="club_member_number">51人></ul>
+		</div>
+	    <li class="aui-row aui-padded-b-5 aui-padded-t-5 aui-padded-l-5 aui-padded-r-5 aui-margin-t-5"style="width:100%;background:white;height: 4rem;" id="club_member_list">
+			<img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/touxiang1.jpg" class="aui-img-round aui-col-xs-2"/>
+			<img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/touxiang3.jpg" class="aui-img-round aui-col-xs-2"/>
+		    <img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/touxiang3.jpg" class="aui-img-round aui-col-xs-2"/>
+		    <img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/touxiang4.jpg" class="aui-img-round aui-col-xs-2"/>
+		    <img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/touxiang4.jpg" class="aui-img-round aui-col-xs-2"/>
+		    <img src="http://img.lizi123.cn/new_lizi/3_publish/34_publish_club/add.png" class="aui-img-round aui-col-xs-2" id="add_club_member"/>
+		</li>
+	</div>
+		
+	<div class="aui-content"style="width: 100%;background: white;">
+		<div>
+			<ul class="aui-list-header aui-row aui-padded-b-5 tit" style="width: 72%;display: inline-block;"><div style="color: #000000;">社团活动</div></ul>
+			<ul class="aui-list-header aui-row aui-padded-b-5 aui-font-size-12" style="color: #212121;width: 20%;display: inline-block;text-align: right;" id="club_member_number">10个></ul>
+		</div>
+		<div class="aui-card-list"style="width: 100%;background: white;">
+			<div class="aui-card-list-content-padded aui-border-b aui-border-t">
+				<div class="aui-row aui-row-padded"  id="club_poster">
+					<div class="aui-col-xs-4">
+						<a href="../21_function_class/212_function_class_concret.html" target="_blank"><img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/haibao1.JPG"/></a>
+					</div>
+					<div class="aui-col-xs-4">
+						<a href="../23_function_sports/232_function_sports_concret.html" target="_blank"><img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/haibao2.JPG"/></a>
+					</div>
+					<div class="aui-col-xs-4">
+						<img src="http://img.lizi123.cn/new_lizi/2_function/22_function_club/haibao3.jpg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+</body>
+
+</html>

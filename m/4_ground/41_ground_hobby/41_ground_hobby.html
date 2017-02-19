@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>找同好</title>
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />	
+	    <script src="../../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_41_ground_hobby.js"></script>
+	</head>
+	<style>
+		.sport_tap{
+			background: #ffa569;
+		}
+		.class_tap{
+			background: #fcaf56;
+		}
+		.club__tap{
+			background: #ffcb52;
+		}
+		.fun_tap{
+			background: #ffd62f;
+		}	
+		.fun_tap_none{
+			width:3.2rem;padding: 0.15rem;border: 1px solid #b3b3b3;
+				color:#b3b3b3;text-align: center;background:none ;margin: 0.3rem;border-radius: 0.4rem;
+		}	
+	</style>
+	<body>
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18" id="return">
+			 	<i class="aui-icon-left aui-iconfont"></i>
+			 </a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16">找同好</div>
+		    <div class="aui-col-xs-2"style="width: auto;">
+		    	<div class="aui-col-xs-8 aui-font-size-14" id="filter">筛选</div>
+		    	<div class="aui-col-xs-4"style="padding-left: 0.1rem;">
+		    		<i class="aui-iconfont aui-icon-down  aui-font-size-14"></i>
+		    	</div>
+		    </div>			       
+		</header>
+		<ul id="hobby_list">
+			 
+		</ul>
+		<div id="pop" style="top: 1.8rem;width: 85vw;left: 12vw;height: 10vw;position: fixed;background-color: #ffffff;z-index: 20;display: none;">
+			<section class="aui-grid" style="border-bottom: 2px solid #e5e5e5;color: #cccccc !important;">
+				<div class="aui-row">
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.25rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16 aui-text-base" name="chooseFromLabel" id="英语">英语</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.25rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromLabel" id="手绘">手绘</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.25rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromLabel" id="吉他">吉他</div>
+					</div>
+				</div>
+				<div class="aui-row">
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromLabel" id="日语">日语</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromLabel" id="摄影">摄影</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromLabel" id="街舞">街舞</div>
+					</div>
+				</div>
+    		</section>
+    		<section class="aui-grid" style="border-bottom: 2px solid #e5e5e5;color: #cccccc !important;">
+				<div class="aui-row">
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromSex" id="0">不限</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromSex" id="1">男</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromSex" id="2">女</div>
+					</div>
+				</div>
+    		</section>
+    		<section class="aui-grid" style="border-bottom: 2px solid #e5e5e5;color: #cccccc !important;">
+				<div class="aui-row">
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.25rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromRequest" id="相同课程">相同课程</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.25rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromRequest" id="相同活动">相同活动</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.25rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromRequest" id="相同社团">相同社团</div>
+					</div>
+				</div>
+				<div class="aui-row">
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromRequest" id="相同圈子">相同圈子</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromRequest" id="相同城市">相同城市</div>
+					</div>
+					<div class="aui-col-xs-4" style="padding: 0.5rem 0 0.5rem 0 !important;">
+						<div class="aui-grid-label aui-font-size-16" name="chooseFromRequest" id="相同学校">相同学校</div>
+					</div>
+				</div>
+    		</section>
+    		<div style="background-color: white;padding: 4vw 0;">
+    		<div class="aui-content-padded" style="margin: 0 0 0 27vw;width: 15vw;display: inline-block;">
+    			<p><div class="aui-btn aui-btn-warning aui-btn-block aui-font-size-16" style="padding: 0 0.5rem;" id="confirm">确认</div></p>
+    		</div>
+    		<div class="aui-content-padded" style="margin: 0 0 0 5vw;width: 15vw;display: inline-block;">
+    			<p><div class="aui-btn aui-btn-warning aui-btn-block aui-font-size-16" style="padding: 0 0.5rem;" id="cancel">取消</div></p>
+    		</div>
+    		</div>
+		</div>
+	</body>
+	</head>
+</html>

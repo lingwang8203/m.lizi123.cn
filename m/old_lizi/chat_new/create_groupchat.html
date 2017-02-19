@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>创建群聊</title>
+		<link href="css/create_groupchat.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<a class="title" href="chat_homepage.html"><创建群聊</a>
+			<a class="title" href="group_people.html" style="float: right;margin-right: 3vw;"><span>下一步</span></a>
+		</header>
+		<div id="tabs">
+			<div id="tabs1">
+				<img src="http://img.lizi123.cn/LiZi/chat_new/img/interest1.png" id="xingqu"/>
+				<p>兴趣群聊</p>
+			</div>
+			<div id="tabs2">
+				<img src="http://img.lizi123.cn/LiZi/chat_new/img/location1.png" id="weizhi"/>
+				<p>位置群聊</p>
+			</div>
+		</div>
+		<div id="tips">
+			<h5>建议您创建与兴趣或交友相关的群聊。</h5>
+			<p>（出于对社区的保护，色情、暴力、非法营销和个人及企业广告是被禁止的）</p>
+		</div>
+		<iframe id="group_chat" src="xingqu_groupchat.html"></iframe>
+	</body>
+	<script>
+		var xingqu=document.getElementById("xingqu");
+		var weizhi=document.getElementById("weizhi");
+		var group=document.getElementById("group_chat");
+		xingqu.addEventListener("touchstart",function(e){
+			e.preventDefault();
+			this.src="http://img.lizi123.cn/LiZi/chat_new/img/interest1.png";
+			weizhi.src="http://img.lizi123.cn/LiZi/chat_new/img/location1.png";
+			group.src="xingqu_groupchat.html";
+		},false);
+		weizhi.addEventListener("touchstart",function(e){
+			e.preventDefault();
+			this.src="http://img.lizi123.cn/LiZi/chat_new/img/location2.png";
+			xingqu.src="http://img.lizi123.cn/LiZi/chat_new/img/interest2.png";
+			group.src="weizhi_groupchat.html";
+		},false);
+	</script>
+</html>

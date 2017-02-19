@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">	
+		<title>发起私聊</title>
+		<link rel="stylesheet" type="text/css" href="css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/new.css" />
+		<script src="../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_61_chat_creatPrivatechat.js"></script>
+	</head>
+	<style>
+		body{
+			background: white;
+		}
+	</style>
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18"><</a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16">发起私聊</div>
+		    <a class="aui-pull-right aui-col-xs-2 aui-font-size-12"  id="confirm">确定</a>			       
+		</header>		
+		<!--搜索-->
+			<div class="aui-content"style="position: relative;height: 2.5rem;">
+				<div class="aui-searchbar" id="search">
+				    <div class="aui-searchbar-input aui-border-radius" tapmode onclick="doSearch()">
+				        <i class="aui-iconfont aui-icon-search"></i>
+				        <form action="javascript:search();">
+				            <input type="search" placeholder="请输入搜索内容" id="search-input">
+				        </form>
+				    </div>
+				    <div class="aui-searchbar-cancel" tapmod>取消</div>
+				</div>
+		</div>
+		<!--列表-->
+		<ul class="aui-row" id="people_list">
+			<li class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2"style="padding:0 0.2rem;">
+					<a href="../../5_mine/51_mine_homepage/51_mine_homepage.html" target="_blank"><img src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-1.png" style="width: 3rem;height: 3rem;border-radius: 50%;"/></a>
+				</div>
+				<div class="aui-col-xs-9 aui-padded-t-15 aui-padded-l-10">小栗子</div>
+				<div class="aui-col-xs-1">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;" id="1"> </label>   					
+				</div>
+			</li>
+			<li class="aui-hr"></li>
+			<li class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2"style="padding:0 0.2rem;">
+					<img src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-2.png" style="width: 3rem;height: 3rem;border-radius: 50%;"/>
+				</div>
+				<div class="aui-col-xs-9 aui-padded-t-15 aui-padded-l-10">小栗子111111111111</div>
+				<div class="aui-col-xs-1">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;"> </label>   					
+				</div>
+			</li>
+			<li class="aui-hr"></li>			
+			<li class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2"style="padding:0 0.2rem;">
+					<img src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-1.png" style="width: 3rem;height: 3rem;border-radius: 50%;"/>
+				</div>
+				<div class="aui-col-xs-9 aui-padded-t-15 aui-padded-l-10">小栗子</div>
+				<div class="aui-col-xs-1">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;"> </label>   					
+				</div>
+			</li>
+			<li class="aui-hr"></li>
+			<li class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2"style="padding:0 0.2rem;">
+					<img src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-2.png" style="width: 3rem;height: 3rem;border-radius: 50%;"/>
+				</div>
+				<div class="aui-col-xs-9 aui-padded-t-15 aui-padded-l-10">小栗子</div>
+				<div class="aui-col-xs-1">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;"> </label>   					
+				</div>
+			</li>
+			<li class="aui-hr"></li>			
+			<li class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2"style="padding:0 0.2rem;">
+					<img src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-1.png" style="width: 3rem;height: 3rem;border-radius: 50%;"/>
+				</div>
+				<div class="aui-col-xs-9 aui-padded-t-15 aui-padded-l-10">小栗子</div>
+				<div class="aui-col-xs-1">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;"> </label>   					
+				</div>
+			</li>
+			<li class="aui-hr"></li>
+			<li class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2"style="padding:0 0.2rem;">
+					<img src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-2.png" style="width: 3rem;height: 3rem;border-radius: 50%;"/>
+				</div>
+				<div class="aui-col-xs-9 aui-padded-t-15 aui-padded-l-10">小栗子</div>
+				<div class="aui-col-xs-1">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;"> </label>   					
+				</div>
+			</li>				
+		</ul>
+    <!--<div class="aui-content aui-margin-b-15"style="margin-top:2.3rem;">
+    <ul class="aui-list aui-select-list">
+         <li class="aui-list-header"style="font-size:0.7rem;">D</li>
+        <li class="aui-list-item">
+        	<div class="aui-list-item-label"style="padding-right:15rem;">
+        		<img style="height:250%;width:250%;"src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-1.png">小栗子
+        	</div>
+            <div class="aui-list-item-inner">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;"> </label>    
+            </div>
+        </li>
+        <li class="aui-list-item">
+        	<div class="aui-list-item-label"style="padding-right:15rem;">
+        		<img style="height:250%;width:250%;"src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-1.png">小栗子
+        	</div>
+            <div class="aui-list-item-inner">
+                <label ><input class="aui-radio" type="radio" name="after"style="margin-top:0.5rem;"> </label>    
+            </div>
+        </li>        
+        <li class="aui-list-item">
+        	<div class="aui-list-item-label"style="padding-right:15rem;">
+        		<img style="height:250%;width:250%;"src="http://img.lizi123.cn/new_lizi/6_chat/61_chat_creatPrivatechat/xiaolizi-2.png">小栗子
+        	</div>
+            <div class="aui-list-item-inner">
+                <label ><input class="aui-radio" type="radio" name="checkbox"style="margin-top:0.5rem;"> </label>
+            </div>
+        </li>
+    </ul>
+</div>-->
+	</body>
+</html>
+   

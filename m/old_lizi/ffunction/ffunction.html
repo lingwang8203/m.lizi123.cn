@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>功能区</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/css_function.css">		
+	</head>
+	<body>
+				<!------------------顶部----------------------------->
+		<div id="header">
+			<span style="width: 39%;float: left;">&ensp;</span>
+			<img src="http://img.lizi123.cn/LiZi/index/img/logo.png" id="logo"/>
+			<a href="../chat_new/chat_homepage.html" target="_blank"><img class="_tubiao" src="http://img.lizi123.cn/LiZi/index/img/news.png"style="width: 5.5em;"/></a>
+			<a href="../index/search.html"><img class="_tubiao" src="http://img.lizi123.cn/LiZi/index/img/search.png"/></a>
+		</div>	
+			<!-------------------导航标题---------------------->
+		<div id="navigation">
+			<ul>
+				<li><a id="cla" class="nav_on">课程</a></li>
+				<li><a id="sport" class="nav_off">活动</a></li>
+				<li><a id="club" class="nav_off">社团</a></li>
+				<li><a id="famous" class="nav_off">达人</a></li>
+			</ul>
+		</div>	
+		<!-------------中间导入html--------------------->
+		<iframe src="function_class.html" id="middle"></iframe>		
+	</body>
+	<script>
+//		window.onload=function(){
+//			setInterval(function(){
+//				var navigation=document.getElementById("navigation");
+//				var distance=document.getElementById("header").getBoundingClientRect().top;
+//				if(distance<=-127){
+//					navigation.style.top="0em";
+//				}
+//				else {
+//					navigation.style.top="3.3em";
+//				}
+//			},100);
+//			}
+		var	mid=document.getElementById("middle");	
+		var cla=document.getElementById("cla");
+		var sports=document.getElementById("sport");
+		var club=document.getElementById("club");
+		var famous=document.getElementById("famous");
+		//切换到课程区
+		cla.addEventListener("touchstart",function(e){
+			e.preventDefault();							
+			this.className="nav_on";
+			mid.src="function_class.html";
+			sports.className="nav_off";
+			club.className="nav_off";
+			famous.className="nav_off";
+		},false);				
+		//切换到活动区
+		sports.addEventListener("touchstart",function(e){
+			e.preventDefault();							
+			this.className="nav_on";
+			mid.src="function_sport.html";
+			cla.className="nav_off";
+			club.className="nav_off";
+			famous.className="nav_off";
+		},false);
+		//切换到社团区
+		club.addEventListener("touchstart",function(e){
+			e.preventDefault();							
+			this.className="nav_on";
+			mid.src="function_club.html";
+			cla.className="nav_off";
+			sports.className="nav_off";
+			famous.className="nav_off";
+		},false);				
+		//切换到达人区
+		famous.addEventListener("touchstart",function(e){
+			e.preventDefault();							
+			this.className="nav_on";
+			mid.src="function_book.html";
+			cla.className="nav_off";
+			sports.className="nav_off";
+			club.className="nav_off";
+		},false);			
+	</script>
+	<script>
+		var url_index=window.parent.url_index;
+		if(url_index=="a"){
+			sports.className="nav_on";
+			mid.src="function_sport.html";
+			cla.className="nav_off";
+			club.className="nav_off";
+			famous.className="nav_off";
+		}
+		else if(url_index=="c"){
+			cla.className="nav_on";
+			mid.src="function_class.html";
+			sports.className="nav_off";
+			club.className="nav_off";
+			famous.className="nav_off";
+		}
+		else if(url_index=="p"){
+			club.className="nav_on";
+			mid.src="function_club.html";
+			cla.className="nav_off";
+			sports.className="nav_off";
+			famous.className="nav_off";
+		}
+	</script>
+</html>

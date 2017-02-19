@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	    <script src="../../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_12_home_search.js"></script>
+	</head>
+	<style>
+		.sports_cover{
+			width: 3.4rem;
+			height: 3.4rem;
+			float: left;
+		}
+	</style>
+        <script>
+		function deletediv() {
+			$("#clubSearchResult").hide();
+			$("#peopleSearchResult").hide();
+			$("#activitySearchResult").hide();
+			$("#classSearchResult").hide();
+                        $("#result_none").hide();
+		}
+	</script>
+
+<body onload="deletediv()">
+        <header class="aui-bar aui-bar-nav aui-row">
+           <a href="../../index.html" class="aui-pull-left aui-btn">
+             <span class="aui-iconfont aui-icon-left"></span>
+          </a>
+          <div class="aui-title">搜索页</div>
+        </header>
+	<div class="aui-content" style="position: relative;height: 2.5rem;">  
+			<div class="aui-searchbar" id="search">
+				<div class="aui-searchbar-input aui-border-radius" tapmode>
+					<i class="aui-iconfont aui-icon-search"></i>
+					<form action="javascript:search();" >
+						<input type="search" placeholder="请输入搜索内容:如栗子" id="search-input" maxlength="30">
+					</form>
+				</div>
+				<div id="searching" class="aui-searchbar-cancel" tapmod>搜索</div>
+			</div>
+		</div>
+                <div id="result_none" style="text-align: center;">搜索内容为空，请重新输入关键字.....</div>
+		<!--<div id="submit" class="aui-bg-base" style="width:5rem;height:1.6rem; line-height:1.6rem;margin: 10vh auto;text-align: center;border-radius: 6px;" onclick="doSearch()">搜一搜</div>
+<!--社团-只显示搜索的前2个（其余在更多中出现）-->
+<ul style="color: #777777;background: white;padding: 0.1rem 0;padding-left: 1.4rem;" id="clubSearchResult">
+	<!-- <li class="aui-col-xs-12" style="color: #404040;">社团</li>--> 
+		<!--社团推送样式---------->
+		<!--<li class="aui-row aui-padded-b-5  aui-padded-t-5"style="border-top: 0.05rem solid  #f5f5f5;border-bottom: 0.05rem solid  #f5f5f5;background: white;">
+			<div class="aui-col-xs-2 aui-text-center">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg"class="aui-img-round club_photo_suit" />
+			</div>
+			<div class="aui-col-xs-8  aui-padded-l-10">
+				<div class="aui-col-xs-12 aui-font-size-16">栗子社</div>
+				<div class="aui-col-xs-12 aui-font-size-12"style="color:#666666;">华侨大学厦门校区栗子研发实验室</div>
+				<div class="aui-col-xs-12">
+					<i class="aui-icon-my aui-iconfont aui-pull-left"></i>
+					<div class="aui-font-size-12 aui-pull-left  aui-padded-l-5"style="padding-top: 0.1rem;color:#666666;"><span style="color:#ffcb53;"> 120人 </span>已加入</div>
+				</div>
+			</div>
+		    <div class="aui-col-xs-2 aui-pull-right">
+		      	<div class="aui-pull-right aui-label lab aui-font-size-12 aui-label-outlined tap_on">申请加入</div>
+		      	<div class="aui-bar-ligh-col-xs-12">
+		      		<a href="../../2_function/22_function_club/222_function_club_concret.html"><i class="aui-iconfont aui-icon-right aui-pull-right aui-padded-r-15"></i></a>
+		      	</div>
+		    </div> 			
+		</li>
+		
+		<li class="aui-row aui-padded-b-5  aui-padded-t-5"style="border-top: 0.05rem solid  #f5f5f5;border-bottom: 0.05rem solid  #f5f5f5;background: white;">
+			<div class="aui-col-xs-2 aui-text-center">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg"class="aui-img-round club_photo_suit" />
+			</div>
+			<div class="aui-col-xs-8  aui-padded-l-10">
+				<div class="aui-col-xs-12 aui-font-size-16">栗子社</div>
+				<div class="aui-col-xs-12 aui-font-size-12"style="color:#666666;">华侨大学厦门校区栗子研发实验室</div>
+				<div class="aui-col-xs-12">
+					<i class="aui-icon-my aui-iconfont aui-pull-left"></i>
+					<div class="aui-font-size-12 aui-pull-left  aui-padded-l-5"style="padding-top: 0.1rem;color:#666666;"><span style="color:#ffcb53;"> 120人 </span>已加入</div>
+				</div>
+			</div>
+		    <div class="aui-col-xs-2 aui-pull-right">
+		      	<div class="aui-pull-right aui-label lab aui-font-size-12 aui-label-outlined aui-bg-base aui-text-white tap_on">已申请</div>
+		      	<div class="aui-bar-ligh-col-xs-12">
+		      		<i class="aui-iconfont aui-icon-right aui-pull-right aui-padded-r-15"></i>
+		      	</div>
+		    </div> 			
+		</li>			
+	<div class="aui-hr"></div>
+	<a href="" ><li class="aui-col-xs-12 aui-font-size-12"style="padding: 0.1rem 0;color: #0d78a5;">查看更多相关社团></li></a>-->
+</ul>
+<div class="hr"></div>
+<!--个人用户-只显示搜索的前2个（其余在更多中出现）-->
+<ul style="color: #777777;background: white;padding: 0.1rem 0;padding-left: 1.4rem;" id="peopleSearchResult">
+	<!--<li class="aui-col-xs-12" style="color: #404040;">达人</li>
+	<li class="aui-col-xs-12">
+	<div class="aui-hr"></div>
+			<div class="aui-col-xs-12 aui-row">
+				<div class="aui-col-xs-2 aui-text-center" style="margin: 0;padding: 0;margin-top: 0.1rem;">
+					<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round club_photo_suit" id="teacher_pic"/></a>
+				</div>
+				<div class="aui-col-xs-7 aui-row aui-padded-t-15 aui-padded-l-10">
+					<div class="aui-col-12 aui-font-size-14" id="teacher_name">小栗子</div>
+					<div class="aui-col-xs-12 aui-font-size-12"style="color: #9E9E9E;" id="teacher_miaoshu">一个爱拍照爱摄影的小家伙。</div>										
+				</div>
+				<div class="aui-col-xs-3" style="margin-top: 1.2rem;color: #9E9E9E;">
+					<div class="aui-col-xs-12 aui-label lab aui-font-size-12 aui-label-outlined aui-pull-right aui-margin-r-5"style="width: auto;border-radius: 0.4em;" name="guanzhu_index">+关注</div>																		
+				</div>				
+			</div>	
+	</li>
+	<div class="aui-hr"></div>
+	<a href="" ><li class="aui-col-xs-12 aui-font-size-12"style="padding: 0.1rem 0;color: #0d78a5;">查看更多相关达人></li></a>-->
+</ul>
+<div class="hr"></div>
+<!--活动-只显示搜索的前1个（其余在更多中出现）-->
+<ul style="color: #777777;background: white;padding: 0.1rem 0;padding-left: 1.4rem;" id="activitySearchResult">
+	<!--<li class="aui-col-xs-12" style="color: #404040;">活动</li>
+	<li class="aui-col-xs-12">
+	<div class="aui-hr"></div>
+	<a href="../../2_function/23_function_sports/232_function_sports_concret.html">
+		<div class="aui-col-xs-12 aui-row"style="background: white;">
+			<div class="aui-col-xs-3 aui-text-center"style="padding:0.4rem 0;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/hot3.jpg" class="sports_cover"/>
+			</div>
+			<div class="aui-col-xs-9 aui-padded-t-5 aui-font-size-14"style="color: #000000;">教你如何拍出好看的男朋友（标题）</div>
+			<div class="aui-col-xs-12 aui-padded-t-5 aui-font-size-12 aui-padded-r-5" >本活动主要是在教美眉如何把自己的男朋友拍成帅气欧巴(活动简介)</div>
+		</div>		
+	</a>
+	</li>
+	<div class="aui-hr"></div>
+	<a href=""><li class="aui-col-xs-12 aui-font-size-12"style="padding: 0.1rem 0;color: #0d78a5;">查看更多相关活动></li></a>-->
+</ul>
+<div class="hr"></div>
+<!--课程-只显示搜索的前1个（其余在更多中出现）-->
+<ul style="color: #777777;background: white;padding: 0.1rem 0;padding-left: 1.4rem;" id="classSearchResult">
+	<!--<li class="aui-col-xs-12" style="color: #404040;">课程</li>
+	<li class="aui-col-xs-12">
+	<div class="aui-hr"></div>
+	<a href="../../2_function/21_function_class/212_function_class_concret.html">
+		<div class="aui-col-xs-12 aui-row"style="background: white;">
+			<div class="aui-col-xs-3 aui-text-center"style="padding:0.4rem 0;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/hot2.jpg" class="sports_cover"/>
+			</div>
+			<div class="aui-col-xs-9 aui-padded-t-5 aui-font-size-14"style="color: #000000;">教你如何拍出好看的男朋友（标题）</div>
+			<div class="aui-col-xs-12 aui-padded-t-5 aui-font-size-12 aui-padded-r-5" >本课程主要是在教美眉如何把自己的男朋友拍成帅气欧巴(课程简介)</div>
+		</div>		
+	</a>
+	</li>
+	<div class="aui-hr"></div>
+	<a href="121_search_class.html" ><li class="aui-col-xs-12 aui-font-size-12"style="padding: 0.1rem 0;color: #0d78a5;">查看更多相关课程></li></a>-->
+</ul>
+</body>
+</html>

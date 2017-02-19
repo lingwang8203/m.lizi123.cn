@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的活动</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<link rel="stylesheet" type="text/css" href="css/My_class.css">
+		<link rel="stylesheet" type="text/css" href="../ffunction/css/css_function_sports.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+	</head>
+	<body>
+		<header>
+			<a class="title" id="return" style="font-size: 5vw;padding: 0;"><我的课程</a>
+		</header>
+		<div id="tabs">
+			<a href="My_manage_activties.html"><p id="my_manage" class="tabs_uncheck">我管理的</p></a>
+			<a href="My_join_activities.html"><p id="my_join" class="tabs_check">我加入的</p></a>
+		</div>
+		<div class="yinying"></div>
+		<div class="in_html">	
+	    	<a href="../ffunction/concret_activities.html" target="_black">
+	    		<div class="sports">
+				<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/photo2.jpg" class="sport_photo"/>
+				<div class="laste">
+					<p>有进展更新</p>
+				</div>
+				<div class="text">
+					<p class="sports_title">“草莓音乐节，一起玩转音乐”</p>
+					<p class="club_number">已有<span>346</span>人参加</p>
+				</div>
+				<div class="summary">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/time.png" /><p>2016-10-05</p>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/place.png" /><p>华侨大学厦门校区田径场</p>
+					<div  class="num">
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/like.png" /><p>246</p>
+					<img src="http://img.lizi123.cn/LiZi/ffunction/img/sports/comment.png" /><p>87</p>
+					</div>
+				</div>
+			</div>
+	    </a>			 
+		</div>
+	</body>
+	<script>
+		var url_index="me";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+</html>

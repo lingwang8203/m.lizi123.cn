@@ -1,0 +1,153 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #ffbf2b;
+text-align: center;
+width: 96vw;
+text-align: left;
+padding: 3vw 2vw;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+	text-align: center;
+}
+header p{
+	display: inline-block;
+	font-size: 5.5vw;
+	color: white;
+	width: 96.5vw;
+	text-align: center !important;
+}
+#return{
+	background: url("http://img.lizi123.cn/LiZi/ffunction/img/concret/return.png") no-repeat;
+	width: 4vw;
+	height:4.5vh;
+	position: absolute;
+	top: 2.3vw;
+	left: 4vw;
+}
+.pinglunlist{
+	width: 100vw;
+	position: relative;
+	height: auto;
+}
+.critic{
+	padding: 2.5vw 2vw;
+	width: 96vw;
+	clear: both;
+	overflow: auto;
+	border-bottom: 2px solid #e0e0e0;
+}
+.critic img{
+	width: 12vw;
+	height: 12vw;
+	float: left;
+	display: inline-block;
+}
+.critic_right{
+	float:left ;
+	display: inline-block;
+	margin-left: 2vw;
+	width: 82vw;
+}
+.top{
+	font-size: 2.5vw;
+	clear: both;
+	overflow: auto;
+}
+.top p{
+	font-size: 3.5vw;
+	float: left;
+	display: inline-block;
+}
+.top span{
+	float: right;
+	padding-top: 1vw;
+}
+.top img{
+	float: right;
+	width: 4vw;
+	height: 4vw;
+	margin-right: 1vw;
+}
+.bottom{
+	margin-top: 2vw;
+	font-size: 3.5vw;
+	color: black;
+}
+.bottom p{
+	word-break: break-all;
+}
+.bottom img{
+	margin-top: 1vw;
+	width:36vw ;
+	height: 30vw;
+}
+#pinglunbox{
+	width: 96vw;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: auto;
+	padding: 2vw 2vw;
+	overflow: auto;
+	display: none;
+	padding-bottom: 3vw;
+	background-color: white;
+}
+#add_img{
+	float: left;
+	margin-left: 1vw;
+	display: inline-block;
+	width: 6vw !important;
+	height: 6vw !important;
+	background-image: url(http://img.lizi123.cn/LiZi/ffunction/img/concret/PHOTOGRAPHY.png);
+	background-size: 6vw;
+	background-repeat: no-repeat;
+	margin-top: 0.5vw;
+}
+#upload_img{
+	width: 6vw;
+	height: 6vw;
+	opacity: 0;
+}
+#critic{
+	float: left;
+	display: inline-block;
+	width: 75vw;
+	font-size: 4vw;
+	height: 6.5vw;
+	margin-left: 2vw;
+	border-radius: 10px;
+}
+#fasong{
+	float: left;
+	font-size: 4vw;
+	margin-left: 2vw;
+}

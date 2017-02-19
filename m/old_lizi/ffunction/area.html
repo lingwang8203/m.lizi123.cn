@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>摄影区</title>
+		<link href="css/area.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<a class="title" href="../footer/footer.html"><设置</a>
+		</header>
+		<p id="header"><span>本区达人</span></p>
+		<div class="daren_touxiang">
+			<a href="#"><img src="http://img.lizi123.cn/LiZi/me/img/icon5.png"></a>
+			<a href="#"><img src="http://img.lizi123.cn/LiZi/me/img/icon5.png"></a>
+			<a href="#"><img src="http://img.lizi123.cn/LiZi/me/img/icon5.png"></a>
+			<a href="#"><img src="http://img.lizi123.cn/LiZi/me/img/icon5.png"></a>
+			<a href="#"><img src="http://img.lizi123.cn/LiZi/me/img/icon5.png"></a>
+			<a href="#"><img src="http://img.lizi123.cn/LiZi/me/img/icon5.png"></a>
+		</div>
+		<div class="all">
+			<span id="all">全部∨</span>
+		</div>
+		<!--////////////////////////////////嵌入页面-->
+		<iframe id="frame" src="related_all.html"></iframe>
+		<div id="box">
+			<p class="check">全部</p>
+			<p>相关课程</p>
+			<p>相关社团</p>
+			<p>相关活动</p>
+			<p>相关秀秀</p>
+			<p>相关圈子</p>
+		</div>
+	</body>
+	<script>
+		var all=document.getElementById("all");
+		var box=document.getElementById("box");
+		var choice=document.getElementById("box").children;
+		var frame=document.getElementById("frame");
+		all.index=0;
+		all.addEventListener("touchstart",function(e){
+			e.preventDefault();
+			if(all.index==0){
+				box.style.display="block";
+				this.index=1;
+			}
+			else{
+				box.style.display="none";
+				this.index=0;
+			}
+		},false);
+		
+		for(var i=0;i<choice.length;i++){
+			choice[i].index=i;
+			choice[i].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				for(var j=0;j<choice.length;j++){
+					choice[j].className="";
+				}
+				this.className="check";
+				switch(this.index){
+					case 0:frame.src="related_all.html";break;
+					case 1:frame.src="related_pageclub.html";break;
+					case 2:frame.src="related_activities.html";break;
+					case 3:frame.src="related_xiuxiu.html";break;
+					case 4:frame.src="related_quanzi.html";break;
+				}
+			},false);
+		}
+	</script>
+</html>

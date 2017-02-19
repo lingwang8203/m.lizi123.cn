@@ -1,0 +1,82 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #ffbf2b;
+text-align: center;
+width: 100vw;
+text-align: left;
+padding: 3vw 2vw;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+}
+.shenqing{
+	width: 96vw;
+	position: relative;
+	padding: 2vw 2vw;
+	border-bottom: 2px solid #b2b2b2;
+	overflow: auto;
+}
+.touxiang{
+	display: block;
+	float: left;
+	width: 13vw;
+}
+.right{
+	float: left;
+	margin-top: 2vw;
+	margin-left: 3vw;
+	font-size: 3.5vw;
+}
+.yanzhen{
+	font-size: 3vw;
+	color: #585858;
+}
+.tongguo{
+	font-size: 4vw;
+	position: absolute;
+	top: 7vw;
+	right: 4vw;
+	color: white;
+	background-color: #ffbf2b;
+	padding: 0.3vh 2vw;
+	border-radius: 15px;
+}
+.yitongguo{
+	font-size: 4vw;
+	position: absolute;
+	top: 7vw;
+	right: 4vw;
+}
+#zanwu{
+	font-size: 5vw;
+	text-align: center;
+	margin-top: 5vw;
+	display: none;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>社团主页</title>
+		<link rel="stylesheet" type="text/css" href="css/page_club.css">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/page_club.js"></script>		
+	</head>
+	<body>
+<!--顶部-->
+		<div id="club_fenmian">
+			<a id="return"><img class="_tubiao" src="img/back.png"style="float: left;"/></a>	
+			<a><img src="img/share.png" class="share _tubiao"/></a>
+			<div class="intruduce">
+				<div class="opacity_ceng"></div>
+				<img id="top_touxiang1"  src="" class="top_touxiang"/>
+				<p src="" id="club_name1" class="club_name"></p><!--文学社-->
+				<p src="" id="club_number1" class="club_number"></p><!--(<span>128人</span>已加入)-->
+				<button id="club_join"class="join_before">加入社团</button>
+				<p id="club_sign1" class="club_sign" src=""></p><!--"俨然依旧，一副温柔娴淑岁月安好的样子谢你们，带着包容，依次出现在我那不上不下的年纪里 "-->
+			</div>
+		</div>
+<!--内容-->
+		<!--<img src="img/concret/photo.jpg" class="full_photo"/>-->
+		<div class="nav">
+			<ul>
+				<li><a id="yinxiang" class="nav_on">社团印象</a></li>
+				<li><a id="xiu" class="nav_off">社团秀秀</a></li>
+				<li><a id="recall" class="nav_off">社团记忆</a></li>
+			</ul>
+		</div>
+<!--内敛内容-->
+		<iframe id="middle_contect" src="page_club_yinxiang.html"></iframe>
+		<a href="../ffunction/fabu_club_xiuxiu.php" id="fabu_xiuxiu"><img src="../ffunction/img/concret/pencil.png"></a>
+		<a href="page_club_memory.html" id="fabu_memory"><img src="../ffunction/img/concret/pencil.png"></a>
+	</body>
+	<script>
+	//-----------------标签导航
+				var	middle_contect=document.getElementById("middle_contect");	
+				var yinxiang=document.getElementById("yinxiang");
+				var xiu=document.getElementById("xiu");
+				var recall=document.getElementById("recall");
+
+				//切换至简介
+				yinxiang.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="nav_on";
+					middle_contect.src="page_club_yinxiang.html";
+					document.getElementById("fabu_xiuxiu").style.display="none";
+					document.getElementById("fabu_memory").style.display="none";
+					xiu.className="nav_off";
+					recall.className="nav_off";
+				},false);	
+				//切换至秀秀
+				xiu.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="nav_on";
+					middle_contect.src="page_club_xiu.html";
+					document.getElementById("fabu_xiuxiu").style.display="inline-block";
+					document.getElementById("fabu_memory").style.display="none";
+					yinxiang.className="nav_off";
+					recall.className="nav_off";
+				},false);	
+				//切换至记忆
+				recall.addEventListener("touchstart",function(e){
+					e.preventDefault();							
+					this.className="nav_on";
+					middle_contect.src="page_club_recall.html";
+					document.getElementById("fabu_xiuxiu").style.display="none";
+					document.getElementById("fabu_memory").style.display="inline-block";
+					yinxiang.className="nav_off";
+					xiu.className="nav_off";
+				},false);	
+	//-----------报名加入社团---
+				var join=document.getElementById("club_join");
+				join.addEventListener("touchstart",function(e){
+					e.preventDefault();	
+					if(this.className=="join_before")
+						this.className="join_after";				
+					else			
+						this.className="join_before";
+				},false);					
+	</script>
+	<script>
+		var url_index="p";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../footer/footer.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+	<script>
+		var url_index
+		var url=location.href;  
+  		var tmp1=url.split("?")[1];  
+        var tmp3=tmp1.split("=")[1];  
+        var parm1=tmp3; 
+        if(parm1=="xiuxiu"){
+        	xiu.className="nav_on";
+					middle_contect.src="page_club_xiu.html";
+					document.getElementById("fabu_xiuxiu").style.display="inline-block";
+					document.getElementById("fabu_memory").style.display="none";
+					yinxiang.className="nav_off";
+					recall.className="nav_off";
+        }
+        else if(parm1=="jiyi"){
+        	recall.className="nav_on";
+					middle_contect.src="page_club_recall.html";
+					document.getElementById("fabu_xiuxiu").style.display="none";
+					document.getElementById("fabu_memory").style.display="inline-block";
+					yinxiang.className="nav_off";
+					xiu.className="nav_off";
+        }
+	</script>
+</html>

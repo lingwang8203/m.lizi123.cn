@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>ta的个人主页</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	    <link rel="stylesheet" type="text/css" href="../../1_home/css/index.css" />	
+	    <script src="../../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_51_mine_homepage.html.js"></script>
+	</head>
+	<style>
+		.brief{
+			font-size: 0.6rem !important;	
+		}
+		@media screen and (min-width:365px){ 
+			.brief{
+			font-size: 0.7rem !important;
+			}
+		 }		
+	</style>
+	<body>
+		
+	<!--顶部----------------------------->
+		<div class="aui-row aui-padded-t-15"style="background: #FFBF2B;">
+			<div class="aui-col-xs-3 aui-row">
+				 <div id="backlink" class="aui-pull-left aui-col-xs-12 aui-font-size-18" >
+				 	<i class="aui-icon-left aui-iconfont aui-padded-l-5" style="color: white;" id="return"></i>
+				 </div>	
+				 <div class="aui-col-xs-12"style="position:relative;top: 0rem; ">
+					<a href="#" id="backurl"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/chat.png"style="width:1.6rem;height: 1.6rem;float: right;" id="chat_he"/></a>
+				</div>
+			</div>
+			<div class="aui-col-xs-6 aui-row"style="color: white;">
+				<div class="aui-col-xs-12 aui-text-center">
+					<img src="" id="mine_headImg"  class="aui-img-round" style="width: 5rem;height: 5rem;border: 0.1rem solid white;" />
+				</div>
+				<div class="aui-col-xs-12 aui-text-center aui-font-size-18" id="mine_name"></div>
+				<div class="aui-col-xs-12 aui-text-center aui-row brief" id="mine_intro"></div>		
+			</div>
+			<div class="aui-col-xs-3"style="padding-top:2rem;">
+				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/follow.png" id="guanzhu_index" style="width:1.6rem;height: 1.6rem;float:left;"/>
+			</div>			
+		</div>
+		<!-------------------tab切换------------------->
+		<header class="aui-bar aui-bar-nav">			
+			<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active"style="background: none;color: white;"id="frame1">主页</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame2"><div></div>动态</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame3">TA的</div>
+			</div>			       
+		</header>	
+		<iframe id="ifram"style="width: 100%;height:60em;"src="511_mine_homepage_frame1.html" frameborder=no  border=0  marginwidth=0  marginheight=0  scrolling=no></iframe>		
+	</body>
+	<script type="text/javascript" src="js/aui-tab.js" ></script>
+	<script type="text/javascript" src="../js/api.js" ></script>
+	<script type="text/javascript">
+        apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>	
+<script>
+       var backurl=document.referrer;
+	   //$("return").attr('href',backurl);
+       //alert(backurl);
+		document.getElementById("backlink").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			if(backurl=="http://m.lizi123.cn/1_home/1_home.html"){
+				window.open("http://m.lizi123.cn/?url_index=home"); 
+				//alert("1");
+			}
+			else if(backurl=="http://m.lizi123.cn/2_function/21_function_class/211_function_class_push.html")
+			{
+				window.open("http://m.lizi123.cn/?url_index=fcc");//alert("2");
+			}
+			else if(backurl=="http://m.lizi123.cn/4_ground/4_ground_iframe1.html"){
+				window.open("http://m.lizi123.cn/?url_index=gro1");//alert("3");
+			}
+			else if(backurl=="http://m.lizi123.cn/4_ground/4_ground_iframe2.html")
+			{
+				window.open("http://m.lizi123.cn/?url_index=gro2");//alert("4");
+			}
+			else if(backurl=="http://m.lizi123.cn/4_ground/4_ground_iframe3.html"){
+				window.open("http://m.lizi123.cn/?url_index=gro3");//alert("5");
+			}
+			else if(backurl=="http://m.lizi123.cn/4_ground/4_ground_iframe4.html")
+			{
+				window.open("http://m.lizi123.cn/?url_index=gro4");//alert("6");
+			}
+			else if(backurl=="http://m.lizi123.cn/4_ground/4_ground_iframe5.html")
+			{
+				window.open("http://m.lizi123.cn/?url_index=gro5");//alert("7");
+			}
+	        else{
+		        window.open(backurl);//alert("8");
+	        }
+			
+			
+		},false);
+</script>
+</html>
+	

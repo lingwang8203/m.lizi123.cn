@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<title>群聊人物</title>
+		<link href="css/group_people.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<a class="title" href="create_groupchat.html"><</a>
+			<span>关注的人</span>
+			<a href="group_chat.html" style="float: right;margin-right: 0vw;"><p>确定</p></a>
+		</header>
+		<div id="search">
+			<img src="http://img.lizi123.cn/LiZi/login/img/search.png" />
+			<input type="text" placeholder="搜索关注的人"/>
+		</div>
+		<!--////////////////////////////////////////分组-->
+		<p class="fenzu_header">D</p>
+		<div class="people">
+			<img src="http://img.lizi123.cn/LiZi/chat_new/img/touxiang.png" />
+			<span>小栗子</span>
+			<img src="http://img.lizi123.cn/LiZi/chat_new/img/unchecked.png" class="choose"/>
+		</div>
+	</body>
+	<script>
+		var choose=document.getElementsByClassName("choose");
+		for(var i=0;i<choose.length;i++){
+			choose[i].index=0;
+			choose[i].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				if(this.index==0){
+					this.src="http://img.lizi123.cn/LiZi/chat_new/img/checked.png";
+					this.index=1;
+				}
+				else{
+					this.src="http://img.lizi123.cn/LiZi/chat_new/img/unchecked.png";
+					this.index=0;
+				}
+			},false);
+		}
+	</script>
+</html>

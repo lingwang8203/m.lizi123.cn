@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人主页-简介</title>
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />	
+	    <script src="../../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_511_mine_homepage_frame1.html.js"></script>
+	</head>
+	<style>
+		.tap_out{
+			padding-left: 0;
+		}
+		 .book_photo{
+		 	width: 4rem;
+		 	height: 6rem;
+		 }
+		 .tex{
+		 	font-size: 0.6rem !important;
+		 }			
+		@media screen and (min-width:365px){ 
+		.tap_out{
+			padding-left: 1.4rem;
+		}
+		.book_photo{
+		 	width:5rem;
+		 	height: 7rem;
+		 }	
+		 .tex{
+		 	font-size: 0.8rem !important;;
+		 }			 
+		 }
+		.photo{
+			width:2rem;height:2rem;margin: 0.2rem;margin-right:0.1rem;
+		}
+		@media screen and (min-width:365px){ 
+			.photo{
+				width: 2.4rem;
+				height: 2.4rem;
+			}
+		 }		 	
+	</style>
+	<body>
+	<div class="aui-content"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="tit">兴趣标签</p>
+	</div>
+	<div class="aui-row"style="width: 100%;">
+		<div class="aui-row aui-col-xs-12 tap_out" id="lizi_memory">
+			<!--<div class="aui-label aui-font-size-12 tap">标签</div>-->
+			
+		</div>	
+	</div>
+	<div class="aui-content aui-pull-left aui-padded-b-10 aui-padded-t-10" style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">TA参与了</p>
+   		 <p class="aui-pull-right aui-padded-r-10 aui-font-size-12" style="color: #FFBF2B;" id="mine_join_more">更多></p>
+	</div>	
+	<div class="aui-row aui-pull-left" id="mine_join_content">
+		<!--<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+				<a href="../../2_function/23_function_sports/2321_function_sports_concret_frame1.html" target="_blank"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/></a>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>
+		<div class="aui-col-xs-4 aui-row  aui-padded-l-15 aui-padded-r-10">
+			<div class="aui-col-xs-12">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/book1.png" class="book_photo"/>
+			</div>
+			<div class="aui-col-xs-12 tex">一起来挑战吧</div>
+		</div>		-->
+	</div>
+	<div class="aui-content aui-pull-left aui-padded-b-5 aui-padded-t-10" style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">与TA相关</p>
+	</div>		
+	<div class="aui-row" style="width:96%;margin: 0 auto;" id="his_related"> 
+		<!--<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo1.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo2.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo3.jpg" class="aui-img-round photo"/>			
+		</div>	
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo4.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo5.jpg" class="aui-img-round photo"/>			
+		</div>		
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo6.jpg" class="aui-img-round photo"/>			
+		</div>				
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/more.png" style="width:0.6rem;height:0.8rem;margin: 0.3rem;margin-right: 0;margin-top: 0.8rem;" />			
+		</div>	-->		
+	</div>	
+	<div class="aui-content aui-pull-left aui-padded-b-5 aui-padded-t-10" style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">与我相关</p>
+	</div>		
+	<div class="aui-row" style="width:96%;margin: 0 auto;" id="mine_related"> 
+		<!--<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo1.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo2.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo3.jpg" class="aui-img-round photo"/>			
+		</div>	
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo4.jpg" class="aui-img-round photo"/>			
+		</div>
+		<div class="aui-col-xs-2"style="width: auto;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/photo5.jpg" class="aui-img-round photo"/>			
+		</div>	-->		
+	</div>
+	<div class="aui-font-size-12 aui-padded-l-10" style="color:#5f5e5e;" id="tips"></div>
+	</body>
+</html>

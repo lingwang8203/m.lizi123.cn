@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>系统聊天列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+	</head>
+	<style>
+		.touxiang{
+			width:2.6rem;height:2.6rem;margin-top: 0.1rem;
+		}
+		.new_chat{
+			color:white;background: red;width: auto;border-radius: 50%;margin-right: 1rem;margin-top: 0.1rem;
+		}
+		.new_chat_dot{
+			padding:0 0.3rem;border-radius: 50%;color: red;
+		}
+		.right_photo{
+			width: 100%;
+			height: 4rem;
+		}
+		.aui-col-xs-33 {
+			position: relative;
+			float: left;			
+			width: 22%;
+		}		
+		@media screen and (min-width:365px){
+		.new_chat{
+			margin-right: 1.5rem;
+			margin-top: 0.2rem;
+		}
+		.touxiang{
+			width:2.8rem;height:2.8rem;margin-top: 0.1rem;
+		}
+	
+		}				
+	</style>
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav">
+			 <a class="aui-pull-left aui-col-xs-2 aui-font-size-18"><</a>	
+			<div class="aui-col-xs-8 aui-text-center aui-font-size-16">系统消息</div>			       
+		</header>	
+		<!--列表-->
+		<ul>
+		<!--------------------评论回复类(点击图片进入到详情，点击文字进行回复评论)---------------------------->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3" style="width: auto; margin-top: 0.1rem;padding: 0.2rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">小栗子</div>
+						<div class="aui-col-xs-12 aui-font-size-12"style="color: #9E9E9E;">16/10/22 14:23 在活动花絮回复你</div>	<!--活动花絮，课堂感悟，社团秀秀中的评论；个人秀秀，课程推送，活动推送上的评论-->					
+						<div class="aui-col-xs-12 aui-font-size-12"style="color: black;">谢谢你的支持啊，我会继续努力的！你也要加油哦~</div>										
+					</div>
+					<div class="aui-col-xs-33 aui-font-size-12 aui-pull-right aui-padded-r-5 aui-padded-t-5">
+						<img src="http://img.lizi123.cn/LiZi/index/img/class_photo.png" class="right_photo"/>
+					</div>				
+				</div>
+				<div class="aui-hr"></div>
+			</li>		
+		<!--------------------评论回复类(点击图片进入到详情，点击文字进行回复评论)---------------------------->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3" style="width: auto; margin-top: 0.1rem;padding: 0.2rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">小栗子</div>
+						<div class="aui-col-xs-12 aui-font-size-12"style="color: #9E9E9E;">16/10/22 14:23 在课堂感悟回复你</div>							
+						<div class="aui-col-xs-12 aui-font-size-12"style="color: black;">谢谢你的支持啊，我会继续努力的！你也要加油哦~</div>										
+					</div>
+					<div class="aui-col-xs-33 aui-font-size-12 aui-pull-right aui-padded-r-5 aui-padded-t-5">
+						<img src="http://img.lizi123.cn/LiZi/index/img/class_photo.png" class="right_photo"/>
+					</div>				
+				</div>
+				<div class="aui-hr"></div>
+			</li>	
+		<!--------------------点赞类(点击图片或文字均进入到详情)---------------------------->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3" style="width: auto; margin-top: 0.1rem;padding: 0.2rem;">
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">小栗子</div>
+						<div class="aui-col-xs-12 aui-font-size-12"style="color: #9E9E9E;">16/10/22 14:23 在活动花絮赞了你</div>	<!--活动花絮，课堂感悟，社团秀秀中的点赞；个人秀秀，课程推送，活动推送和详情底下的点赞-->						
+						<div class="aui-col-xs-12 aui-font-size-12"style="color: black;">给你点个赞~\(≧▽≦)/~</div>										
+					</div>
+					<div class="aui-col-xs-33 aui-font-size-12 aui-pull-right aui-padded-r-5 aui-padded-t-5">
+						<img src="http://img.lizi123.cn/LiZi/index/img/class_photo.png" class="right_photo"/>
+					</div>				
+				</div>
+				<div class="aui-hr"></div>
+			</li>
+			<!---------群通知----->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;position: relative;">
+						<div class="aui-dot"style="position: absolute;top:0.5rem;right:0.25rem;"></div>	
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">栗子社 通知</div>
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">点击查看详情（新增加社人数12）</div> <!--社团通知包括：社团公告更新，社团成员更新，社团管理员换届更新-->										
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right" style="margin-top: 0.3rem;color: #9E9E9E;">14:23</div>	<!--时间显示格式：一天内：14:24；一周内：星期二；超过一周：16/10/3-->			
+				</div>
+				<div class="aui-hr"></div>
+			</li>		
+			<!---------活动通知----->
+			<li>
+				<div class="aui-col-xs-12 aui-row aui-padded-t-5 aui-padded-b-5">
+					<div class="aui-col-xs-3 aui-padded-l-10 aui-padded-r-5" style="width: auto; margin-top: 0.1rem;position: relative;">
+						<div class="aui-dot"style="position: absolute;top:0.5rem;right:0.25rem;"></div>						
+						<a href="../5_mine/51_mine_homepage/51_mine_homepage.html"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/photo.jpg" class="aui-img-round touxiang"/></a>
+					</div>
+					<div class="aui-col-xs-7 aui-row aui-padded-t-10">
+						<div class="aui-col-12 aui-font-size-14">创新设计大赛 通知</div>
+						<div class="aui-col-xs-12 aui-font-size-12 aui-padded-t-5"style="color: #9E9E9E;">点击查看详情（活动进展有更新）</div>	<!--活动消息页面内容提示包括“活动进展更新”，“活动公告更新”，“活动报名人数更新以及新增人员资料----仅活动管理员有此提示”-->									
+					</div>
+					<div class="aui-col-xs-2 aui-font-size-12 aui-pull-right" style="margin-top: 0.3rem;color: #9E9E9E;">16/8/14</div>				
+				</div>
+				<div class="aui-hr"></div>
+			</li>			
+		</ul>
+		
+	</body>
+</html>

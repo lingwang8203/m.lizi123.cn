@@ -1,0 +1,72 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+p{
+	display: block;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	*display:inline;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	padding-bottom: 5em;
+}
+header{
+background-color: #ffbf2b;
+text-align: center;
+width: 96vw;
+text-align: left;
+padding: 3vw 2vw;
+clear: both;
+overflow: auto;
+}
+header a{
+	font-size: 5vw;
+	color: white;
+}
+#all{
+	font-size: 5vw;
+	color: white;
+	margin-left: 32vw;
+}
+/*//////////////////////选项卡*/
+#tabs{
+	width: 100vw;
+	height: 7.2vh;
+	font-size: 5vw;
+}
+#tabs p{
+	display: inline-block;
+	width: 49vw;
+	text-align: center;
+	padding: 1.5vh 0;
+}
+#tabs a{
+	display: inline-block;
+}
+.tabs_check{
+	color: #ffad0c;
+	border-bottom: 0.5rem solid #ffad0c;
+}
+.tabs_uncheck{
+	color: #adadad;
+}
+.yinying{
+	height: 2vh;
+	width: 100vw;
+	background-color: #E0E0E0;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布课程</title>
+		<meta content="user-scalable=0;" name="viewport" />	
+		<script type="text/javascript" src="../ffunction/js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" href="css/new_publish_class.css"/>
+	</head>
+	<body>
+		<!--顶部，发布课程-->
+		<header>
+			<a href="../wangEditor-mobile/test/publish_class_first.php" id="more">
+				<img src="http://img.lizi123.cn/LiZi/index/img/return1.png">
+			</a>
+			<h1>发布课程</h1>
+		</header>
+		<div id="schedule">
+		    <div class="tap_class">
+				<p class="class">课程表</p>
+			</div>
+			<div style="clear: both;"></div>
+		    <div id="class_time">
+			    <span class="schedule_header">上课时间</span>
+				<span class="class_time_off" name="choose_time">一</span>
+				<span class="class_time_off" name="choose_time">二</span>
+				<span class="class_time_off" name="choose_time">三</span>
+				<span class="class_time_off" name="choose_time">四</span>
+				<span class="class_time_off" name="choose_time">五</span>
+				<span class="class_time_off" name="choose_time">六</span>
+				<span class="class_time_off" name="choose_time">日</span>
+		    </div>
+		    <div style="width: 100vw; margin: 2vh 3vw; ">
+		    	<span ><b>每周课时</b></span>
+		    	<input id="class_hours" type="text" /><b>课时</b>
+		    	&nbsp;<b>持续</b><input  id="class_weeks" type="text"/><b>周</b>
+		    </div>
+		    <div style="margin: 2vh 3vw;width: 100vw;">
+		    <span><b>上课地点</b></span>
+		    <input id="class_address" type="text" placeholder="添加上课地点描述" />
+		    </div>
+		</div>
+		<!--授课方式-->
+		<form action="" method="get" id="give_class">
+			<span style="float: left;font-size: 4vw;">授课方式</span>
+			<div class="give_choose_top">
+				<input type="radio" name="give_way1" value="online"/>
+				<label name="give_class_address" class="unchecked" for="online">线上</label>
+				<input type="radio" name="give_way2" value="one_to_one"/>
+				<label name="give_class_way" class="unchecked" for="one_to_one" style="margin-left: 2vw;">一对一</label>
+			</div>
+			<div style="height: 1.5vh;clear: both;"></div>
+			<div class="give_choose_foot">
+				<input type="radio" name="give_way1" value="belowline"/>
+				<label name="give_class_address" class="unchecked" for="belowline">线下</label>
+				<input type="radio" name="give_way2"  value="one_to_many"/>
+				<label name="give_class_way" class="unchecked" for="one_to_many" style="margin-left: 2vw;">一对多</label>
+			</div>
+			<div style="height: 1vh;clear: both;"></div>
+		</form>
+		<!--付费方式-->
+	    <form action="" method="get" id="pay_way">
+			<span style="float: left;font-size: 4vw;">付费方式</span>
+			<div class="pay_choose_1">
+				<input type="radio" name="pay_way" value="free"/>
+				<label name="pay" class="unchecked" for="free">免费</label>
+			</div>
+		    <div style="height: 1.5vh;clear: both;"></div>
+				<div class="pay_choose_2">
+				<input type="radio" name="pay_way" value="charge"/>
+				<label name="pay" class="unchecked" for="charge" id="charge">付费</label>
+				<input type="number" id="charge_money" readonly="true"/>元
+			</div>
+		</form>
+		<div id="over">完成</div>
+	</body>
+	<script src="js/new_publish_class_second.js"></script>
+</html>

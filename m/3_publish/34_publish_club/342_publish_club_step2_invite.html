@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<title>邀请联系人</title>
+		<link href="../../css/aui.2.0.css" rel="stylesheet"/>
+		<script src="js/ajax_342_publish_club_step2_invite.js"></script>
+	</head>
+	<body>
+		<!--顶部-->
+		<header class="aui-bar aui-bar-nav aui-bar-light aui-bg-base">
+		    <a class="aui-pull-left aui-btn" href="../../5_mine/53_mine_club/531_mine_club_manage.html">
+		        <span class="aui-iconfont aui-icon-left-white" style="color: white !important;">邀请联系人</span>
+		    </a>
+		    <a class="aui-pull-right aui-btn" id="furnish">确认</a>
+		</header>
+		<div class="aui-searchbar" id="search" style="top: 2.25rem;">
+		    <div class="aui-searchbar-input aui-border-radius" tapmode onclick="doSearch()">
+		        <i class="aui-iconfont aui-icon-search"></i>
+		        <form action="javascript:search();">
+		            <input type="search" placeholder="请输入搜索内容" id="search-input">
+		        </form>
+		    </div>
+		    <div class="aui-searchbar-cancel" tapmod>取消</div>
+		</div>
+		<div class="aui-content aui-margin-b-15" style="margin-top:2.3rem;" id="invite_list">
+    	<ul class="aui-list aui-media-list">
+	        <li class="aui-list-header">最近联系人</li>
+	        <li class="aui-list-item aui-list-item-middle">
+	            <div class="aui-media-list-item-inner">
+	            	 <div class="aui-list-item-media" style="width: 8vw;padding-right: 0.2rem !important;">
+	                    <img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/choose1.png" name="choose_user" id="1">
+	                </div>
+	                <div class="aui-list-item-media" style="width: 3rem;padding-top:0 !important;padding-bottom: 0 !important;">
+	                    <img src="http://img.lizi123.cn/new_lizi/5_mine/56_mine_focus/Angle.png" class="aui-img-round aui-list-img-sm">
+	                </div>
+	                <div class="aui-list-item-inner ">
+	                    <div class="aui-list-item-text">
+	                        <div class="aui-list-item-title aui-font-size-14">安吉拉Angle</div>
+	                    </div>
+	                </div>
+	            </div>
+       		</li>
+       		<li class="aui-list-item aui-list-item-middle">
+	            <div class="aui-media-list-item-inner">
+	            	 <div class="aui-list-item-media" style="width: 8vw;padding-right: 0.2rem !important;">
+	                    <img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/choose1.png" name="choose_user" id="2">
+	                </div>
+	                <div class="aui-list-item-media" style="width: 3rem;padding-top:0 !important;padding-bottom: 0 !important;">
+	                    <img src="http://img.lizi123.cn/new_lizi/5_mine/56_mine_focus/Angle.png" class="aui-img-round aui-list-img-sm">
+	                </div>
+	                <div class="aui-list-item-inner ">
+	                    <div class="aui-list-item-text">
+	                        <div class="aui-list-item-title aui-font-size-14">安吉拉Angle</div>
+	                    </div>
+	                </div>
+	            </div>
+       		</li>
+       		<li class="aui-list-item aui-list-item-middle">
+	            <div class="aui-media-list-item-inner">
+	            	 <div class="aui-list-item-media" style="width: 8vw;padding-right: 0.2rem !important;">
+	                    <img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/choose1.png" name="choose_user" id="3">
+	                </div>
+	                <div class="aui-list-item-media" style="width: 3rem;padding-top:0 !important;padding-bottom: 0 !important;">
+	                    <img src="http://img.lizi123.cn/new_lizi/5_mine/56_mine_focus/Angle.png" class="aui-img-round aui-list-img-sm">
+	                </div>
+	                <div class="aui-list-item-inner ">
+	                    <div class="aui-list-item-text">
+	                        <div class="aui-list-item-title aui-font-size-14">安吉拉Angle</div>
+	                    </div>
+	                </div>
+	            </div>
+       		</li>
+       	</ul>
+       </div>
+	</body>
+</html>

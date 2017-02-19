@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="user-scalable=0;" name="viewport" />
+	<title>群资料</title>
+	<link rel="stylesheet" type="text/css" href="css/css_group.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+</head>
+<body>
+	<!-- ===header====== -->
+	<div class="header">
+		<span class="return"></span>
+		<a href="information_group.html"><p class="title">群资料</p></a>
+		<p class="edit" id="edit">编辑</p>
+		<!-- <p class="edit">完成</p> -->
+	</div>
+	<!-- ====content==== -->
+	<div class="content">
+		<img src="http://img.lizi123.cn/LiZi/chat_new/img/icon_logo.png" class="logo">
+		<p class="name-icon">我们就只玩一把</p>
+		<p class="msg">群主<input class="textbox host-group" type="text" name="host-group" value="爱开车的老司机" size="34" readonly="readonly" /></p>
+		<p class="msg">成员<input class="textbox" type="text" name="member-group" value="11" size="34" readonly="readonly" /></p>
+		<p class="msg">简介<textarea class="textbox" type="text" name="introduction-group"  rows="2" id="jianjie" cols="40" readonly="readonly" />我们很少玩游戏，所以我们就只玩一把，没错，就是简简一把游戏而已。</textarea></p>
+		<p class="msg">群位置<input class="textbox" type="text" name="position-group" value="华侨大学西门"  id="weizhi" size="34" readonly="readonly" /></p>
+	</div>
+</body>
+<script>
+	var edit=document.getElementById("edit");
+	edit.index=0;
+	var jianjie=document.getElementById("jianjie");
+	var weizhi=document.getElementById("weizhi");
+	var oldjianjie=jianjie.value;
+	var oldweizhi=weizhi.value;
+	edit.addEventListener("touchstart",function(e){
+		e.preventDefault();
+		if(this.index==0){
+			jianjie.readOnly=false;
+			weizhi.readOnly=false;
+			edit.innerHTML="完成";
+			this.index=1;
+		}
+		else{
+			if(confirm("保存编辑吗？")){
+			jianjie.readOnly=true;
+			weizhi.readOnly=true;
+			edit.innerHTML="编辑";
+			this.index=0;
+			}
+			else{
+				jianjie.readOnly=true;
+				weizhi.readOnly=true;
+				edit.innerHTML="编辑";
+				this.index=0;
+				jianjie.value=oldjianjie;
+				weizhi.value=oldweizhi;
+			}
+		}
+	},false);
+</script>
+</html>

@@ -1,0 +1,139 @@
+*{
+	margin:0;
+	padding:0;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+body{
+	font-family: 微软雅黑, 宋体,'Hiragino Sans GB', 'WenQuanYi Micro Hei',  sans-serif;
+	font-size:62.5%;
+	font-weight:400;
+	color:#868686 ;
+}
+/*===========================顶部======================================*/
+header{
+	width: 100vw;
+	height: 8vh;
+	background-color: #ffbf2b;
+	text-align: center;
+}
+header p{
+	display: inline-block;
+	font-size: 6vw;
+	float: left;
+	color: white;
+	margin-top: 1.5vh;
+	margin-left: 2vw;
+}
+header span{
+	font-size: 5vw;
+	float: right;
+	margin-right: 3vw;
+	margin-top: 1.6vh;
+	color: white;
+	padding: 0 2vw;
+	border: 0.3rem solid white;
+	border-radius: 15px;
+}
+/*//////////////////////选项卡*/
+#tabs{
+	width: 100vw;
+	height: 7.2vh;
+	font-size: 5vw;
+}
+#tabs p{
+	display: inline-block;
+	width: 49vw;
+	text-align: center;
+	padding: 1.5vh 0;
+}
+.tabs_check{
+	color: #ffad0c;
+	border-bottom: 0.5rem solid #ffad0c;
+}
+.tabs_uncheck{
+	color: #adadad;
+}
+.yinying{
+	height: 2vh;
+	width: 100vw;
+	background-color: #E0E0E0;
+}
+/*////////////////////////////管理社团列表*/
+.manage_pageclub_list{
+	width: 95vw;
+	height: 16vh;
+	margin: 1.5vh 2.5vw;
+	background-color: #fcb62b;
+	border-radius: 15px;
+	position: relative;
+	overflow: auto;
+	color: white;
+}
+.logo{
+	float: left;
+	height: 12vh;
+	width: 21vw;
+	margin-top: 1vh;
+	margin-left: 5vw;
+	margin-right: 3vw;
+}
+.Club_name{
+	margin-top: 2vh;
+	font-size: 5vw !important;
+	font-weight: normal;
+}
+.Club_miaoshu{
+	margin-top: 1vh;
+	font-size: 3vw !important;
+}
+.details{
+	margin-top: 1vh;
+}
+.details img{
+	width: 3vw;
+	float: left;
+}
+.details p{
+	margin-left: 2vw;
+	float: left;
+	display: inline !important;
+	font-size: 3vw;
+}
+.manage_label{
+	position: absolute;
+	right: 5vw;
+	font-size: 4vw;
+	padding: 0.5vh 1vw;
+	top: 0;
+	background-color: #ff8a00;
+	border-radius: 15px;
+}
+.juti{
+	position: absolute;
+	font-size: 7vw;
+	top: 4.5vh;
+	right: 2vw;
+	color: white;
+}
+#wen{
+	font-size: 4.5vw;
+	color: black;
+	margin-top: 5vh;
+	margin-left: 37vw;
+	margin-bottom: 2vh;
+}
+#create{
+	display: block;
+	font-size: 6vw;
+	color: #fcb62b;
+	margin-left: 32vw;
+	width: 36vw;
+	height: auto;
+	text-decoration: none;
+	border-bottom: 0.2rem solid #fcb62b;
+	padding-bottom: 0.2rem;
+}

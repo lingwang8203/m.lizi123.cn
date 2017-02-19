@@ -1,0 +1,34 @@
+#collection{
+	width: 100vw;
+	height: 90vh;
+}
+#tanchu{
+	position: fixed;
+	top: 13vw;
+	width: 40vw;
+	height: auto;
+	left: 30vw;
+	font-size: 4.5vw;
+	background-color: white;
+	text-align: center;
+	padding: 2vh 1vw;
+	color: #ffbf2b;
+	border: 5px solid #e0e0e0;
+	border-radius:30px ;
+	display: none;
+}
+.all{
+	background-color: #FFBF2B;
+	color: white;
+	padding: 0.5vh 0;
+	border-radius: 15px;
+}
+.unchecked{
+	padding: 0.5vh 0;
+}
+.checked{
+	background-color: #FFBF2B;
+	color: white;
+	padding: 0.5vh 0;
+	border-radius: 15px;
+}

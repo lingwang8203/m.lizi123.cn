@@ -1,0 +1,156 @@
+
+#add_show_miaoshu_img{
+	display: block;
+	float: left;
+	overflow: auto;
+	margin-left: 5vw;
+	width: 22vw;
+	height: 22vw;
+	background-image:url(http://img.lizi123.cn/LiZi/ffunction/img/edit_label/add_class_details.png);
+	background-repeat: no-repeat;
+	background-size: 22vw;
+	background-position: center;
+	border: 1px solid #f5f5f5;
+}
+#img_div{
+	display: block;
+	width: 100vw;
+	height: auto;
+	overflow: auto;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+.show_miaoshu_img{
+	position: relative;
+	float: left;
+	display: inline-block;
+	border: none;
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	width: 22vw;
+	height: 22vw;
+}
+/*放大预览层*/
+#zoom_preview{
+	display: none;
+	position: fixed;
+	top: 15vh;
+	left: 10vw;
+	width: 80vw;
+	height: 75vh;
+	background-color: #404040;
+}
+#zoom_img{
+	padding: 0 !important;
+	width: 100%;
+	height: 100%;
+}
+/*//添加标签*/
+#add_label{
+	display: block;
+	font-size: 4vw;
+	clear: both;
+	color: #ffbf2b;
+	width: 21vw;
+	text-align: center;
+	margin-top: 1.5vh;
+	margin-left: 4vw;
+	border: solid 1px #ffbf2b;
+	padding: 0.5vw 2vw;
+	border-radius: 3rem;
+	text-shadow: none;
+}
+
+#frame_back{
+	position: fixed;
+	top: 2.25rem;
+	left: 0;
+	width: 100%;
+	height: 95vh;
+	background-color: #404040;
+	opacity:0.7;
+	z-index: 100;
+}
+.tap_class{
+	width: 100%;
+	float: left;
+	height: auto;
+	/*border-bottom: 0.2rem solid #dcdcdc;*/
+	/*background-color: burlywood;*/
+}
+#exchange{
+	width: 100%;
+	float: left;
+	font-size: 4vw;
+	padding:0.2rem 0 0 0.3rem;
+	margin:0.2rem 0.2rem;
+	border-left: 0.2rem solid #FFBF2B;
+}
+#change_module{
+	position: fixed;
+	top: 30vh;
+	left: 10vw;
+	width: 80vw;
+	height: auto;
+	background-color: #FFFFFF;
+	z-index: 200;
+	font-weight: normal;
+	font-size: 4vw;
+}
+.change_module_label{
+	font-weight: normal;
+	float: left;
+	width: 24vw;
+	text-align: center;
+	margin-top: 4vw;
+	font-size: 4vw;
+	margin-left: 2vw;
+	border: 2px solid #ff9000;
+	padding: 1vw 2vw;
+	border-radius: 13px;
+}	border-radius: 13px;
+}
+.label_back{
+	color: #FF9000;
+}
+.label_back_hover{
+	color: white;
+	background-color: #FF9000;
+}
+#refresh_label{
+	float:left;
+	margin-top: 5vw;
+	margin-left: 5vw;
+	font-size: 4vw;
+	color: #FF9000;
+}
+#cancel_change_module{
+	float:left;
+	margin-top: 5vw;
+	margin-left: 20vw;
+	font-size: 4vw;
+	color: #FF9000;
+}
+#confirm_change_module{
+	float:left;
+	margin-top: 5vw;
+	margin-left: 6vw;
+	font-size: 4vw;
+	color: #FF9000;
+}
+/*//已选择标签*/
+#label{
+	display: none;
+	font-size: 4vw;
+	font-weight: bold;
+	margin-left: 5vw;
+	margin-top: 5vw;
+}
+#label0,#label1,#label2{
+	margin-left: 2vw;
+	display: none;
+	padding: 0.6vw 2vw;
+	background-color: #ffad0c;
+	color: white;
+	border-radius: 10px;
+}

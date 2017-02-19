@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">       
+    <title>我的活动</title>
+    <link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+ 	<script src="../../js/jquery-2.2.3.min.js"></script>
+    <script src="js/ajax_54_mine_activity_join.js"></script>
+	<script>
+			window.onload=function(e){
+				document.getElementById("mine_manage_sports").addEventListener("touchstart",function(e){
+					e.preventDefault();
+					window.location.href="54_mine_sportsManege.html";
+				},false);
+				
+			}
+	</script>  
+	<style>
+	body{
+		background: white;
+	}
+	.sport_cover{
+		width: 100%;height: 6.6rem;
+	}
+	.ic_top{
+		width: 1.4rem;
+		height: 1.4rem;
+		position: absolute;
+		top: 0.5rem;
+		left: 0.5rem;
+	}
+	.ic_people{
+		top: 0.5rem;
+		left: 2.5rem;
+	}
+	.icc_bottom{
+		margin-top: 0.2rem;
+		width: 0.8rem;
+		height: 0.8rem;
+	}
+	.iic_location{
+		width: 0.7rem;
+		height: 1rem;
+	}
+		@media screen and (min-width:365px){ 
+			.sport_cover{
+				width: 100%;height:8rem;
+			}
+		 }
+	</style>	
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left aui-btn" href="http://m.lizi123.cn/?url_index=me">
+            <span class="aui-iconfont aui-icon-left"></span>我的活动
+        </a>
+        <a href="http://m.lizi123.cn/3_publish/31_publish_sports/311_publish_sports_step1.php" class="aui-pull-right aui-font-size-14" style="line-height: 1rem;border:1px solid white;border-radius:0.2rem;padding:0 0.3rem;margin:0.55rem;">发布</a>
+    </header>
+    <div class="aui-tab" id="tab">
+        <div class="aui-tab-item aui-font-size-16"  style="color: #ffbf2b;border-bottom: 2px solid #ffbf2b;">我参与的</div>
+        <div class="aui-tab-item aui-font-size-16" id="mine_manage_sports" style="color:#b0aca6">我管理的</div>
+    </div>
+    <section class="aui-content1" style="background-color:white;">
+        <div style="height:0.5rem;background-color:#F5F5F5;"></div>
+        <section id="join_act_list"class="aui-content">
+			<ul>
+			<!--已加入活动的推送-->
+			<li class="aui-col-xs-12 aui-row aui-padded-b-5">
+				<div class="aui-col-xs-12"style="position: relative;height: auto;">					
+					<a>
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/delete1.png" class="ic_delete11 ic_top"/>						
+					</a>
+					<a>
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/icc_pepole.png" class="ic_people ic_top"/>						
+					</a>	
+	        		<a href=""target="_blank"><div class="aui-label aui-pull-right aui-font-size-12 tap"style="position: absolute;top: 0.5rem;right: 0;">取消报名</div></a> 					
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/cover.JPG" class="sport_cover"/>
+				</div>
+				<div class="aui-col-xs-12 aui-row  aui-font-size-14">
+					<div class="aui-col-xs-12 aui-row">
+						<div class="aui-col-xs-9 aui-padded-l-5">文艺写真约拍活动</div>
+						<a class="aui-col-xs-3 aui-font-size-12"style="text-decoration: underline;color: #ffbf2b;">查看活动详情</a>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_time.png" class="icc_bottom"/>
+						</div>
+						<div class="aui-col-xs-11">2016年7月8日</div>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_location.png" class="icc_bottom iic_location"/>
+						</div>
+						<div class="aui-col-xs-11">厦门华侨大学计算机科学与技术学院</div>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_more.png" class="icc_bottom"/>
+						</div>
+						<div class="aui-col-xs-11">门票</div>
+					</div>						
+				</div>
+			</li>
+			<div class="hr">
+			<!--已加入活动的推送-->
+			<!--<li class="aui-col-xs-12 aui-row aui-padded-b-5">
+				<div class="aui-col-xs-12"style="position: relative;height: auto;">					
+					<a>
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/delete1.png" class="ic_delete11 ic_top"/>						
+					</a>
+					<a>
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/icc_pepole.png" class="ic_people ic_top"/>						
+					</a>	
+	        		<a href=""target="_blank"><div class="aui-label aui-pull-right aui-font-size-12 tap"style="position: absolute;top: 0.5rem;right: 0;">取消报名</div></a> 					
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/cover.JPG" class="sport_cover"/>
+				</div>
+				<div class="aui-col-xs-12 aui-row  aui-font-size-14">
+					<div class="aui-col-xs-12 aui-row">
+						<div class="aui-col-xs-9 aui-padded-l-5">文艺写真约拍活动</div>
+						<a class="aui-col-xs-3 aui-font-size-12"style="text-decoration: underline;color: #ffbf2b;">查看活动详情</a>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_time.png" class="icc_bottom"/>
+						</div>
+						<div class="aui-col-xs-11">2016年7月8日</div>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_location.png" class="icc_bottom iic_location"/>
+						</div>
+						<div class="aui-col-xs-11">厦门华侨大学计算机科学与技术学院</div>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_more.png" class="icc_bottom"/>
+						</div>
+						<div class="aui-col-xs-11">门票</div>
+					</div>						
+				</div>
+			</li>
+			<div class="hr"></div>-->
+			<!--已加入活动的推送-->
+			<!--<li class="aui-col-xs-12 aui-row aui-padded-b-5">
+				<div class="aui-col-xs-12"style="position: relative;height: auto;">					
+					<a>
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/delete1.png" class="ic_delete11 ic_top"/>						
+					</a>
+					<a>
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/icc_pepole.png" class="ic_people ic_top"/>						
+					</a>	
+	        		<a href=""target="_blank"><div class="aui-label aui-pull-right aui-font-size-12 tap"style="position: absolute;top: 0.5rem;right: 0;">取消报名</div></a> 					
+					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/cover.JPG" class="sport_cover"/>
+				</div>
+				<div class="aui-col-xs-12 aui-row  aui-font-size-14">
+					<div class="aui-col-xs-12 aui-row">
+						<div class="aui-col-xs-9 aui-padded-l-5">文艺写真约拍活动</div>
+						<a class="aui-col-xs-3 aui-font-size-12"style="text-decoration: underline;color: #ffbf2b;">查看活动详情</a>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_time.png" class="icc_bottom"/>
+						</div>
+						<div class="aui-col-xs-11">2016年7月8日</div>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_location.png" class="icc_bottom iic_location"/>
+						</div>
+						<div class="aui-col-xs-11">厦门华侨大学计算机科学与技术学院</div>
+					</div>
+					<div class="aui-col-xs-12 aui-row"style="color: #666666;">
+						<div class="aui-col-xs-1 aui-text-center">
+							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/ic_more.png" class="icc_bottom"/>
+						</div>
+						<div class="aui-col-xs-11">门票</div>
+					</div>						
+				</div>
+			</li>
+			<div class="hr"></div>			-->
+			</ul>
+        </section>
+    </section>
+</body>
+</html>

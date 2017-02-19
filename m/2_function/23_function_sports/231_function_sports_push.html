@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>活动推送</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	    <link rel="stylesheet" type="text/css" href="../../1_home/css/index.css" />	
+	    <script src="../../js/jquery-2.2.3.min.js"></script>
+	    <script src="js/ajax_function_sports_push.js"></script>
+	</head>
+	<body>
+		<!--标签分类----------------------------------------------------------->
+	<div class="aui-content"style="width: 100%;padding-top: 0.2rem;">
+   		 <p class="aui-pull-left tit">活动分类</p>
+	</div>	
+	<div class="aui-row"style="width: 100%;padding-bottom: 0.2rem;">
+		<div class="aui-col-xs-4 aui-text-center">
+			<div class="aui-label tap_nor aui-font-size-12 aui-col-xs-12 " name="function_sports_label"></div>	
+			<div class="aui-label tap_nor aui-font-size-12  aui-col-xs-12" name="function_sports_label"></div>	
+		</div>
+		<div class="aui-col-xs-4 aui-text-center">
+			<div class="aui-label tap_nor aui-font-size-12  aui-col-xs-12" name="function_sports_label"></div>	
+			<div class="aui-label tap_nor aui-font-size-12  aui-col-xs-12" name="function_sports_label"></div>	
+		</div>		
+		<div class="aui-col-xs-4 aui-text-center">
+			<div class="aui-label tap_nor aui-font-size-12  aui-col-xs-12" name="function_sports_label"></div>	
+			<div class="aui-label tap_nor aui-font-size-12  aui-col-xs-12" name="function_sports_label"></div>	
+		</div>			
+	</div>
+	<div class="aui-hr"></div>
+	<div id="sports_push_content">    
+		<!------活动推送样式------------>
+			<!--<li  class="aui-row aui-padded-b-5"style="width:100%;height: auto;position: relative;background: white;">
+	        	<div class="aui-col-xs-12"style="padding: 0;margin: 0;height:auto;">
+	        		<a href="../../5_mine/51_mine_homepage/51_mine_homepage.html"target="_blank"><img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/show_photo3.jpg" style="height:16rem;width: 100%;"/></a>
+	        	</div>
+	        		<a href="../../1_home/13_home_label/13_home_label.html"target="_blank"><div class="aui-label aui-pull-right aui-font-size-12 tap"style="position: absolute;top: 0.5rem;right: 0;">摄影摄影</div></a>        	
+        	<div class="sportcontect"style="width:100%;height: auto;position: absolute;bottom:1.8rem;">
+	        	<div style="width: 100%;height: auto;">
+		        	<div class="aui-col-xs-12 out">
+		        		<div class="aui-col-xs-12 in_opacity"></div>
+		        		<div class="aui-col-xs-2 join_title aui-text-center aui-row aui-margin-t-10">
+		        			<div class="aui-font-size-16 aui-col-12">投票</div>
+		        			<div class="aui-font-size-12 aui-col-12">进行中</div>
+		        		</div>
+		        		<div class="aui-row aui-col-xs-7 aui-padded-t-5 "style="width: auto;">
+		        			<div class="aui-font-size-16 aui-col-xs-12"style="color: white;">春季流浪猫摄影影大浪猫...</div>
+		        			<div class="aui-font-size-12 aui-col-xs-12"style="color: white;">替他们表达心意（活动简介）</div>
+		        			<div class="aui-font-size-12 aui-col-xs-12"style="color: white;">主办方：华侨大学爱心社</div>
+		        		</div>
+			    		<div class="aui-row aui-col-xs-3 aui-pull-right aui-padded-t-10 aui-padded-r-5"style="width: auto;">
+			      			<div class="aui-label lab_join aui-pull-right aui-font-size-14 aui-col-xs-12"style="width: auto; color:white ;text-align: center;border-radius: 0.4rem;padding:0.1rem 0.3rem;">参与投票</div>
+			        		<a href="../23_function_sports/232_function_sports_concret.html"target="_blank"><div class="aui-col-xs-12 aui-font-size-12"style="color: white;">
+        					<div class="aui-col-xs-3 aui-font-size-12 aui-pull-right aui-padded-r-5 aui-padded-t-10"style="width: auto;">活动详情></div> 
+			        		</div></a> 
+			    		</div>           		
+		        	</div>
+	        	</div>
+	        </div>
+	        	<div class="aui-row aui-col-xs-12">
+		        	<div class="aui-col-xs-2 aui-row aui-margin-l-15 aui-pull-left">
+		        		<i class="aui-iconfont aui-icon-like" name="sport_dianzan"></i>
+		        		<span class="aui-font-size-12">125</span>       		
+		        	</div>
+		        	<a href="../23_function_sports/232_function_sports_concret.html"target="_blank">
+			        	<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left">
+			        		<i class="aui-iconfont aui-icon-comment"></i>
+			        		<span class="aui-font-size-12">289</span>       		
+			        	</div> 	
+		        	</a>
+		        </div>	            	
+	      </li>  
+		<div class="hr"></div>	-->
+ 
+ 		<!------活动推送样式------------>
+		<!--<li  class="aui-row aui-padded-b-5"style="width:100%;height: auto;position: relative;background: white;">
+        	<div class="aui-col-xs-12"style="padding: 0;margin: 0;height:auto;">
+        		<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/show_photo2.jpg" style="height:16rem;width: 100%;"/>
+        	</div>
+        	<a href="../../1_home/13_home_label/13_home_label.html" target="_blank">
+        		<div class="aui-label aui-pull-right aui-font-size-12 tap"style="position: absolute;top: 0.5rem;right: 0;">摄影摄影</div>        	
+        	</a>
+        	<div class="sportcontect"style="width:100%;height: auto;position: absolute;bottom:1.7rem;">
+	        	<div style="width: 100%;height: auto;">
+		        	<div class="aui-col-xs-12 out">
+		        		<div class="aui-col-xs-12 in_opacity"></div>
+		        		<div class="aui-col-xs-2 join_title aui-text-center aui-row aui-margin-t-10 aui-margin-l-5 ">
+		        			<div class="aui-font-size-16 aui-col-12">投票</div>
+		        			<div class="aui-font-size-12 aui-col-12">进行中</div>
+		        		</div>
+		        		<div class="aui-row aui-col-xs-6 aui-padded-t-5 ">
+		        			<div class="aui-font-size-16 aui-col-xs-12"style="color: white;">春季流浪猫摄影大...</div>
+		        			<div class="aui-font-size-12 aui-col-xs-12"style="color: white;">替他们表达心意</div>
+		        			<div class="aui-font-size-12 aui-col-xs-12"style="color: white;">主办方：华侨大学爱心社</div>
+		        		</div>
+			    		<div class="aui-row aui-col-xs-3 aui-pull-right aui-padded-t-10 aui-padded-r-5">
+			      			<div class="aui-label lab_join aui-pull-right aui-font-size-14 aui-col-xs-12"style="color:white ;text-align: center;border-radius: 0.4rem;">参与投票</div>
+			        		<a  href="232_function_sports_concret.html"target="_blank"><div class="aui-col-xs-12 aui-font-size-12"style="color: white;">
+			        			<div class="aui-pull-right aui-padded-r-10 aui-padded-t-5">活动详情></div>	
+			        		</div></a> 
+			    		</div>         		
+		        	</div>
+	        	</div>
+	        </div>	
+        	<div class="aui-row aui-col-xs-12">
+	        	<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left">
+	        		<i class="aui-iconfont aui-icon-like"></i>
+	        		<span class="aui-font-size-12">125</span>       		
+	        	</div>
+	        	<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left">
+	        		<i class="aui-iconfont aui-icon-comment"></i>
+	        		<span class="aui-font-size-12">289</span>       		
+	        	</div> 	        	        	
+	        </div>	            	
+       </li>
+       <div class="hr"></div>-->
+ 		<!------活动推送样式------------>
+		<!--<li  class="aui-row aui-padded-b-5"style="width:100%;height: auto;position: relative;background: white;">
+	        	<div class="aui-col-xs-12"style="padding: 0;margin: 0;height:auto;">
+	        		<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/1_home/show_photo5.jpg" style="height:16rem;width: 100%;"/>
+	        	</div>
+	        		<a href="13_home_label/13_home_label.html"target="_blank"><div class="aui-label aui-pull-right aui-font-size-12 tap"style="position: absolute;top: 0.5rem;right: 0;">摄影摄影</div></a>        	
+        	<div class="sportcontect"style="width:100%;height: auto;position: absolute;bottom:1.8rem;">
+	        	<div style="width: 100%;height: auto;">
+		        	<div class="aui-col-xs-12 out">
+		        		<div class="aui-col-xs-12 in_opacity"></div>
+		        		<div class="aui-col-xs-2 join_title aui-text-center aui-row aui-margin-t-10">
+		        			<div class="aui-font-size-16 aui-col-12">投票</div>
+		        			<div class="aui-font-size-12 aui-col-12">进行中</div>
+		        		</div>
+		        		<div class="aui-row aui-col-xs-7 aui-padded-t-5 ">
+		        			<div class="aui-font-size-16 aui-col-xs-12"style="color: white;">春季流浪猫摄影影大浪猫...</div>
+		        			<div class="aui-font-size-12 aui-col-xs-12"style="color: white;max-height:1.7rem !important;overflow:auto;">替他们表达心意（活动简介）</div>
+		        			<div class="aui-font-size-12 aui-col-xs-12"style="color: white;">主办方：华侨大学爱心社</div>
+		        		</div>
+			    		<div class="aui-row aui-col-xs-3 aui-pull-right aui-padded-t-10 aui-padded-r-5"style="width: auto;">
+			      			<div class="aui-label lab_join aui-pull-right aui-font-size-14 aui-col-xs-12"style="width: auto; color:white ;text-align: center;border-radius: 0.4rem;padding:0.1rem 0.3rem;">参与投票</div>
+			        		<a href="../2_function/23_function_sports/232_function_sports_concret.html"target="_blank"><div class="aui-col-xs-12 aui-font-size-12"style="color: white;">
+        					<div class="aui-col-xs-3 aui-font-size-12 aui-pull-right aui-padded-r-5 aui-padded-t-10"style="width: auto;">活动详情></div> 
+			        		</div></a> 
+			    		</div>           		
+		        	</div>
+	        	</div>
+	        </div>
+	        	<div class="aui-row aui-col-xs-12">
+		        	<div class="aui-col-xs-2 aui-row aui-margin-l-15 aui-pull-left">
+		        		<i class="aui-iconfont aui-icon-like" name="sport_dianzan"></i>
+		        		<span class="aui-font-size-12">125</span>       		
+		        	</div>
+		        	<a href="#">
+			        	<div class="aui-col-xs-2 aui-row aui-margin-l-5 aui-pull-left">
+			        		<i class="aui-iconfont aui-icon-comment"></i>
+			        		<span class="aui-font-size-12">289</span>       		
+			        	</div> 	
+		        	</a>
+		        </div>	            	
+	       </li>
+		<div class="hr"></div>	 -->
+       </div>
+	</body>
+</html>

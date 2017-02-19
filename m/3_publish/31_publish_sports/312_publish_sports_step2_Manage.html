@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">		
+		<title>活动管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+		<script src="../../js/jquery-2.2.3.min.js"></script>
+		<script src="js/ajax_312_publish_sports_step2_Manage.js"></script>
+	</head>
+	<style>
+		.cover{
+			width: 100%;
+			height: 10rem;
+			float: left;
+		}
+		@media screen and (min-width:365px){ 
+		.cover{
+			width: 100%;
+			height:12rem;
+		}
+		 }			
+		.ffuntion .aui-active{
+			color: #000000;
+			border-bottom: 2px solid white;
+		}	
+		
+	</style>
+	<body>
+		<!-------------------顶部------------------->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+       		<a class="aui-pull-left aui-btn">
+           		<span class="aui-iconfont aui-icon-left"style="color: #FFFFFF;"></span>
+       		</a>
+       		<div class="aui-title"style="color: #FFFFFF;">管理活动</div>	
+    	</header>
+    	<div class="aui-col-xs-12"style="padding: 0;margin: 0;height: auto;">
+			<img src="http://m.lizi123.cn/2_function/22_function_club/image/she_fenmian.jpg" style="height: 16rem;width: 100%;"/>
+		</div>
+			<!-------------------tab切换------------------->
+		<header class="aui-bar aui-bar-nav">	
+			<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
+			    <div class="aui-tab-item aui-active"style="background: none;color: white;" name="frame1" id="frame1">详情</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame2"><div></div>花絮</div>
+			    <div class="aui-tab-item"style="background: none;color: white;"id="frame3">进展</div>
+			</div>			       
+		</header>	
+		<iframe id="ifram" name="ifram" style="width: 100%;height:42em;"src="3121_publish_sports_step2_Manage_frame1.html" frameborder=no  border=0  marginwidth=0  marginheight=0 ></iframe>		
+		<img src="../../2_function/21_function_class/img/ic_edit.png" style="position: fixed;bottom: 2.5rem;right: 2rem;width: 3rem;height: auto;z-index: 999;display: none;" id="publish_sport_huaxu">
+	</body>
+	<script type="text/javascript" src="js/aui-tab.js" ></script>
+	<script type="text/javascript">
+	window.onload=function(){
+	        apiready = function(){
+	        	api.parseTapmode();
+		    }
+		    var tab = new auiTab({
+		        element:document.getElementById("tab"),
+		        // callback:function(o,dom){
+		        //     console.log(o);
+		        // }
+		    },function(ret){
+		        console.log(ret);
+		    });
+		    
+		    document.getElementById("publish_sport_huaxu").addEventListener("touchstart",function(e){
+		    	e.preventDefault();
+		    	window.open("../../2_function/23_function_sports/233_publish_sport_huaxu.php");
+		    },false)
+	}
+</script>	
+<script>
+window.onload=function(){
+		var url=location.href;  
+  		var tmp1=url.split("?")[1];  
+        var tmp3=tmp1.split("=")[2];  
+        var parm1=tmp3;  
+        sports_id=tmp1.split("&")[0];  
+        sports_id=sports_id.split("=")[1];  
+//      alert(parm1);
+        if(parm1=="jinzhan"){
+        	document.getElementById("ifram").src="3123_publish_sports_step2_Manage_frame3.html?activity_id="+activity_id;
+            document.getElementById("sports_edit").style.display="none";
+         	document.getElementById("publish_sport_huaxu").style.display="none";
+            document.getElementById("ifram").style.height="76em";
+            document.getElementById("frame1").className="aui-tab-item";
+            document.getElementById("frame2").className="aui-tab-item";
+            document.getElementById("frame3").className="aui-tab-item aui-active";
+        }
+		
+}
+</script>
+</html>

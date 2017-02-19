@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/memory.css">
+		<title>社团记忆</title>
+		<link rel="stylesheet" href="css/LCalendar.css">
+	</head>
+	<body>
+	 <div class="header">
+<!--		<span class="return"><span>-->
+		<img class="return" src="img/return.png" id="return">
+		<p class="title">社团记忆</p>
+		<span id="furnish">完成</span>
+	</div>
+	<form action="" method="post" id="logo">
+			<a href="#" id="add_logo">
+				<input type="file" name="file" id="upload_logo"  onchange="javascript:setImagePreview();"/>
+			</a>
+			<div id="show_logo" class="show_logo">
+		  	 	<img id="preview" width="-1" height="-1" style="display: none" /> 
+			</div>
+	</form>
+	<div class="activities">
+		<input type="text" placeholder="输入活动标题"/>
+	</div>
+	<div class="activities_day">
+		<input id="demo1" type="text" readonly="" placeholder="选择活动时间" data-lcalendar="2000-01-01,2020-12-31" />
+	</div>
+	<textarea id="activities_details" maxlength="140" placeholder="请输入活动详情"></textarea>
+	<img src="img/icon_delete.png" id="delete"/>
+	</body>
+	<script>
+		//多图片上传预览
+ function setImagePreview(){
+	document.getElementById("show_logo").style.display="inline-block";
+	var preview, img_txt, localImag, file_head = document.getElementById("upload_logo"),
+            picture = file_head.value; 
+            if (!picture.match(/.jpg|.gif|.png|.bmp/i)) return alert("您上传的图片格式不正确，请重新选择！"),  
+            !1;  
+            if (preview = document.getElementById("preview"), file_head.files && file_head.files[0]) preview.style.display = "block",  
+                preview.style.width = "100%",  
+                preview.style.height = "100%",
+                document.getElementById("add_logo").style.backgroundImage="none",
+                preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);  
+            else {  
+                file_head.select(),  
+                file_head.blur(),  
+                img_txt = document.selection.createRange().text,  
+                localImag = document.getElementById("show_logo"),  
+                localImag.style.width = "100%",  
+                localImag.style.height = "100%";  
+                try {  
+                    localImag.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)",  
+                    localImag.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = img_txt  
+                } catch(f) {  
+                    return alert("您上传的图片格式不正确，请重新选择！"),  
+                    !1  
+                }  
+                preview.style.display = "none",  
+                document.selection.empty()  
+            }   
+            !0  
+}
+	</script>
+	<script src="js/publish_recall.js"></script>
+	<script>
+		var url_index="jiyi";
+		document.getElementById("return").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			var myurl="../page_club/page_club.html"+"?"+"url_index="+url_index;
+			window.location.assign(myurl);
+		},false);
+	</script>
+	<script src="js/LCalendar.js"></script>
+    <script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#demo1', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': '1900-1-1', //最小日期
+        'maxDate': '2020-12-31' //最大日期
+    });
+    </script>
+</html>
