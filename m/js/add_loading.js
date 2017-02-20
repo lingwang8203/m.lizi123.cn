@@ -10,7 +10,7 @@
 		//加载状态为complete时移除loading效果
 		function completeLoading() {
 			if(document.readyState == "complete") {
-				var loadingMask = document.getElementById('loadimg');
-				loadingMask.parentNode.removeChild(loadimg);
+				var loadimg = document.getElementById('loadimg');
+				loadimg.parentNode.removeChild(loadimg);
 			}
 		}

@@ -6,89 +6,18 @@
 		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<link rel="stylesheet" type="text/css" href="css/aui.2.0.css" />
-
-    <link rel="stylesheet" type="text/css" href="css/iconfont.css" />  
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css" />  
 		<link rel="stylesheet" type="text/css" href="1_home/css/index.css" />
-		<link rel="stylesheet" type="text/css" href="1_home/css/aui-slide.css" />
-		<link rel="stylesheet" type="text/css" href="1_home/css/iconfont_like.css" />
-		<script src="js/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/aui-slide.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont_like.css" />
 		
+		<?php include("footer.html"); ?>
+		
+		<script src="js/jquery-2.2.3.min.js"></script>		
 		<script src="1_home/js/ajax_home.js"></script>
-		
-		<style type="text/css">
-        #demo {
-            width: 4rem;
-            height: 4rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -2rem;
-            margin-top: -2rem;
-            background-color: #e0e0e0;
-            border-radius: 50%;
-            line-height: 4rem;
-            text-align: center;
-            color: #212121;
-            font-size: 1.2rem;
-        }
-		/*======中间===============*/
-		/*#middle{
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			outline: none;
-			/*height:65rem;*/
-		}*/
-		#pop_back{
-			display: none;
-			position: fixed;
-			z-index: 200;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #404040;
-			/*opacity:0.2;
-			filter:alpha(opacity=20);*/
-		}
-		#pop-class{
-			position: fixed;
-			text-align: center;
-			left: 10vw;
-			bottom: 25vw;
-		}
-		#pop-show{
-			position: fixed;
-			text-align: center;
-			left: 40vw;
-			bottom: 38vw;
-		}
-		#pop-activ{
-			position: fixed;
-			text-align: center;
-			left: 70vw;
-			bottom: 25vw;
-		}
-		#pop-cancel{
-			position: fixed;
-			left: 40vw;
-			bottom: 10vw;
-		}
-		.pop-tabs img{
-			width: 22vw;
-			height: auto;
-		}
-		.pop-tabs p{
-			color: white;
-			font-size: 0.8rem;
-			-webkit-margin-before: 0em;
-    		-webkit-margin-after: 0em;
-		}
-    </style>
-		
+		<script src="js/add_loading.js"></script>		
 	</head>
-
 	<body>
-	
 		<!-------------------顶部------------------>
 		<header class="aui-bar aui-bar-nav aui-row">
 			<a href="http://m.lizi123.cn/7_login/73_login_location/73_login_location.php" target="_blank" class="aui-pull-left aui-btn aui-col-xs-4">
@@ -203,111 +132,9 @@
 	</div>
 	</body>
 	
-	<!--<iframe src="guide_menu.html" frameborder=no  border=0  marginwidth=0  marginheight=0></iframe>-->
-		<!--------------导航条-------------------------->
-    <footer class="aui-bar aui-bar-tab" id="footer">
-        <div class="aui-bar-tab-item aui-active" id="tabbar1">      	
-            <i class="iconfont icon-shouye"></i>
-            <div class="aui-bar-tab-label">首页</div>
-        </div>
-        <div class="aui-bar-tab-item"id="tabbar2">
-            <i class="iconfont icon-fuction"></i>
-            <div class="aui-bar-tab-label">功能</div>
-        </div>
-        <div class="aui-bar-tab-item"id="tabbar3">
-            <i class="iconfont icon-fabu icon-fabu-on" id="fabu"></i>
-        </div>
-        <div class="aui-bar-tab-item" id="tabbar4">
-            <i class="iconfont icon-guang"></i>
-            <div class="aui-bar-tab-label">广场</div>
-        </div>    
-        <div class="aui-bar-tab-item" id="tabbar5">
-<!--//新消息红点显示            <div class="aui-dot"></div>-->
-            <i class="iconfont icon-wode"></i>
-            <div class="aui-bar-tab-label">我的</div>
-        </div>
-    </footer>
-    <div id="pop_back">
-    	<a href="3_publish/32_publish_class/321_publish_class_step1.php" id="pop-class" class="pop-tabs">
-    		<img src="http://img.lizi123.cn/LiZi/publish/img/fabu_class.png" />
-    		<p>课程</p>
-    	</a>
-    	<a href="3_publish/33_publish_show/331_publish_show_step1.php" id="pop-show" class="pop-tabs">
-    		<img src="http://img.lizi123.cn/LiZi/publish/img/fabu_show.png" />
-    		<p>秀一秀</p>
-    	</a>
-    	<a href="3_publish/31_publish_sports/311_publish_sports_step1.php" target="_blank" id="pop-activ" class="pop-tabs">
-    		<img src="http://img.lizi123.cn/LiZi/publish/img/fabu_activ.png" />
-    		<p>活动</p>
-    	</a>
-    	<a href="" id="pop-cancel" class="pop-tabs">
-    		<img src="http://img.lizi123.cn/LiZi/publish/img/cancel_fabu.png" />
-    	</a>
-    </div>
-	<script type="text/javascript" src="js/aui-tab.js" ></script>
-<script type="text/javascript">
- //-----------------标签导航
- 				h=0;
-				var	middle=document.getElementById("middle");	
-				var home=document.getElementById("tabbar1");
-				var ffunction=document.getElementById("tabbar2");
-				var guang=document.getElementById("tabbar4");
-				var me=document.getElementById("tabbar5");
-				var back=document.getElementById("pop_back");
-				var cancel=document.getElementById("pop-cancel");
-				var fabu=document.getElementById("fabu");
-				//切换至首页
-				home.addEventListener("touchstart",function(e){
-					e.preventDefault();							
-					middle.src="1_home/1_home.html";
-					middle.style.height="80rem";
-					tabbar1.style.color="#ffbf2a";
-					tabbar2.style.color="#757575";
-					tabbar4.style.color="#757575";
-					tabbar5.style.color="#757575";
-				},false);	
-				//切换至功能
-				ffunction.addEventListener("touchstart",function(e){
-					e.preventDefault();							
-					middle.src="2_function/2_function.html";
-					middle.style.height="85rem";
-					tabbar2.style.color="#ffbf2a";
-					tabbar1.style.color="#757575";
-					tabbar4.style.color="#757575";
-					tabbar5.style.color="#757575";
-				},false);
-				//切换至广场
-				guang.addEventListener("touchstart",function(e){
-					e.preventDefault();							
-					middle.src="4_ground/4_ground.html";
-//					alert(h);
-					middle.style.height="160rem";
-					tabbar4.style.color="#ffbf2a";
-					tabbar2.style.color="#757575";
-					tabbar1.style.color="#757575";
-					tabbar5.style.color="#757575";
-				},false);
-				//切换至我的
-				me.addEventListener("touchstart",function(e){
-					e.preventDefault();		
-					middle.src="5_mine";
-					middle.style.height="33rem";
-					tabbar5.style.color="#ffbf2a";
-					tabbar2.style.color="#757575";
-					tabbar3.style.color="#757575";
-					tabbar4.style.color="#757575";
-					tabbar1.style.color="#757575";
-				},false);	
-				fabu.addEventListener("touchstart",function(e){
-					e.preventDefault();
-					back.style.display="block";
-				},false);
-				cancel.addEventListener("touchstart",function(e){
-					e.preventDefault();
-					back.style.display="none";
-				},false);
-</script>
-<script>
+
+</script><script type="text/javascript" src="js/api.js" ></script>
+
 	<script type="text/javascript" src="js/aui-slide.js"></script>
 	<script type="text/javascript">
 //-----------------------轮播-------------------------------------

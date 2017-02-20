@@ -6,7 +6,7 @@
 	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
 	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 	    <link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />	    
-	    <!--<?php include("../footer.html"); ?>-->
+	    <?php include("../footer.html"); ?>
 	    	
 	</head>
 	<body>
@@ -25,8 +25,8 @@
 		    </a>			       
 		</header>	
 		
-		<iframe id="ifram"style="width: 100%;"src="23_function_sports/231_function_sports_push.html" frameborder=no  border=0  marginwidth=0  marginheight=0  scrolling=no></iframe>
-	    <object style="border:0px" type="text/x-scriptlet" data="../footer.html" width=100%></object>
+		<iframe id="ifram"style="width: 100%;height: 100em;"src="23_function_sports/231_function_sports_push.html" frameborder=no  border=0  marginwidth=0  marginheight=0  scrolling=no></iframe>
+	    
 	</body>
 	
 	<script type="text/javascript" src="js/aui-tab.js" ></script>
