@@ -15,9 +15,13 @@
 		
 		<script src="js/jquery-2.2.3.min.js"></script>		
 		<script src="1_home/js/ajax_home.js"></script>
-		<script src="js/add_loading.js"></script>		
+		<script src="js/add_loading.js"></script>
+
+		
 	</head>
+
 	<body>
+	
 		<!-------------------顶部------------------>
 		<header class="aui-bar aui-bar-nav aui-row">
 			<a href="http://m.lizi123.cn/7_login/73_login_location/73_login_location.php" target="_blank" class="aui-pull-left aui-btn aui-col-xs-4">

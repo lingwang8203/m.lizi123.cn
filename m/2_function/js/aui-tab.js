@@ -1,4 +1,3 @@
-
 (function( window, undefined ) {
     "use strict";
     var auiTab = function(params,callback) {
@@ -36,11 +35,11 @@
         				this.parentNode.querySelector(".aui-active").classList.remove("aui-active");
             			this.classList.add("aui-active");
             			if(this.id=="club")
-            			{document.getElementById("ifram").src="22_function_club/221_function_club_push.html";}
+            			{location.href="22_function_club/221_function_club_push.php";}
             			else if(this.id=="sports")
-            			{document.getElementById("ifram").src="23_function_sports/231_function_sports_push.html";}          
+            			{location.href="23_function_sports/231_function_sports_push.php";}          
             			else if(this.id=="subject")
-            			{document.getElementById("ifram").src="21_function_class/211_function_class_push.html";}              			
+            			{location.href="21_function_class/211_function_class_push.php";}              			
         			}
         		}
         	}
