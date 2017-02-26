@@ -1329,7 +1329,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .aui-tab-item.aui-active {
     color: #039be5;
-    border-bottom: 2px solid #039be5;
+    border-bottom: 2px solid white;
     z-index: 100;
 }
 .aui-tab:after {

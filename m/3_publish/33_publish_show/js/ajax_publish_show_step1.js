@@ -3,7 +3,7 @@ $(document).ready(function() {
 	i = 0; 
 	var loadimg=document.getElementById("loadimg");
 	document.getElementById("furnish").addEventListener("touchstart", function() {
-
+        $("furnish").attr("disabled","disabled");
 		var content = document.getElementById("content").value;
 		//document.getElementById("preview1").style.display=="none"||
 		if(content == "") {
@@ -29,7 +29,8 @@ $(document).ready(function() {
 
 						//window.location.href="../../../4_ground/4_ground.html?xiu_id="+obj.id+"";
 						loadimg.parentNode.removeChild(loadimg);
-						setTimeout('window.open("http://m.lizi123.cn/?url_index=gro4");',1000);
+						location.href="http://m.lizi123.cn/?url_index=gro4";
+						$("#loadimg").removeAttr("disabled");
 
 					} else if(obj.status == 199) {
 						window.location.href = "http://m.lizi123.cn/7_login/7_login.html";

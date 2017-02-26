@@ -32,7 +32,7 @@
 				<img src="http://img.lizi123.cn/LiZi/index/img/logo.png" id="logo" />
 			</div>
 			<div class="aui-col-xs-3 aui-row aui-pull-right">
-				<a class="aui-pull-right aui-btn aui-col-xs-6" id="search" href="11_home_search/12_home_search.html" target="_blank">
+				<a class="aui-pull-right aui-btn aui-col-xs-6" id="search" href="http://m.lizi123.cn/1_home/11_home_search/12_home_search.html" target="_blank">
 					<span class="aui-iconfont aui-icon-search" style="padding-top: 0.1rem;"></span>
 				</a>
 				<a class="aui-pull-right aui-btn aui-col-xs-6" href="../6_chat/new_chat_homepage.php" target="_blank">
@@ -58,7 +58,7 @@
 		<!--热门------------------------------------------------------------------------->
 		<div class="aui-content title">
 			<p class="aui-pull-left hot">热门内容</p>
-			<a href="12_home_hotMore/12_home_hotMore.html" target="_blank">
+			<a href="http://m.lizi123.cn/1_home/12_home_hotMore/12_home_hotMore.html">
 				<p class="aui-pull-right aui-font-size-12 more aui-text-yellow">更多</p>
 			</a>
 		</div>

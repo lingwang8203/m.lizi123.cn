@@ -43,7 +43,7 @@ function resShow(obj) {
 			html += "<div class='aui-pull-right aui-padded-r-5'>" + obj[i].time + "</div></div></div>";
 			html += "<a target='_blank' href='http://m.lizi123.cn/2_function/24_function_show/241_function_show_concret.html?show_id=" + obj[i].id + "'>";
 			
-			 var image_H = new Array;
+			   var image_H = new Array;
 				var image_W = new Array;
 				var img_h = new Array;
 				var img_w = new Array;
@@ -90,7 +90,7 @@ function resShow(obj) {
 						pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 						//img_h[j] = img_w[j] * img_H[j] / img_W[j];
 					} else {
-						img_h[j] = 80 * w_count[j];
+						img_h[j] = 110 * w_count[j];
 						pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 					}
@@ -103,7 +103,7 @@ function resShow(obj) {
 					//alert("the width="+img_w[j]+"\n"+"the height="+img_h[j]);
 					// width='" + img_w[j] + "' height='" + img_h[j] + "'
 					html += "<div class='aui-col-xs-6 aui-text-center'>";
-					html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='80'/>";
+					html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='110'/>";
 					html += "</div>";
 				}
 				html += "</div>";
@@ -131,7 +131,7 @@ function resShow(obj) {
 						pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 						//img_h[j] = img_w[j] * img_H[j] / img_W[j];
 					} else {
-						img_h[j] = 80 * w_count[j];
+						img_h[j] = 110 * w_count[j];
 						pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 					}
@@ -144,7 +144,7 @@ function resShow(obj) {
 					//alert("the width="+img_w[j]+"\n"+"the height="+img_h[j]);
 					// width='" + img_w[j] + "' height='" + img_h[j] + "'
 					html += "<div class='aui-col-xs-4 aui-text-center'>";
-					html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='80'/>";
+					html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='110'/>";
 					html += "</div>";
 				}
 				html += "</div>";

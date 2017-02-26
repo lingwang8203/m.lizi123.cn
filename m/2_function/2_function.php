@@ -8,7 +8,7 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
 		<script src="../js/jquery-2.2.3.min.js"></script>
-		<script src="21_function_class/js/ajax_211_function_class_push.js"></script>
+		<script src="23_function_sports/js/ajax_function_sports_push.js"></script>
 		<script type="text/javascript" src="js/aui-tab.js"></script>
 	    <script type="text/javascript" src="../js/api.js"></script>
 		<?php include("../footer.html"); ?>
@@ -57,7 +57,7 @@
 
 	</body>
 
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 		apiready = function() {
 			api.parseTapmode();
 		}
@@ -69,7 +69,7 @@
 		}, function(ret) {
 			console.log(ret)
 		});
-	</script>
+	</script>-->
 	<script>
 		var url = location.href;
 		var tmp1 = url.split("?")[1];
