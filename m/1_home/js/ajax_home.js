@@ -208,9 +208,17 @@ $(document).ready(function() {
 								pos_crop_h[j] = parseInt(pos_crop_h[j]);
 								img_w[j] = parseInt(img_w[j]);
 								img_h[j] = parseInt(img_h[j]);
+								
+                                								
+								
+								
+								
+								
+								
 								obj[i].image[j] = obj[i].image[j].split('?')[0]; //图片地址
 								html += "<div class='aui-col-xs-6 aui-text-center'>";
-								html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='80'/>";
+								html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height=";
+								html += browser_w +"/>";
 								html += "</div>";
 							}
 							html += "</div>";
@@ -248,7 +256,9 @@ $(document).ready(function() {
 								img_h[j] = parseInt(img_h[j]);
 								obj[i].image[j] = obj[i].image[j].split('?')[0]; //图片地址
 								html += "<div class='aui-col-xs-4 aui-text-center'>";
-								html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='80'/>";
+								html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width=";
+								html += browser_w*0.95 + " height=";
+								html += browser_w*0.95 +"/>";
 								html += "</div>";
 							}
 							html += "</div>";
