@@ -20,17 +20,21 @@
 				} else {
 					return null;
 				}
-			};
-		</script>
+			};																
+		</script>				
 	</head>
 
 	<body>
+		
+		
 
 		<header class="aui-bar aui-bar-nav">
-			<a class="aui-pull-left aui-col-xs-2 aui-font-size-18">
-				<</a>
-					<div class="aui-col-xs-8 aui-text-center aui-font-size-16" id="sports_name">管理社团</div>
-					<a class="aui-pull-right aui-col-xs-2 aui-font-size-16" id="sports_edit">编辑</a>
+			<a class="aui-pull-left aui-btn"href="javascript:history.go(-1);">
+        		<span class="aui-iconfont aui-icon-left"></span>
+    		</a>
+			
+			<div class="aui-title" id="sports_name">管理社团</div>
+			<a class="aui-pull-right aui-btn" id="sports_edit">编辑</a>
 		</header>
 
 		<div class="aui-tab aui-col-xs-12 ffuntion" id="tab">
@@ -96,5 +100,19 @@
 
 		//xiuxiu跳转
 	</script>
-
+	<!--
+    	作者：2249986392@qq.com
+    	时间：2017-02-25
+    	描述：
+   
+	<script>
+			var url_index="fcc";
+			document.getElementById("return").addEventListener("touchstart",function(e){
+				e.preventDefault();
+				var myurl=history.go(-1);
+				window.location.assign(myurl);
+			},false);
+			
+	</script>
+ -->
 </html>

@@ -175,7 +175,7 @@ $(document).ready(function() {
 							var img_w = image_W * img_h / image_H;
 							html += "<div class='aui-col-xs-12 aui-font-size-14  aui-pull-left aui-padded-l-10'>" + obj[i].intro + "</div>";
 							html += "<div class='aui-col-xs-12 aui-pull-left' style='padding:0 0.4rem;margin: 0;height:9rem;'>";
-							html += "<img src='" + obj[i].image[0] + "' style='height:9rem;' width='" + img_w + "' id='show_img' /> ";
+							html += "<img src='" + obj[i].image[0] + "' style='height:9rem;border-radius:0.5rem;' width='" + img_w + "' id='show_img' /> ";
 							html += "</div>";
 						} else if(obj[i].image.length == 2) {
 							html += "<div class='aui-font-size-14 aui-col-xs-12  aui-padded-l-10 aui-padded-r-5'>" + obj[i].intro + "</div>";
@@ -183,7 +183,7 @@ $(document).ready(function() {
 
 							for(var j = 0; j < 2; j++) {
 								var browser_w = document.documentElement.clientWidth;
-								browser_w = browser_w * 0.5 * 0.95;
+								browser_w = browser_w * 0.33333;
 								pos_crop_w[j] = 0;
 								pos_crop_h[j] = 0;
 
@@ -191,7 +191,7 @@ $(document).ready(function() {
 								image_W[j] = obj[i].image[j].match(/&W=(\S*)/)[1];
 
 								w_count[j] = image_W[j] / browser_w;
-								h_count[j] = image_H[j] / img_h[j];
+								h_count[j] = image_H[j] / browser_w;
 
 								img_w[j] = image_W[j];
 								img_h[j] = image_H[j];
@@ -199,7 +199,7 @@ $(document).ready(function() {
 									img_w[j] = browser_w * h_count[j];
 									pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 								} else {
-									img_h[j] = 80 * w_count[j];
+									img_h[j] = browser_w * w_count[j];
 									pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 								}
@@ -207,18 +207,13 @@ $(document).ready(function() {
 								pos_crop_w[j] = parseInt(pos_crop_w[j]);
 								pos_crop_h[j] = parseInt(pos_crop_h[j]);
 								img_w[j] = parseInt(img_w[j]);
-								img_h[j] = parseInt(img_h[j]);
-								
-                                								
-								
-								
-								
+								img_h[j] = parseInt(img_h[j]);														
 								
 								
 								obj[i].image[j] = obj[i].image[j].split('?')[0]; //图片地址
 								html += "<div class='aui-col-xs-6 aui-text-center'>";
-								html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height=";
-								html += browser_w +"/>";
+								html += "<img style='margin-bottom: 0.1rem;border-radius:0.5rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height=";
+								html += 0.95 * browser_w +"/>";
 								html += "</div>";
 							}
 							html += "</div>";
@@ -229,7 +224,7 @@ $(document).ready(function() {
 
 							for(var j = 0; j < obj[i].image.length; j++) {
 								var browser_w = document.documentElement.clientWidth;
-								browser_w = browser_w * 0.33333 * 0.95;
+								browser_w = browser_w * 0.33333;
 								pos_crop_w[j] = 0;
 								pos_crop_h[j] = 0;
 
@@ -237,7 +232,7 @@ $(document).ready(function() {
 								image_W[j] = obj[i].image[j].match(/&W=(\S*)/)[1];
 
 								w_count[j] = image_W[j] / browser_w;
-								h_count[j] = image_H[j] / img_h[j];
+								h_count[j] = image_H[j] / browser_w;
 
 								img_w[j] = image_W[j];
 								img_h[j] = image_H[j];
@@ -245,7 +240,7 @@ $(document).ready(function() {
 									img_w[j] = browser_w * h_count[j];
 									pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 								} else {
-									img_h[j] = 80 * w_count[j];
+									img_h[j] = browser_w * w_count[j];
 									pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 								}
@@ -256,7 +251,7 @@ $(document).ready(function() {
 								img_h[j] = parseInt(img_h[j]);
 								obj[i].image[j] = obj[i].image[j].split('?')[0]; //图片地址
 								html += "<div class='aui-col-xs-4 aui-text-center'>";
-								html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width=";
+								html += "<img style='margin-bottom: 0.1rem;border-radius:0.5rem;' src='" + obj[i].image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width=";
 								html += browser_w*0.95 + " height=";
 								html += browser_w*0.95 +"/>";
 								html += "</div>";

@@ -71,13 +71,13 @@ function showInfo(show_id) {
 					var image_H = getQueryString('H');
 					var img_w = image_W * img_h / image_H;
 
-					html += "<a href='http://m.lizi123.cn/2_function/24_function_show/photo_slide.html?first_img=0&" + img_linklist + "' style='height:9rem;width: 100%;'><img src='" + obj.image[0] + "' style='height:9rem;' width='" + img_w + "' id='show_img' /></a>";
+					html += "<a href='http://m.lizi123.cn/2_function/24_function_show/photo_slide.html?first_img=0&" + img_linklist + "' style='height:9rem;width: 100%;'><img src='" + obj.image[0] + "' style='height:9rem;border-radius:0.5rem;' width='" + img_w + "' id='show_img' /></a>";
 
 				} else if(obj.image.length == 2) {
 
 					for(var j = 0; j < obj.image.length; j++) {
 						var browser_w = document.documentElement.clientWidth;
-						browser_w = browser_w * 0.33333 * 0.95;
+						browser_w = browser_w * 0.33333;
 						pos_crop_w[j] = 0;
 						pos_crop_h[j] = 0;
 
@@ -85,7 +85,7 @@ function showInfo(show_id) {
 						image_W[j] = obj.image[j].match(/&W=(\S*)/)[1];
 
 						w_count[j] = image_W[j] / browser_w;
-						h_count[j] = image_H[j] / img_h[j];
+						h_count[j] = image_H[j] / browser_w;
 
 						//img_w[j] = img_h[j] * img_W[j] / img_H[j];
 						img_w[j] = image_W[j];
@@ -95,7 +95,7 @@ function showInfo(show_id) {
 							pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 							//img_h[j] = img_w[j] * img_H[j] / img_W[j];
 						} else {
-							img_h[j] = 80 * w_count[j];
+							img_h[j] = browser_w * w_count[j];
 							pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 						}
@@ -107,24 +107,17 @@ function showInfo(show_id) {
 						obj.image[j] = obj.image[j].split('?')[0]; //图片地址
 
 						html += "<div class='aui-col-xs-4 aui-text-center'>";
-						html += "<a href='http://m.lizi123.cn/2_function/24_function_show/photo_slide.html?first_img="+j+"&" + img_linklist + "' style='height:9rem;width: 100%;'><img style='margin-bottom: 0.2rem;' src='" + obj.image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%' height='80'/></a>";
+						html += "<a href='http://m.lizi123.cn/2_function/24_function_show/photo_slide.html?first_img="+j+"&" + img_linklist + "' style='height:9rem;width: 100%;'><img style='margin-bottom: 0.2rem;border-radius:0.5rem;' src='" + obj.image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%' height=";
+						html += 0.95 * browser_w +"/></a>";
 						html += "</div>";
-						//for(var j=0;j<obj.image.length;j++){
-						//	html+="<div class='aui-col-xs-4 aui-text-center'>";
-						//	html+="<a href='http://m.lizi123.cn/2_function/24_function_show/show_picture.html?imgurl="+obj.image[j]+"' style='height:9rem;width: 100%;'><img src='"+obj.image[j]+"'width='95%' height='80'/></a>";
-					}
+                    }
 					html += "</div>";
-
-					//					html+="<div class='aui-col-xs-4 aui-text-center'>";
-					//					html+="<a href='http://m.lizi123.cn/2_function/24_function_show/show_picture.html?imgurl="+obj.image[0]+"' style='height:9rem;width: 100%;'><img src='"+obj.image[0]+"'width='95%' height='80'/></a></div>";
-					//					html+="<div class='aui-col-xs-4 aui-text-center'>";
-					//					html+="<a href='http://m.lizi123.cn/2_function/24_function_show/show_picture.html?imgurl="+obj.image[1]+"' style='height:9rem;width: 100%;'><img src='"+obj.image[1]+"'class='showphoto3'/></a></div>";
 
 				} else if(obj.image.length >= 3) {
 
 					for(var j = 0; j < obj.image.length; j++) {
 						var browser_w = document.documentElement.clientWidth;
-						browser_w = browser_w * 0.33333 * 0.95;
+						browser_w = browser_w * 0.33333;
 						pos_crop_w[j] = 0;
 						pos_crop_h[j] = 0;
 
@@ -132,7 +125,7 @@ function showInfo(show_id) {
 						image_W[j] = obj.image[j].match(/&W=(\S*)/)[1];
 
 						w_count[j] = image_W[j] / browser_w;
-						h_count[j] = image_H[j] / img_h[j];
+						h_count[j] = image_H[j] / browser_w;
 
 						//img_w[j] = img_h[j] * img_W[j] / img_H[j];
 						img_w[j] = image_W[j];
@@ -142,7 +135,7 @@ function showInfo(show_id) {
 							pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 							//img_h[j] = img_w[j] * img_H[j] / img_W[j];
 						} else {
-							img_h[j] = 80 * w_count[j];
+							img_h[j] = browser_w * w_count[j];
 							pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 						}
@@ -154,14 +147,13 @@ function showInfo(show_id) {
 						obj.image[j] = obj.image[j].split('?')[0]; //图片地址
 
 						html += "<div class='aui-col-xs-4 aui-text-center'>";//imgurl=" + obj.image[j] + "'
-						html += "<a href='http://m.lizi123.cn/2_function/24_function_show/photo_slide.html?first_img="+j+"&" + img_linklist + "' style='height:9rem;width: 100%;'><img style='margin-bottom: 0.2rem;' src='" + obj.image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='80'/></a>";
-						html += "</div>";
-						//for(var j=0;j<obj.image.length;j++){
-						//	html+="<div class='aui-col-xs-4 aui-text-center'>";
-						//	html+="<a href='http://m.lizi123.cn/2_function/24_function_show/show_picture.html?imgurl="+obj.image[j]+"' style='height:9rem;width: 100%;'><img src='"+obj.image[j]+"'width='95%' height='80'/></a>";
-					}
+						html += "<a href='http://m.lizi123.cn/2_function/24_function_show/photo_slide.html?first_img="+j+"&" + img_linklist + "' style='height:9rem;width: 100%;'>";
+						html += "<img style='margin-bottom: 0.2rem;border-radius:0.5rem;' src='" + obj.image[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width=";
+						html += browser_w*0.95 + " height=";
+						html += browser_w*0.95 +"/>"; 
+						html += "</a></div>";
+                    }
 					html += "</div>";
-					//}
 
 				}
 				$("#photo_box").append(html);

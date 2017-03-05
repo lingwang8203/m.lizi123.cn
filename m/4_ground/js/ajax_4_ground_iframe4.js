@@ -1,33 +1,72 @@
-/////////////最新
-$(document).ready(function() {
+$(document).ready(function() 
+{
+	var page = 1;
+	//$(function() {
 
-	$.ajax({
-		type: "post",
-		url: "http://api.lizi123.cn/index.php/home/ground/groundShow",
-		xhrFields: {
-			withCredentials: true
-		},
-		data: {
-			"client_type": 0,
-			"page": 1,
-		},
-		success: function(data) {
-			var obj = eval(data);
-			console.dir(obj);
-			if(obj.status == 200) {
-				$("#ground").text("");
-				resShow(obj);
-			} else if(obj.status == 199) {
-				window.open("http://m.lizi123.cn/7_login/7_login.html");
+		/*初始化*/
+		var counter = page; /*计数器*/
+
+		getData(page); /*首次加载*/
+
+			// 当滚动到最底部以上100像素时， 加载新内容
+			// 核心代码
+			//if((($(window).scrollTop()+$(window).height())+100)>=$(document).height()) {
+			//alert($(document).height())	;
+						
+			
+			 $(window).scroll(function(){
+			 				 	
+			if ($(document).height() - $(this).scrollTop() - $(this).height()<25){
+               //alert(page);
+				
+				//page++;
+				if(page>counter){page++;getData(page);}
+				
 			}
-		},
-		error: function(data) {
-			alert("失败！");
-		},
-	});
-})
-
-function resShow(obj) {
+			else{
+				
+			}
+		})
+		function getData(page) {
+		counter=page;
+		
+		isAjax = true;
+       // alert("getData true");
+		$.ajax({
+			type: "post",
+			url: "http://api.lizi123.cn/index.php/home/ground/groundShow",
+			xhrFields: {
+				withCredentials: true
+			},
+			data: {
+				"client_type": 0,
+				"page": page,
+			},
+			success: function(data) {
+				var obj = eval(data);
+				isAjax = false;
+				console.dir(obj);
+				console.dir(obj.status);
+				if(obj.status == 200) {
+					//$("#ground").text("");
+					if(obj.length<10)
+					{
+						alert("加载完啦！");
+					}
+					resShow(obj);
+					console.log("page="+page);
+					
+				} else if(obj.status == 199) {
+					window.open("http://m.lizi123.cn/7_login/7_login.html");
+				}
+			},
+			error: function(data) {
+				alert("失败！");
+			},
+		});
+	}
+function resShow(obj) 
+{
 	var pos_crop_w = new Array();
 	var pos_crop_h = new Array();
 	
@@ -43,7 +82,7 @@ function resShow(obj) {
 			html += "<div class='aui-pull-right aui-padded-r-5'>" + obj[i].time + "</div></div></div>";
 			html += "<a target='_blank' href='http://m.lizi123.cn/2_function/24_function_show/241_function_show_concret.html?show_id=" + obj[i].id + "'>";
 			
-			   var image_H = new Array;
+			 var image_H = new Array;
 				var image_W = new Array;
 				var img_h = new Array;
 				var img_w = new Array;
@@ -65,7 +104,7 @@ function resShow(obj) {
 
 				html += "<div class='aui-col-xs-12 aui-font-size-14  aui-pull-left aui-padded-l-10'>" + obj[i].intro + "</div>";
 				html += "<div class='aui-col-xs-12 aui-pull-left' style='padding:0 0.4rem;margin: 0;height:9rem;'>";
-				html += "<img src='" + obj[i].images[0] + "' style='height:9rem;' width='" + img_w + "' id='show_img' /> ";
+				html += "<img src='" + obj[i].images[0] + "' style='height:9rem;border-radius:0.5rem;' width='" + img_w + "' id='show_img' /> ";
 				html += "</div>";
 			} else if(obj[i].images.length == 2) {
                 html += "<div class='aui-font-size-14 aui-col-xs-12  aui-padded-l-10 aui-padded-r-5'>" + obj[i].intro + "</div>";
@@ -73,14 +112,14 @@ function resShow(obj) {
                 
 				for(var j = 0; j < 2; j++) {
 					var browser_w = document.documentElement.clientWidth;
-					browser_w = browser_w * 0.5*0.95;
+					browser_w = browser_w * 0.333333;
                     pos_crop_w[j]=0; pos_crop_h[j]=0;
 					
 					image_H[j] = obj[i].images[j].match(/H=(\S*)&/)[1];
 					image_W[j] = obj[i].images[j].match(/&W=(\S*)/)[1];
              
 					w_count[j] = image_W[j] / browser_w;
-					h_count[j] = image_H[j] / img_h[j];
+					h_count[j] = image_H[j] / browser_w;
 
 					//img_w[j] = img_h[j] * img_W[j] / img_H[j];
 					img_w[j] = image_W[j];
@@ -90,7 +129,7 @@ function resShow(obj) {
 						pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 						//img_h[j] = img_w[j] * img_H[j] / img_W[j];
 					} else {
-						img_h[j] = 110 * w_count[j];
+						img_h[j] = browser_w * w_count[j];
 						pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 					}
@@ -102,8 +141,9 @@ function resShow(obj) {
 					obj[i].images[j] = obj[i].images[j].split('?')[0]; //图片地址
 					//alert("the width="+img_w[j]+"\n"+"the height="+img_h[j]);
 					// width='" + img_w[j] + "' height='" + img_h[j] + "'
-					html += "<div class='aui-col-xs-6 aui-text-center'>";
-					html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='110'/>";
+					html += "<div class='aui-col-xs-4 aui-text-center'>";
+					html += "<img style='margin-bottom: 0.1rem;border-radius:0.5rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height=";
+					html += 0.95 * browser_w +"/>";
 					html += "</div>";
 				}
 				html += "</div>";
@@ -121,7 +161,7 @@ function resShow(obj) {
 					image_W[j] = obj[i].images[j].match(/&W=(\S*)/)[1];
              
 					w_count[j] = image_W[j] / browser_w;
-					h_count[j] = image_H[j] / img_h[j];
+					h_count[j] = image_H[j] / browser_w;
 
 					//img_w[j] = img_h[j] * img_W[j] / img_H[j];
 					img_w[j] = image_W[j];
@@ -131,7 +171,7 @@ function resShow(obj) {
 						pos_crop_w[j] = (image_W[j] - img_w[j]) / 2;
 						//img_h[j] = img_w[j] * img_H[j] / img_W[j];
 					} else {
-						img_h[j] = 110 * w_count[j];
+						img_h[j] = browser_w * w_count[j];
 						pos_crop_h[j] = (image_H[j] - img_h[j]) / 2;
 
 					}
@@ -144,7 +184,9 @@ function resShow(obj) {
 					//alert("the width="+img_w[j]+"\n"+"the height="+img_h[j]);
 					// width='" + img_w[j] + "' height='" + img_h[j] + "'
 					html += "<div class='aui-col-xs-4 aui-text-center'>";
-					html += "<img style='margin-bottom: 0.2rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width='95%'  height='110'/>";
+					html += "<img style='margin-bottom: 0.1rem;border-radius:0.5rem;' src='" + obj[i].images[j] + "?x-oss-process=image/crop,x_" + pos_crop_w[j] + " ,y_" + pos_crop_h[j] + ",w_" + img_w[j] + ",h_" + img_h[j] + " ' width=";
+					html += browser_w*0.95 + " height=";
+					html += browser_w*0.95 +"/>";
 					html += "</div>";
 				}
 				html += "</div>";
@@ -163,6 +205,8 @@ function resShow(obj) {
 			html += "<span class='aui-font-size-12' style='padding-left:4px !important;'>" + obj[i].comment_num + "</span></div></a></div></li>";
 			html += "<div class='aui-hr'></div>";
 			$("#ground").append(html); //divLocation(html,obj.show[k].time);
+			counter--;
 		}
 	}
 }
+})

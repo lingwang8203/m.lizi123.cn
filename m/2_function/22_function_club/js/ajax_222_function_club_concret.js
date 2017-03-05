@@ -42,9 +42,12 @@ $(document).ready(function(){
             	
             	if(obj.is_join==0){///0表示未加入  1表示已加入
             		document.getElementById("club_join_index").className="aui-row aui-label lab_join aui-pull-right aui-font-size-14 aui-col-xs-10 aui-margin-t-15 aui-margin-r-15";
-            	}else{
+            	}else if(obj.is_join==1){
             		document.getElementById("club_join_index").className="aui-row aui-label lab_join aui-bg-base aui-text-white aui-pull-right aui-font-size-14 aui-col-xs-10 aui-margin-t-15 aui-margin-r-15";
             		document.getElementById("club_join_index").innerHTML="已加入";
+            	}else{
+            		document.getElementById("club_join_index").className="aui-row aui-label lab_join aui-bg-base aui-text-white aui-pull-right aui-font-size-14 aui-col-xs-10 aui-margin-t-15 aui-margin-r-15";
+            		document.getElementById("club_join_index").innerHTML="已申请";
             	}
             }
 		},
