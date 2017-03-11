@@ -8,6 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
 	<script src="../../js/jquery-2.2.3.min.js"></script>
 	<script src="js/ajax_2221_function_club_concret_iframe1.js"></script>
+	
+	<?php include("222_function_club_concret.html");?>
+	
 </head>
 <style>
 	body{

@@ -6,6 +6,9 @@
 	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">	
 	<title>社团记忆</title>
 	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	
+	<?php include("222_function_club_concret.html");?>
+	
 	<style>
 		.topCircle{
 			width:4rem;

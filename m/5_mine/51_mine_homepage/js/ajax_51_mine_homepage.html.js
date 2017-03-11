@@ -22,7 +22,7 @@ $(document).ready(function(){
  	  				if(obj.guanzhu_index==0){///0未关注  1已关注
  	  					document.getElementById("guanzhu_index").src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/follow.png";
  	  					document.getElementById("guanzhu_index").index=0;
- 	  				}else{
+ 	  				}else{	  					
  	  					document.getElementById("guanzhu_index").src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/5_mine/51_mine_homepage/ic_cancel_focus.png";
  	  					document.getElementById("guanzhu_index").index=1;
  	  				}

@@ -6,11 +6,11 @@
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 	<title>社团管理_社团秀秀</title>
 	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
-	<!--link rel="stylesheet" type="text/css" href="../../css/iconfont_like.css"/-->
-	<!--script src="../../js/jquery-2.2.3.min.js"></script-->
-	<!--script src="js/ajax_2222_function_club_concret_frame2.js"></script-->
 	<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
 	<script src="js/ajax_3422_publish_club_step2_Manager_frame2.js"></script>
+	
+	<?php include("342_publish_club_step2_Manage.html");?>
+	
 </head>
 <body>
 <!-----------推送内容-------> 

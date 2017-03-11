@@ -1,18 +1,5 @@
 $(document).ready(function(){
 	var club_id = getQueryString('club_id');
-	//alert("ifram3421:"+club_id);
-	$("#add_public").click(function(){
-		window.open('http://m.lizi123.cn/3_publish/34_publish_club/34312_public_club_step2_Manage_frame1_editMessage.html?club_id='+ club_id);
-	});
-	$("#add_activity").click(function(){
-		window.open('http://m.lizi123.cn/3_publish/31_publish_sports/311_publish_sports_step1.html?club_id='+ club_id);
-	});
-	$("#fabu_memory").click(function(){
-		window.open('http://m.lizi123.cn/3_publish/34_publish_club/34331_publish_club_step2_Manage_frame3_publishRecord.html?club_id='+ club_id);
-	});
-	$("#check_request").click(function(){
-		window.open('http://m.lizi123.cn/3_publish/34_publish_club/34331_public_club_Manage_frame3_readApply.html?club_id='+ club_id);
-	});
 	$.ajax({
 			type:"post",
 			url:"http://api.lizi123.cn/index.php/home/club/clubImpress",
@@ -43,7 +30,6 @@ $(document).ready(function(){
  	  				//社团成员
  	  				if (obj.member!=0) {
  	  					$("#club_member_list").text("");
- 	  					$("#club_member_number").innerHTML=obj.member.length.toString();
  	  					for(var j=0;j<6&&j<obj.member.length;j++){
 	 	  					var html="<a href='../../5_mine/51_mine_homepage/51_mine_homepage.html?user_id="+obj.member[j].id+"' target='_blank'><img src='"+obj.member[j].head_image+"' class='aui-img-round aui-col-xs-2'/></a>";
 	 	  					$("#club_member_list").append(html);
@@ -52,7 +38,8 @@ $(document).ready(function(){
  	  				
  	  				//社团简介
  	  				document.getElementById("club_miaoshu").innerHTML=obj.intro;
- 	  				$("#club_active_number").innerHTML=obj.member.length.toString();
+ 	  				$("#club_member_number").text(obj.member.length);
+// 	  				document.getElementById("club_member_number").innerHTML=obj.member.length;
 				}
     		},
 	     	error:function(data)
@@ -61,22 +48,20 @@ $(document).ready(function(){
 	     	}
 	
 		});
+		document.getElementById("add_public").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			window.open("http://m.lizi123.cn/3_publish/34_publish_club/34312_public_club_step2_Manage_frame1_editMessage.html?club="+club_id);
+		},false);
+		document.getElementById("add_activity").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			window.open("http://m.lizi123.cn/3_publish/31_publish_sports/311_publish_sports_step1.html?club="+club_id);
+		},false);
+		document.getElementById("fabu_memory").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			window.open("http://m.lizi123.cn/3_publish/34_publish_club/34331_publish_club_step2_Manage_frame3_publishRecord.html?club="+club_id);
+		},false);
+		document.getElementById("check_request").addEventListener("touchstart",function(e){
+			e.preventDefault();
+			window.open("");
+		},false);
 })
-window.onload=function(){
-	
-	/*document.getElementById("club_more_member").addEventListener("touchstart",function(e){
-		e.preventDefault();
-		window.open("2221_club_member.html?club_id="+club_id);
-	},false)*/
-	
-}
-//=================================获取url参数=====================
-function getQueryString(name){ 
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-    var r = window.location.search.substr(1).match(reg); 
-    if (r != null) {
-        return unescape(r[2]); 
-    }else{
-        return null; 
-    }
-}; 

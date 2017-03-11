@@ -6,6 +6,11 @@
 	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">	
 	<title>社团记忆</title>
 	<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+	<script src="js/ajax_3423_publish_club_step2_Manager_frame3.js"></script>
+	
+	<?php include("342_publish_club_step2_Manage.html");?>
+	
 	<style>
 		.topCircle{
 			width:4rem;
@@ -47,7 +52,7 @@
 	<div class="aui-content aui-text-center">
 		<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/topCircle.png" class="topCircle"/>
 	</div>
-	<ul>
+	<ul id="recall_list">
 		<li class="aui-col-xs-12 aui-row">
 			<div class="aui-col-xs-6 aui-padded-r-5"style="padding-top: 4.5rem;">
 				<div class="club_search_out">
@@ -59,11 +64,11 @@
 				<div class="aui-col-xs-2 club_line"></div>
 				<div class="aui-col-xs-10">
 					<a class="aui-pull-right ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\shanchu.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
 					</a>
 					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/photo1.png" class="club_photo_record"/>
 					<a class="aui-pull-right  ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\Bianji.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/Bianji.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
 					</a>
 				</div>
 				<div class="aui-col-xs-12 aui-row">
@@ -77,11 +82,11 @@
 			<div class="aui-col-xs-6 aui-padded-r-5">
 				<div class="aui-col-xs-10">
 					<a class="aui-pull-left ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\shanchu.png" class="aui-col-xs-4 aui-margin-l-5" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png" class="aui-col-xs-4 aui-margin-l-5" />
 					</a>
 					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/photo2.png" class="club_photo_record"style="margin: 0;margin-right: 0.4rem;float: right;"/>
 					<a class="aui-pull-left  ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\Bianji.png" class="aui-col-xs-4 aui-margin-l-5" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/Bianji.png" class="aui-col-xs-4 aui-margin-l-5" />
 					</a>
 				</div>
 				<div class="aui-col-xs-2 club_line"style="float: right;"></div>				
@@ -95,11 +100,11 @@
 				<div class="aui-col-xs-2 club_line"></div>
 				<div class="aui-col-xs-10">
 					<a class="aui-pull-right ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\shanchu.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
 					</a>
 					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/photo3.png" class="club_photo_record"/>
 					<a class="aui-pull-right  ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\Bianji.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/Bianji.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
 					</a>
 				</div>
 				<div class="aui-col-xs-12 aui-row">
@@ -113,11 +118,11 @@
 			<div class="aui-col-xs-6 aui-padded-r-5">
 				<div class="aui-col-xs-10">
 					<a class="aui-pull-left ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\shanchu.png" class="aui-col-xs-4 aui-margin-l-5" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png" class="aui-col-xs-4 aui-margin-l-5" />
 					</a>
 					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/photo4.png" class="club_photo_record"style="margin: 0;margin-right: 0.4rem;float: right;"/>
 					<a class="aui-pull-left  ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\Bianji.png" class="aui-col-xs-4 aui-margin-l-5" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/Bianji.png" class="aui-col-xs-4 aui-margin-l-5" />
 					</a>
 				</div>
 				<div class="aui-col-xs-2 club_line"style="float: right;"></div>				
@@ -131,11 +136,11 @@
 				<div class="aui-col-xs-2 club_line"></div>
 				<div class="aui-col-xs-10">
 					<a class="aui-pull-right ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\shanchu.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
 					</a>
 					<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/photo5.png" class="club_photo_record"/>
 					<a class="aui-pull-right  ">
-						<img src="F:\桌面文件夹\lizi（设计稿)\3_publish\34_publish_club\Bianji.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
+						<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/Bianji.png" class="aui-col-xs-4 aui-pull-right aui-margin-r-15" />
 					</a>
 				</div>
 				<div class="aui-col-xs-12 aui-row">

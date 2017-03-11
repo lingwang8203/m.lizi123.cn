@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	club_id = getQueryString('club_id');
+	document.getElementById("ifram").src = "2221_function_club_concret_frame1.html?club_id="+club_id;
 	    document.getElementById("publish_club_xiuxiu").addEventListener("touchstart",function(e){
     	e.preventDefault();
     	window.open("http://m.lizi123.cn/2_function/22_function_club/223_publish_club_xiuxiu.php?club_id="+club_id+"");
@@ -9,7 +10,7 @@ $(document).ready(function(){
     	window.open("http://m.lizi123.cn/3_publish/34_publish_club/34331_publish_club_step2_Manage_frame3_publishRecord.html?club_id="+club_id+"");
     },false)
 	//alert(club_id);
-	document.getElementById("ifram").src = "2221_function_club_concret_frame1.html?club_id="+club_id;
+	
 	//社团基本资料
 	$.ajax({
 		type:"post",

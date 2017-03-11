@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
 	    <link rel="stylesheet" type="text/css" href="../../1_home/css/index.css" />	
 	    
-	    <?php include("../../footer.html";); ?>
+	    <?php include("../../footer.html"); ?>
 		
 	    <script src="../../js/jquery-2.2.3.min.js"></script>
 	    <script src="js/ajax_function_sports_push.js"></script>
@@ -25,7 +25,7 @@
 			<div class="aui-tab aui-col-xs-8 ffuntion" id="tab">
 				<div class="aui-tab-item" style="background: none;color: white;" id="sports">活动</div>
 				<div class="aui-tab-item" style="background: none;color: white;" id="club">社团</div>
-				<div class="aui-tab-item" style="background: none;color: white;" id="subject">课程</div>
+				<div class="aui-tab-item" style="background: none;color: white;" id="class">课程</div>
 			</div>
 			<a target="_blank" href="http://m.lizi123.cn/6_chat/new_chat_homepage.php" class="aui-pull-right aui-btn  aui-col-xs-2">
 				<img src="http://img.lizi123.cn/LiZi/index/img/news.png" class="btn-news aui-pull-right" style="width: 1.2rem;height:0.9rem;" />

@@ -3,12 +3,12 @@ $(document).ready(function(){
 //		this.addClass("aui-active").sibli
 //	)
     var current_url=location.href;
-	if(current_url=="http://m.lizi123.cn/2_function/22_function_club/221_function_club_push.php"){
-		$("#club").addClass("aui-active");
+	if(current_url=="http://m.lizi123.cn/2_function/21_function_class/211_function_class_push.php"){
+		$("#class").addClass("aui-active");
 	}else if(current_url=="http://m.lizi123.cn/2_function/2_function.php"){
 		$("#sports").addClass("aui-active");
-	}else if(current_url=="http://m.lizi123.cn/2_function/21_function_class/211_function_class_push.php"){
-		$("#subject").addClass("aui-active");
+	}else if(current_url=="http://m.lizi123.cn/2_function/22_function_club/221_function_club_push.php"){
+		$("#club").addClass("aui-active");
 	}
     
     
@@ -23,12 +23,12 @@ $(document).ready(function(){
     	e.preventDefault();
     	$("#club").addClass("aui-active");
     	$("#sports").removeClass("aui-active");
-    	$("#subject").removeClass("aui-active");
+    	$("#class").removeClass("aui-active");
     	location.href="http://m.lizi123.cn/2_function/22_function_club/221_function_club_push.php";
     },false);
-    document.getElementById("subject").addEventListener("touchstart",function(e){
+    document.getElementById("class").addEventListener("touchstart",function(e){
     	e.preventDefault();
-    	$("#subject").addClass("aui-active");
+    	$("#class").addClass("aui-active");
     	$("#club").removeClass("aui-active");
     	$("#sports").removeClass("aui-active");
     	location.href="http://m.lizi123.cn/2_function/21_function_class/211_function_class_push.php";

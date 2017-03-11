@@ -1,74 +1,178 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
-	 	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">	
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title>编辑社团记忆</title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui.2.0.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/iconfont_like.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont_like.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
 	<style>
-		.memary_photo_record{
+		body {}
+		
+		.memary_photo_record {
 			width: 8rem;
 			height: 8rem;
 			border-radius: 50%;
 			margin-left: 0.5rem;
-			border: 0.1rem solid #ffc955 ;
+			border: 0.1rem solid #ffc955;
 		}
-		.memeary_line{
+		
+		.memeary_line {
 			border-bottom: 0.15rem solid #ffc955;
 			margin-top: 0.65rem;
 		}
 	</style>
-	<body style="background: white;">
-		<header class="aui-bar aui-bar-nav aui-bar-light"style="background-color: #FFBF2A;">
-       		<a class="aui-pull-left aui-btn">
-           		<span class="aui-iconfont aui-icon-left"style="color: #FFFFFF;"></span>
-       		</a>
-       		<div class="aui-title"style="color: #FFFFFF;">编辑社团记忆</div>
-       		<a class="aui-pull-right aui-btn ">
-           		<span class="aui-pull-right"style="color: #FFFFFF;">发布</span>
-       		</a>
-        </header>
-    	<div class="aui-padded-t-15 aui-padded-l-15" style="background: white;top:4rem;color: #767676;">选择封面：</div>
-    	<div class="aui-content aui-text-center aui-padded-t-0 " style="background: white;">
-    			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/FengMian.jpg" class="memary_photo_record" />    		
-    			<div class="aui-col-xs-12 aui-row"style="left: 1rem;top: 1rem;background: white;">
-					<div class="aui-col-xs-2 aui-margin-l-15"style="left: 2rem;">
-						<i class=" aui-pull-right">
+
+	<body style="background: white;overflow-x:hidden;" scroll="no">
+		<header class="aui-bar aui-bar-nav aui-bar-light" style="background-color: #FFBF2A;">
+			<a class="aui-pull-left aui-btn">
+				<span class="aui-iconfont aui-icon-left" style="color: #FFFFFF;"></span>
+			</a>
+			<div class="aui-title" style="color: #FFFFFF;">编辑社团记忆</div>
+			<a class="aui-pull-right aui-btn ">
+				<span class="aui-pull-right" style="color: #FFFFFF;">发布</span>
+			</a>
+		</header>
+		<div class="aui-padded-t-15 aui-padded-l-15" style="background: white;top:4rem;color: #767676;"id="memory_cover">选择封面：</div>
+		<div class="aui-content aui-text-center aui-padded-t-0 " style="background: white;">
+			<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/FengMian.jpg" class="memary_photo_record" />
+			<div class="aui-col-xs-12 aui-row" style="left: 1rem;top: 1rem;background: white;">
+				<div class="aui-col-xs-2 aui-margin-l-15" style="left: 2rem;">
+					<i class=" aui-pull-right">
 							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/Star.jpg" class="aui-img-round" style="border: 0.15rem solid #FFC955;height: 2rem;width: 2rem;"/>
 						</i>
-					</div>					
-					<div class="aui-col-xs-6 memeary_line aui-font-size-16 aui-list-item-input"style="left: 1.1rem;color: #a3a3a3;height: 1.3rem;" >
-						<textarea placeholder="     输入活动标题" id="content" maxlength="14"class="aui-margin-l-15"></textarea>
-					</div>
 				</div>
-			
-    			<div class="aui-col-xs-12 aui-row"style="left: 1rem;top: 1.5rem;background: white;">
-					<div class="aui-col-xs-2 aui-margin-l-15"style="left: 2rem;">
-						<i class=" aui-pull-right">
+				<div class="aui-col-xs-6 memeary_line aui-font-size-16 aui-list-item-input" style="left: 1.1rem;color: #a3a3a3;height: 1.3rem;padding: 0;"id="memory_title">
+					<textarea placeholder="     输入记忆标题" id="content" maxlength="14" class="aui-margin-l-15"></textarea>
+				</div>
+			</div>
+
+			<div class="aui-col-xs-12 aui-row" style="left: 1rem;top: 1.5rem;background: white;">
+				<div class="aui-col-xs-2 aui-margin-l-15" style="left: 2rem;">
+					<i class=" aui-pull-right">
 							<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/YeZi.jpg" class="aui-img-round" style="border: 0.15rem solid #FFC955;height: 2rem;width: 2rem;"/>
 						</i>
-					</div>					
-					<div class="aui-col-xs-6 memeary_line aui-font-size-16 aui-list-item-input"style="left: 1.1rem;color: #a3a3a3;height: 1.3rem;" >
-						<textarea placeholder="        年 月 日" id="content" maxlength="14"class="aui-margin-l-15"></textarea>
-					</div>
 				</div>
-			
-    	</div>
-    	<div class="aui-content aui-padded-t-15">
-    		<div class="aui-list-header aui-row aui-padded-b-5 aui-padded-t-5 aui-margin-t-10 aui-margin-l-15 tit aui-font-size-16"style="background: white;color:#5a5a5a;top: 4rem;">活动详情</div>
-    		<div class="aui-list-item-input aui-padded-l-15 aui-padded-r-15 aui-padded-t-15 aui-font-size-12"style="height: 10rem;">
-    			<textarea placeholder="说说你这次的记忆吧~" id="content" maxlength="300" ></textarea>
+				<div class="aui-col-xs-6 memeary_line aui-font-size-16" style="left: 1.1rem;color: #a3a3a3;height: 1.3rem;padding: 0;">
+					<div style="bottom: 2rem;height: 3rem;">
+						<input placeholder="2017" id="memory_year" maxlength="4" class="" style="height: 1rem;width: 2rem;"></input><span class="aui-padded-t-0" style="color: #000000;">年</span>
+						<input placeholder="XX" id="memory_month" maxlength="2" class="" style="height: 1rem;width: 1rem;"></input><span class="aui-padded-t-0" style="color: #000000;">月</span>
+						<input placeholder="XX" id="memory_day" maxlength="2" class="" style="height: 1rem;width: 1rem;"></input><span class="aui-padded-t-0" style="color: #000000;">日</span>
+					</div>
+
+				</div>
 			</div>
-		 
-			<div class="aui-list-header aui-row aui-padded-b-5 aui-padded-t-5 aui-margin-t-10 aui-margin-l-15 tit aui-font-size-16"style="background: white;color:#5a5a5a;top: 4rem;">更多活动照片</div>
-			<a class="aui-padded-l-15 aui-padded-r-15 aui-padded-t-15">
-				<img src="http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/TianJiaZhaoPian.png" style="height: 4rem;width: auto;"/>
-			</a> 
-    	</div>
-    	
+
+		</div>
+		<div class="aui-content aui-padded-t-15">
+			<div class="aui-list-header aui-row aui-padded-b-5 aui-padded-t-5 aui-margin-t-10 aui-margin-l-15 tit aui-font-size-16" style="background: white;color:#5a5a5a;top: 4rem;">活动详情</div>
+			<div class="aui-list-item-input aui-padded-l-15 aui-padded-r-15 aui-padded-t-15 aui-font-size-12" style="height: 10rem;"id="memory_details">
+				<textarea placeholder="说说你这次的记忆吧~" id="content" maxlength="300" style="height: 9rem;"></textarea>
+			</div>
+
+			<div class="aui-list-header aui-row aui-padded-b-5 aui-padded-t-5 aui-margin-t-10 aui-margin-l-15 tit aui-font-size-16" style="background: white;color:#5a5a5a;top: 4rem;">更多活动照片</div>
+			<div id="add_memory_moreSports_img" style="display: block !important;"></div>
+			<div id="img_div">
+				<div class="memory_moreSports_img">
+					<img id="preview0" width="-1" height="-1" style="display: none" />
+				</div>
+				<div class="memory_moreSports_img">
+					<img id="preview1" width="-1" height="-1" style="display: none" />
+				</div>
+				<div class="memory_moreSports_img">
+					<img id="preview2" width="-1" height="-1" style="display: none" />
+				</div>
+				<div class="memory_moreSports_img">
+					<img id="preview3" width="-1" height="-1" style="display: none" />
+				</div>
+			</div>
+			<div id="img_div">
+				<div class="memory_moreSports_img">
+					<img id="preview4" width="-1" height="-1" style="display: none" />
+				</div>
+				<div class="memory_moreSports_img">
+					<img id="preview5" width="-1" height="-1" style="display: none" />
+				</div>
+				<div class="memory_moreSports_img">
+					<img id="preview6" width="-1" height="-1" style="display: none" />
+				</div>
+				<div class="memory_moreSports_img">
+					<img id="preview7" width="-1" height="-1" style="display: none" />
+				</div>
+			</div>
+			<div id="img_div" style="margin-bottom: 3vh;">
+				<div class="memory_moreSports_img">
+					<img id="preview8" width="-1" height="-1" style="display: none" />
+				</div>
+			</div>
+		</div>
+
 	</body>
+	<script>
+		images = {
+			localId: [],
+			serverId: []
+		};
+		var img_length;
+		document.querySelector('#add_memory_moreSports_img').onclick = function() {
+			wx.chooseImage({
+				count: 9, // 默认9
+				success: function(res) {
+					images.localId = res.localIds;
+
+					//upload
+					var i = 0,
+						length = images.localId.length;
+					img_length = length;
+					images.serverId = [];
+
+					for(var j = 0; j < length; j++) {
+						document.getElementById("preview" + j).style.display = "inline-block";
+						document.getElementById("preview" + j).style.width = "100%";
+						document.getElementById("preview" + j).style.height = "100%";
+						document.getElementById("preview" + j).src = images.localId[j];
+					}
+					for(var k = length; k < 9; k++) {
+						document.getElementById("preview" + k).style.display = "none";
+					}
+					upload();
+
+					function upload() {
+						wx.uploadImage({
+							localId: images.localId[i],
+							//                                      isShowProgressTips: 1,
+							success: function(res) {
+								i++;
+								images.serverId.push(res.serverId);
+								if(i < length) {
+									upload();
+								}
+							},
+							fail: function(res) {
+								alert(JSON.stringify(res));
+							}
+						});
+					}
+
+				}
+			});
+		}
+		for(var l = 0; l < 9; l++) {
+			document.querySelector("#preview" + l).index = l;
+			document.querySelector("#preview" + l).onclick = function() {
+				wx.previewImage({
+					current: images.localId[this.index],
+					urls: [
+						images.localId[this.index]
+					]
+				});
+			}
+		}
+		});
+	</script>
+
 </html>
